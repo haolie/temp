@@ -42,8 +42,6 @@ export default {
       this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
       this.wbSocket.binaryType="arraybuffer"
       this.wbSocket.onmessage = function (event) {
-          let ta = document.getElementById("responseText")
-          ta.value = ta.value + "\n" + event.data
 
           console.log(event.data)
         }
