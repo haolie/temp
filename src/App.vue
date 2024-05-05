@@ -36,9 +36,9 @@ export default {
     obj.setGameversionid(101) 
 
     var loginReq=new login.PlayerLoginReq()
-    loginReq.setUserId("bd6897c0a49b4b938f0d8acfece7467a")
-    loginReq.setServerId(10017)
-    loginReq.setPartnerId(1001)
+    loginReq.setUserid("bd6897c0a49b4b938f0d8acfece7467a")
+    loginReq.setServerid(10017)
+    loginReq.setPartnerid(1001)
 
     obj.setData(loginReq.serializeBinary())
 
