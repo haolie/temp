@@ -7,7 +7,10 @@ window.Pb={
     M:{}
 }
 
-var list =["./pb/Client/ClientRequest_pb","./pb/Client/ClientResponse_pb","./pb/Client/ClientPushModel_pb"]
+var list =[
+    require("./pb/Client/ClientRequest_pb"),
+    require("./pb/Client/ClientResponse_pb"),
+    require("./pb/Client/ClientPushModel_pb")]
 
 //var cliReqPb= require("./pb/Client/ClientRequest_pb")
 
@@ -16,8 +19,7 @@ var resReg=new RegExp("Res$|Response$")
 var pushReg=new RegExp("Push$")
 
 for (var i=0;i<list.length;i++){
-    var p=list[i]
-    var temp=require(p)
+    var temp=list[i]
     for (t in temp){
         console.log(t)
         if(reqReg.test(t)) window.Pb.ReqList.push(t) ;
