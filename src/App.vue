@@ -15,7 +15,7 @@ import Pve from '@/lib/PveInfo_pb'
 import reqModel from  '@/lib/pb/Client/ClientRequest_pb'
 import resModel from  '@/lib/pb/Client/ClientResponse_pb'
 
-import loginReq from  '@/lib/pb/Player/PlayerLogin_pb'
+import login from  '@/lib/pb/Player/PlayerLogin_pb'
 var _this;
 export default {
   name: 'App',
@@ -35,7 +35,7 @@ export default {
     obj.setServerid(10017)
     obj.setGameversionid(101) 
 
-    var loginReq=new loginReq.PlayerLoginReq()
+    var loginReq=new login.PlayerLoginReq()
     loginReq.setUserId("bd6897c0a49b4b938f0d8acfece7467a")
     loginReq.setServerId(10017)
     loginReq.setPartnerId(1001)
