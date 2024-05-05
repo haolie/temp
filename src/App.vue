@@ -30,7 +30,7 @@ export default {
 
     var obj=new reqModel.ClientRequest()
     obj.setCmd(1)
-    obj.setHandlecode(3663)
+    obj.setHandlecode("36636465")
     obj.setPartnerid(1001)
     obj.setServerid(1007)
     obj.setGameversionid(101) 
@@ -42,9 +42,6 @@ export default {
 
     obj.setData(loginReq.serializeBinary())
 
-
-    console.log( JSON.stringify(obj.serializeBinary(),null,2) )
-
     console.log("mounted")
     _this=this
     debugger 
@@ -55,8 +52,9 @@ export default {
 
         var res=new resModel.ClientResponse()
 		  
-		  
-          console.log(JSON.stringify(reqModel.ClientRequest.deserializeBinary(event.data).toObject()))
+        var req= reqModel.ClientRequest.deserializeBinary(event.data).toObject()
+        console.log("收到数据!"+req.Handlecode)
+          console.log(JSON.stringify())
         }
         this.wbSocket.onopen = function (event) {
           console.log("连接开启!")
