@@ -12,6 +12,7 @@ var global = Function('return this')();
 window.goog-jspb;
 import JAlert from '@/components/JAlert'
 import Pve from '@/lib/PveInfo_pb'
+import reqModel from  '@/lib/pb/Client/ClientRequest_pb'
 var _this;
 export default {
   name: 'App',
@@ -19,17 +20,46 @@ export default {
     JAlert
   }, 
   created () {
-    var obj=new Pve.PveInfo()
-    console.log( JSON.stringify(obj.toObject(),null,2) )
+  
     console.log("creted")
   },
   mounted () {
+
+    var obj=new reqModel.ClientRequest()
+    obj.setCmd(1)
+    obj.setHandlecode(3663)
+    obj.setPartnerid(1001)
+    obj.setServerid(1007)
+    obj.setGameversionid(101) 
+
+
+    console.log( JSON.stringify(obj.serializeBinary(),null,2) )
+
     console.log("mounted")
     _this=this
     debugger 
     if("WebSocket" in window){
       this.wbSocket=new WebSocket("ws://127.0.0.1:9296/login?name=23")
       this.wbSocket.binaryType="arraybuffer"
+      this.wbSocket.onmessage = function (event) {
+          let ta = document.getElementById("responseText")
+          ta.value = ta.value + "\n" + event.data
+
+          console.log(event.data)
+        }
+        this.wbSocket.onopen = function (event) {
+          console.log("连接开启!")
+
+      
+          
+
+
+          _this.wbSocket.send(obj.serializeBinary())
+        }
+        this.wbSocket.onclose = function (event) {
+          console.log("event.data")
+        }
+ 
 
     }else if("WebSocket" in window){
       this.wbSocket=new MozWebSocket("/api/login")
@@ -37,6 +67,9 @@ export default {
     }else{
       this.wbSocket=new SockJs("/api/login")
     } 
+
+
+
   }
 }
 </script>
