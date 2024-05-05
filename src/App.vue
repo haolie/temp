@@ -39,7 +39,7 @@ export default {
     _this=this
     debugger 
     if("WebSocket" in window){
-      this.wbSocket=new WebSocket("ws://127.0.0.1:9296/login?name=23")
+      this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
       this.wbSocket.binaryType="arraybuffer"
       this.wbSocket.onmessage = function (event) {
           let ta = document.getElementById("responseText")
