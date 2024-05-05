@@ -13,6 +13,7 @@ window.goog-jspb;
 import JAlert from '@/components/JAlert'
 import Pve from '@/lib/PveInfo_pb'
 import reqModel from  '@/lib/pb/Client/ClientRequest_pb'
+import resModel from  '@/lib/pb/Client/ClientResponse_pb'
 var _this;
 export default {
   name: 'App',
@@ -43,13 +44,15 @@ export default {
       this.wbSocket.binaryType="arraybuffer"
       this.wbSocket.onmessage = function (event) {
 
-          console.log(event.data)
+        var res=new resModel.ClientResponse()
+          res.deserializeBinary(event.data)
+          console.log(JSON.stringify(res))
         }
         this.wbSocket.onopen = function (event) {
           console.log("连接开启!")
 
       
-          
+    
 
 
           _this.wbSocket.send(obj.serializeBinary())
