@@ -32,12 +32,12 @@ export default {
     obj.setCmd(1)
     obj.setHandlecode(3663)
     obj.setPartnerid(1001)
-    obj.setServerid(10017)
+    obj.setServerid(1007)
     obj.setGameversionid(101) 
 
     var loginReq=new login.PlayerLoginReq()
     loginReq.setUserid("bd6897c0a49b4b938f0d8acfece7467a")
-    loginReq.setServerid(10017)
+    loginReq.setServerid(1007)
     loginReq.setPartnerid(1001)
 
     obj.setData(loginReq.serializeBinary())
