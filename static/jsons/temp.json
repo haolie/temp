@@ -1,0 +1,212 @@
+{
+  "status": {
+    "code": 200,
+    "message": "系统请求成功！"
+  },
+  "data": [
+    {
+      "unitMemId": 0,
+      "unitMem": "卫士通",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 5250,
+      "finishedValue": 4478.68,
+      "noFinishedValue": 771.3198,
+      "statMonth": "201910",
+      "finishedPer": 85.31,
+      "index": 0
+    },
+    {
+      "unitMemId": 1,
+      "unitMem": "三十所",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 13636.1,
+      "finishedValue": 10760.04,
+      "noFinishedValue": 2872.0896,
+      "statMonth": "201910",
+      "finishedPer": 78.93,
+      "index": 0
+    },
+    {
+      "unitMemId": 2,
+      "unitMem": "三十三所",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 28533.45,
+      "finishedValue": 19167,
+      "noFinishedValue": 9366.449,
+      "statMonth": "201910",
+      "finishedPer": 67.176,
+      "index": 0
+    },
+    {
+      "unitMemId": 3,
+      "unitMem": "网安本部",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 84100,
+      "finishedValue": 51287.72,
+      "noFinishedValue": 32812.28,
+      "statMonth": "201910",
+      "finishedPer": 60.98,
+      "index": 0
+    },
+    {
+      "unitMemId": 4,
+      "unitMem": "凯天",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 13896.22,
+      "finishedValue": 7775.35,
+      "noFinishedValue": 6120.3696,
+      "statMonth": "201910",
+      "finishedPer": 55.96,
+      "index": 0
+    },
+    {
+      "unitMemId": 5,
+      "unitMem": "神风",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 223000,
+      "finishedValue": 117755.93,
+      "noFinishedValue": 105244.07,
+      "statMonth": "201910",
+      "finishedPer":52.81,
+      "index": 0
+    },
+    {
+      "unitMemId": 6,
+      "unitMem": "新瑞",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 12915.84,
+      "finishedValue": 6715.21,
+      "noFinishedValue": 6200.63,
+      "statMonth": "201910",
+      "finishedPer": 51.99,
+      "index": 0
+    },
+    {
+      "unitMemId": 7,
+      "unitMem": "凯瑞",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 12915.84,
+      "finishedValue": 6515.11,
+      "noFinishedValue": 6400.73,
+      "statMonth": "201910",
+      "finishedPer": 50.44,
+      "index": 0
+    },
+    {
+      "unitMemId": 8,
+      "unitMem": "卫视都",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 17101.61,
+      "finishedValue": 8568.5,
+      "noFinishedValue": 8533.109,
+      "statMonth": "201910",
+      "finishedPer": 50.10,
+      "index": 0
+    },
+    {
+      "unitMemId": 9,
+      "unitMem": "凯峰",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 208775.31,
+      "finishedValue": 103061.64,
+      "noFinishedValue": 105713.67,
+      "statMonth": "201910",
+      "finishedPer": 49.36,
+      "index": 0
+    },
+    {
+      "unitMemId": 10,
+      "unitMem": "新田",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 16670.4,
+      "finishedValue": 7871.72,
+      "noFinishedValue": 8798.68,
+      "statMonth": "201910",
+      "finishedPer": 47.22,
+      "index": 0
+    },
+    {
+      "unitMemId": 11,
+      "unitMem": "凯氏同",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 15434.23,
+      "finishedValue": 7101.45,
+      "noFinishedValue": 8332.78,
+      "statMonth": "201910",
+      "finishedPer": 46.01,
+      "index": 0
+    },
+    {
+      "unitMemId": 12,
+      "unitMem": "卫视峰",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 3233.76,
+      "finishedValue": 1140.08,
+      "noFinishedValue": 2093.6802,
+      "statMonth": "201910",
+      "finishedPer": 35.26,
+      "index": 0
+    },
+    {
+      "unitMemId": 13,
+      "unitMem": "科技创新",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 4060,
+      "finishedValue": 1373.33,
+      "noFinishedValue": 2686.67,
+      "statMonth": "201910",
+      "finishedPer": 33.83,
+      "index": 0
+    },
+    {
+      "unitMemId": 14,
+      "unitMem": "国际业务",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 8185.34,
+      "finishedValue": 2354.39,
+      "noFinishedValue": 5830.96,
+      "statMonth": "201910",
+      "finishedPer": 28.76,
+      "index": 0
+    },
+    {
+      "unitMemId": 15,
+      "unitMem": "军工电子",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 13377,
+      "finishedValue": 284.06,
+      "noFinishedValue": 13092.94,
+      "statMonth": "201910",
+      "finishedPer": 2.12,
+      "index": 0
+    },
+    {
+      "unitMemId": 16,
+      "unitMem": "军工电子",
+      "quotaName": "营业收入",
+      "quotaNum": "01",
+      "targetValue": 0,
+      "finishedValue": 356210.72,
+      "noFinishedValue": -356210.72,
+      "statMonth": "201910",
+      "finishedPer": 0,
+      "index": 0
+    }
+  ]
+}
