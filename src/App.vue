@@ -14,6 +14,8 @@ import JAlert from '@/components/JAlert'
 import Pve from '@/lib/PveInfo_pb'
 import reqModel from  '@/lib/pb/Client/ClientRequest_pb'
 import resModel from  '@/lib/pb/Client/ClientResponse_pb'
+
+import loginReq from  '@/lib/pb/Player/PlayerLogin_pb'
 var _this;
 export default {
   name: 'App',
@@ -30,8 +32,15 @@ export default {
     obj.setCmd(1)
     obj.setHandlecode(3663)
     obj.setPartnerid(1001)
-    obj.setServerid(1007)
+    obj.setServerid(10017)
     obj.setGameversionid(101) 
+
+    var loginReq=new loginReq.PlayerLoginReq()
+    loginReq.setUserId("bd6897c0a49b4b938f0d8acfece7467a")
+    loginReq.setServerId(10017)
+    loginReq.setPartnerId(1001)
+
+    obj.setData(loginReq.serializeBinary())
 
 
     console.log( JSON.stringify(obj.serializeBinary(),null,2) )
@@ -45,8 +54,9 @@ export default {
       this.wbSocket.onmessage = function (event) {
 
         var res=new resModel.ClientResponse()
-          res.deserializeBinary(event.data)
-          console.log(JSON.stringify(res))
+		  
+		  
+          console.log(JSON.stringify(reqModel.ClientRequest.deserializeBinary(event.data).toObject()))
         }
         this.wbSocket.onopen = function (event) {
           console.log("连接开启!")
