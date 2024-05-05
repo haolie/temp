@@ -16,6 +16,10 @@ import reqModel from  '@/lib/pb/Client/ClientRequest_pb'
 import resModel from  '@/lib/pb/Client/ClientResponse_pb'
 
 import login from  '@/lib/pb/Player/PlayerLogin_pb'
+import groupRoom from  '@/lib/pb/GroupRoom/GroupRoomTeamInfo_pb'
+import groupRoomCreate from  '@/lib/pb/GroupRoom/GroupRoomCreate_pb' 
+
+import p from  '@/lib/pba'
 var _this;
 export default {
   name: 'App',
@@ -27,6 +31,17 @@ export default {
     console.log("creted")
   },
   mounted () {
+
+     for (var t in groupRoomCreate){
+      console.log(t)
+      var to=new groupRoomCreate[t]()
+      console.log(JSON.stringify( to.toObject()))
+      
+     }
+
+       var d=groupRoomCreate.GroupRoomCreateReq()
+       debugger
+    return
 
     var obj=new reqModel.ClientRequest()
     obj.setCmd(1)
@@ -41,7 +56,7 @@ export default {
     loginReq.setPartnerid(1001)
 
     obj.setData(loginReq.serializeBinary())
-
+ 
     console.log("mounted")
     _this=this
     debugger 
@@ -49,12 +64,16 @@ export default {
       this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
       this.wbSocket.binaryType="arraybuffer"
       this.wbSocket.onmessage = function (event) {
+ 
 
-        var res=new resModel.ClientResponse()
-		  
-        var req= reqModel.ClientRequest.deserializeBinary(event.data).toObject()
-        console.log("收到数据!"+req.Handlecode)
-          console.log(JSON.stringify())
+        var clientRes=resModel.ClientResponse.deserializeBinary(event.data)
+        var reqObj= clientRes.toObject()
+        console.log("收到数据!"+reqObj.handlecode)
+          console.log(JSON.stringify(reqObj))
+
+          var d= clientRes.getData()
+          var loginRes= login.PlayerLoginRes.deserializeBinary(d)
+          console.log(JSON.stringify(loginRes.toObject()))
         }
         this.wbSocket.onopen = function (event) {
           console.log("连接开启!")

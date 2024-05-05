@@ -9,6 +9,8 @@ function copy(src, dst) {
   fs.createReadStream(src).pipe(fs.createWriteStream(dst))
 }
 
+
+
 function travel(dir, todir, level) {
   fs.stat(todir, function (err2, stats) {
     if (err2) fs.mkdirSync(todir)
