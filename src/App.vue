@@ -18,8 +18,11 @@ import resModel from  '@/lib/pb/Client/ClientResponse_pb'
 import login from  '@/lib/pb/Player/PlayerLogin_pb'
 import groupRoom from  '@/lib/pb/GroupRoom/GroupRoomTeamInfo_pb'
 import groupRoomCreate from  '@/lib/pb/GroupRoom/GroupRoomCreate_pb' 
+import webCli from  '@/lib/client' 
 
-import p from  '@/lib/pba'
+import pbUtils from '@/lib/pbUtils'
+
+import p from  '@/lib/proto'
 var _this;
 export default {
   name: 'App',
@@ -28,19 +31,31 @@ export default {
   }, 
   created () {
   
-    console.log("creted")
+    console.log(pbUtils.GetSetFunName("create"))
   },
   mounted () {
 
+
+    var cli=new webCli("",{})
+    cli.connect()
+    cli.Login()
+
      for (var t in groupRoomCreate){
-      console.log(t)
-      var to=new groupRoomCreate[t]()
-      console.log(JSON.stringify( to.toObject()))
-      
+      // console.log(t)
+      // var to=new groupRoomCreate[t]()
+
+      // var toObj=to.toObject()
+      // toObj.id=665
+
+
+      //var to= pbUtils.CreateReqObj("ClientRequest")
+      // var to= pbUtils.CreateReqObj("GroupRoomCreate")
+
+      // console.log(JSON.stringify(to.toObject()))
      }
 
-       var d=groupRoomCreate.GroupRoomCreateReq()
-       debugger
+      //  var d=groupRoomCreate.GroupRoomCreateReq()
+      //  debugger
     return
 
     var obj=new reqModel.ClientRequest()

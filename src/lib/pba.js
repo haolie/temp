@@ -12,11 +12,11 @@ var list =[
     require("./pb/Client/ClientResponse_pb"),
     require("./pb/Client/ClientPushModel_pb")]
 
-//var cliReqPb= require("./pb/Client/ClientRequest_pb")
+var cliReqPb= require("./pb/Client/ClientRequest_pb")
 
 var reqReg=new RegExp("Req$|Request$")
 var resReg=new RegExp("Res$|Response$")
-var pushReg=new RegExp("Push$")
+var pushReg=new RegExp("^Push")
 
 for (var i=0;i<list.length;i++){
     var temp=list[i]
