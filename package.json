@@ -12,7 +12,7 @@
     "web": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open http://localhost:9010"
   },
   "dependencies": {
-    "axios": "^0.19",
+    "axios": "^1.6",
     "convertpath": "^1.0.2",
     "deasync": "^0.1.29",
     "echarts": "^4.1.0",
