@@ -34,6 +34,7 @@ Client.prototype.onMessage=function(event){
    if(responseObj.command==1){
     var loginRes= pbUitl.CreatePbObj("PlayerLoginRes")
     loginRes.deserializeBinary(responseObj.data)
+    console.log(JSON.stringify(loginRes.toObject()))
    }
 }
 
