@@ -36,9 +36,11 @@ export default {
   mounted () {
 
 
-    var cli=new webCli("",{})
+    var cli=new webCli("roote19db7fafc9f11ee-21",{})
     cli.connect()
-    cli.Login()
+	
+	//setTimeout(function(){cli.Login()},3000)
+    //cli.Login()
 
      for (var t in groupRoomCreate){
       // console.log(t)

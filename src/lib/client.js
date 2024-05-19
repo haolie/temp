@@ -14,7 +14,7 @@ function Client(uid,option){
 
 Client.prototype.Login=function(){
     var loginReq= pbUitl.CreateReqObj("PlayerLogin")
-    loginReq.setUserid("bd6897c0a49b4b938f0d8acfece7467a")
+    loginReq.setUserid(this.uid)
     loginReq.setServerid(1007)
     loginReq.setPartnerid(1001)
     this.sendReq(1,loginReq)
@@ -23,14 +23,17 @@ Client.prototype.Login=function(){
 Client.prototype.sendReq=function(comman,req){
 if (!this.isConnect)return
 
+   console.log("sendReq sendReq")
     var obj=this.createReq(comman,req)
     this.wbSocket.send(obj.serializeBinary())
 }
 
 Client.prototype.onMessage=function(event){
+    console.log("client onMessage")
    var response=pbUitl.CreatePbObj("ClientResponse")
    response.deserializeBinary(event.data)
    var responseObj=response.toObject();
+       console.log(responseObj.command)
    if(responseObj.command==1){
     var loginRes= pbUitl.CreatePbObj("PlayerLoginRes")
     loginRes.deserializeBinary(responseObj.data)
@@ -40,9 +43,12 @@ Client.prototype.onMessage=function(event){
 
 Client.prototype.onOpen=function(event){
    this.isConnect=true
+   this.Login()
+   console.log("client connected")
 }
 
 Client.prototype.onClose=function(event){
+    console.log("client onClose")
     this.isConnect=false
 }
 
@@ -51,6 +57,7 @@ Client.prototype.connect=function(){
         return
      }
 
+ console.log("try strt")
      var _this=this
     this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
     this.wbSocket.binaryType="arraybuffer"
