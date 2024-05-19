@@ -126,7 +126,6 @@ var pushReg=new RegExp("^Push")
 for (var i=0;i<list.length;i++){
   var temp=list[i]
   for (t in temp){
-      console.log(t)
       if(reqReg.test(t)) window.Pb.ReqList.push(t) ;
       else if(resReg.test(t)) window.Pb.ResList.push(t) ;
       else if(pushReg.test(t)) window.Pb.PushList.push(t) ;
