@@ -8,7 +8,8 @@
     "dev": "node build/copy.js && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open http://localhost:9010",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "web": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open http://localhost:9010"
   },
   "dependencies": {
     "axios": "^0.19",

@@ -15,9 +15,14 @@ if(!pbObj||!obj){
     GetSetFunName:function(key){
         return "set"+key.replace(/( |^)[a-z]/g,(L)=>L.toUpperCase())
     },
+    GetPb:function(k){
+        k=k.toUpperCase()
+        return window.Pb.M[k]
+    },
     CreatePbObj:function(k){
-        if(window.Pb.M[k]){
-            return new window.Pb.M[k]()
+        var p=this.GetPb()
+        if(p){
+            return p()
         }
       
         return null
@@ -28,6 +33,29 @@ if(!pbObj||!obj){
     CreateRequest:function(command,pbObj){
         var request= this.CreatePbObj("ClientRequest")
          
+    },
+    CreateResFromData:function(command,data){
+        var k=command+"Res"
+        var p=this.GetPb(k)
+        if(p){
+            return p.deserializeBinary(data)
+        }
+      
+        return null
+    },
+    GetCommandNum:function(command){
+        command=command.toUpperCase()
+        var cmdMap=this.GetPb("Command")
+        return cmdMap[command]?cmdMap[command]:0
+    },
+    GetCommandName:function(cmdNum){
+        var cmdMap=this.GetPb("Command")
+        for(c in cmdMap){
+            if(cmdMap[c]==cmdNum){
+                return c
+            }
+        }
+        return ""
     },
 }
 

@@ -17,7 +17,7 @@ Client.prototype.Login=function(){
     loginReq.setUserid(this.uid)
     loginReq.setServerid(1007)
     loginReq.setPartnerid(1001)
-    this.sendReq(1,loginReq)
+    this.sendReq("PlayerLogin",loginReq)
 }
 
 Client.prototype.sendReq=function(comman,req){
@@ -52,6 +52,44 @@ Client.prototype.onClose=function(event){
     this.isConnect=false
 }
 
+Client.prototype.Test=function(){
+
+ 
+    var _this=this
+    this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
+    this.wbSocket.binaryType="arraybuffer"
+    this.wbSocket.onmessage = function (event) {
+
+
+        var clientRes=pbUitl.GetPb("ClientResponse").deserializeBinary(event.data)
+      var reqObj= clientRes.toObject()
+      console.log("收到数据!"+reqObj.handlecode)
+        console.log(JSON.stringify(reqObj))
+
+        var d= clientRes.getData()
+
+          var loginRes= pbUitl.CreateResFromData("PlayerLogin",d)
+        console.log(JSON.stringify(loginRes.toObject()))
+      }
+      this.wbSocket.onopen = function (event) {
+        console.log("连接开启!")
+
+    
+        var loginReq= pbUitl.CreateReqObj("PlayerLogin")
+        loginReq.setUserid(_this.uid)
+        loginReq.setServerid(1007)
+        loginReq.setPartnerid(1001)
+
+        var obj=_this.createReq(1,loginReq)
+
+
+        _this.wbSocket.send(obj.serializeBinary())
+      }
+      this.wbSocket.onclose = function (event) {
+        console.log("event.data")
+      }
+}
+
 Client.prototype.connect=function(){
      if(this.isConnect){
         return
@@ -59,29 +97,31 @@ Client.prototype.connect=function(){
 
  console.log("try strt")
      var _this=this
-    this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
-    this.wbSocket.binaryType="arraybuffer"
+     this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
+     this.wbSocket.binaryType="arraybuffer"
+     this.wbSocket.onmessage=function(event){
+        _this.onMessage(event)
+    }
+
  
     this.wbSocket.onclose=function(event){
         _this.onClose(event)
     }
 
-    this.onmessage=function(event){
-        _this.onMessage(event)
-    }
-
-    this.onopen=function(event){
+   
+    this.wbSocket.onopen=function(event){
         _this.onOpen(event)
     }    
 
-    this.onerror=function(event){
+    this.wbSocket.onerror=function(event){
         console.log(event)
     }
 }
 
 Client.prototype.createReq=function(command,pbObj){
     var req= pbUitl.CreatePbObj("ClientRequest")
-    req.setCmd(command)
+    var cmdNum=pbUitl.GetCommandNum(command)
+    req.setCmd(cmdNum)
     req.setHandlecode("36636465")
     req.setPartnerid(1001)
     req.setServerid(1007)

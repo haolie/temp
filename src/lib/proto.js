@@ -323,6 +323,7 @@ for (var i=0;i<list.length;i++){
       else if(pushReg.test(t)) window.Pb.PushList.push(t) ;
       else  window.Pb.OtherList.push(t) ;
    
+      t=t.toUpperCase()
       window.Pb.M[t]=temp[t]
    }
 }
