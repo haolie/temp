@@ -1,17 +1,17 @@
 import pbUitl from '@/lib/pbUtils'
 
 function Client(uid,option){
-    let client=Object.create(Client.prototype)
-    client.uid=uid
-    client.pid=""
-    client.name=""
-    client.isConnect=false
-    client.option=option
-    client.wbSocket=null
-    
-
+    let client=Object.create(Client.prototype)  
+	client.uid=uid
 }
 
+Client.prototype.uid=""
+Client.prototype.pid=""
+Client.prototype.name=""
+Client.prototype.isConnect=false
+Client.prototype.option=null
+Client.prototype.wbSocket=null
+Client.prototype.order=0
 Client.prototype.Login=function(){
     var loginReq= pbUitl.CreateReqObj("PlayerLogin")
     loginReq.setUserid(this.uid)
@@ -23,22 +23,22 @@ Client.prototype.Login=function(){
 Client.prototype.sendReq=function(comman,req){
 if (!this.isConnect)return
 
-   console.log("sendReq sendReq")
     var obj=this.createReq(comman,req)
     this.wbSocket.send(obj.serializeBinary())
 }
 
 Client.prototype.onMessage=function(event){
     console.log("client onMessage")
-   var response=pbUitl.CreatePbObj("ClientResponse")
-   response.deserializeBinary(event.data)
+   var response=pbUitl.GetPb("ClientResponse").deserializeBinary(event.data) 
    var responseObj=response.toObject();
-       console.log(responseObj.command)
-   if(responseObj.command==1){
-    var loginRes= pbUitl.CreatePbObj("PlayerLoginRes")
-    loginRes.deserializeBinary(responseObj.data)
-    console.log(JSON.stringify(loginRes.toObject()))
-   }
+       
+	   var cmdName=pbUitl.GetCommandName(responseObj.cmd)
+	   if (responseObj.code!=0){
+		   console.log(cmdName+"err:"+responseObj.code)
+	   }else{
+		 var res=  pbUitl.CreateResFromData(cmdName,responseObj.data)
+		 console.log(JSON.stringify(res.toObject()))
+	   } 
 }
 
 Client.prototype.onOpen=function(event){
@@ -119,10 +119,11 @@ Client.prototype.connect=function(){
 }
 
 Client.prototype.createReq=function(command,pbObj){
+	this.order++
     var req= pbUitl.CreatePbObj("ClientRequest")
     var cmdNum=pbUitl.GetCommandNum(command)
     req.setCmd(cmdNum)
-    req.setHandlecode("36636465")
+    req.setHandlecode(this.order)
     req.setPartnerid(1001)
     req.setServerid(1007)
     req.setGameversionid(101) 

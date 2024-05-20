@@ -20,9 +20,9 @@ if(!pbObj||!obj){
         return window.Pb.M[k]
     },
     CreatePbObj:function(k){
-        var p=this.GetPb()
+        var p=this.GetPb(k)
         if(p){
-            return p()
+            return new p()
         }
       
         return null
@@ -50,7 +50,7 @@ if(!pbObj||!obj){
     },
     GetCommandName:function(cmdNum){
         var cmdMap=this.GetPb("Command")
-        for(c in cmdMap){
+        for(var c in cmdMap){
             if(cmdMap[c]==cmdNum){
                 return c
             }
