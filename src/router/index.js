@@ -30,8 +30,8 @@ directives.init(Vue)
 export default new Router({
   routes: [
     {
-      path: '/index',
-      name: '经济运行分析平台',
+      path: '/',
+      name: 'WebClient',
       component: () => import('@/views/mainView/mainView')
     },
     {

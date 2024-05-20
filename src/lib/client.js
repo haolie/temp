@@ -1,8 +1,8 @@
 import pbUitl from '@/lib/pbUtils'
 
 function Client(uid,option){
-    let client=Object.create(Client.prototype)  
-	client.uid=uid
+    this.uid=uid
+    this.option=option
 }
 
 Client.prototype.uid=""
