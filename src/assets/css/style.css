@@ -6,6 +6,26 @@
   display: none;
 }
 
+body{
+  width: 99%;
+  height: 99%;
+}
+
+.main-out{
+  height: 100%;
+}
+
+.el-container{
+  height: 100%;
+}
+
+.el-main{
+  height: 100%;
+  background-color: red;
+}
+
+
+
 
 @media screen and (min-width: 1921px) and (max-width: 2560px) {
   html{

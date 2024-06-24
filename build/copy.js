@@ -113,6 +113,9 @@ window.Pb={
   M:{}
 }
 
+
+let cmdAll=require("./pb/Command_pb.js")
+
 var list =[
   ${listPath}
 ]

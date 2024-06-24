@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-out">
     <router-view />
     <j-alert />
   </div>
@@ -35,4 +35,28 @@ export default {
 <style>
 @import "assets/css/message-box.css";
 @import "assets/css/style.css";
+</style>
+<style>
+body{
+  width: 99%;
+  height: 99%;
+}
+
+.main-head{
+  height: 120px;
+}
+
+.main-out{
+  height: 100%;
+}
+
+.el-container{
+  height: 100%;
+}
+
+.el-main{
+  height: 100%;
+  background-color: red;
+}
+
 </style>
