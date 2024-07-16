@@ -156,7 +156,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -969,6 +969,13 @@ proto.PbModel.FashionVcards.FashionVcardsWearRes.serializeBinaryToWriter = funct
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1000,7 +1007,8 @@ proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.toObject = 
  */
 proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    info: (f = msg.getInfo()) && proto.PbModel.FashionVcards.FashionVcardsInfo.toObject(includeInstance, f)
+    infoList: jspb.Message.toObjectList(msg.getInfoList(),
+    proto.PbModel.FashionVcards.FashionVcardsInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1040,7 +1048,7 @@ proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.deserializeBinaryFrom
     case 1:
       var value = new proto.PbModel.FashionVcards.FashionVcardsInfo;
       reader.readMessage(value,proto.PbModel.FashionVcards.FashionVcardsInfo.deserializeBinaryFromReader);
-      msg.setInfo(value);
+      msg.addInfo(value);
       break;
     default:
       reader.skipField();
@@ -1071,9 +1079,9 @@ proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.serializeBi
  */
 proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getInfo();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getInfoList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       1,
       f,
       proto.PbModel.FashionVcards.FashionVcardsInfo.serializeBinaryToWriter
@@ -1083,39 +1091,40 @@ proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.serializeBinaryToWrit
 
 
 /**
- * optional FashionVcardsInfo Info = 1;
- * @return {?proto.PbModel.FashionVcards.FashionVcardsInfo}
+ * repeated FashionVcardsInfo Info = 1;
+ * @return {!Array<!proto.PbModel.FashionVcards.FashionVcardsInfo>}
  */
-proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.getInfo = function() {
-  return /** @type{?proto.PbModel.FashionVcards.FashionVcardsInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.FashionVcards.FashionVcardsInfo, 1));
+proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.getInfoList = function() {
+  return /** @type{!Array<!proto.PbModel.FashionVcards.FashionVcardsInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.FashionVcards.FashionVcardsInfo, 1));
 };
 
 
 /**
- * @param {?proto.PbModel.FashionVcards.FashionVcardsInfo|undefined} value
+ * @param {!Array<!proto.PbModel.FashionVcards.FashionVcardsInfo>} value
  * @return {!proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes} returns this
 */
-proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.setInfo = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.setInfoList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.PbModel.FashionVcards.FashionVcardsInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.FashionVcards.FashionVcardsInfo}
+ */
+proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.addInfo = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.FashionVcards.FashionVcardsInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes} returns this
  */
-proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.clearInfo = function() {
-  return this.setInfo(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.hasInfo = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.PbModel.FashionVcards.FashionVcardsPushChangeInfoRes.prototype.clearInfoList = function() {
+  return this.setInfoList([]);
 };
 
 

@@ -4,8 +4,8 @@ window.Pb={
   ResList:[],
   PushList:[],
   OtherList:[],
-  M:{},
   CmdMap:{},
+  M:{}
 }
 
 
@@ -13,6 +13,7 @@ let cmdAll=require("./pb/Command_pb.js")
 
 var list =[
     require("./pb/ActiveGift_pb.js"),
+    require("./pb/ActiveQuestionnaire_pb.js"),
     require("./pb/ActivityCalendar_pb.js"),
     require("./pb/ActivityDailyPack_pb.js"),
     require("./pb/ActivityDepot_pb.js"),
@@ -26,7 +27,9 @@ var list =[
     require("./pb/AncientRuinsRedeem_pb.js"),
     require("./pb/Area_pb.js"),
     require("./pb/AresRallyRecruit_pb.js"),
+    require("./pb/Auction_pb.js"),
     require("./pb/Bonus_pb.js"),
+    require("./pb/BranchTask_pb.js"),
     require("./pb/BuyGold_pb.js"),
     require("./pb/Card_pb.js"),
     require("./pb/ChallengeInfo_pb.js"),
@@ -37,6 +40,8 @@ var list =[
     require("./pb/Client_pb.js"),
     require("./pb/Collection_pb.js"),
     require("./pb/Command_pb.js"),
+    require("./pb/CompareFight_pb.js"),
+    require("./pb/Consignment_pb.js"),
     require("./pb/DailyDeals_pb.js"),
     require("./pb/DailySign_pb.js"),
     require("./pb/Email_pb.js"),
@@ -49,6 +54,7 @@ var list =[
     require("./pb/FashionHorn_pb.js"),
     require("./pb/FashionVcards_pb.js"),
     require("./pb/Fashion_pb.js"),
+    require("./pb/FightReportSave_pb.js"),
     require("./pb/Fight_pb.js"),
     require("./pb/Friend_pb.js"),
     require("./pb/GeneralActivityConvert_pb.js"),
@@ -59,6 +65,7 @@ var list =[
     require("./pb/GroupRoom_pb.js"),
     require("./pb/GuildHunt_pb.js"),
     require("./pb/Guild_pb.js"),
+    require("./pb/HeroBroadcast_pb.js"),
     require("./pb/HeroEquipPosition_pb.js"),
     require("./pb/HeroEquip_pb.js"),
     require("./pb/HeroRecruit_pb.js"),
@@ -79,7 +86,6 @@ var list =[
     require("./pb/PlayerBigLv_pb.js"),
     require("./pb/PlayerEquip_pb.js"),
     require("./pb/PlayerGet_pb.js"),
-    require("./pb/PlayerOutput_pb.js"),
     require("./pb/PlayerReward_pb.js"),
     require("./pb/Player_pb.js"),
     require("./pb/Profession_pb.js"),
@@ -104,6 +110,7 @@ var list =[
     require("./pb/Team_pb.js"),
     require("./pb/TowerTreasure_pb.js"),
     require("./pb/Tower_pb.js"),
+    require("./pb/Trading_pb.js"),
     require("./pb/TriggerGift_pb.js"),
     require("./pb/Vip_pb.js"),
     require("./pb/WeeklyPack_pb.js"),
@@ -112,32 +119,43 @@ var list =[
   
 ]
 
-//var cliReqPb= require("./pb/Client/ClientRequest_pb")
-
-
-
 var reqReg=new RegExp("Req$|Request$")
 var resReg=new RegExp("Res$|Response$")
 var pushReg=new RegExp("^Push")
 
+//var cmdTmp=new cmdAll()
+for (var cmd in cmdAll.Command){
+   var key=cmd.replace("_","").toUpperCase()
+   window.Pb.CmdMap[key]={
+    Key:key,
+    Cmd:cmd,
+    Value:cmdAll.Command[cmd]
+   }
+}
+
 for (var i=0;i<list.length;i++){
   var temp=list[i]
   for (t in temp){
-      if(reqReg.test(t)) window.Pb.ReqList.push(t) ;
-      else if(resReg.test(t)) window.Pb.ResList.push(t) ;
+    var k=t.toUpperCase()   
+      if(reqReg.test(t)){ 
+         var tk= k.slice(0,k.length-3)
+         if( window.Pb.CmdMap[tk]){
+            window.Pb.CmdMap[tk].Req=temp[t]
+            window.Pb.ReqList.push(window.Pb.CmdMap[tk]) 
+         }
+      } 
+      else if(resReg.test(t)) {
+       
+         var tk= k.slice(0,k.length-3)
+         if( window.Pb.CmdMap[tk]){
+            window.Pb.CmdMap[tk].Res=temp[t]
+            window.Pb.ResList.push(window.Pb.CmdMap[tk]) 
+         }
+      }
       else if(pushReg.test(t)) window.Pb.PushList.push(t) ;
       else  window.Pb.OtherList.push(t) ;
    
       window.Pb.M[t.toUpperCase()]=temp[t]
-   }
-}
-
-var cmdTmp=new cmdAll()
-for (var cmd in cmdTmp){
-   var key=cmd.replace("_","")
-   window.pb.CmdMap[key]={
-    Key:key,
-    Cmd:cmd
    }
 }
 

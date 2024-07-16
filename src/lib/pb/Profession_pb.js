@@ -12,6 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var Resource_pb = require('./Resource_pb.js');
+goog.object.extend(proto, Resource_pb);
 goog.exportSymbol('proto.PbModel.Profession.ProfessionClassInfo', null, global);
 goog.exportSymbol('proto.PbModel.Profession.ProfessionGetInfoReq', null, global);
 goog.exportSymbol('proto.PbModel.Profession.ProfessionGetInfoRes', null, global);
@@ -848,7 +850,8 @@ proto.PbModel.Profession.ProfessionResetRes.prototype.toObject = function(opt_in
  */
 proto.PbModel.Profession.ProfessionResetRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    classdicinfoMap: (f = msg.getClassdicinfoMap()) ? f.toObject(includeInstance, proto.PbModel.Profession.ProfessionClassInfo.toObject) : []
+    classdicinfoMap: (f = msg.getClassdicinfoMap()) ? f.toObject(includeInstance, proto.PbModel.Profession.ProfessionClassInfo.toObject) : [],
+    basegetgameresourcelist: (f = msg.getBasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -891,6 +894,11 @@ proto.PbModel.Profession.ProfessionResetRes.deserializeBinaryFromReader = functi
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Profession.ProfessionClassInfo.deserializeBinaryFromReader, 0, new proto.PbModel.Profession.ProfessionClassInfo());
          });
       break;
+    case 2:
+      var value = new Resource_pb.ResourceToClientModel;
+      reader.readMessage(value,Resource_pb.ResourceToClientModel.deserializeBinaryFromReader);
+      msg.setBasegetgameresourcelist(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -924,6 +932,14 @@ proto.PbModel.Profession.ProfessionResetRes.serializeBinaryToWriter = function(m
   if (f && f.getLength() > 0) {
     f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Profession.ProfessionClassInfo.serializeBinaryToWriter);
   }
+  f = message.getBasegetgameresourcelist();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      Resource_pb.ResourceToClientModel.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -947,6 +963,43 @@ proto.PbModel.Profession.ProfessionResetRes.prototype.getClassdicinfoMap = funct
 proto.PbModel.Profession.ProfessionResetRes.prototype.clearClassdicinfoMap = function() {
   this.getClassdicinfoMap().clear();
   return this;};
+
+
+/**
+ * optional PbModel.Resource.ResourceToClientModel BaseGetGameResourceList = 2;
+ * @return {?proto.PbModel.Resource.ResourceToClientModel}
+ */
+proto.PbModel.Profession.ProfessionResetRes.prototype.getBasegetgameresourcelist = function() {
+  return /** @type{?proto.PbModel.Resource.ResourceToClientModel} */ (
+    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.Resource.ResourceToClientModel|undefined} value
+ * @return {!proto.PbModel.Profession.ProfessionResetRes} returns this
+*/
+proto.PbModel.Profession.ProfessionResetRes.prototype.setBasegetgameresourcelist = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.Profession.ProfessionResetRes} returns this
+ */
+proto.PbModel.Profession.ProfessionResetRes.prototype.clearBasegetgameresourcelist = function() {
+  return this.setBasegetgameresourcelist(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.Profession.ProfessionResetRes.prototype.hasBasegetgameresourcelist = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
 
 
 

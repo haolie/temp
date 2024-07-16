@@ -1,10 +1,12 @@
 import pbUitl from '@/lib/pbUtils'
+import { name } from 'file-loader'
 
-function Client(uid,option){
-    this.uid=uid
+function Client(option){
     this.option=option
 }
 
+// 0:未登陆； <0 登陆错误 ；1:登陆成功； 2:离线
+Client.prototype.status=0
 Client.prototype.uid=""
 Client.prototype.pid=""
 Client.prototype.name=""
@@ -12,33 +14,96 @@ Client.prototype.isConnect=false
 Client.prototype.option=null
 Client.prototype.wbSocket=null
 Client.prototype.order=0
+Client.prototype.msgOrder=0
+Client.prototype.reqMap={}
+Client.prototype.msgList=[]
 Client.prototype.Login=function(){
-    var loginReq= pbUitl.CreateReqObj("PlayerLogin")
-    loginReq.setUserid(this.uid)
-    loginReq.setServerid(1007)
-    loginReq.setPartnerid(1001)
-    this.sendReq("PlayerLogin",loginReq)
+    var _this=this
+    this.connect(function(){
+        var loginReq= pbUitl.CreateReqObj(_this.option.LoginType)
+        loginReq.setPlayername(_this.option.LoginParam) 
+        //var obj=this.createReq(this.option.LoginType,loginReq)
+        _this.sendReq(_this.option.LoginType,loginReq,function(res){
+            
+
+            if (res.Code==0){
+                _this.name=res.Res.playername
+                _this.pid=res.Res.id
+                _this.uid=res.Res.userid
+                _this.setStatus(1)
+            }else{
+                _this.setStatus(-res.Code)
+            } 
+        })
+    }) 
 }
 
-Client.prototype.sendReq=function(comman,req){
+Client.prototype.sendReq=function(comman,req,cb){
 if (!this.isConnect)return
 
     var obj=this.createReq(comman,req)
     this.wbSocket.send(obj.serializeBinary())
+    this.reqMap[req.getHandlecode]={
+        Req:req.toObject(),
+        Cb:cb,
+        Time:new Date().getTime()
+    }
+}
+
+Client.prototype.setStatus=function(status){
+    this.status=status
+    if(this.status==1){
+        this.startHead()
+    }
+
+    if(this.option.onStatus){
+        this.option.onStatus(status)
+    } 
 }
 
 Client.prototype.onMessage=function(event){
-    console.log("client onMessage")
+   if(this.option.onMsg){
+     this.onMsg()
+   }
+
+    
    var response=pbUitl.GetPb("ClientResponse").deserializeBinary(event.data) 
    var responseObj=response.toObject();
        
-	   var cmdName=pbUitl.GetCommandName(responseObj.cmd)
+       
+       
+	   var cmdObj=pbUitl.GetCommand(responseObj.cmd)
+       if(cmdObj.cmd=="PLAYER_XINTIAO"){
+        console.log("client PLAYER_XINTIAO")
+        return     
+       }
+
+
+       var o={
+        MsgOrder:this.msgOrder++,
+        Key:cmdObj.Key,
+        Cmd:cmdObj.Cmd,
+        Code:responseObj.code,
+        Res:{},
+        Req:{}
+       }
 	   if (responseObj.code!=0){
-		   console.log(cmdName+"err:"+responseObj.code)
-	   }else{
-		 var res=  pbUitl.CreateResFromData(cmdName,responseObj.data)
-		 console.log(JSON.stringify(res.toObject()))
+		   console.log(cmdObj.Cmd+"err:"+responseObj.code)
+	   }else{ 
+		 var res=  cmdObj.Res.deserializeBinary(responseObj.data)
+         o.Res=res.toObject() 
 	   } 
+
+       if(this.reqMap[responseObj.Code]){
+        o.Req=this.reqMap[responseObj.Code]
+        if(this.reqMap[responseObj.Code].Cb){
+            this.reqMap[responseObj.Code].Cb(o)
+        }
+
+        this.reqMap[responseObj.Code]=undefined
+       }
+
+       this.msgList.push(o)
 }
 
 Client.prototype.onOpen=function(event){
@@ -52,9 +117,7 @@ Client.prototype.onClose=function(event){
     this.isConnect=false
 }
 
-Client.prototype.Test=function(){
-
- 
+Client.prototype.Test=function(){ 
     var _this=this
     this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
     this.wbSocket.binaryType="arraybuffer"
@@ -75,12 +138,10 @@ Client.prototype.Test=function(){
         console.log("连接开启!")
 
     
-        var loginReq= pbUitl.CreateReqObj("PlayerLogin")
-        loginReq.setUserid(_this.uid)
-        loginReq.setServerid(1007)
-        loginReq.setPartnerid(1001)
+        var loginReq= pbUitl.CreateReqObj("PlayerYaceLogin")
+        loginReq.setPlayername("l11") 
 
-        var obj=_this.createReq(1,loginReq)
+        var obj=_this.createReq("PlayerYaceLogin",loginReq)
 
 
         _this.wbSocket.send(obj.serializeBinary())
@@ -90,14 +151,23 @@ Client.prototype.Test=function(){
       }
 }
 
-Client.prototype.connect=function(){
+Client.prototype.setOpt=function(opt){
+   this.option=opt
+}
+
+Client.prototype.connect=function(cb,opt){
      if(this.isConnect){
+        if(cb)cb()
+
         return
      }
 
- console.log("try strt")
+     if(opt) this.option=opt
+
+     console.log("try strt")
+     console.log(this.option.Mc)
      var _this=this
-     this.wbSocket=new WebSocket("ws://10.253.0.63:10001/client")
+     this.wbSocket=new WebSocket(this.option.Mc)
      this.wbSocket.binaryType="arraybuffer"
      this.wbSocket.onmessage=function(event){
         _this.onMessage(event)
@@ -106,16 +176,32 @@ Client.prototype.connect=function(){
  
     this.wbSocket.onclose=function(event){
         _this.onClose(event)
+        _this.setStatus(2)
     }
 
    
     this.wbSocket.onopen=function(event){
         _this.onOpen(event)
+        if(cb)cb()
     }    
 
     this.wbSocket.onerror=function(event){
         console.log(event)
     }
+}
+
+Client.prototype.startHead=function(){
+    if(this.status!=1){
+        return
+    }
+
+    var req= pbUitl.CreateReqObj("PLAYERXINTIAO")
+    this.sendReq("PLAYERXINTIAO",req)
+    var _this=this
+    setTimeout(() => {
+        _this.startHead()
+    }, 500);
+
 }
 
 Client.prototype.createReq=function(command,pbObj){
@@ -124,22 +210,59 @@ Client.prototype.createReq=function(command,pbObj){
     var cmdNum=pbUitl.GetCommandNum(command)
     req.setCmd(cmdNum)
     req.setHandlecode(this.order)
-    req.setPartnerid(1001)
-    req.setServerid(1007)
-    req.setGameversionid(101) 
+    req.setPartnerid(this.option.Partner)
+    req.setServerid(this.option.ServerGroupid)
+    req.setGameversionid(this.option.VersoinId) 
     req.setData(pbObj.serializeBinary())
 
     return req
 }
 
+Client.prototype.getServerList=function(cb){ 
+    var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+    httpRequest.open('POST', 'https://managecenterapitest-dqsj2.qcplay.com/API/ServerGroupList.ashx', true); //第二步：打开连接
+    httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+    httpRequest.send('GroupType=Mix&HashValue=');//发送请求 将情头体写在send中
+    /**
+     * 获取数据后的处理程序
+     */
+    httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
+        if(httpRequest.status == 200){
+            cb(httpRequest.status)
+        }
 
-
-
-
-function createReq(pbObj){
-
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
+            var json = JSON.parse(httpRequest.responseText);//获取到服务端返回的数据
+            json=JSON.parse(json.Data)
+            cb(httpRequest.status,json)
+        }
+    };
 }
 
+Client.prototype.msgClear=function(txt){ 
+ 
+}
 
+Client.prototype.selectMsg=function(obj,msg){ 
+    obj.Cmd=msg.Cmd
+    
+    if(msg.Req&&msg.Req.Req){
+        obj.Req=JSON.stringify(msg.Req.Req,null,2) 
+    }else{
+        obj.Req="{}"
+    }
 
+    
+    obj.Res=  JSON.stringify(msg.Res,null,2) 
+ }
+
+ Client.prototype.Query=function(cmd,msg,cb){ 
+    cmd = cmd.replace("_","").toUpperCase()
+    var req= pbUitl.CreateReqObj(cmd)
+    pbUitl.SetWithObj(req,msg)
+  
+    this.sendReq(cmd,req,cb)
+ }
+
+ 
 export default Client

@@ -156,7 +156,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -969,6 +969,13 @@ proto.PbModel.FashionHeadframe.FashionHeadframeWearRes.serializeBinaryToWriter =
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1000,7 +1007,8 @@ proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.toObj
  */
 proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    info: (f = msg.getInfo()) && proto.PbModel.FashionHeadframe.FashionHeadframeInfo.toObject(includeInstance, f)
+    infoList: jspb.Message.toObjectList(msg.getInfoList(),
+    proto.PbModel.FashionHeadframe.FashionHeadframeInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1040,7 +1048,7 @@ proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.deserializeBina
     case 1:
       var value = new proto.PbModel.FashionHeadframe.FashionHeadframeInfo;
       reader.readMessage(value,proto.PbModel.FashionHeadframe.FashionHeadframeInfo.deserializeBinaryFromReader);
-      msg.setInfo(value);
+      msg.addInfo(value);
       break;
     default:
       reader.skipField();
@@ -1071,9 +1079,9 @@ proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.seria
  */
 proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getInfo();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getInfoList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       1,
       f,
       proto.PbModel.FashionHeadframe.FashionHeadframeInfo.serializeBinaryToWriter
@@ -1083,39 +1091,40 @@ proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.serializeBinary
 
 
 /**
- * optional FashionHeadframeInfo Info = 1;
- * @return {?proto.PbModel.FashionHeadframe.FashionHeadframeInfo}
+ * repeated FashionHeadframeInfo Info = 1;
+ * @return {!Array<!proto.PbModel.FashionHeadframe.FashionHeadframeInfo>}
  */
-proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.getInfo = function() {
-  return /** @type{?proto.PbModel.FashionHeadframe.FashionHeadframeInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.FashionHeadframe.FashionHeadframeInfo, 1));
+proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.getInfoList = function() {
+  return /** @type{!Array<!proto.PbModel.FashionHeadframe.FashionHeadframeInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.FashionHeadframe.FashionHeadframeInfo, 1));
 };
 
 
 /**
- * @param {?proto.PbModel.FashionHeadframe.FashionHeadframeInfo|undefined} value
+ * @param {!Array<!proto.PbModel.FashionHeadframe.FashionHeadframeInfo>} value
  * @return {!proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes} returns this
 */
-proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.setInfo = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.setInfoList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.PbModel.FashionHeadframe.FashionHeadframeInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.FashionHeadframe.FashionHeadframeInfo}
+ */
+proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.addInfo = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.FashionHeadframe.FashionHeadframeInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes} returns this
  */
-proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.clearInfo = function() {
-  return this.setInfo(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.hasInfo = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.PbModel.FashionHeadframe.FashionHeadframePushChangeInfoRes.prototype.clearInfoList = function() {
+  return this.setInfoList([]);
 };
 
 

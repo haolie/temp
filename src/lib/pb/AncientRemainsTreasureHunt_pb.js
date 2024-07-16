@@ -14,6 +14,8 @@ var global = Function('return this')();
 
 var Resource_pb = require('./Resource_pb.js');
 goog.object.extend(proto, Resource_pb);
+var Fight_pb = require('./Fight_pb.js');
+goog.object.extend(proto, Fight_pb);
 goog.exportSymbol('proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntExploreReq', null, global);
 goog.exportSymbol('proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntExploreRes', null, global);
 goog.exportSymbol('proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightReq', null, global);
@@ -1299,7 +1301,8 @@ proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prot
  */
 proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    iswin: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
+    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1336,6 +1339,15 @@ proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.dese
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIswin(value);
+      break;
+    case 2:
+      var value = new Fight_pb.FightReport;
+      reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
+      msg.setFightreport(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1365,6 +1377,76 @@ proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prot
  */
 proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getIswin();
+  if (f) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+  f = message.getFightreport();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      Fight_pb.FightReport.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional bool IsWin = 1;
+ * @return {boolean}
+ */
+proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prototype.getIswin = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes} returns this
+ */
+proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prototype.setIswin = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+/**
+ * optional PbModel.Fight.FightReport FightReport = 2;
+ * @return {?proto.PbModel.Fight.FightReport}
+ */
+proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prototype.getFightreport = function() {
+  return /** @type{?proto.PbModel.Fight.FightReport} */ (
+    jspb.Message.getWrapperField(this, Fight_pb.FightReport, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.Fight.FightReport|undefined} value
+ * @return {!proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes} returns this
+*/
+proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prototype.setFightreport = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes} returns this
+ */
+proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prototype.clearFightreport = function() {
+  return this.setFightreport(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.AncientRemainsTreasureHunt.AncientRemainsTreasureHuntFightRes.prototype.hasFightreport = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

@@ -2579,8 +2579,10 @@ proto.PbModel.Player.PlayerLoginReq.prototype.toObject = function(opt_includeIns
 proto.PbModel.Player.PlayerLoginReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     userid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    serverid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    partnerid: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    logininfo: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    inputencryptedstring: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    randnum: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    ismaxserverid: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
   if (includeInstance) {
@@ -2622,12 +2624,20 @@ proto.PbModel.Player.PlayerLoginReq.deserializeBinaryFromReader = function(msg, 
       msg.setUserid(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setServerid(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLogininfo(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setPartnerid(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setInputencryptedstring(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setRandnum(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsmaxserverid(value);
       break;
     default:
       reader.skipField();
@@ -2665,17 +2675,31 @@ proto.PbModel.Player.PlayerLoginReq.serializeBinaryToWriter = function(message, 
       f
     );
   }
-  f = message.getServerid();
-  if (f !== 0) {
-    writer.writeInt32(
+  f = message.getLogininfo();
+  if (f.length > 0) {
+    writer.writeString(
       2,
       f
     );
   }
-  f = message.getPartnerid();
-  if (f !== 0) {
-    writer.writeInt64(
+  f = message.getInputencryptedstring();
+  if (f.length > 0) {
+    writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getRandnum();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+  f = message.getIsmaxserverid();
+  if (f) {
+    writer.writeBool(
+      5,
       f
     );
   }
@@ -2701,11 +2725,47 @@ proto.PbModel.Player.PlayerLoginReq.prototype.setUserid = function(value) {
 
 
 /**
- * optional int32 ServerId = 2;
+ * optional string LoginInfo = 2;
+ * @return {string}
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.getLogininfo = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.setLogininfo = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string InputEncryptedString = 3;
+ * @return {string}
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.getInputencryptedstring = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.setInputencryptedstring = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional int32 RandNum = 4;
  * @return {number}
  */
-proto.PbModel.Player.PlayerLoginReq.prototype.getServerid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.PbModel.Player.PlayerLoginReq.prototype.getRandnum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
@@ -2713,26 +2773,26 @@ proto.PbModel.Player.PlayerLoginReq.prototype.getServerid = function() {
  * @param {number} value
  * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
  */
-proto.PbModel.Player.PlayerLoginReq.prototype.setServerid = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+proto.PbModel.Player.PlayerLoginReq.prototype.setRandnum = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
 /**
- * optional int64 PartnerId = 3;
- * @return {number}
+ * optional bool IsMaxServerId = 5;
+ * @return {boolean}
  */
-proto.PbModel.Player.PlayerLoginReq.prototype.getPartnerid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+proto.PbModel.Player.PlayerLoginReq.prototype.getIsmaxserverid = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
 
 /**
- * @param {number} value
+ * @param {boolean} value
  * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
  */
-proto.PbModel.Player.PlayerLoginReq.prototype.setPartnerid = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+proto.PbModel.Player.PlayerLoginReq.prototype.setIsmaxserverid = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -3048,11 +3108,7 @@ proto.PbModel.Player.PlayerLoginForTestReq.prototype.toObject = function(opt_inc
  */
 proto.PbModel.Player.PlayerLoginForTestReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    device: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    os: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    randnum: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    inputencryptedstring: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    playername: jspb.Message.getFieldWithDefault(msg, 5, "")
+    playername: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -3091,22 +3147,6 @@ proto.PbModel.Player.PlayerLoginForTestReq.deserializeBinaryFromReader = functio
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDevice(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setOs(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRandnum(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInputencryptedstring(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
       msg.setPlayername(value);
       break;
     default:
@@ -3138,38 +3178,10 @@ proto.PbModel.Player.PlayerLoginForTestReq.prototype.serializeBinary = function(
  */
 proto.PbModel.Player.PlayerLoginForTestReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDevice();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getOs();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getRandnum();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
-  f = message.getInputencryptedstring();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
   f = message.getPlayername();
   if (f.length > 0) {
     writer.writeString(
-      5,
+      1,
       f
     );
   }
@@ -3177,10 +3189,10 @@ proto.PbModel.Player.PlayerLoginForTestReq.serializeBinaryToWriter = function(me
 
 
 /**
- * optional string Device = 1;
+ * optional string PlayerName = 1;
  * @return {string}
  */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.getDevice = function() {
+proto.PbModel.Player.PlayerLoginForTestReq.prototype.getPlayername = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -3189,80 +3201,8 @@ proto.PbModel.Player.PlayerLoginForTestReq.prototype.getDevice = function() {
  * @param {string} value
  * @return {!proto.PbModel.Player.PlayerLoginForTestReq} returns this
  */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.setDevice = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string Os = 2;
- * @return {string}
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.getOs = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Player.PlayerLoginForTestReq} returns this
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.setOs = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional int32 RandNum = 3;
- * @return {number}
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.getRandnum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Player.PlayerLoginForTestReq} returns this
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.setRandnum = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional string InputEncryptedString = 4;
- * @return {string}
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.getInputencryptedstring = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Player.PlayerLoginForTestReq} returns this
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.setInputencryptedstring = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional string PlayerName = 5;
- * @return {string}
- */
-proto.PbModel.Player.PlayerLoginForTestReq.prototype.getPlayername = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Player.PlayerLoginForTestReq} returns this
- */
 proto.PbModel.Player.PlayerLoginForTestReq.prototype.setPlayername = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -5241,7 +5181,7 @@ proto.PbModel.Player.PlayerViewAllInfoRes.prototype.toObject = function(opt_incl
 proto.PbModel.Player.PlayerViewAllInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
     baseinfo: (f = msg.getBaseinfo()) && proto.PbModel.Player.PlayerViewBaseInfo.toObject(includeInstance, f),
-    herosMap: (f = msg.getHerosMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroFullAttributeInfo.toObject) : [],
+    herosMap: (f = msg.getHerosMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroViewAttributeInfo.toObject) : [],
     fashioninfo: (f = msg.getFashioninfo()) && proto.PbModel.Player.PlayerViewFashionInfo.toObject(includeInstance, f),
     playerequipwearinfo: (f = msg.getPlayerequipwearinfo()) && PlayerEquip_pb.PlayerEquipInfo.toObject(includeInstance, f),
     playerattrMap: (f = msg.getPlayerattrMap()) ? f.toObject(includeInstance, undefined) : []
@@ -5289,7 +5229,7 @@ proto.PbModel.Player.PlayerViewAllInfoRes.deserializeBinaryFromReader = function
     case 2:
       var value = msg.getHerosMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroFullAttributeInfo());
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroViewAttributeInfo());
          });
       break;
     case 3:
@@ -5347,7 +5287,7 @@ proto.PbModel.Player.PlayerViewAllInfoRes.serializeBinaryToWriter = function(mes
   }
   f = message.getHerosMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter);
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroViewAttributeInfo.serializeBinaryToWriter);
   }
   f = message.getFashioninfo();
   if (f != null) {
@@ -5410,15 +5350,15 @@ proto.PbModel.Player.PlayerViewAllInfoRes.prototype.hasBaseinfo = function() {
 
 
 /**
- * map<string, PbModel.Hero.HeroFullAttributeInfo> Heros = 2;
+ * map<string, PbModel.Hero.HeroViewAttributeInfo> Heros = 2;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.PbModel.Hero.HeroFullAttributeInfo>}
+ * @return {!jspb.Map<string,!proto.PbModel.Hero.HeroViewAttributeInfo>}
  */
 proto.PbModel.Player.PlayerViewAllInfoRes.prototype.getHerosMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.PbModel.Hero.HeroFullAttributeInfo>} */ (
+  return /** @type {!jspb.Map<string,!proto.PbModel.Hero.HeroViewAttributeInfo>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
-      proto.PbModel.Hero.HeroFullAttributeInfo));
+      proto.PbModel.Hero.HeroViewAttributeInfo));
 };
 
 
@@ -5567,7 +5507,8 @@ proto.PbModel.Player.PlayerViewBaseInfo.toObject = function(includeInstance, msg
     lv: jspb.Message.getFieldWithDefault(msg, 6, 0),
     registertime: jspb.Message.getFieldWithDefault(msg, 7, 0),
     guildname: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    ipaddress: jspb.Message.getFieldWithDefault(msg, 9, "")
+    ipaddress: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    gender: jspb.Message.getFieldWithDefault(msg, 10, 0)
   };
 
   if (includeInstance) {
@@ -5639,6 +5580,10 @@ proto.PbModel.Player.PlayerViewBaseInfo.deserializeBinaryFromReader = function(m
     case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setIpaddress(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setGender(value);
       break;
     default:
       reader.skipField();
@@ -5729,6 +5674,13 @@ proto.PbModel.Player.PlayerViewBaseInfo.serializeBinaryToWriter = function(messa
   if (f.length > 0) {
     writer.writeString(
       9,
+      f
+    );
+  }
+  f = message.getGender();
+  if (f !== 0) {
+    writer.writeInt32(
+      10,
       f
     );
   }
@@ -5894,6 +5846,24 @@ proto.PbModel.Player.PlayerViewBaseInfo.prototype.getIpaddress = function() {
  */
 proto.PbModel.Player.PlayerViewBaseInfo.prototype.setIpaddress = function(value) {
   return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * optional int32 Gender = 10;
+ * @return {number}
+ */
+proto.PbModel.Player.PlayerViewBaseInfo.prototype.getGender = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Player.PlayerViewBaseInfo} returns this
+ */
+proto.PbModel.Player.PlayerViewBaseInfo.prototype.setGender = function(value) {
+  return jspb.Message.setProto3IntField(this, 10, value);
 };
 
 

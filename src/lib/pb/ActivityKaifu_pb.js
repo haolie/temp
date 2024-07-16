@@ -2793,7 +2793,7 @@ proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.toObject = f
 proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     activityid: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    taskid: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    day: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -2836,7 +2836,7 @@ proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.deserializeBinaryFromR
       break;
     case 2:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setTaskid(value);
+      msg.setDay(value);
       break;
     default:
       reader.skipField();
@@ -2874,7 +2874,7 @@ proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.serializeBinaryToWrite
       f
     );
   }
-  f = message.getTaskid();
+  f = message.getDay();
   if (f !== 0) {
     writer.writeInt32(
       2,
@@ -2903,10 +2903,10 @@ proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.setActivityi
 
 
 /**
- * optional int32 TaskId = 2;
+ * optional int32 Day = 2;
  * @return {number}
  */
-proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.getTaskid = function() {
+proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.getDay = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -2915,7 +2915,7 @@ proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.getTaskid = 
  * @param {number} value
  * @return {!proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq} returns this
  */
-proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.setTaskid = function(value) {
+proto.PbModel.ActivityKaifu.ActivityKaifuReceiveGrowthReq.prototype.setDay = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 

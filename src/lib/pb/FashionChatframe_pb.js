@@ -156,7 +156,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -969,6 +969,13 @@ proto.PbModel.FashionChatframe.FashionChatframeWearRes.serializeBinaryToWriter =
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1000,7 +1007,8 @@ proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.toObj
  */
 proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    info: (f = msg.getInfo()) && proto.PbModel.FashionChatframe.FashionChatframeInfo.toObject(includeInstance, f)
+    infoList: jspb.Message.toObjectList(msg.getInfoList(),
+    proto.PbModel.FashionChatframe.FashionChatframeInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1040,7 +1048,7 @@ proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.deserializeBina
     case 1:
       var value = new proto.PbModel.FashionChatframe.FashionChatframeInfo;
       reader.readMessage(value,proto.PbModel.FashionChatframe.FashionChatframeInfo.deserializeBinaryFromReader);
-      msg.setInfo(value);
+      msg.addInfo(value);
       break;
     default:
       reader.skipField();
@@ -1071,9 +1079,9 @@ proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.seria
  */
 proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getInfo();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getInfoList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       1,
       f,
       proto.PbModel.FashionChatframe.FashionChatframeInfo.serializeBinaryToWriter
@@ -1083,39 +1091,40 @@ proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.serializeBinary
 
 
 /**
- * optional FashionChatframeInfo Info = 1;
- * @return {?proto.PbModel.FashionChatframe.FashionChatframeInfo}
+ * repeated FashionChatframeInfo Info = 1;
+ * @return {!Array<!proto.PbModel.FashionChatframe.FashionChatframeInfo>}
  */
-proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.getInfo = function() {
-  return /** @type{?proto.PbModel.FashionChatframe.FashionChatframeInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.FashionChatframe.FashionChatframeInfo, 1));
+proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.getInfoList = function() {
+  return /** @type{!Array<!proto.PbModel.FashionChatframe.FashionChatframeInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.FashionChatframe.FashionChatframeInfo, 1));
 };
 
 
 /**
- * @param {?proto.PbModel.FashionChatframe.FashionChatframeInfo|undefined} value
+ * @param {!Array<!proto.PbModel.FashionChatframe.FashionChatframeInfo>} value
  * @return {!proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes} returns this
 */
-proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.setInfo = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.setInfoList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.PbModel.FashionChatframe.FashionChatframeInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.FashionChatframe.FashionChatframeInfo}
+ */
+proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.addInfo = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.FashionChatframe.FashionChatframeInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes} returns this
  */
-proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.clearInfo = function() {
-  return this.setInfo(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.hasInfo = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.PbModel.FashionChatframe.FashionChatframePushChangeInfoRes.prototype.clearInfoList = function() {
+  return this.setInfoList([]);
 };
 
 

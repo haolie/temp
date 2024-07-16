@@ -30,18 +30,22 @@ goog.exportSymbol('proto.PbModel.Hero.HeroDisbandReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroDisbandRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroExclusiveActReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroExclusiveActRes', null, global);
-goog.exportSymbol('proto.PbModel.Hero.HeroExclusiveFullInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroExclusiveInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroExclusiveLvUpReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroExclusiveLvUpRes', null, global);
-goog.exportSymbol('proto.PbModel.Hero.HeroFullAttributeInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroFullSkillInfo', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroGetHeroInTeamReq', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroGetHeroInTeamRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroGetHeroMaxAttrReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroGetHeroMaxAttrRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroHandBookInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroHandBookReceiveReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroHandBookReceiveRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroInTeamInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroInfo', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroInterchangeInfo', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroLvInterchangeReq', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroLvInterchangeRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroLvResetPreviewReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroLvResetPreviewRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroLvResetReq', null, global);
@@ -52,9 +56,13 @@ goog.exportSymbol('proto.PbModel.Hero.HeroMainForceInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroOwnInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroPushBigLvChangeInfoRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroPushChangeInfoRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroPushDeleteInfoRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroPushMainForceChangeInfoRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroPushOwnChangeInfoRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroPushTalentChangeInfoRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroQuickBigLvReq', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroQuickBigLvRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroRollBackHeroResourceInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroRollBackPreviewReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroRollBackPreviewRes', null, global);
@@ -63,6 +71,8 @@ goog.exportSymbol('proto.PbModel.Hero.HeroRollBackRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroRollBackStarCountRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroSetAutoDecomposeReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroSetAutoDecomposeRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroSoaringForDebugReq', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroSoaringForDebugRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroStarsBookGetInfoReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroStarsBookGetInfoRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroStarsBookInfo', null, global);
@@ -70,7 +80,6 @@ goog.exportSymbol('proto.PbModel.Hero.HeroStarsBookLvUpReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroStarsBookLvUpRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroTalentAttrLvUpReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroTalentAttrLvUpRes', null, global);
-goog.exportSymbol('proto.PbModel.Hero.HeroTalentFullInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroTalentInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroTalentQuickUpReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroTalentQuickUpRes', null, global);
@@ -80,13 +89,16 @@ goog.exportSymbol('proto.PbModel.Hero.HeroUpBagLvReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroUpBagLvRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroUpStartReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroUpStartRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroViewAttributeInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewCollectionInfo', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroViewExclusiveInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewHeroDetailReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewHeroDetailRes', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewHeroEquipDetailInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewHeroEquipInfo', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewHeroListReq', null, global);
 goog.exportSymbol('proto.PbModel.Hero.HeroViewHeroListRes', null, global);
+goog.exportSymbol('proto.PbModel.Hero.HeroViewTalentInfo', null, global);
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -559,16 +571,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.Hero.HeroFullAttributeInfo = function(opt_data) {
+proto.PbModel.Hero.HeroViewAttributeInfo = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.Hero.HeroFullAttributeInfo, jspb.Message);
+goog.inherits(proto.PbModel.Hero.HeroViewAttributeInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.Hero.HeroFullAttributeInfo.displayName = 'proto.PbModel.Hero.HeroFullAttributeInfo';
+  proto.PbModel.Hero.HeroViewAttributeInfo.displayName = 'proto.PbModel.Hero.HeroViewAttributeInfo';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -601,16 +613,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo = function(opt_data) {
+proto.PbModel.Hero.HeroViewExclusiveInfo = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.Hero.HeroExclusiveFullInfo, jspb.Message);
+goog.inherits(proto.PbModel.Hero.HeroViewExclusiveInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.Hero.HeroExclusiveFullInfo.displayName = 'proto.PbModel.Hero.HeroExclusiveFullInfo';
+  proto.PbModel.Hero.HeroViewExclusiveInfo.displayName = 'proto.PbModel.Hero.HeroViewExclusiveInfo';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -622,16 +634,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.Hero.HeroTalentFullInfo = function(opt_data) {
+proto.PbModel.Hero.HeroViewTalentInfo = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.Hero.HeroTalentFullInfo, jspb.Message);
+goog.inherits(proto.PbModel.Hero.HeroViewTalentInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.Hero.HeroTalentFullInfo.displayName = 'proto.PbModel.Hero.HeroTalentFullInfo';
+  proto.PbModel.Hero.HeroViewTalentInfo.displayName = 'proto.PbModel.Hero.HeroViewTalentInfo';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1620,6 +1632,258 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.PbModel.Hero.HeroGetHeroMaxAttrRes.displayName = 'proto.PbModel.Hero.HeroGetHeroMaxAttrRes';
 }
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroSoaringForDebugReq, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroSoaringForDebugReq.displayName = 'proto.PbModel.Hero.HeroSoaringForDebugReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.Hero.HeroSoaringForDebugRes.repeatedFields_, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroSoaringForDebugRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroSoaringForDebugRes.displayName = 'proto.PbModel.Hero.HeroSoaringForDebugRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroGetHeroInTeamReq, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroGetHeroInTeamReq.displayName = 'proto.PbModel.Hero.HeroGetHeroInTeamReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroGetHeroInTeamRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroGetHeroInTeamRes.displayName = 'proto.PbModel.Hero.HeroGetHeroInTeamRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroInTeamInfo = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.Hero.HeroInTeamInfo.repeatedFields_, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroInTeamInfo, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroInTeamInfo.displayName = 'proto.PbModel.Hero.HeroInTeamInfo';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.displayName = 'proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroQuickBigLvReq, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroQuickBigLvReq.displayName = 'proto.PbModel.Hero.HeroQuickBigLvReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroQuickBigLvRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroQuickBigLvRes.displayName = 'proto.PbModel.Hero.HeroQuickBigLvRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroLvInterchangeReq, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroLvInterchangeReq.displayName = 'proto.PbModel.Hero.HeroLvInterchangeReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.Hero.HeroLvInterchangeRes.repeatedFields_, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroLvInterchangeRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroLvInterchangeRes.displayName = 'proto.PbModel.Hero.HeroLvInterchangeRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroInterchangeInfo = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroInterchangeInfo, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroInterchangeInfo.displayName = 'proto.PbModel.Hero.HeroInterchangeInfo';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.Hero.HeroPushDeleteInfoRes.repeatedFields_, null);
+};
+goog.inherits(proto.PbModel.Hero.HeroPushDeleteInfoRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.Hero.HeroPushDeleteInfoRes.displayName = 'proto.PbModel.Hero.HeroPushDeleteInfoRes';
+}
 
 
 
@@ -1662,7 +1926,8 @@ proto.PbModel.Hero.HeroInfo.toObject = function(includeInstance, msg) {
     ifawakening: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
     fap: jspb.Message.getFieldWithDefault(msg, 9, 0),
     attrcontentMap: (f = msg.getAttrcontentMap()) ? f.toObject(includeInstance, undefined) : [],
-    biglv: jspb.Message.getFieldWithDefault(msg, 11, 0)
+    biglv: jspb.Message.getFieldWithDefault(msg, 11, 0),
+    biglvorder: jspb.Message.getFieldWithDefault(msg, 12, 0)
   };
 
   if (includeInstance) {
@@ -1744,6 +2009,10 @@ proto.PbModel.Hero.HeroInfo.deserializeBinaryFromReader = function(msg, reader) 
     case 11:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setBiglv(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setBiglvorder(value);
       break;
     default:
       reader.skipField();
@@ -1845,6 +2114,13 @@ proto.PbModel.Hero.HeroInfo.serializeBinaryToWriter = function(message, writer) 
   if (f !== 0) {
     writer.writeInt32(
       11,
+      f
+    );
+  }
+  f = message.getBiglvorder();
+  if (f !== 0) {
+    writer.writeInt32(
+      12,
       f
     );
   }
@@ -2050,6 +2326,24 @@ proto.PbModel.Hero.HeroInfo.prototype.getBiglv = function() {
  */
 proto.PbModel.Hero.HeroInfo.prototype.setBiglv = function(value) {
   return jspb.Message.setProto3IntField(this, 11, value);
+};
+
+
+/**
+ * optional int32 BigLvOrder = 12;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroInfo.prototype.getBiglvorder = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroInfo} returns this
+ */
+proto.PbModel.Hero.HeroInfo.prototype.setBiglvorder = function(value) {
+  return jspb.Message.setProto3IntField(this, 12, value);
 };
 
 
@@ -3898,7 +4192,9 @@ proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.toObject = function(opt_i
 proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     biglv: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    count: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    count: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    profession: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    orderstr: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -3943,6 +4239,14 @@ proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.deserializeBinaryFromReader = funct
       var value = /** @type {number} */ (reader.readInt32());
       msg.setCount(value);
       break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setProfession(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setOrderstr(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -3986,6 +4290,20 @@ proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.serializeBinaryToWriter = function(
       f
     );
   }
+  f = message.getProfession();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+  f = message.getOrderstr();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
 };
 
 
@@ -4022,6 +4340,42 @@ proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.getCount = function() {
  */
 proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.setCount = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int32 Profession = 3;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.getProfession = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroBigLvGoodsExchangeReq} returns this
+ */
+proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.setProfession = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int32 OrderStr = 4;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.getOrderstr = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroBigLvGoodsExchangeReq} returns this
+ */
+proto.PbModel.Hero.HeroBigLvGoodsExchangeReq.prototype.setOrderstr = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -5476,8 +5830,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.Hero.HeroFullAttributeInfo.toObject(opt_includeInstance, this);
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroViewAttributeInfo.toObject(opt_includeInstance, this);
 };
 
 
@@ -5486,11 +5840,11 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.toObject = function(opt_inclu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.Hero.HeroFullAttributeInfo} msg The msg instance to transform.
+ * @param {!proto.PbModel.Hero.HeroViewAttributeInfo} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.toObject = function(includeInstance, msg) {
+proto.PbModel.Hero.HeroViewAttributeInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     order: jspb.Message.getFieldWithDefault(msg, 1, 0),
     modelid: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -5499,14 +5853,15 @@ proto.PbModel.Hero.HeroFullAttributeInfo.toObject = function(includeInstance, ms
     fap: jspb.Message.getFieldWithDefault(msg, 5, 0),
     attrcontentMap: (f = msg.getAttrcontentMap()) ? f.toObject(includeInstance, undefined) : [],
     ifawakening: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
-    exclusivefullinfo: (f = msg.getExclusivefullinfo()) && proto.PbModel.Hero.HeroExclusiveFullInfo.toObject(includeInstance, f),
-    talentfullinfo: (f = msg.getTalentfullinfo()) && proto.PbModel.Hero.HeroTalentFullInfo.toObject(includeInstance, f),
+    exclusiveinfo: (f = msg.getExclusiveinfo()) && proto.PbModel.Hero.HeroViewExclusiveInfo.toObject(includeInstance, f),
+    talentinfo: (f = msg.getTalentinfo()) && proto.PbModel.Hero.HeroViewTalentInfo.toObject(includeInstance, f),
     biglv: jspb.Message.getFieldWithDefault(msg, 10, 0),
     heroid: jspb.Message.getFieldWithDefault(msg, 11, ""),
     collectioninfo: (f = msg.getCollectioninfo()) && proto.PbModel.Hero.HeroViewCollectionInfo.toObject(includeInstance, f),
-    equipinfo: (f = msg.getEquipinfo()) && proto.PbModel.Hero.HeroViewHeroEquipInfo.toObject(includeInstance, f),
+    heroequipinfo: (f = msg.getHeroequipinfo()) && proto.PbModel.Hero.HeroViewHeroEquipInfo.toObject(includeInstance, f),
     corpslv: jspb.Message.getFieldWithDefault(msg, 14, 0),
-    fashionid: jspb.Message.getFieldWithDefault(msg, 15, 0)
+    fashionid: jspb.Message.getFieldWithDefault(msg, 15, 0),
+    biglvorder: jspb.Message.getFieldWithDefault(msg, 16, 0)
   };
 
   if (includeInstance) {
@@ -5520,23 +5875,23 @@ proto.PbModel.Hero.HeroFullAttributeInfo.toObject = function(includeInstance, ms
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo}
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinary = function(bytes) {
+proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.Hero.HeroFullAttributeInfo;
-  return proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.Hero.HeroViewAttributeInfo;
+  return proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.Hero.HeroFullAttributeInfo} msg The message object to deserialize into.
+ * @param {!proto.PbModel.Hero.HeroViewAttributeInfo} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo}
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5574,14 +5929,14 @@ proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader = function(
       msg.setIfawakening(value);
       break;
     case 8:
-      var value = new proto.PbModel.Hero.HeroExclusiveFullInfo;
-      reader.readMessage(value,proto.PbModel.Hero.HeroExclusiveFullInfo.deserializeBinaryFromReader);
-      msg.setExclusivefullinfo(value);
+      var value = new proto.PbModel.Hero.HeroViewExclusiveInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroViewExclusiveInfo.deserializeBinaryFromReader);
+      msg.setExclusiveinfo(value);
       break;
     case 9:
-      var value = new proto.PbModel.Hero.HeroTalentFullInfo;
-      reader.readMessage(value,proto.PbModel.Hero.HeroTalentFullInfo.deserializeBinaryFromReader);
-      msg.setTalentfullinfo(value);
+      var value = new proto.PbModel.Hero.HeroViewTalentInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroViewTalentInfo.deserializeBinaryFromReader);
+      msg.setTalentinfo(value);
       break;
     case 10:
       var value = /** @type {number} */ (reader.readInt32());
@@ -5599,7 +5954,7 @@ proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader = function(
     case 13:
       var value = new proto.PbModel.Hero.HeroViewHeroEquipInfo;
       reader.readMessage(value,proto.PbModel.Hero.HeroViewHeroEquipInfo.deserializeBinaryFromReader);
-      msg.setEquipinfo(value);
+      msg.setHeroequipinfo(value);
       break;
     case 14:
       var value = /** @type {number} */ (reader.readInt32());
@@ -5608,6 +5963,10 @@ proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader = function(
     case 15:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setFashionid(value);
+      break;
+    case 16:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setBiglvorder(value);
       break;
     default:
       reader.skipField();
@@ -5622,9 +5981,9 @@ proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader = function(
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.serializeBinary = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter(this, writer);
+  proto.PbModel.Hero.HeroViewAttributeInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5632,11 +5991,11 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.serializeBinary = function() 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.Hero.HeroFullAttributeInfo} message
+ * @param {!proto.PbModel.Hero.HeroViewAttributeInfo} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.Hero.HeroViewAttributeInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getOrder();
   if (f !== 0) {
@@ -5684,20 +6043,20 @@ proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter = function(mess
       f
     );
   }
-  f = message.getExclusivefullinfo();
+  f = message.getExclusiveinfo();
   if (f != null) {
     writer.writeMessage(
       8,
       f,
-      proto.PbModel.Hero.HeroExclusiveFullInfo.serializeBinaryToWriter
+      proto.PbModel.Hero.HeroViewExclusiveInfo.serializeBinaryToWriter
     );
   }
-  f = message.getTalentfullinfo();
+  f = message.getTalentinfo();
   if (f != null) {
     writer.writeMessage(
       9,
       f,
-      proto.PbModel.Hero.HeroTalentFullInfo.serializeBinaryToWriter
+      proto.PbModel.Hero.HeroViewTalentInfo.serializeBinaryToWriter
     );
   }
   f = message.getBiglv();
@@ -5722,7 +6081,7 @@ proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter = function(mess
       proto.PbModel.Hero.HeroViewCollectionInfo.serializeBinaryToWriter
     );
   }
-  f = message.getEquipinfo();
+  f = message.getHeroequipinfo();
   if (f != null) {
     writer.writeMessage(
       13,
@@ -5744,6 +6103,13 @@ proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter = function(mess
       f
     );
   }
+  f = message.getBiglvorder();
+  if (f !== 0) {
+    writer.writeInt32(
+      16,
+      f
+    );
+  }
 };
 
 
@@ -5751,16 +6117,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter = function(mess
  * optional int32 Order = 1;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getOrder = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getOrder = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setOrder = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setOrder = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -5769,16 +6135,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setOrder = function(value) {
  * optional int32 ModelId = 2;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getModelid = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getModelid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setModelid = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setModelid = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -5787,16 +6153,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setModelid = function(value) 
  * optional int32 Lv = 3;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getLv = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getLv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setLv = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setLv = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -5805,16 +6171,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setLv = function(value) {
  * optional int32 Stars = 4;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getStars = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getStars = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setStars = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setStars = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -5823,16 +6189,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setStars = function(value) {
  * optional int64 Fap = 5;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getFap = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getFap = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setFap = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setFap = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -5843,7 +6209,7 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setFap = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getAttrcontentMap = function(opt_noLazyCreate) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getAttrcontentMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 6, opt_noLazyCreate,
       null));
@@ -5852,9 +6218,9 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getAttrcontentMap = function(
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearAttrcontentMap = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.clearAttrcontentMap = function() {
   this.getAttrcontentMap().clear();
   return this;};
 
@@ -5863,45 +6229,45 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearAttrcontentMap = functio
  * optional bool IfAwakening = 7;
  * @return {boolean}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getIfawakening = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getIfawakening = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setIfawakening = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setIfawakening = function(value) {
   return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
 
 /**
- * optional HeroExclusiveFullInfo ExclusiveFullInfo = 8;
- * @return {?proto.PbModel.Hero.HeroExclusiveFullInfo}
+ * optional HeroViewExclusiveInfo ExclusiveInfo = 8;
+ * @return {?proto.PbModel.Hero.HeroViewExclusiveInfo}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getExclusivefullinfo = function() {
-  return /** @type{?proto.PbModel.Hero.HeroExclusiveFullInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroExclusiveFullInfo, 8));
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getExclusiveinfo = function() {
+  return /** @type{?proto.PbModel.Hero.HeroViewExclusiveInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroViewExclusiveInfo, 8));
 };
 
 
 /**
- * @param {?proto.PbModel.Hero.HeroExclusiveFullInfo|undefined} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @param {?proto.PbModel.Hero.HeroViewExclusiveInfo|undefined} value
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
 */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setExclusivefullinfo = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setExclusiveinfo = function(value) {
   return jspb.Message.setWrapperField(this, 8, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearExclusivefullinfo = function() {
-  return this.setExclusivefullinfo(undefined);
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.clearExclusiveinfo = function() {
+  return this.setExclusiveinfo(undefined);
 };
 
 
@@ -5909,36 +6275,36 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearExclusivefullinfo = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.hasExclusivefullinfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.hasExclusiveinfo = function() {
   return jspb.Message.getField(this, 8) != null;
 };
 
 
 /**
- * optional HeroTalentFullInfo TalentFullInfo = 9;
- * @return {?proto.PbModel.Hero.HeroTalentFullInfo}
+ * optional HeroViewTalentInfo TalentInfo = 9;
+ * @return {?proto.PbModel.Hero.HeroViewTalentInfo}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getTalentfullinfo = function() {
-  return /** @type{?proto.PbModel.Hero.HeroTalentFullInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroTalentFullInfo, 9));
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getTalentinfo = function() {
+  return /** @type{?proto.PbModel.Hero.HeroViewTalentInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroViewTalentInfo, 9));
 };
 
 
 /**
- * @param {?proto.PbModel.Hero.HeroTalentFullInfo|undefined} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @param {?proto.PbModel.Hero.HeroViewTalentInfo|undefined} value
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
 */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setTalentfullinfo = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setTalentinfo = function(value) {
   return jspb.Message.setWrapperField(this, 9, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearTalentfullinfo = function() {
-  return this.setTalentfullinfo(undefined);
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.clearTalentinfo = function() {
+  return this.setTalentinfo(undefined);
 };
 
 
@@ -5946,7 +6312,7 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearTalentfullinfo = functio
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.hasTalentfullinfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.hasTalentinfo = function() {
   return jspb.Message.getField(this, 9) != null;
 };
 
@@ -5955,16 +6321,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.hasTalentfullinfo = function(
  * optional int32 BigLv = 10;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getBiglv = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getBiglv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setBiglv = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setBiglv = function(value) {
   return jspb.Message.setProto3IntField(this, 10, value);
 };
 
@@ -5973,16 +6339,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setBiglv = function(value) {
  * optional string HeroId = 11;
  * @return {string}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getHeroid = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getHeroid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setHeroid = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setHeroid = function(value) {
   return jspb.Message.setProto3StringField(this, 11, value);
 };
 
@@ -5991,7 +6357,7 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setHeroid = function(value) {
  * optional HeroViewCollectionInfo CollectionInfo = 12;
  * @return {?proto.PbModel.Hero.HeroViewCollectionInfo}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getCollectioninfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getCollectioninfo = function() {
   return /** @type{?proto.PbModel.Hero.HeroViewCollectionInfo} */ (
     jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroViewCollectionInfo, 12));
 };
@@ -5999,18 +6365,18 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getCollectioninfo = function(
 
 /**
  * @param {?proto.PbModel.Hero.HeroViewCollectionInfo|undefined} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
 */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setCollectioninfo = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setCollectioninfo = function(value) {
   return jspb.Message.setWrapperField(this, 12, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearCollectioninfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.clearCollectioninfo = function() {
   return this.setCollectioninfo(undefined);
 };
 
@@ -6019,16 +6385,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearCollectioninfo = functio
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.hasCollectioninfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.hasCollectioninfo = function() {
   return jspb.Message.getField(this, 12) != null;
 };
 
 
 /**
- * optional HeroViewHeroEquipInfo EquipInfo = 13;
+ * optional HeroViewHeroEquipInfo HeroEquipInfo = 13;
  * @return {?proto.PbModel.Hero.HeroViewHeroEquipInfo}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getEquipinfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getHeroequipinfo = function() {
   return /** @type{?proto.PbModel.Hero.HeroViewHeroEquipInfo} */ (
     jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroViewHeroEquipInfo, 13));
 };
@@ -6036,19 +6402,19 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getEquipinfo = function() {
 
 /**
  * @param {?proto.PbModel.Hero.HeroViewHeroEquipInfo|undefined} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
 */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setEquipinfo = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setHeroequipinfo = function(value) {
   return jspb.Message.setWrapperField(this, 13, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearEquipinfo = function() {
-  return this.setEquipinfo(undefined);
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.clearHeroequipinfo = function() {
+  return this.setHeroequipinfo(undefined);
 };
 
 
@@ -6056,7 +6422,7 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.clearEquipinfo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.hasEquipinfo = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.hasHeroequipinfo = function() {
   return jspb.Message.getField(this, 13) != null;
 };
 
@@ -6065,16 +6431,16 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.hasEquipinfo = function() {
  * optional int32 CorpsLv = 14;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getCorpslv = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getCorpslv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 14, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setCorpslv = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setCorpslv = function(value) {
   return jspb.Message.setProto3IntField(this, 14, value);
 };
 
@@ -6083,17 +6449,35 @@ proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setCorpslv = function(value) 
  * optional int32 FashionId = 15;
  * @return {number}
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.getFashionid = function() {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getFashionid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 15, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
  */
-proto.PbModel.Hero.HeroFullAttributeInfo.prototype.setFashionid = function(value) {
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setFashionid = function(value) {
   return jspb.Message.setProto3IntField(this, 15, value);
+};
+
+
+/**
+ * optional int32 BigLvOrder = 16;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.getBiglvorder = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 16, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo} returns this
+ */
+proto.PbModel.Hero.HeroViewAttributeInfo.prototype.setBiglvorder = function(value) {
+  return jspb.Message.setProto3IntField(this, 16, value);
 };
 
 
@@ -6273,8 +6657,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.Hero.HeroExclusiveFullInfo.toObject(opt_includeInstance, this);
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroViewExclusiveInfo.toObject(opt_includeInstance, this);
 };
 
 
@@ -6283,11 +6667,11 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.toObject = function(opt_inclu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.Hero.HeroExclusiveFullInfo} msg The msg instance to transform.
+ * @param {!proto.PbModel.Hero.HeroViewExclusiveInfo} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.toObject = function(includeInstance, msg) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     heromodelid: jspb.Message.getFieldWithDefault(msg, 1, 0),
     fap: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -6306,23 +6690,23 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.toObject = function(includeInstance, ms
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.Hero.HeroExclusiveFullInfo}
+ * @return {!proto.PbModel.Hero.HeroViewExclusiveInfo}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.deserializeBinary = function(bytes) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.Hero.HeroExclusiveFullInfo;
-  return proto.PbModel.Hero.HeroExclusiveFullInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.Hero.HeroViewExclusiveInfo;
+  return proto.PbModel.Hero.HeroViewExclusiveInfo.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.Hero.HeroExclusiveFullInfo} msg The message object to deserialize into.
+ * @param {!proto.PbModel.Hero.HeroViewExclusiveInfo} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.Hero.HeroExclusiveFullInfo}
+ * @return {!proto.PbModel.Hero.HeroViewExclusiveInfo}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6360,9 +6744,9 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.deserializeBinaryFromReader = function(
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.serializeBinary = function() {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.Hero.HeroExclusiveFullInfo.serializeBinaryToWriter(this, writer);
+  proto.PbModel.Hero.HeroViewExclusiveInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6370,11 +6754,11 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.serializeBinary = function() 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.Hero.HeroExclusiveFullInfo} message
+ * @param {!proto.PbModel.Hero.HeroViewExclusiveInfo} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHeromodelid();
   if (f !== 0) {
@@ -6408,16 +6792,16 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.serializeBinaryToWriter = function(mess
  * optional int32 HeroModelId = 1;
  * @return {number}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.getHeromodelid = function() {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.getHeromodelid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroExclusiveFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewExclusiveInfo} returns this
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.setHeromodelid = function(value) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.setHeromodelid = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6426,16 +6810,16 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.setHeromodelid = function(val
  * optional int64 Fap = 2;
  * @return {number}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.getFap = function() {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.getFap = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroExclusiveFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewExclusiveInfo} returns this
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.setFap = function(value) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.setFap = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -6444,16 +6828,16 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.setFap = function(value) {
  * optional int32 Lv = 3;
  * @return {number}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.getLv = function() {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.getLv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroExclusiveFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewExclusiveInfo} returns this
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.setLv = function(value) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.setLv = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -6464,7 +6848,7 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.setLv = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.getAttrcontentMap = function(opt_noLazyCreate) {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.getAttrcontentMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 4, opt_noLazyCreate,
       null));
@@ -6473,9 +6857,9 @@ proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.getAttrcontentMap = function(
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.PbModel.Hero.HeroExclusiveFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewExclusiveInfo} returns this
  */
-proto.PbModel.Hero.HeroExclusiveFullInfo.prototype.clearAttrcontentMap = function() {
+proto.PbModel.Hero.HeroViewExclusiveInfo.prototype.clearAttrcontentMap = function() {
   this.getAttrcontentMap().clear();
   return this;};
 
@@ -6496,8 +6880,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.Hero.HeroTalentFullInfo.toObject(opt_includeInstance, this);
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroViewTalentInfo.toObject(opt_includeInstance, this);
 };
 
 
@@ -6506,11 +6890,11 @@ proto.PbModel.Hero.HeroTalentFullInfo.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.Hero.HeroTalentFullInfo} msg The msg instance to transform.
+ * @param {!proto.PbModel.Hero.HeroViewTalentInfo} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.Hero.HeroTalentFullInfo.toObject = function(includeInstance, msg) {
+proto.PbModel.Hero.HeroViewTalentInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     talentattrlv: jspb.Message.getFieldWithDefault(msg, 1, 0),
     usetalentattrpoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -6529,23 +6913,23 @@ proto.PbModel.Hero.HeroTalentFullInfo.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.Hero.HeroTalentFullInfo}
+ * @return {!proto.PbModel.Hero.HeroViewTalentInfo}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.deserializeBinary = function(bytes) {
+proto.PbModel.Hero.HeroViewTalentInfo.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.Hero.HeroTalentFullInfo;
-  return proto.PbModel.Hero.HeroTalentFullInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.Hero.HeroViewTalentInfo;
+  return proto.PbModel.Hero.HeroViewTalentInfo.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.Hero.HeroTalentFullInfo} msg The message object to deserialize into.
+ * @param {!proto.PbModel.Hero.HeroViewTalentInfo} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.Hero.HeroTalentFullInfo}
+ * @return {!proto.PbModel.Hero.HeroViewTalentInfo}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.Hero.HeroViewTalentInfo.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6581,9 +6965,9 @@ proto.PbModel.Hero.HeroTalentFullInfo.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.serializeBinary = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.Hero.HeroTalentFullInfo.serializeBinaryToWriter(this, writer);
+  proto.PbModel.Hero.HeroViewTalentInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6591,11 +6975,11 @@ proto.PbModel.Hero.HeroTalentFullInfo.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.Hero.HeroTalentFullInfo} message
+ * @param {!proto.PbModel.Hero.HeroViewTalentInfo} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.Hero.HeroTalentFullInfo.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.Hero.HeroViewTalentInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTalentattrlv();
   if (f !== 0) {
@@ -6632,16 +7016,16 @@ proto.PbModel.Hero.HeroTalentFullInfo.serializeBinaryToWriter = function(message
  * optional int32 TalentAttrLv = 1;
  * @return {number}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.getTalentattrlv = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.getTalentattrlv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroTalentFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.setTalentattrlv = function(value) {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.setTalentattrlv = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6650,16 +7034,16 @@ proto.PbModel.Hero.HeroTalentFullInfo.prototype.setTalentattrlv = function(value
  * optional int32 UseTalentAttrPoint = 2;
  * @return {number}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.getUsetalentattrpoint = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.getUsetalentattrpoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroTalentFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.setUsetalentattrpoint = function(value) {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.setUsetalentattrpoint = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -6668,16 +7052,16 @@ proto.PbModel.Hero.HeroTalentFullInfo.prototype.setUsetalentattrpoint = function
  * optional int32 TalentSkillLv = 3;
  * @return {number}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.getTalentskilllv = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.getTalentskilllv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroTalentFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.setTalentskilllv = function(value) {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.setTalentskilllv = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -6686,16 +7070,16 @@ proto.PbModel.Hero.HeroTalentFullInfo.prototype.setTalentskilllv = function(valu
  * optional int32 UseTalentSkillPoint = 4;
  * @return {number}
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.getUsetalentskillpoint = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.getUsetalentskillpoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.Hero.HeroTalentFullInfo} returns this
+ * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroTalentFullInfo.prototype.setUsetalentskillpoint = function(value) {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.setUsetalentskillpoint = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -12039,7 +12423,7 @@ proto.PbModel.Hero.HeroViewHeroDetailRes.prototype.toObject = function(opt_inclu
  */
 proto.PbModel.Hero.HeroViewHeroDetailRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    heroinfo: (f = msg.getHeroinfo()) && proto.PbModel.Hero.HeroFullAttributeInfo.toObject(includeInstance, f)
+    heroinfo: (f = msg.getHeroinfo()) && proto.PbModel.Hero.HeroViewAttributeInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -12077,8 +12461,8 @@ proto.PbModel.Hero.HeroViewHeroDetailRes.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.Hero.HeroFullAttributeInfo;
-      reader.readMessage(value,proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader);
+      var value = new proto.PbModel.Hero.HeroViewAttributeInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinaryFromReader);
       msg.setHeroinfo(value);
       break;
     default:
@@ -12115,24 +12499,24 @@ proto.PbModel.Hero.HeroViewHeroDetailRes.serializeBinaryToWriter = function(mess
     writer.writeMessage(
       1,
       f,
-      proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter
+      proto.PbModel.Hero.HeroViewAttributeInfo.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional HeroFullAttributeInfo HeroInfo = 1;
- * @return {?proto.PbModel.Hero.HeroFullAttributeInfo}
+ * optional HeroViewAttributeInfo HeroInfo = 1;
+ * @return {?proto.PbModel.Hero.HeroViewAttributeInfo}
  */
 proto.PbModel.Hero.HeroViewHeroDetailRes.prototype.getHeroinfo = function() {
-  return /** @type{?proto.PbModel.Hero.HeroFullAttributeInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroFullAttributeInfo, 1));
+  return /** @type{?proto.PbModel.Hero.HeroViewAttributeInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroViewAttributeInfo, 1));
 };
 
 
 /**
- * @param {?proto.PbModel.Hero.HeroFullAttributeInfo|undefined} value
+ * @param {?proto.PbModel.Hero.HeroViewAttributeInfo|undefined} value
  * @return {!proto.PbModel.Hero.HeroViewHeroDetailRes} returns this
 */
 proto.PbModel.Hero.HeroViewHeroDetailRes.prototype.setHeroinfo = function(value) {
@@ -12486,7 +12870,10 @@ proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.toObject = function(includeInstan
     entityid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     equipmodelid: jspb.Message.getFieldWithDefault(msg, 2, 0),
     heromodelid: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    lv: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    lv: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    currentvalue: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    basicscore: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
+    bonusscore: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0)
   };
 
   if (includeInstance) {
@@ -12538,6 +12925,18 @@ proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.deserializeBinaryFromReader = fun
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setLv(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCurrentvalue(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBasicscore(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBonusscore(value);
       break;
     default:
       reader.skipField();
@@ -12593,6 +12992,27 @@ proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.serializeBinaryToWriter = functio
   if (f !== 0) {
     writer.writeInt32(
       4,
+      f
+    );
+  }
+  f = message.getCurrentvalue();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getBasicscore();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      6,
+      f
+    );
+  }
+  f = message.getBonusscore();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      7,
       f
     );
   }
@@ -12668,6 +13088,60 @@ proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.getLv = function() {
  */
 proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.setLv = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 CurrentValue = 5;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.getCurrentvalue = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroViewHeroEquipDetailInfo} returns this
+ */
+proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.setCurrentvalue = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional double BasicScore = 6;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.getBasicscore = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroViewHeroEquipDetailInfo} returns this
+ */
+proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.setBasicscore = function(value) {
+  return jspb.Message.setProto3FloatField(this, 6, value);
+};
+
+
+/**
+ * optional double BonusScore = 7;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.getBonusscore = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroViewHeroEquipDetailInfo} returns this
+ */
+proto.PbModel.Hero.HeroViewHeroEquipDetailInfo.prototype.setBonusscore = function(value) {
+  return jspb.Message.setProto3FloatField(this, 7, value);
 };
 
 
@@ -12834,7 +13308,7 @@ proto.PbModel.Hero.HeroViewHeroListRes.prototype.toObject = function(opt_include
 proto.PbModel.Hero.HeroViewHeroListRes.toObject = function(includeInstance, msg) {
   var f, obj = {
     maininfo: (f = msg.getMaininfo()) && proto.PbModel.Hero.HeroMainForceInfo.toObject(includeInstance, f),
-    herosMap: (f = msg.getHerosMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroFullAttributeInfo.toObject) : []
+    herosMap: (f = msg.getHerosMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroViewAttributeInfo.toObject) : []
   };
 
   if (includeInstance) {
@@ -12879,7 +13353,7 @@ proto.PbModel.Hero.HeroViewHeroListRes.deserializeBinaryFromReader = function(ms
     case 2:
       var value = msg.getHerosMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroFullAttributeInfo());
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroViewAttributeInfo());
          });
       break;
     default:
@@ -12921,7 +13395,7 @@ proto.PbModel.Hero.HeroViewHeroListRes.serializeBinaryToWriter = function(messag
   }
   f = message.getHerosMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter);
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroViewAttributeInfo.serializeBinaryToWriter);
   }
 };
 
@@ -12964,15 +13438,15 @@ proto.PbModel.Hero.HeroViewHeroListRes.prototype.hasMaininfo = function() {
 
 
 /**
- * map<string, HeroFullAttributeInfo> Heros = 2;
+ * map<string, HeroViewAttributeInfo> Heros = 2;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.PbModel.Hero.HeroFullAttributeInfo>}
+ * @return {!jspb.Map<string,!proto.PbModel.Hero.HeroViewAttributeInfo>}
  */
 proto.PbModel.Hero.HeroViewHeroListRes.prototype.getHerosMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.PbModel.Hero.HeroFullAttributeInfo>} */ (
+  return /** @type {!jspb.Map<string,!proto.PbModel.Hero.HeroViewAttributeInfo>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
-      proto.PbModel.Hero.HeroFullAttributeInfo));
+      proto.PbModel.Hero.HeroViewAttributeInfo));
 };
 
 
@@ -14108,7 +14582,7 @@ proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.toObject = function(opt_inclu
 proto.PbModel.Hero.HeroGetHeroMaxAttrRes.toObject = function(includeInstance, msg) {
   var f, obj = {
     heroinfosList: jspb.Message.toObjectList(msg.getHeroinfosList(),
-    proto.PbModel.Hero.HeroFullAttributeInfo.toObject, includeInstance)
+    proto.PbModel.Hero.HeroViewAttributeInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -14146,8 +14620,8 @@ proto.PbModel.Hero.HeroGetHeroMaxAttrRes.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.Hero.HeroFullAttributeInfo;
-      reader.readMessage(value,proto.PbModel.Hero.HeroFullAttributeInfo.deserializeBinaryFromReader);
+      var value = new proto.PbModel.Hero.HeroViewAttributeInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroViewAttributeInfo.deserializeBinaryFromReader);
       msg.addHeroinfos(value);
       break;
     default:
@@ -14184,24 +14658,24 @@ proto.PbModel.Hero.HeroGetHeroMaxAttrRes.serializeBinaryToWriter = function(mess
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.PbModel.Hero.HeroFullAttributeInfo.serializeBinaryToWriter
+      proto.PbModel.Hero.HeroViewAttributeInfo.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated HeroFullAttributeInfo HeroInfos = 1;
- * @return {!Array<!proto.PbModel.Hero.HeroFullAttributeInfo>}
+ * repeated HeroViewAttributeInfo HeroInfos = 1;
+ * @return {!Array<!proto.PbModel.Hero.HeroViewAttributeInfo>}
  */
 proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.getHeroinfosList = function() {
-  return /** @type{!Array<!proto.PbModel.Hero.HeroFullAttributeInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.Hero.HeroFullAttributeInfo, 1));
+  return /** @type{!Array<!proto.PbModel.Hero.HeroViewAttributeInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.Hero.HeroViewAttributeInfo, 1));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.Hero.HeroFullAttributeInfo>} value
+ * @param {!Array<!proto.PbModel.Hero.HeroViewAttributeInfo>} value
  * @return {!proto.PbModel.Hero.HeroGetHeroMaxAttrRes} returns this
 */
 proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.setHeroinfosList = function(value) {
@@ -14210,12 +14684,12 @@ proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.setHeroinfosList = function(v
 
 
 /**
- * @param {!proto.PbModel.Hero.HeroFullAttributeInfo=} opt_value
+ * @param {!proto.PbModel.Hero.HeroViewAttributeInfo=} opt_value
  * @param {number=} opt_index
- * @return {!proto.PbModel.Hero.HeroFullAttributeInfo}
+ * @return {!proto.PbModel.Hero.HeroViewAttributeInfo}
  */
 proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.addHeroinfos = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.Hero.HeroFullAttributeInfo, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.Hero.HeroViewAttributeInfo, opt_index);
 };
 
 
@@ -14225,6 +14699,1763 @@ proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.addHeroinfos = function(opt_v
  */
 proto.PbModel.Hero.HeroGetHeroMaxAttrRes.prototype.clearHeroinfosList = function() {
   return this.setHeroinfosList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroSoaringForDebugReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroSoaringForDebugReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugReq}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroSoaringForDebugReq;
+  return proto.PbModel.Hero.HeroSoaringForDebugReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroSoaringForDebugReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugReq}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroSoaringForDebugReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroSoaringForDebugReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroSoaringForDebugReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroSoaringForDebugRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroSoaringForDebugRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    heroidsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugRes}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroSoaringForDebugRes;
+  return proto.PbModel.Hero.HeroSoaringForDebugRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroSoaringForDebugRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugRes}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addHeroids(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroSoaringForDebugRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroSoaringForDebugRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeroidsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * repeated string HeroIds = 1;
+ * @return {!Array<string>}
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.prototype.getHeroidsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugRes} returns this
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.prototype.setHeroidsList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugRes} returns this
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.prototype.addHeroids = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.Hero.HeroSoaringForDebugRes} returns this
+ */
+proto.PbModel.Hero.HeroSoaringForDebugRes.prototype.clearHeroidsList = function() {
+  return this.setHeroidsList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroGetHeroInTeamReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroGetHeroInTeamReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroGetHeroInTeamReq}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroGetHeroInTeamReq;
+  return proto.PbModel.Hero.HeroGetHeroInTeamReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroGetHeroInTeamReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroGetHeroInTeamReq}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroGetHeroInTeamReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroGetHeroInTeamReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroGetHeroInTeamRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroGetHeroInTeamRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    heroinmodulesMap: (f = msg.getHeroinmodulesMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroInTeamInfo.toObject) : []
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroGetHeroInTeamRes}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroGetHeroInTeamRes;
+  return proto.PbModel.Hero.HeroGetHeroInTeamRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroGetHeroInTeamRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroGetHeroInTeamRes}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = msg.getHeroinmodulesMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroInTeamInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroInTeamInfo());
+         });
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroGetHeroInTeamRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroGetHeroInTeamRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeroinmodulesMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroInTeamInfo.serializeBinaryToWriter);
+  }
+};
+
+
+/**
+ * map<string, HeroInTeamInfo> HeroInModules = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,!proto.PbModel.Hero.HeroInTeamInfo>}
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.prototype.getHeroinmodulesMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.PbModel.Hero.HeroInTeamInfo>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      proto.PbModel.Hero.HeroInTeamInfo));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.Hero.HeroGetHeroInTeamRes} returns this
+ */
+proto.PbModel.Hero.HeroGetHeroInTeamRes.prototype.clearHeroinmodulesMap = function() {
+  this.getHeroinmodulesMap().clear();
+  return this;};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.Hero.HeroInTeamInfo.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroInTeamInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroInTeamInfo.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroInTeamInfo} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroInTeamInfo.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    moduleidList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroInTeamInfo}
+ */
+proto.PbModel.Hero.HeroInTeamInfo.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroInTeamInfo;
+  return proto.PbModel.Hero.HeroInTeamInfo.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroInTeamInfo} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroInTeamInfo}
+ */
+proto.PbModel.Hero.HeroInTeamInfo.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
+      msg.setModuleidList(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroInTeamInfo.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroInTeamInfo.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroInTeamInfo} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroInTeamInfo.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getModuleidList();
+  if (f.length > 0) {
+    writer.writePackedInt32(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * repeated int32 ModuleId = 1;
+ * @return {!Array<number>}
+ */
+proto.PbModel.Hero.HeroInTeamInfo.prototype.getModuleidList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.PbModel.Hero.HeroInTeamInfo} returns this
+ */
+proto.PbModel.Hero.HeroInTeamInfo.prototype.setModuleidList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.Hero.HeroInTeamInfo} returns this
+ */
+proto.PbModel.Hero.HeroInTeamInfo.prototype.addModuleid = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.Hero.HeroInTeamInfo} returns this
+ */
+proto.PbModel.Hero.HeroInTeamInfo.prototype.clearModuleidList = function() {
+  return this.setModuleidList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    heroinmodulesMap: (f = msg.getHeroinmodulesMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroInTeamInfo.toObject) : []
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes}
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes;
+  return proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes}
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = msg.getHeroinmodulesMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroInTeamInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroInTeamInfo());
+         });
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeroinmodulesMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroInTeamInfo.serializeBinaryToWriter);
+  }
+};
+
+
+/**
+ * map<string, HeroInTeamInfo> HeroInModules = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,!proto.PbModel.Hero.HeroInTeamInfo>}
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.prototype.getHeroinmodulesMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.PbModel.Hero.HeroInTeamInfo>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      proto.PbModel.Hero.HeroInTeamInfo));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes} returns this
+ */
+proto.PbModel.Hero.HeroPushHeroInTeamChangeInfoRes.prototype.clearHeroinmodulesMap = function() {
+  this.getHeroinmodulesMap().clear();
+  return this;};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroQuickBigLvReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroQuickBigLvReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    heroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    biglv: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    biglvorder: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvReq}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroQuickBigLvReq;
+  return proto.PbModel.Hero.HeroQuickBigLvReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroQuickBigLvReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvReq}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHeroid(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setBiglv(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setBiglvorder(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroQuickBigLvReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroQuickBigLvReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeroid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getBiglv();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getBiglvorder();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string HeroId = 1;
+ * @return {string}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.getHeroid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvReq} returns this
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.setHeroid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 BigLv = 2;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.getBiglv = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvReq} returns this
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.setBiglv = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int32 BigLvOrder = 3;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.getBiglvorder = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvReq} returns this
+ */
+proto.PbModel.Hero.HeroQuickBigLvReq.prototype.setBiglvorder = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroQuickBigLvRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroQuickBigLvRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    info: (f = msg.getInfo()) && proto.PbModel.Hero.HeroInfo.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvRes}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroQuickBigLvRes;
+  return proto.PbModel.Hero.HeroQuickBigLvRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroQuickBigLvRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvRes}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.PbModel.Hero.HeroInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroInfo.deserializeBinaryFromReader);
+      msg.setInfo(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroQuickBigLvRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroQuickBigLvRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getInfo();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.PbModel.Hero.HeroInfo.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional HeroInfo Info = 1;
+ * @return {?proto.PbModel.Hero.HeroInfo}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.getInfo = function() {
+  return /** @type{?proto.PbModel.Hero.HeroInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroInfo, 1));
+};
+
+
+/**
+ * @param {?proto.PbModel.Hero.HeroInfo|undefined} value
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvRes} returns this
+*/
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.setInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvRes} returns this
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.clearInfo = function() {
+  return this.setInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.hasInfo = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroLvInterchangeReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroLvInterchangeReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    mainheroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    corpsheroid: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeReq}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroLvInterchangeReq;
+  return proto.PbModel.Hero.HeroLvInterchangeReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroLvInterchangeReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeReq}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMainheroid(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCorpsheroid(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroLvInterchangeReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroLvInterchangeReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getMainheroid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getCorpsheroid();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string MainHeroId = 1;
+ * @return {string}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.getMainheroid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeReq} returns this
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.setMainheroid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string CorpsHeroId = 2;
+ * @return {string}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.getCorpsheroid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeReq} returns this
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.setCorpsheroid = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroLvInterchangeRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroLvInterchangeRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    herosList: jspb.Message.toObjectList(msg.getHerosList(),
+    proto.PbModel.Hero.HeroInterchangeInfo.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeRes}
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroLvInterchangeRes;
+  return proto.PbModel.Hero.HeroLvInterchangeRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroLvInterchangeRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeRes}
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.PbModel.Hero.HeroInterchangeInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroInterchangeInfo.deserializeBinaryFromReader);
+      msg.addHeros(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroLvInterchangeRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroLvInterchangeRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHerosList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.PbModel.Hero.HeroInterchangeInfo.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated HeroInterchangeInfo Heros = 1;
+ * @return {!Array<!proto.PbModel.Hero.HeroInterchangeInfo>}
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.prototype.getHerosList = function() {
+  return /** @type{!Array<!proto.PbModel.Hero.HeroInterchangeInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.Hero.HeroInterchangeInfo, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.PbModel.Hero.HeroInterchangeInfo>} value
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeRes} returns this
+*/
+proto.PbModel.Hero.HeroLvInterchangeRes.prototype.setHerosList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.PbModel.Hero.HeroInterchangeInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.Hero.HeroInterchangeInfo}
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.prototype.addHeros = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.Hero.HeroInterchangeInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeRes} returns this
+ */
+proto.PbModel.Hero.HeroLvInterchangeRes.prototype.clearHerosList = function() {
+  return this.setHerosList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroInterchangeInfo.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroInterchangeInfo} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    heroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    lv: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroInterchangeInfo}
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroInterchangeInfo;
+  return proto.PbModel.Hero.HeroInterchangeInfo.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroInterchangeInfo} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroInterchangeInfo}
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHeroid(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setLv(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroInterchangeInfo.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroInterchangeInfo} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeroid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getLv();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string HeroId = 1;
+ * @return {string}
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.prototype.getHeroid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Hero.HeroInterchangeInfo} returns this
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.prototype.setHeroid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 Lv = 2;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.prototype.getLv = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroInterchangeInfo} returns this
+ */
+proto.PbModel.Hero.HeroInterchangeInfo.prototype.setLv = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.Hero.HeroPushDeleteInfoRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.Hero.HeroPushDeleteInfoRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    heroidsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.Hero.HeroPushDeleteInfoRes}
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.Hero.HeroPushDeleteInfoRes;
+  return proto.PbModel.Hero.HeroPushDeleteInfoRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.Hero.HeroPushDeleteInfoRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.Hero.HeroPushDeleteInfoRes}
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addHeroids(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.Hero.HeroPushDeleteInfoRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.Hero.HeroPushDeleteInfoRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeroidsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * repeated string HeroIds = 1;
+ * @return {!Array<string>}
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.prototype.getHeroidsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.PbModel.Hero.HeroPushDeleteInfoRes} returns this
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.prototype.setHeroidsList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.Hero.HeroPushDeleteInfoRes} returns this
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.prototype.addHeroids = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.Hero.HeroPushDeleteInfoRes} returns this
+ */
+proto.PbModel.Hero.HeroPushDeleteInfoRes.prototype.clearHeroidsList = function() {
+  return this.setHeroidsList([]);
 };
 
 

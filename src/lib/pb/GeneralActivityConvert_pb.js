@@ -179,7 +179,8 @@ proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.prototype.
 proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     activityid: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    convertid: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    convertid: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    convertcount: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -224,6 +225,10 @@ proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.deserializ
       var value = /** @type {number} */ (reader.readInt32());
       msg.setConvertid(value);
       break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setConvertcount(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -267,6 +272,13 @@ proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.serializeB
       f
     );
   }
+  f = message.getConvertcount();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -303,6 +315,24 @@ proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.prototype.
  */
 proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.prototype.setConvertid = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int32 ConvertCount = 3;
+ * @return {number}
+ */
+proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.prototype.getConvertcount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq} returns this
+ */
+proto.PbModel.GeneralActivityConvert.GeneralActivityConvertConvertReq.prototype.setConvertcount = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 

@@ -165,7 +165,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1752,6 +1752,13 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.setTriggertype 
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1783,7 +1790,8 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.prototype.toObject = func
  */
 proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    triggergiftlistList: jspb.Message.toObjectList(msg.getTriggergiftlistList(),
+    proto.PbModel.TriggerGift.TriggerGiftPushInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1820,6 +1828,11 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.deserializeBinaryFromRead
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = new proto.PbModel.TriggerGift.TriggerGiftPushInfo;
+      reader.readMessage(value,proto.PbModel.TriggerGift.TriggerGiftPushInfo.deserializeBinaryFromReader);
+      msg.addTriggergiftlist(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1849,6 +1862,52 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.prototype.serializeBinary
  */
 proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getTriggergiftlistList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.PbModel.TriggerGift.TriggerGiftPushInfo.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TriggerGiftPushInfo TriggerGiftList = 1;
+ * @return {!Array<!proto.PbModel.TriggerGift.TriggerGiftPushInfo>}
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.prototype.getTriggergiftlistList = function() {
+  return /** @type{!Array<!proto.PbModel.TriggerGift.TriggerGiftPushInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TriggerGift.TriggerGiftPushInfo, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.PbModel.TriggerGift.TriggerGiftPushInfo>} value
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes} returns this
+*/
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.prototype.setTriggergiftlistList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.PbModel.TriggerGift.TriggerGiftPushInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo}
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.prototype.addTriggergiftlist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TriggerGift.TriggerGiftPushInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes} returns this
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerRes.prototype.clearTriggergiftlistList = function() {
+  return this.setTriggergiftlistList([]);
 };
 
 
@@ -3051,9 +3110,12 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.toObject = function(includeInstanc
     orderid: jspb.Message.getFieldWithDefault(msg, 1, 0),
     giftid: jspb.Message.getFieldWithDefault(msg, 2, 0),
     triggertype: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    endtime: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    iswindowcur: jspb.Message.getBooleanFieldWithDefault(msg, 6, false)
+    windowtype: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    name: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    crtime: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    endtime: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    reward: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    isnormal: jspb.Message.getBooleanFieldWithDefault(msg, 9, false)
   };
 
   if (includeInstance) {
@@ -3103,16 +3165,28 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.deserializeBinaryFromReader = func
       msg.setTriggertype(value);
       break;
     case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setWindowtype(value);
+      break;
+    case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
-    case 5:
+    case 6:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCrtime(value);
+      break;
+    case 7:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setEndtime(value);
       break;
-    case 6:
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReward(value);
+      break;
+    case 9:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIswindowcur(value);
+      msg.setIsnormal(value);
       break;
     default:
       reader.skipField();
@@ -3164,24 +3238,45 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.serializeBinaryToWriter = function
       f
     );
   }
+  f = message.getWindowtype();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      4,
+      5,
+      f
+    );
+  }
+  f = message.getCrtime();
+  if (f !== 0) {
+    writer.writeInt64(
+      6,
       f
     );
   }
   f = message.getEndtime();
   if (f !== 0) {
     writer.writeInt64(
-      5,
+      7,
       f
     );
   }
-  f = message.getIswindowcur();
+  f = message.getReward();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
+      f
+    );
+  }
+  f = message.getIsnormal();
   if (f) {
     writer.writeBool(
-      6,
+      9,
       f
     );
   }
@@ -3243,11 +3338,29 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setTriggertype = functio
 
 
 /**
- * optional string Name = 4;
+ * optional int32 WindowType = 4;
+ * @return {number}
+ */
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getWindowtype = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo} returns this
+ */
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setWindowtype = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional string Name = 5;
  * @return {string}
  */
 proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -3256,16 +3369,34 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getName = function() {
  * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo} returns this
  */
 proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional int64 EndTime = 5;
+ * optional int64 CrTime = 6;
+ * @return {number}
+ */
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getCrtime = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo} returns this
+ */
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setCrtime = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int64 EndTime = 7;
  * @return {number}
  */
 proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getEndtime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
@@ -3274,16 +3405,34 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getEndtime = function() 
  * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo} returns this
  */
 proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setEndtime = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 
 /**
- * optional bool IsWindowCur = 6;
+ * optional string Reward = 8;
+ * @return {string}
+ */
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getReward = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo} returns this
+ */
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setReward = function(value) {
+  return jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * optional bool IsNormal = 9;
  * @return {boolean}
  */
-proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getIswindowcur = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getIsnormal = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
 };
 
 
@@ -3291,8 +3440,8 @@ proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.getIswindowcur = functio
  * @param {boolean} value
  * @return {!proto.PbModel.TriggerGift.TriggerGiftPushInfo} returns this
  */
-proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setIswindowcur = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 6, value);
+proto.PbModel.TriggerGift.TriggerGiftPushInfo.prototype.setIsnormal = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 9, value);
 };
 
 

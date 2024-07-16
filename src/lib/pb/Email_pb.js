@@ -420,16 +420,8 @@ proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.toObject = function(opt_i
  */
 proto.PbModel.Email.EmailAddEmailForDebugReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    sendplayerid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    sendplayername: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    subject: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    content: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    emailtype: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    reward: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    isreceive: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
-    isread: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
-    url: jspb.Message.getFieldWithDefault(msg, 10, "")
+    info: (f = msg.getInfo()) && proto.PbModel.Email.EmailInfo.toObject(includeInstance, f),
+    emailtype: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -467,44 +459,13 @@ proto.PbModel.Email.EmailAddEmailForDebugReq.deserializeBinaryFromReader = funct
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setId(value);
+      var value = new proto.PbModel.Email.EmailInfo;
+      reader.readMessage(value,proto.PbModel.Email.EmailInfo.deserializeBinaryFromReader);
+      msg.setInfo(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSendplayerid(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSendplayername(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSubject(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setContent(value);
-      break;
-    case 6:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setEmailtype(value);
-      break;
-    case 7:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setReward(value);
-      break;
-    case 8:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsreceive(value);
-      break;
-    case 9:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsread(value);
-      break;
-    case 10:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUrl(value);
       break;
     default:
       reader.skipField();
@@ -535,73 +496,18 @@ proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.serializeBinary = functio
  */
 proto.PbModel.Email.EmailAddEmailForDebugReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getId();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getInfo();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
-    );
-  }
-  f = message.getSendplayerid();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getSendplayername();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getSubject();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getContent();
-  if (f.length > 0) {
-    writer.writeString(
-      5,
-      f
+      f,
+      proto.PbModel.Email.EmailInfo.serializeBinaryToWriter
     );
   }
   f = message.getEmailtype();
   if (f !== 0) {
     writer.writeInt32(
-      6,
-      f
-    );
-  }
-  f = message.getReward();
-  if (f.length > 0) {
-    writer.writeString(
-      7,
-      f
-    );
-  }
-  f = message.getIsreceive();
-  if (f) {
-    writer.writeBool(
-      8,
-      f
-    );
-  }
-  f = message.getIsread();
-  if (f) {
-    writer.writeBool(
-      9,
-      f
-    );
-  }
-  f = message.getUrl();
-  if (f.length > 0) {
-    writer.writeString(
-      10,
+      2,
       f
     );
   }
@@ -609,101 +515,48 @@ proto.PbModel.Email.EmailAddEmailForDebugReq.serializeBinaryToWriter = function(
 
 
 /**
- * optional string Id = 1;
- * @return {string}
+ * optional EmailInfo Info = 1;
+ * @return {?proto.PbModel.Email.EmailInfo}
  */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getInfo = function() {
+  return /** @type{?proto.PbModel.Email.EmailInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Email.EmailInfo, 1));
 };
 
 
 /**
- * @param {string} value
+ * @param {?proto.PbModel.Email.EmailInfo|undefined} value
+ * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
+*/
+proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
  * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
  */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.clearInfo = function() {
+  return this.setInfo(undefined);
 };
 
 
 /**
- * optional string SendPlayerId = 2;
- * @return {string}
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getSendplayerid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.hasInfo = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
- * @param {string} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setSendplayerid = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string SendPlayerName = 3;
- * @return {string}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getSendplayername = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setSendplayername = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string Subject = 4;
- * @return {string}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getSubject = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setSubject = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional string Content = 5;
- * @return {string}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getContent = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setContent = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
-};
-
-
-/**
- * optional int32 EmailType = 6;
+ * optional int32 EmailType = 2;
  * @return {number}
  */
 proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getEmailtype = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -712,79 +565,7 @@ proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getEmailtype = function()
  * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
  */
 proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setEmailtype = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
-};
-
-
-/**
- * optional string Reward = 7;
- * @return {string}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getReward = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setReward = function(value) {
-  return jspb.Message.setProto3StringField(this, 7, value);
-};
-
-
-/**
- * optional bool IsReceive = 8;
- * @return {boolean}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getIsreceive = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setIsreceive = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 8, value);
-};
-
-
-/**
- * optional bool IsRead = 9;
- * @return {boolean}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getIsread = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setIsread = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 9, value);
-};
-
-
-/**
- * optional string Url = 10;
- * @return {string}
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.getUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.Email.EmailAddEmailForDebugReq} returns this
- */
-proto.PbModel.Email.EmailAddEmailForDebugReq.prototype.setUrl = function(value) {
-  return jspb.Message.setProto3StringField(this, 10, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -1823,7 +1604,8 @@ proto.PbModel.Email.EmailInfo.toObject = function(includeInstance, msg) {
     reward: jspb.Message.getFieldWithDefault(msg, 7, ""),
     isreceive: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
     isread: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
-    url: jspb.Message.getFieldWithDefault(msg, 10, "")
+    url: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    expiredtime: jspb.Message.getFieldWithDefault(msg, 11, 0)
   };
 
   if (includeInstance) {
@@ -1899,6 +1681,10 @@ proto.PbModel.Email.EmailInfo.deserializeBinaryFromReader = function(msg, reader
     case 10:
       var value = /** @type {string} */ (reader.readString());
       msg.setUrl(value);
+      break;
+    case 11:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setExpiredtime(value);
       break;
     default:
       reader.skipField();
@@ -1996,6 +1782,13 @@ proto.PbModel.Email.EmailInfo.serializeBinaryToWriter = function(message, writer
   if (f.length > 0) {
     writer.writeString(
       10,
+      f
+    );
+  }
+  f = message.getExpiredtime();
+  if (f !== 0) {
+    writer.writeInt64(
+      11,
       f
     );
   }
@@ -2179,6 +1972,24 @@ proto.PbModel.Email.EmailInfo.prototype.getUrl = function() {
  */
 proto.PbModel.Email.EmailInfo.prototype.setUrl = function(value) {
   return jspb.Message.setProto3StringField(this, 10, value);
+};
+
+
+/**
+ * optional int64 ExpiredTime = 11;
+ * @return {number}
+ */
+proto.PbModel.Email.EmailInfo.prototype.getExpiredtime = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Email.EmailInfo} returns this
+ */
+proto.PbModel.Email.EmailInfo.prototype.setExpiredtime = function(value) {
+  return jspb.Message.setProto3IntField(this, 11, value);
 };
 
 

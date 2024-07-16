@@ -455,7 +455,7 @@ proto.PbModel.StarsGoodGift.StarsGoodGiftObj.toObject = function(includeInstance
     receivecount: jspb.Message.getFieldWithDefault(msg, 7, 0),
     iscanget: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
     isallget: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
-    colorlv: jspb.Message.getFieldWithDefault(msg, 10, 0)
+    valuelv: jspb.Message.getFieldWithDefault(msg, 10, 0)
   };
 
   if (includeInstance) {
@@ -530,7 +530,7 @@ proto.PbModel.StarsGoodGift.StarsGoodGiftObj.deserializeBinaryFromReader = funct
       break;
     case 10:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setColorlv(value);
+      msg.setValuelv(value);
       break;
     default:
       reader.skipField();
@@ -624,7 +624,7 @@ proto.PbModel.StarsGoodGift.StarsGoodGiftObj.serializeBinaryToWriter = function(
       f
     );
   }
-  f = message.getColorlv();
+  f = message.getValuelv();
   if (f !== 0) {
     writer.writeInt32(
       10,
@@ -797,10 +797,10 @@ proto.PbModel.StarsGoodGift.StarsGoodGiftObj.prototype.setIsallget = function(va
 
 
 /**
- * optional int32 ColorLv = 10;
+ * optional int32 ValueLv = 10;
  * @return {number}
  */
-proto.PbModel.StarsGoodGift.StarsGoodGiftObj.prototype.getColorlv = function() {
+proto.PbModel.StarsGoodGift.StarsGoodGiftObj.prototype.getValuelv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
@@ -809,7 +809,7 @@ proto.PbModel.StarsGoodGift.StarsGoodGiftObj.prototype.getColorlv = function() {
  * @param {number} value
  * @return {!proto.PbModel.StarsGoodGift.StarsGoodGiftObj} returns this
  */
-proto.PbModel.StarsGoodGift.StarsGoodGiftObj.prototype.setColorlv = function(value) {
+proto.PbModel.StarsGoodGift.StarsGoodGiftObj.prototype.setValuelv = function(value) {
   return jspb.Message.setProto3IntField(this, 10, value);
 };
 

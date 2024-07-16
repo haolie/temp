@@ -890,7 +890,7 @@ proto.PbModel.Pvp.PvpFightForGroupReq.toObject = function(includeInstance, msg) 
   var f, obj = {
     playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     teaminfoList: jspb.Message.toObjectList(msg.getTeaminfoList(),
-    Team_pb.Team.toObject, includeInstance)
+    Team_pb.TeamTeamInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -932,8 +932,8 @@ proto.PbModel.Pvp.PvpFightForGroupReq.deserializeBinaryFromReader = function(msg
       msg.setPlayerid(value);
       break;
     case 2:
-      var value = new Team_pb.Team;
-      reader.readMessage(value,Team_pb.Team.deserializeBinaryFromReader);
+      var value = new Team_pb.TeamTeamInfo;
+      reader.readMessage(value,Team_pb.TeamTeamInfo.deserializeBinaryFromReader);
       msg.addTeaminfo(value);
       break;
     default:
@@ -977,7 +977,7 @@ proto.PbModel.Pvp.PvpFightForGroupReq.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       2,
       f,
-      Team_pb.Team.serializeBinaryToWriter
+      Team_pb.TeamTeamInfo.serializeBinaryToWriter
     );
   }
 };
@@ -1002,17 +1002,17 @@ proto.PbModel.Pvp.PvpFightForGroupReq.prototype.setPlayerid = function(value) {
 
 
 /**
- * repeated PbModel.Team.Team TeamInfo = 2;
- * @return {!Array<!proto.PbModel.Team.Team>}
+ * repeated PbModel.Team.TeamTeamInfo TeamInfo = 2;
+ * @return {!Array<!proto.PbModel.Team.TeamTeamInfo>}
  */
 proto.PbModel.Pvp.PvpFightForGroupReq.prototype.getTeaminfoList = function() {
-  return /** @type{!Array<!proto.PbModel.Team.Team>} */ (
-    jspb.Message.getRepeatedWrapperField(this, Team_pb.Team, 2));
+  return /** @type{!Array<!proto.PbModel.Team.TeamTeamInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, Team_pb.TeamTeamInfo, 2));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.Team.Team>} value
+ * @param {!Array<!proto.PbModel.Team.TeamTeamInfo>} value
  * @return {!proto.PbModel.Pvp.PvpFightForGroupReq} returns this
 */
 proto.PbModel.Pvp.PvpFightForGroupReq.prototype.setTeaminfoList = function(value) {
@@ -1021,12 +1021,12 @@ proto.PbModel.Pvp.PvpFightForGroupReq.prototype.setTeaminfoList = function(value
 
 
 /**
- * @param {!proto.PbModel.Team.Team=} opt_value
+ * @param {!proto.PbModel.Team.TeamTeamInfo=} opt_value
  * @param {number=} opt_index
- * @return {!proto.PbModel.Team.Team}
+ * @return {!proto.PbModel.Team.TeamTeamInfo}
  */
 proto.PbModel.Pvp.PvpFightForGroupReq.prototype.addTeaminfo = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.PbModel.Team.Team, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.PbModel.Team.TeamTeamInfo, opt_index);
 };
 
 
@@ -1080,11 +1080,12 @@ proto.PbModel.Pvp.PvpFightForGroupRes.toObject = function(includeInstance, msg) 
   var f, obj = {
     iswin: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
     myrank: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    reportfight: (f = msg.getReportfight()) && Fight_pb.FightReport.toObject(includeInstance, f),
+    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
     clientresourcemodel: (f = msg.getClientresourcemodel()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f),
     rankupgetlist: (f = msg.getRankupgetlist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f),
     brandlistList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
-    brandpoolList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f
+    brandpoolList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
+    usefreenum: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
   if (includeInstance) {
@@ -1132,7 +1133,7 @@ proto.PbModel.Pvp.PvpFightForGroupRes.deserializeBinaryFromReader = function(msg
     case 3:
       var value = new Fight_pb.FightReport;
       reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
-      msg.setReportfight(value);
+      msg.setFightreport(value);
       break;
     case 4:
       var value = new Resource_pb.ResourceToClientModel;
@@ -1151,6 +1152,10 @@ proto.PbModel.Pvp.PvpFightForGroupRes.deserializeBinaryFromReader = function(msg
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.addBrandpool(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setUsefreenum(value);
       break;
     default:
       reader.skipField();
@@ -1195,7 +1200,7 @@ proto.PbModel.Pvp.PvpFightForGroupRes.serializeBinaryToWriter = function(message
       f
     );
   }
-  f = message.getReportfight();
+  f = message.getFightreport();
   if (f != null) {
     writer.writeMessage(
       3,
@@ -1230,6 +1235,13 @@ proto.PbModel.Pvp.PvpFightForGroupRes.serializeBinaryToWriter = function(message
   if (f.length > 0) {
     writer.writeRepeatedString(
       7,
+      f
+    );
+  }
+  f = message.getUsefreenum();
+  if (f !== 0) {
+    writer.writeInt32(
+      8,
       f
     );
   }
@@ -1273,10 +1285,10 @@ proto.PbModel.Pvp.PvpFightForGroupRes.prototype.setMyrank = function(value) {
 
 
 /**
- * optional PbModel.Fight.FightReport ReportFight = 3;
+ * optional PbModel.Fight.FightReport FightReport = 3;
  * @return {?proto.PbModel.Fight.FightReport}
  */
-proto.PbModel.Pvp.PvpFightForGroupRes.prototype.getReportfight = function() {
+proto.PbModel.Pvp.PvpFightForGroupRes.prototype.getFightreport = function() {
   return /** @type{?proto.PbModel.Fight.FightReport} */ (
     jspb.Message.getWrapperField(this, Fight_pb.FightReport, 3));
 };
@@ -1286,7 +1298,7 @@ proto.PbModel.Pvp.PvpFightForGroupRes.prototype.getReportfight = function() {
  * @param {?proto.PbModel.Fight.FightReport|undefined} value
  * @return {!proto.PbModel.Pvp.PvpFightForGroupRes} returns this
 */
-proto.PbModel.Pvp.PvpFightForGroupRes.prototype.setReportfight = function(value) {
+proto.PbModel.Pvp.PvpFightForGroupRes.prototype.setFightreport = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
@@ -1295,8 +1307,8 @@ proto.PbModel.Pvp.PvpFightForGroupRes.prototype.setReportfight = function(value)
  * Clears the message field making it undefined.
  * @return {!proto.PbModel.Pvp.PvpFightForGroupRes} returns this
  */
-proto.PbModel.Pvp.PvpFightForGroupRes.prototype.clearReportfight = function() {
-  return this.setReportfight(undefined);
+proto.PbModel.Pvp.PvpFightForGroupRes.prototype.clearFightreport = function() {
+  return this.setFightreport(undefined);
 };
 
 
@@ -1304,7 +1316,7 @@ proto.PbModel.Pvp.PvpFightForGroupRes.prototype.clearReportfight = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.Pvp.PvpFightForGroupRes.prototype.hasReportfight = function() {
+proto.PbModel.Pvp.PvpFightForGroupRes.prototype.hasFightreport = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -1457,6 +1469,24 @@ proto.PbModel.Pvp.PvpFightForGroupRes.prototype.clearBrandpoolList = function() 
 };
 
 
+/**
+ * optional int32 UseFreeNum = 8;
+ * @return {number}
+ */
+proto.PbModel.Pvp.PvpFightForGroupRes.prototype.getUsefreenum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Pvp.PvpFightForGroupRes} returns this
+ */
+proto.PbModel.Pvp.PvpFightForGroupRes.prototype.setUsefreenum = function(value) {
+  return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
@@ -1498,7 +1528,7 @@ proto.PbModel.Pvp.PvpFightForScoreReq.toObject = function(includeInstance, msg) 
   var f, obj = {
     playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     teaminfoList: jspb.Message.toObjectList(msg.getTeaminfoList(),
-    Team_pb.Team.toObject, includeInstance)
+    Team_pb.TeamTeamInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1540,8 +1570,8 @@ proto.PbModel.Pvp.PvpFightForScoreReq.deserializeBinaryFromReader = function(msg
       msg.setPlayerid(value);
       break;
     case 2:
-      var value = new Team_pb.Team;
-      reader.readMessage(value,Team_pb.Team.deserializeBinaryFromReader);
+      var value = new Team_pb.TeamTeamInfo;
+      reader.readMessage(value,Team_pb.TeamTeamInfo.deserializeBinaryFromReader);
       msg.addTeaminfo(value);
       break;
     default:
@@ -1585,7 +1615,7 @@ proto.PbModel.Pvp.PvpFightForScoreReq.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       2,
       f,
-      Team_pb.Team.serializeBinaryToWriter
+      Team_pb.TeamTeamInfo.serializeBinaryToWriter
     );
   }
 };
@@ -1610,17 +1640,17 @@ proto.PbModel.Pvp.PvpFightForScoreReq.prototype.setPlayerid = function(value) {
 
 
 /**
- * repeated PbModel.Team.Team TeamInfo = 2;
- * @return {!Array<!proto.PbModel.Team.Team>}
+ * repeated PbModel.Team.TeamTeamInfo TeamInfo = 2;
+ * @return {!Array<!proto.PbModel.Team.TeamTeamInfo>}
  */
 proto.PbModel.Pvp.PvpFightForScoreReq.prototype.getTeaminfoList = function() {
-  return /** @type{!Array<!proto.PbModel.Team.Team>} */ (
-    jspb.Message.getRepeatedWrapperField(this, Team_pb.Team, 2));
+  return /** @type{!Array<!proto.PbModel.Team.TeamTeamInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, Team_pb.TeamTeamInfo, 2));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.Team.Team>} value
+ * @param {!Array<!proto.PbModel.Team.TeamTeamInfo>} value
  * @return {!proto.PbModel.Pvp.PvpFightForScoreReq} returns this
 */
 proto.PbModel.Pvp.PvpFightForScoreReq.prototype.setTeaminfoList = function(value) {
@@ -1629,12 +1659,12 @@ proto.PbModel.Pvp.PvpFightForScoreReq.prototype.setTeaminfoList = function(value
 
 
 /**
- * @param {!proto.PbModel.Team.Team=} opt_value
+ * @param {!proto.PbModel.Team.TeamTeamInfo=} opt_value
  * @param {number=} opt_index
- * @return {!proto.PbModel.Team.Team}
+ * @return {!proto.PbModel.Team.TeamTeamInfo}
  */
 proto.PbModel.Pvp.PvpFightForScoreReq.prototype.addTeaminfo = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.PbModel.Team.Team, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.PbModel.Team.TeamTeamInfo, opt_index);
 };
 
 
@@ -1691,10 +1721,11 @@ proto.PbModel.Pvp.PvpFightForScoreRes.toObject = function(includeInstance, msg) 
     scorechange: jspb.Message.getFieldWithDefault(msg, 3, 0),
     tgtscore: jspb.Message.getFieldWithDefault(msg, 4, 0),
     tgtscorechange: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    reportfight: (f = msg.getReportfight()) && Fight_pb.FightReport.toObject(includeInstance, f),
+    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
     clientresourcemodel: (f = msg.getClientresourcemodel()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f),
     brandlistList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
-    brandpoolList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
+    brandpoolList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f,
+    usefreenum: jspb.Message.getFieldWithDefault(msg, 10, 0)
   };
 
   if (includeInstance) {
@@ -1754,7 +1785,7 @@ proto.PbModel.Pvp.PvpFightForScoreRes.deserializeBinaryFromReader = function(msg
     case 6:
       var value = new Fight_pb.FightReport;
       reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
-      msg.setReportfight(value);
+      msg.setFightreport(value);
       break;
     case 7:
       var value = new Resource_pb.ResourceToClientModel;
@@ -1768,6 +1799,10 @@ proto.PbModel.Pvp.PvpFightForScoreRes.deserializeBinaryFromReader = function(msg
     case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.addBrandpool(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setUsefreenum(value);
       break;
     default:
       reader.skipField();
@@ -1833,7 +1868,7 @@ proto.PbModel.Pvp.PvpFightForScoreRes.serializeBinaryToWriter = function(message
       f
     );
   }
-  f = message.getReportfight();
+  f = message.getFightreport();
   if (f != null) {
     writer.writeMessage(
       6,
@@ -1860,6 +1895,13 @@ proto.PbModel.Pvp.PvpFightForScoreRes.serializeBinaryToWriter = function(message
   if (f.length > 0) {
     writer.writeRepeatedString(
       9,
+      f
+    );
+  }
+  f = message.getUsefreenum();
+  if (f !== 0) {
+    writer.writeInt32(
+      10,
       f
     );
   }
@@ -1957,10 +1999,10 @@ proto.PbModel.Pvp.PvpFightForScoreRes.prototype.setTgtscorechange = function(val
 
 
 /**
- * optional PbModel.Fight.FightReport ReportFight = 6;
+ * optional PbModel.Fight.FightReport FightReport = 6;
  * @return {?proto.PbModel.Fight.FightReport}
  */
-proto.PbModel.Pvp.PvpFightForScoreRes.prototype.getReportfight = function() {
+proto.PbModel.Pvp.PvpFightForScoreRes.prototype.getFightreport = function() {
   return /** @type{?proto.PbModel.Fight.FightReport} */ (
     jspb.Message.getWrapperField(this, Fight_pb.FightReport, 6));
 };
@@ -1970,7 +2012,7 @@ proto.PbModel.Pvp.PvpFightForScoreRes.prototype.getReportfight = function() {
  * @param {?proto.PbModel.Fight.FightReport|undefined} value
  * @return {!proto.PbModel.Pvp.PvpFightForScoreRes} returns this
 */
-proto.PbModel.Pvp.PvpFightForScoreRes.prototype.setReportfight = function(value) {
+proto.PbModel.Pvp.PvpFightForScoreRes.prototype.setFightreport = function(value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
@@ -1979,8 +2021,8 @@ proto.PbModel.Pvp.PvpFightForScoreRes.prototype.setReportfight = function(value)
  * Clears the message field making it undefined.
  * @return {!proto.PbModel.Pvp.PvpFightForScoreRes} returns this
  */
-proto.PbModel.Pvp.PvpFightForScoreRes.prototype.clearReportfight = function() {
-  return this.setReportfight(undefined);
+proto.PbModel.Pvp.PvpFightForScoreRes.prototype.clearFightreport = function() {
+  return this.setFightreport(undefined);
 };
 
 
@@ -1988,7 +2030,7 @@ proto.PbModel.Pvp.PvpFightForScoreRes.prototype.clearReportfight = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.Pvp.PvpFightForScoreRes.prototype.hasReportfight = function() {
+proto.PbModel.Pvp.PvpFightForScoreRes.prototype.hasFightreport = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -2101,6 +2143,24 @@ proto.PbModel.Pvp.PvpFightForScoreRes.prototype.addBrandpool = function(value, o
  */
 proto.PbModel.Pvp.PvpFightForScoreRes.prototype.clearBrandpoolList = function() {
   return this.setBrandpoolList([]);
+};
+
+
+/**
+ * optional int32 UseFreeNum = 10;
+ * @return {number}
+ */
+proto.PbModel.Pvp.PvpFightForScoreRes.prototype.getUsefreenum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Pvp.PvpFightForScoreRes} returns this
+ */
+proto.PbModel.Pvp.PvpFightForScoreRes.prototype.setUsefreenum = function(value) {
+  return jspb.Message.setProto3IntField(this, 10, value);
 };
 
 
@@ -2256,7 +2316,8 @@ proto.PbModel.Pvp.PvpGetInfoRes.toObject = function(includeInstance, msg) {
     topthreerankinfoList: jspb.Message.toObjectList(msg.getTopthreerankinfoList(),
     proto.PbModel.Pvp.PvpRankItem.toObject, includeInstance),
     challengeinfoList: jspb.Message.toObjectList(msg.getChallengeinfoList(),
-    proto.PbModel.Pvp.PvpChallengeItem.toObject, includeInstance)
+    proto.PbModel.Pvp.PvpChallengeItem.toObject, includeInstance),
+    usefreenum: jspb.Message.getFieldWithDefault(msg, 12, 0)
   };
 
   if (includeInstance) {
@@ -2338,6 +2399,10 @@ proto.PbModel.Pvp.PvpGetInfoRes.deserializeBinaryFromReader = function(msg, read
       var value = new proto.PbModel.Pvp.PvpChallengeItem;
       reader.readMessage(value,proto.PbModel.Pvp.PvpChallengeItem.deserializeBinaryFromReader);
       msg.addChallengeinfo(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setUsefreenum(value);
       break;
     default:
       reader.skipField();
@@ -2445,6 +2510,13 @@ proto.PbModel.Pvp.PvpGetInfoRes.serializeBinaryToWriter = function(message, writ
       11,
       f,
       proto.PbModel.Pvp.PvpChallengeItem.serializeBinaryToWriter
+    );
+  }
+  f = message.getUsefreenum();
+  if (f !== 0) {
+    writer.writeInt32(
+      12,
+      f
     );
   }
 };
@@ -2704,6 +2776,24 @@ proto.PbModel.Pvp.PvpGetInfoRes.prototype.addChallengeinfo = function(opt_value,
  */
 proto.PbModel.Pvp.PvpGetInfoRes.prototype.clearChallengeinfoList = function() {
   return this.setChallengeinfoList([]);
+};
+
+
+/**
+ * optional int32 UseFreeNum = 12;
+ * @return {number}
+ */
+proto.PbModel.Pvp.PvpGetInfoRes.prototype.getUsefreenum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Pvp.PvpGetInfoRes} returns this
+ */
+proto.PbModel.Pvp.PvpGetInfoRes.prototype.setUsefreenum = function(value) {
+  return jspb.Message.setProto3IntField(this, 12, value);
 };
 
 
@@ -4454,7 +4544,7 @@ proto.PbModel.Pvp.PvpBuyTicketReq.prototype.toObject = function(opt_includeInsta
  */
 proto.PbModel.Pvp.PvpBuyTicketReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    num: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -4491,6 +4581,10 @@ proto.PbModel.Pvp.PvpBuyTicketReq.deserializeBinaryFromReader = function(msg, re
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setNum(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -4520,6 +4614,31 @@ proto.PbModel.Pvp.PvpBuyTicketReq.prototype.serializeBinary = function() {
  */
 proto.PbModel.Pvp.PvpBuyTicketReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getNum();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int32 Num = 1;
+ * @return {number}
+ */
+proto.PbModel.Pvp.PvpBuyTicketReq.prototype.getNum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Pvp.PvpBuyTicketReq} returns this
+ */
+proto.PbModel.Pvp.PvpBuyTicketReq.prototype.setNum = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -4744,7 +4863,7 @@ proto.PbModel.Pvp.PvpTeamReq.prototype.toObject = function(opt_includeInstance) 
 proto.PbModel.Pvp.PvpTeamReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     teaminfoList: jspb.Message.toObjectList(msg.getTeaminfoList(),
-    Team_pb.Team.toObject, includeInstance)
+    Team_pb.TeamTeamInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -4782,8 +4901,8 @@ proto.PbModel.Pvp.PvpTeamReq.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new Team_pb.Team;
-      reader.readMessage(value,Team_pb.Team.deserializeBinaryFromReader);
+      var value = new Team_pb.TeamTeamInfo;
+      reader.readMessage(value,Team_pb.TeamTeamInfo.deserializeBinaryFromReader);
       msg.addTeaminfo(value);
       break;
     default:
@@ -4820,24 +4939,24 @@ proto.PbModel.Pvp.PvpTeamReq.serializeBinaryToWriter = function(message, writer)
     writer.writeRepeatedMessage(
       1,
       f,
-      Team_pb.Team.serializeBinaryToWriter
+      Team_pb.TeamTeamInfo.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated PbModel.Team.Team TeamInfo = 1;
- * @return {!Array<!proto.PbModel.Team.Team>}
+ * repeated PbModel.Team.TeamTeamInfo TeamInfo = 1;
+ * @return {!Array<!proto.PbModel.Team.TeamTeamInfo>}
  */
 proto.PbModel.Pvp.PvpTeamReq.prototype.getTeaminfoList = function() {
-  return /** @type{!Array<!proto.PbModel.Team.Team>} */ (
-    jspb.Message.getRepeatedWrapperField(this, Team_pb.Team, 1));
+  return /** @type{!Array<!proto.PbModel.Team.TeamTeamInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, Team_pb.TeamTeamInfo, 1));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.Team.Team>} value
+ * @param {!Array<!proto.PbModel.Team.TeamTeamInfo>} value
  * @return {!proto.PbModel.Pvp.PvpTeamReq} returns this
 */
 proto.PbModel.Pvp.PvpTeamReq.prototype.setTeaminfoList = function(value) {
@@ -4846,12 +4965,12 @@ proto.PbModel.Pvp.PvpTeamReq.prototype.setTeaminfoList = function(value) {
 
 
 /**
- * @param {!proto.PbModel.Team.Team=} opt_value
+ * @param {!proto.PbModel.Team.TeamTeamInfo=} opt_value
  * @param {number=} opt_index
- * @return {!proto.PbModel.Team.Team}
+ * @return {!proto.PbModel.Team.TeamTeamInfo}
  */
 proto.PbModel.Pvp.PvpTeamReq.prototype.addTeaminfo = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.Team.Team, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.Team.TeamTeamInfo, opt_index);
 };
 
 

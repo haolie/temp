@@ -6119,7 +6119,7 @@ proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.prototype.toObject = function
  */
 proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    isnewguide: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -6156,6 +6156,10 @@ proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsnewguide(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -6185,6 +6189,31 @@ proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.prototype.serializeBinary = f
  */
 proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getIsnewguide();
+  if (f) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bool IsNewGuide = 1;
+ * @return {boolean}
+ */
+proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.prototype.getIsnewguide = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq} returns this
+ */
+proto.PbModel.GroupRoom.GroupRoomStartTeamMergeReq.prototype.setIsnewguide = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
 
@@ -7182,7 +7211,9 @@ proto.PbModel.GroupRoom.GroupRoomPushTeamRes.toObject = function(includeInstance
     hasteam: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
     hasinvite: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
     team: (f = msg.getTeam()) && proto.PbModel.GroupRoom.GroupRoomTeamInfo.toObject(includeInstance, f),
-    autojoinstoptime: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    autojoinstoptime: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    isleadergiveup: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    iskickout: jspb.Message.getBooleanFieldWithDefault(msg, 6, false)
   };
 
   if (includeInstance) {
@@ -7235,6 +7266,14 @@ proto.PbModel.GroupRoom.GroupRoomPushTeamRes.deserializeBinaryFromReader = funct
     case 4:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setAutojoinstoptime(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsleadergiveup(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIskickout(value);
       break;
     default:
       reader.skipField();
@@ -7291,6 +7330,20 @@ proto.PbModel.GroupRoom.GroupRoomPushTeamRes.serializeBinaryToWriter = function(
   if (f !== 0) {
     writer.writeInt64(
       4,
+      f
+    );
+  }
+  f = message.getIsleadergiveup();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getIskickout();
+  if (f) {
+    writer.writeBool(
+      6,
       f
     );
   }
@@ -7388,6 +7441,42 @@ proto.PbModel.GroupRoom.GroupRoomPushTeamRes.prototype.setAutojoinstoptime = fun
 };
 
 
+/**
+ * optional bool IsLeaderGiveUp = 5;
+ * @return {boolean}
+ */
+proto.PbModel.GroupRoom.GroupRoomPushTeamRes.prototype.getIsleadergiveup = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.GroupRoom.GroupRoomPushTeamRes} returns this
+ */
+proto.PbModel.GroupRoom.GroupRoomPushTeamRes.prototype.setIsleadergiveup = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional bool IsKickOut = 6;
+ * @return {boolean}
+ */
+proto.PbModel.GroupRoom.GroupRoomPushTeamRes.prototype.getIskickout = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.GroupRoom.GroupRoomPushTeamRes} returns this
+ */
+proto.PbModel.GroupRoom.GroupRoomPushTeamRes.prototype.setIskickout = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 6, value);
+};
+
+
 
 
 
@@ -7420,7 +7509,7 @@ proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.prototype.toObject = function(
  */
 proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    issuccess: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+
   };
 
   if (includeInstance) {
@@ -7457,10 +7546,6 @@ proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.deserializeBinaryFromReader = 
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIssuccess(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -7490,31 +7575,6 @@ proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.prototype.serializeBinary = fu
  */
 proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getIssuccess();
-  if (f) {
-    writer.writeBool(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional bool IsSuccess = 1;
- * @return {boolean}
- */
-proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.prototype.getIssuccess = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes} returns this
- */
-proto.PbModel.GroupRoom.GroupRoomPushMergeStopRes.prototype.setIssuccess = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
 

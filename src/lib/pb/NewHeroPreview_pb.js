@@ -438,7 +438,8 @@ proto.PbModel.NewHeroPreview.NewHeroPreviewObj.toObject = function(includeInstan
     isfristshow: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
     t1picturename: jspb.Message.getFieldWithDefault(msg, 2, ""),
     godpicturename: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    heromodelid: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    heromodelid: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    titlepicture: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -490,6 +491,10 @@ proto.PbModel.NewHeroPreview.NewHeroPreviewObj.deserializeBinaryFromReader = fun
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setHeromodelid(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTitlepicture(value);
       break;
     default:
       reader.skipField();
@@ -545,6 +550,13 @@ proto.PbModel.NewHeroPreview.NewHeroPreviewObj.serializeBinaryToWriter = functio
   if (f !== 0) {
     writer.writeInt32(
       4,
+      f
+    );
+  }
+  f = message.getTitlepicture();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -620,6 +632,24 @@ proto.PbModel.NewHeroPreview.NewHeroPreviewObj.prototype.getHeromodelid = functi
  */
 proto.PbModel.NewHeroPreview.NewHeroPreviewObj.prototype.setHeromodelid = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional string TitlePicture = 5;
+ * @return {string}
+ */
+proto.PbModel.NewHeroPreview.NewHeroPreviewObj.prototype.getTitlepicture = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.NewHeroPreview.NewHeroPreviewObj} returns this
+ */
+proto.PbModel.NewHeroPreview.NewHeroPreviewObj.prototype.setTitlepicture = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 

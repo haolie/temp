@@ -1277,7 +1277,8 @@ proto.PbModel.WeeklyPack.WeeklyPackGift.toObject = function(includeInstance, msg
     rewardpoolList: jspb.Message.toObjectList(msg.getRewardpoolList(),
     proto.PbModel.WeeklyPack.WeeklyPackRewardPool.toObject, includeInstance),
     selectmapMap: (f = msg.getSelectmapMap()) ? f.toObject(includeInstance, undefined) : [],
-    reward: jspb.Message.getFieldWithDefault(msg, 13, "")
+    reward: jspb.Message.getFieldWithDefault(msg, 13, ""),
+    productid: jspb.Message.getFieldWithDefault(msg, 14, "")
   };
 
   if (includeInstance) {
@@ -1368,6 +1369,10 @@ proto.PbModel.WeeklyPack.WeeklyPackGift.deserializeBinaryFromReader = function(m
     case 13:
       var value = /** @type {string} */ (reader.readString());
       msg.setReward(value);
+      break;
+    case 14:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setProductid(value);
       break;
     default:
       reader.skipField();
@@ -1484,6 +1489,13 @@ proto.PbModel.WeeklyPack.WeeklyPackGift.serializeBinaryToWriter = function(messa
   if (f.length > 0) {
     writer.writeString(
       13,
+      f
+    );
+  }
+  f = message.getProductid();
+  if (f.length > 0) {
+    writer.writeString(
+      14,
       f
     );
   }
@@ -1745,6 +1757,24 @@ proto.PbModel.WeeklyPack.WeeklyPackGift.prototype.getReward = function() {
  */
 proto.PbModel.WeeklyPack.WeeklyPackGift.prototype.setReward = function(value) {
   return jspb.Message.setProto3StringField(this, 13, value);
+};
+
+
+/**
+ * optional string ProductId = 14;
+ * @return {string}
+ */
+proto.PbModel.WeeklyPack.WeeklyPackGift.prototype.getProductid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.WeeklyPack.WeeklyPackGift} returns this
+ */
+proto.PbModel.WeeklyPack.WeeklyPackGift.prototype.setProductid = function(value) {
+  return jspb.Message.setProto3StringField(this, 14, value);
 };
 
 

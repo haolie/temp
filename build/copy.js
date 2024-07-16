@@ -110,6 +110,7 @@ window.Pb={
   ResList:[],
   PushList:[],
   OtherList:[],
+  CmdMap:{},
   M:{}
 }
 
@@ -120,17 +121,39 @@ var list =[
   ${listPath}
 ]
 
-//var cliReqPb= require("./pb/Client/ClientRequest_pb")
-
 var reqReg=new RegExp("Req$|Request$")
 var resReg=new RegExp("Res$|Response$")
 var pushReg=new RegExp("^Push")
 
+//var cmdTmp=new cmdAll()
+for (var cmd in cmdAll.Command){
+   var key=cmd.replace("_","").toUpperCase()
+   window.Pb.CmdMap[key]={
+    Key:key,
+    Cmd:cmd,
+    Value:cmdAll.Command[cmd]
+   }
+}
+
 for (var i=0;i<list.length;i++){
   var temp=list[i]
   for (t in temp){
-      if(reqReg.test(t)) window.Pb.ReqList.push(t) ;
-      else if(resReg.test(t)) window.Pb.ResList.push(t) ;
+    var k=t.toUpperCase()   
+      if(reqReg.test(t)){ 
+         var tk= k.slice(0,k.length-3)
+         if( window.Pb.CmdMap[tk]){
+            window.Pb.CmdMap[tk].Req=temp[t]
+            window.Pb.ReqList.push(window.Pb.CmdMap[tk]) 
+         }
+      } 
+      else if(resReg.test(t)) {
+       
+         var tk= k.slice(0,k.length-3)
+         if( window.Pb.CmdMap[tk]){
+            window.Pb.CmdMap[tk].Res=temp[t]
+            window.Pb.ResList.push(window.Pb.CmdMap[tk]) 
+         }
+      }
       else if(pushReg.test(t)) window.Pb.PushList.push(t) ;
       else  window.Pb.OtherList.push(t) ;
    

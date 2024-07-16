@@ -444,7 +444,7 @@ proto.PbModel.Marquee.MarqueeMessageParameter.toObject = function(includeInstanc
   var f, obj = {
     resourcetypesub: jspb.Message.getFieldWithDefault(msg, 1, 0),
     count: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    value: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    value: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -490,7 +490,7 @@ proto.PbModel.Marquee.MarqueeMessageParameter.deserializeBinaryFromReader = func
       msg.setCount(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {string} */ (reader.readString());
       msg.setValue(value);
       break;
     default:
@@ -537,8 +537,8 @@ proto.PbModel.Marquee.MarqueeMessageParameter.serializeBinaryToWriter = function
     );
   }
   f = message.getValue();
-  if (f !== 0) {
-    writer.writeInt32(
+  if (f.length > 0) {
+    writer.writeString(
       3,
       f
     );
@@ -583,20 +583,20 @@ proto.PbModel.Marquee.MarqueeMessageParameter.prototype.setCount = function(valu
 
 
 /**
- * optional int32 Value = 3;
- * @return {number}
+ * optional string Value = 3;
+ * @return {string}
  */
 proto.PbModel.Marquee.MarqueeMessageParameter.prototype.getValue = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.PbModel.Marquee.MarqueeMessageParameter} returns this
  */
 proto.PbModel.Marquee.MarqueeMessageParameter.prototype.setValue = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 

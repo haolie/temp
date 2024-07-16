@@ -360,7 +360,8 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.prototype.toObject =
 proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
     giftlistList: jspb.Message.toObjectList(msg.getGiftlistList(),
-    proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.toObject, includeInstance)
+    proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.toObject, includeInstance),
+    enddate: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -402,6 +403,10 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.deserializeBinaryFro
       reader.readMessage(value,proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.deserializeBinaryFromReader);
       msg.addGiftlist(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setEnddate(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -437,6 +442,13 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.serializeBinaryToWri
       1,
       f,
       proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.serializeBinaryToWriter
+    );
+  }
+  f = message.getEnddate();
+  if (f !== 0) {
+    writer.writeInt64(
+      2,
+      f
     );
   }
 };
@@ -477,6 +489,24 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.prototype.addGiftlis
  */
 proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.prototype.clearGiftlistList = function() {
   return this.setGiftlistList([]);
+};
+
+
+/**
+ * optional int64 EndDate = 2;
+ * @return {number}
+ */
+proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.prototype.getEnddate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes} returns this
+ */
+proto.PbModel.ActivityDailyPack.ActivityDailyPackGetInfoRes.prototype.setEnddate = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -1277,7 +1307,8 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.toObject = function(includ
     rewardpoolList: jspb.Message.toObjectList(msg.getRewardpoolList(),
     proto.PbModel.ActivityDailyPack.ActivityDailyPackRewardPool.toObject, includeInstance),
     selectmapMap: (f = msg.getSelectmapMap()) ? f.toObject(includeInstance, undefined) : [],
-    reward: jspb.Message.getFieldWithDefault(msg, 13, "")
+    reward: jspb.Message.getFieldWithDefault(msg, 13, ""),
+    productid: jspb.Message.getFieldWithDefault(msg, 14, "")
   };
 
   if (includeInstance) {
@@ -1368,6 +1399,10 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.deserializeBinaryFromReade
     case 13:
       var value = /** @type {string} */ (reader.readString());
       msg.setReward(value);
+      break;
+    case 14:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setProductid(value);
       break;
     default:
       reader.skipField();
@@ -1484,6 +1519,13 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.serializeBinaryToWriter = 
   if (f.length > 0) {
     writer.writeString(
       13,
+      f
+    );
+  }
+  f = message.getProductid();
+  if (f.length > 0) {
+    writer.writeString(
+      14,
       f
     );
   }
@@ -1745,6 +1787,24 @@ proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.prototype.getReward = func
  */
 proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.prototype.setReward = function(value) {
   return jspb.Message.setProto3StringField(this, 13, value);
+};
+
+
+/**
+ * optional string ProductId = 14;
+ * @return {string}
+ */
+proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.prototype.getProductid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.ActivityDailyPack.ActivityDailyPackGift} returns this
+ */
+proto.PbModel.ActivityDailyPack.ActivityDailyPackGift.prototype.setProductid = function(value) {
+  return jspb.Message.setProto3StringField(this, 14, value);
 };
 
 

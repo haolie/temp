@@ -5787,7 +5787,8 @@ proto.PbModel.Friend.FriendPushApplyRes.prototype.toObject = function(opt_includ
  */
 proto.PbModel.Friend.FriendPushApplyRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    appliedplayerid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    appliedplayerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    appliedplayername: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -5828,6 +5829,10 @@ proto.PbModel.Friend.FriendPushApplyRes.deserializeBinaryFromReader = function(m
       var value = /** @type {string} */ (reader.readString());
       msg.setAppliedplayerid(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAppliedplayername(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -5864,6 +5869,13 @@ proto.PbModel.Friend.FriendPushApplyRes.serializeBinaryToWriter = function(messa
       f
     );
   }
+  f = message.getAppliedplayername();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -5882,6 +5894,24 @@ proto.PbModel.Friend.FriendPushApplyRes.prototype.getAppliedplayerid = function(
  */
 proto.PbModel.Friend.FriendPushApplyRes.prototype.setAppliedplayerid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string AppliedPlayerName = 2;
+ * @return {string}
+ */
+proto.PbModel.Friend.FriendPushApplyRes.prototype.getAppliedplayername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Friend.FriendPushApplyRes} returns this
+ */
+proto.PbModel.Friend.FriendPushApplyRes.prototype.setAppliedplayername = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

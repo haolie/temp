@@ -28,35 +28,58 @@ if(!pbObj||!obj){
         return null
     },
     CreateReqObj:function(command){
-        return this.CreatePbObj(command+"Req")
+        if( window.Pb.CmdMap[command.toUpperCase()]){
+             return new window.Pb.CmdMap[command.toUpperCase()].Req()
+        }
+
+        return null
     },
-    CreateRequest:function(command,pbObj){
+    CreateRequest:function(opt,command,pbObj){
         var request= this.CreatePbObj("ClientRequest")
+        
          
     },
     CreateResFromData:function(command,data){
-        var k=command+"Res"
-        var p=this.GetPb(k)
-        if(p){
-            return p.deserializeBinary(data)
+        command=command.toUpperCase();
+        if(window.Pb.CmdMap[command]){
+            return window.Pb.CmdMap[command].Res.deserializeBinary(data)
         }
       
         return null
     },
     GetCommandNum:function(command){
-        command=command.toUpperCase()
-        var cmdMap=this.GetPb("Command")
-        return cmdMap[command]?cmdMap[command]:0
+        if( window.Pb.CmdMap[command.toUpperCase()]){
+            return  window.Pb.CmdMap[command.toUpperCase()].Value
+       }
+
     },
-    GetCommandName:function(cmdNum){
-        var cmdMap=this.GetPb("Command")
-        for(var c in cmdMap){
-            if(cmdMap[c]==cmdNum){
-                return c
+    GetCommand:function(cmd){
+        for (var k in window.Pb.CmdMap){
+            if(cmd==window.Pb.CmdMap[k].Value){
+                return window.Pb.CmdMap[k]
             }
         }
-        return ""
     },
+    GetServerList:function(cb){ 
+        var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+        httpRequest.open('POST', 'https://managecenterapitest-dqsj2.qcplay.com/API/ServerGroupList.ashx', true); //第二步：打开连接
+        httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send('GroupType=Mix&HashValue=');//发送请求 将情头体写在send中
+        /**
+         * 获取数据后的处理程序
+         */
+        httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
+            if(httpRequest.status == 200){
+                cb(httpRequest.status)
+            }
+    
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
+                var json = JSON.parse(httpRequest.responseText);//获取到服务端返回的数据
+                json=JSON.parse(json.Data)
+                cb(httpRequest.status,json)
+            }
+        };
+    }
 }
 
  

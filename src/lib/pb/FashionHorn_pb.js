@@ -156,7 +156,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -969,6 +969,13 @@ proto.PbModel.FashionHorn.FashionHornWearRes.serializeBinaryToWriter = function(
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1000,7 +1007,8 @@ proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.toObject = func
  */
 proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    info: (f = msg.getInfo()) && proto.PbModel.FashionHorn.FashionHornInfo.toObject(includeInstance, f)
+    infoList: jspb.Message.toObjectList(msg.getInfoList(),
+    proto.PbModel.FashionHorn.FashionHornInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1040,7 +1048,7 @@ proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.deserializeBinaryFromRead
     case 1:
       var value = new proto.PbModel.FashionHorn.FashionHornInfo;
       reader.readMessage(value,proto.PbModel.FashionHorn.FashionHornInfo.deserializeBinaryFromReader);
-      msg.setInfo(value);
+      msg.addInfo(value);
       break;
     default:
       reader.skipField();
@@ -1071,9 +1079,9 @@ proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.serializeBinary
  */
 proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getInfo();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getInfoList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       1,
       f,
       proto.PbModel.FashionHorn.FashionHornInfo.serializeBinaryToWriter
@@ -1083,39 +1091,40 @@ proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.serializeBinaryToWriter =
 
 
 /**
- * optional FashionHornInfo Info = 1;
- * @return {?proto.PbModel.FashionHorn.FashionHornInfo}
+ * repeated FashionHornInfo Info = 1;
+ * @return {!Array<!proto.PbModel.FashionHorn.FashionHornInfo>}
  */
-proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.getInfo = function() {
-  return /** @type{?proto.PbModel.FashionHorn.FashionHornInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.FashionHorn.FashionHornInfo, 1));
+proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.getInfoList = function() {
+  return /** @type{!Array<!proto.PbModel.FashionHorn.FashionHornInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.FashionHorn.FashionHornInfo, 1));
 };
 
 
 /**
- * @param {?proto.PbModel.FashionHorn.FashionHornInfo|undefined} value
+ * @param {!Array<!proto.PbModel.FashionHorn.FashionHornInfo>} value
  * @return {!proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes} returns this
 */
-proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.setInfo = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.setInfoList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.PbModel.FashionHorn.FashionHornInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.FashionHorn.FashionHornInfo}
+ */
+proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.addInfo = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.FashionHorn.FashionHornInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes} returns this
  */
-proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.clearInfo = function() {
-  return this.setInfo(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.hasInfo = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.PbModel.FashionHorn.FashionHornPushChangeInfoRes.prototype.clearInfoList = function() {
+  return this.setInfoList([]);
 };
 
 

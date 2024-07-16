@@ -296,7 +296,8 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.toObject = function(includeInstanc
     rankList: jspb.Message.toObjectList(msg.getRankList(),
     proto.PbModel.GlobalRank.GlobalRankInfo.toObject, includeInstance),
     myrank: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    myrankcontent: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    myrankcontent: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    myguildname: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -346,6 +347,10 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.deserializeBinaryFromReader = func
       var value = /** @type {number} */ (reader.readInt64());
       msg.setMyrankcontent(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMyguildname(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -394,6 +399,13 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.serializeBinaryToWriter = function
   if (f !== 0) {
     writer.writeInt64(
       3,
+      f
+    );
+  }
+  f = message.getMyguildname();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -471,6 +483,24 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.getMyrankcontent = funct
  */
 proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.setMyrankcontent = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional string MyGuildName = 4;
+ * @return {string}
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.getMyguildname = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.GlobalRank.GlobalRankGetRankRes} returns this
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.setMyguildname = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 

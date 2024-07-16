@@ -1843,7 +1843,8 @@ proto.PbModel.StarterPack.StarterPackGiftInfo.toObject = function(includeInstanc
     selectmapMap: (f = msg.getSelectmapMap()) ? f.toObject(includeInstance, undefined) : [],
     discountshow: jspb.Message.getFieldWithDefault(msg, 12, 0),
     titlenameshow: jspb.Message.getFieldWithDefault(msg, 13, ""),
-    productid: jspb.Message.getFieldWithDefault(msg, 14, "")
+    productid: jspb.Message.getFieldWithDefault(msg, 14, ""),
+    showorder: jspb.Message.getFieldWithDefault(msg, 15, 0)
   };
 
   if (includeInstance) {
@@ -1938,6 +1939,10 @@ proto.PbModel.StarterPack.StarterPackGiftInfo.deserializeBinaryFromReader = func
     case 14:
       var value = /** @type {string} */ (reader.readString());
       msg.setProductid(value);
+      break;
+    case 15:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setShoworder(value);
       break;
     default:
       reader.skipField();
@@ -2061,6 +2066,13 @@ proto.PbModel.StarterPack.StarterPackGiftInfo.serializeBinaryToWriter = function
   if (f.length > 0) {
     writer.writeString(
       14,
+      f
+    );
+  }
+  f = message.getShoworder();
+  if (f !== 0) {
+    writer.writeInt32(
+      15,
       f
     );
   }
@@ -2340,6 +2352,24 @@ proto.PbModel.StarterPack.StarterPackGiftInfo.prototype.getProductid = function(
  */
 proto.PbModel.StarterPack.StarterPackGiftInfo.prototype.setProductid = function(value) {
   return jspb.Message.setProto3StringField(this, 14, value);
+};
+
+
+/**
+ * optional int32 ShowOrder = 15;
+ * @return {number}
+ */
+proto.PbModel.StarterPack.StarterPackGiftInfo.prototype.getShoworder = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 15, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.StarterPack.StarterPackGiftInfo} returns this
+ */
+proto.PbModel.StarterPack.StarterPackGiftInfo.prototype.setShoworder = function(value) {
+  return jspb.Message.setProto3IntField(this, 15, value);
 };
 
 

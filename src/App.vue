@@ -7,7 +7,7 @@
 
 <script>
 import JAlert from '@/components/JAlert'
-import webCli from  '@/lib/client' 
+import pb from  '@/lib/proto' 
 import pbUtils from '@/lib/pbUtils'
 
 export default {
@@ -24,7 +24,7 @@ export default {
 
     //var cli=new webCli("roote19db7fafc9f11ee-21",{})
    // cli.connect()
-	
+	   debugger
 
     return
 
@@ -36,14 +36,11 @@ export default {
 @import "assets/css/message-box.css";
 @import "assets/css/style.css";
 </style>
-<style>
+</script>
+<style >
 body{
   width: 99%;
   height: 99%;
-}
-
-.main-head{
-  height: 120px;
 }
 
 .main-out{
@@ -56,7 +53,7 @@ body{
 
 .el-main{
   height: 100%;
-  background-color: red;
+  background-color: #313131;
 }
 
 </style>
