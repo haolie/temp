@@ -258,11 +258,11 @@ export default {
        this.WebCli.Query(this.MsgObj.Cmd,JSON.parse(this.MsgObj.Req))
     },
     getServerItem(){
-       for(var i=0;i<this.ServerList.length;i++){
-         if(this.ServerItem.ServerGroupId==this.ServerList[i].GroupID){
-           return this.ServerList[i]
-         }
-       }
+      //  for(var i=0;i<this.ServerList.length;i++){
+      //    if(this.ServerItem.ServerGroupId==this.ServerList[i].GroupID){
+      //      return this.ServerList[i]
+      //    }
+      //  }
 
        return null
     },
@@ -284,8 +284,8 @@ export default {
      
   },
   mounted () { 
-    this.CmdList=window.Pb.ReqList   
-    this.loadServerList()
+    // this.CmdList=window.Pb.ReqList   
+    // this.loadServerList()
   }
 }
 
