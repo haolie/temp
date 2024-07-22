@@ -1,6 +1,10 @@
 import pbUitl from '@/lib/pbUtils'
 import { name } from 'file-loader'
 
+const igList={
+    SLOT_PUSHMAINSLOTINFO:1
+}
+
 function Client(option){
     this.option=option
 }
@@ -19,13 +23,11 @@ Client.prototype.reqMap={}
 Client.prototype.msgList=[]
 Client.prototype.Login=function(){
     var _this=this
-    this.connect(function(){
-        var loginReq= pbUitl.CreateReqObj(_this.option.LoginType)
+    var loginReq= pbUitl.CreateReqObj(_this.option.LoginType)
         loginReq.setPlayername(_this.option.LoginParam) 
         //var obj=this.createReq(this.option.LoginType,loginReq)
         _this.sendReq(_this.option.LoginType,loginReq,function(res){
-            
-
+             
             if (res.Code==0){
                 _this.name=res.Res.playername
                 _this.pid=res.Res.id
@@ -35,7 +37,6 @@ Client.prototype.Login=function(){
                 _this.setStatus(-res.Code)
             } 
         })
-    }) 
 }
 
 Client.prototype.sendReq=function(comman,req,cb){
@@ -43,7 +44,7 @@ if (!this.isConnect)return
 
     var obj=this.createReq(comman,req)
     this.wbSocket.send(obj.serializeBinary())
-    this.reqMap[req.getHandlecode]={
+    this.reqMap[obj.getHandlecode()]={
         Req:req.toObject(),
         Cb:cb,
         Time:new Date().getTime()
@@ -62,20 +63,21 @@ Client.prototype.setStatus=function(status){
 }
 
 Client.prototype.onMessage=function(event){
-   if(this.option.onMsg){
-     this.onMsg()
+   if(this.option.onData){
+     this.onData()
    }
 
     
    var response=pbUitl.GetPb("ClientResponse").deserializeBinary(event.data) 
-   var responseObj=response.toObject();
-       
-       
-       
+   var responseObj=response.toObject(); 
 	   var cmdObj=pbUitl.GetCommand(responseObj.cmd)
-       if(cmdObj.cmd=="PLAYER_XINTIAO"){
+       if(cmdObj.Cmd=="PLAYER_XINTIAO"){
         console.log("client PLAYER_XINTIAO")
         return     
+       }
+
+       if(igList[cmdObj.Cmd]){
+         return     
        }
 
 
@@ -94,15 +96,18 @@ Client.prototype.onMessage=function(event){
          o.Res=res.toObject() 
 	   } 
 
-       if(this.reqMap[responseObj.Code]){
-        o.Req=this.reqMap[responseObj.Code]
-        if(this.reqMap[responseObj.Code].Cb){
-            this.reqMap[responseObj.Code].Cb(o)
+       if(this.reqMap[responseObj.handlecode]){
+        o.Req=this.reqMap[responseObj.handlecode]
+        if(this.reqMap[responseObj.handlecode].Cb){
+            this.reqMap[responseObj.handlecode].Cb(o)
         }
 
-        this.reqMap[responseObj.Code]=undefined
+        this.reqMap[responseObj.handlecode]=undefined
        }
 
+       if (this.option.onMsg)
+         this.option.onMsg(o)
+        else
        this.msgList.push(o)
 }
 
@@ -209,11 +214,12 @@ Client.prototype.createReq=function(command,pbObj){
     var req= pbUitl.CreatePbObj("ClientRequest")
     var cmdNum=pbUitl.GetCommandNum(command)
     req.setCmd(cmdNum)
-    req.setHandlecode(this.order)
+    req.setHandlecode(this.order.toString())
     req.setPartnerid(this.option.Partner)
     req.setServerid(this.option.ServerGroupid)
     req.setGameversionid(this.option.VersoinId) 
     req.setData(pbObj.serializeBinary())
+ 
 
     return req
 }

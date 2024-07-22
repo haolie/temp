@@ -68,6 +68,8 @@ var BranchTask_pb = require('./BranchTask_pb.js');
 goog.object.extend(proto, BranchTask_pb);
 var ChargeFirst_pb = require('./ChargeFirst_pb.js');
 goog.object.extend(proto, ChargeFirst_pb);
+var HeroContact_pb = require('./HeroContact_pb.js');
+goog.object.extend(proto, HeroContact_pb);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataReq', null, global);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataRes', null, global);
 /**
@@ -305,7 +307,9 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.toObject = function(includeInstance
     Friend_pb.FriendDetail.toObject, includeInstance),
     heroinmodulesMap: (f = msg.getHeroinmodulesMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroInTeamInfo.toObject) : [],
     branchtaskgroupinfo: (f = msg.getBranchtaskgroupinfo()) && BranchTask_pb.BranchTaskGroupInfo.toObject(includeInstance, f),
-    chargefirstinfo: (f = msg.getChargefirstinfo()) && ChargeFirst_pb.ChargeFirstBoxInfo.toObject(includeInstance, f)
+    chargefirstinfo: (f = msg.getChargefirstinfo()) && ChargeFirst_pb.ChargeFirstBoxInfo.toObject(includeInstance, f),
+    fapinfo: (f = msg.getFapinfo()) && Player_pb.PlayerPushFapInfoRes.toObject(includeInstance, f),
+    herocontactinfo: (f = msg.getHerocontactinfo()) && HeroContact_pb.HeroContactInitInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -609,6 +613,16 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.deserializeBinaryFromReader = funct
       var value = new ChargeFirst_pb.ChargeFirstBoxInfo;
       reader.readMessage(value,ChargeFirst_pb.ChargeFirstBoxInfo.deserializeBinaryFromReader);
       msg.setChargefirstinfo(value);
+      break;
+    case 51:
+      var value = new Player_pb.PlayerPushFapInfoRes;
+      reader.readMessage(value,Player_pb.PlayerPushFapInfoRes.deserializeBinaryFromReader);
+      msg.setFapinfo(value);
+      break;
+    case 52:
+      var value = new HeroContact_pb.HeroContactInitInfo;
+      reader.readMessage(value,HeroContact_pb.HeroContactInitInfo.deserializeBinaryFromReader);
+      msg.setHerocontactinfo(value);
       break;
     default:
       reader.skipField();
@@ -965,6 +979,22 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.serializeBinaryToWriter = function(
       50,
       f,
       ChargeFirst_pb.ChargeFirstBoxInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getFapinfo();
+  if (f != null) {
+    writer.writeMessage(
+      51,
+      f,
+      Player_pb.PlayerPushFapInfoRes.serializeBinaryToWriter
+    );
+  }
+  f = message.getHerocontactinfo();
+  if (f != null) {
+    writer.writeMessage(
+      52,
+      f,
+      HeroContact_pb.HeroContactInitInfo.serializeBinaryToWriter
     );
   }
 };
@@ -2551,6 +2581,80 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearChargefirstinfo = fu
  */
 proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasChargefirstinfo = function() {
   return jspb.Message.getField(this, 50) != null;
+};
+
+
+/**
+ * optional PbModel.Player.PlayerPushFapInfoRes FapInfo = 51;
+ * @return {?proto.PbModel.Player.PlayerPushFapInfoRes}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getFapinfo = function() {
+  return /** @type{?proto.PbModel.Player.PlayerPushFapInfoRes} */ (
+    jspb.Message.getWrapperField(this, Player_pb.PlayerPushFapInfoRes, 51));
+};
+
+
+/**
+ * @param {?proto.PbModel.Player.PlayerPushFapInfoRes|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setFapinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 51, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearFapinfo = function() {
+  return this.setFapinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasFapinfo = function() {
+  return jspb.Message.getField(this, 51) != null;
+};
+
+
+/**
+ * optional PbModel.HeroContact.HeroContactInitInfo HeroContactInfo = 52;
+ * @return {?proto.PbModel.HeroContact.HeroContactInitInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getHerocontactinfo = function() {
+  return /** @type{?proto.PbModel.HeroContact.HeroContactInitInfo} */ (
+    jspb.Message.getWrapperField(this, HeroContact_pb.HeroContactInitInfo, 52));
+};
+
+
+/**
+ * @param {?proto.PbModel.HeroContact.HeroContactInitInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setHerocontactinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 52, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearHerocontactinfo = function() {
+  return this.setHerocontactinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasHerocontactinfo = function() {
+  return jspb.Message.getField(this, 52) != null;
 };
 
 

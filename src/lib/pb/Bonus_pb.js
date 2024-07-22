@@ -1020,7 +1020,8 @@ proto.PbModel.Bonus.BonusSendItem.toObject = function(includeInstance, msg) {
     bonusmodelid: jspb.Message.getFieldWithDefault(msg, 4, 0),
     isreceive: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
     bonusreceivelistList: jspb.Message.toObjectList(msg.getBonusreceivelistList(),
-    proto.PbModel.Bonus.BonusReceiveItem.toObject, includeInstance)
+    proto.PbModel.Bonus.BonusReceiveItem.toObject, includeInstance),
+    receivednum: jspb.Message.getFieldWithDefault(msg, 7, 0)
   };
 
   if (includeInstance) {
@@ -1082,6 +1083,10 @@ proto.PbModel.Bonus.BonusSendItem.deserializeBinaryFromReader = function(msg, re
       var value = new proto.PbModel.Bonus.BonusReceiveItem;
       reader.readMessage(value,proto.PbModel.Bonus.BonusReceiveItem.deserializeBinaryFromReader);
       msg.addBonusreceivelist(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReceivednum(value);
       break;
     default:
       reader.skipField();
@@ -1154,6 +1159,13 @@ proto.PbModel.Bonus.BonusSendItem.serializeBinaryToWriter = function(message, wr
       6,
       f,
       proto.PbModel.Bonus.BonusReceiveItem.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceivednum();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
     );
   }
 };
@@ -1303,6 +1315,24 @@ proto.PbModel.Bonus.BonusSendItem.prototype.addBonusreceivelist = function(opt_v
  */
 proto.PbModel.Bonus.BonusSendItem.prototype.clearBonusreceivelistList = function() {
   return this.setBonusreceivelistList([]);
+};
+
+
+/**
+ * optional int32 ReceivedNum = 7;
+ * @return {number}
+ */
+proto.PbModel.Bonus.BonusSendItem.prototype.getReceivednum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Bonus.BonusSendItem} returns this
+ */
+proto.PbModel.Bonus.BonusSendItem.prototype.setReceivednum = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 

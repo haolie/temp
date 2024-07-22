@@ -12135,11 +12135,13 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.toObject = function(includeInstanc
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     playerid: jspb.Message.getFieldWithDefault(msg, 2, ""),
     playername: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    iswin: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    cuthp: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    createtime: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    borrowplayerid: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    borrowplayername: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    iswin: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
+    cuthp: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    createtime: jspb.Message.getFieldWithDefault(msg, 8, 0),
     guildfashionheadinfo: (f = msg.getGuildfashionheadinfo()) && Guild_pb.GuildFashionHeadInfo.toObject(includeInstance, f),
-    fightdifficulty: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    fightdifficulty: jspb.Message.getFieldWithDefault(msg, 10, 0)
   };
 
   if (includeInstance) {
@@ -12189,23 +12191,31 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.deserializeBinaryFromReader = func
       msg.setPlayername(value);
       break;
     case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBorrowplayerid(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBorrowplayername(value);
+      break;
+    case 6:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIswin(value);
       break;
-    case 5:
+    case 7:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setCuthp(value);
       break;
-    case 6:
+    case 8:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setCreatetime(value);
       break;
-    case 7:
+    case 9:
       var value = new Guild_pb.GuildFashionHeadInfo;
       reader.readMessage(value,Guild_pb.GuildFashionHeadInfo.deserializeBinaryFromReader);
       msg.setGuildfashionheadinfo(value);
       break;
-    case 8:
+    case 10:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setFightdifficulty(value);
       break;
@@ -12259,31 +12269,45 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.serializeBinaryToWriter = function
       f
     );
   }
+  f = message.getBorrowplayerid();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getBorrowplayername();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
   f = message.getIswin();
   if (f) {
     writer.writeBool(
-      4,
+      6,
       f
     );
   }
   f = message.getCuthp();
   if (f !== 0) {
     writer.writeInt64(
-      5,
+      7,
       f
     );
   }
   f = message.getCreatetime();
   if (f !== 0) {
     writer.writeInt64(
-      6,
+      8,
       f
     );
   }
   f = message.getGuildfashionheadinfo();
   if (f != null) {
     writer.writeMessage(
-      7,
+      9,
       f,
       Guild_pb.GuildFashionHeadInfo.serializeBinaryToWriter
     );
@@ -12291,7 +12315,7 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.serializeBinaryToWriter = function
   f = message.getFightdifficulty();
   if (f !== 0) {
     writer.writeInt32(
-      8,
+      10,
       f
     );
   }
@@ -12353,11 +12377,47 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setPlayername = function
 
 
 /**
- * optional bool IsWin = 4;
+ * optional string BorrowPlayerId = 4;
+ * @return {string}
+ */
+proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getBorrowplayerid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setBorrowplayerid = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string BorrowPlayerName = 5;
+ * @return {string}
+ */
+proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getBorrowplayername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setBorrowplayername = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional bool IsWin = 6;
  * @return {boolean}
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getIswin = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
 };
 
 
@@ -12366,16 +12426,16 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getIswin = function() {
  * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setIswin = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 4, value);
+  return jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 
 /**
- * optional int64 CutHP = 5;
+ * optional int64 CutHP = 7;
  * @return {number}
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getCuthp = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
@@ -12384,16 +12444,16 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getCuthp = function() {
  * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setCuthp = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 
 /**
- * optional int64 CreateTime = 6;
+ * optional int64 CreateTime = 8;
  * @return {number}
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getCreatetime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
@@ -12402,17 +12462,17 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getCreatetime = function
  * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setCreatetime = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
+  return jspb.Message.setProto3IntField(this, 8, value);
 };
 
 
 /**
- * optional PbModel.Guild.GuildFashionHeadInfo GuildFashionHeadInfo = 7;
+ * optional PbModel.Guild.GuildFashionHeadInfo GuildFashionHeadInfo = 9;
  * @return {?proto.PbModel.Guild.GuildFashionHeadInfo}
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getGuildfashionheadinfo = function() {
   return /** @type{?proto.PbModel.Guild.GuildFashionHeadInfo} */ (
-    jspb.Message.getWrapperField(this, Guild_pb.GuildFashionHeadInfo, 7));
+    jspb.Message.getWrapperField(this, Guild_pb.GuildFashionHeadInfo, 9));
 };
 
 
@@ -12421,7 +12481,7 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getGuildfashionheadinfo 
  * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
 */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setGuildfashionheadinfo = function(value) {
-  return jspb.Message.setWrapperField(this, 7, value);
+  return jspb.Message.setWrapperField(this, 9, value);
 };
 
 
@@ -12439,16 +12499,16 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.clearGuildfashionheadinf
  * @return {boolean}
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.hasGuildfashionheadinfo = function() {
-  return jspb.Message.getField(this, 7) != null;
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
 /**
- * optional int32 FightDifficulty = 8;
+ * optional int32 FightDifficulty = 10;
  * @return {number}
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getFightdifficulty = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
 
@@ -12457,7 +12517,7 @@ proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.getFightdifficulty = fun
  * @return {!proto.PbModel.GuildHunt.GuildHuntFightLogInfo} returns this
  */
 proto.PbModel.GuildHunt.GuildHuntFightLogInfo.prototype.setFightdifficulty = function(value) {
-  return jspb.Message.setProto3IntField(this, 8, value);
+  return jspb.Message.setProto3IntField(this, 10, value);
 };
 
 

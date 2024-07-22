@@ -4463,9 +4463,7 @@ proto.PbModel.Player.PlayerRsInfo.toObject = function(includeInstance, msg) {
     lv: jspb.Message.getFieldWithDefault(msg, 1, 0),
     vip: jspb.Message.getFieldWithDefault(msg, 2, 0),
     chargenum: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
-    biglv: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    fap: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    totalfap: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    biglv: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -4517,14 +4515,6 @@ proto.PbModel.Player.PlayerRsInfo.deserializeBinaryFromReader = function(msg, re
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setBiglv(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFap(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setTotalfap(value);
       break;
     default:
       reader.skipField();
@@ -4580,20 +4570,6 @@ proto.PbModel.Player.PlayerRsInfo.serializeBinaryToWriter = function(message, wr
   if (f !== 0) {
     writer.writeInt32(
       4,
-      f
-    );
-  }
-  f = message.getFap();
-  if (f !== 0) {
-    writer.writeInt64(
-      5,
-      f
-    );
-  }
-  f = message.getTotalfap();
-  if (f !== 0) {
-    writer.writeInt64(
-      6,
       f
     );
   }
@@ -4669,42 +4645,6 @@ proto.PbModel.Player.PlayerRsInfo.prototype.getBiglv = function() {
  */
 proto.PbModel.Player.PlayerRsInfo.prototype.setBiglv = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional int64 Fap = 5;
- * @return {number}
- */
-proto.PbModel.Player.PlayerRsInfo.prototype.getFap = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Player.PlayerRsInfo} returns this
- */
-proto.PbModel.Player.PlayerRsInfo.prototype.setFap = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional int64 TotalFap = 6;
- * @return {number}
- */
-proto.PbModel.Player.PlayerRsInfo.prototype.getTotalfap = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Player.PlayerRsInfo} returns this
- */
-proto.PbModel.Player.PlayerRsInfo.prototype.setTotalfap = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 

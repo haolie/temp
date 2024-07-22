@@ -1,12 +1,12 @@
 <template>
   <el-container>
     <!-- <header data-v-730268c5="" class="el-header main-head">Header</header> -->
-    <el-header class="main-head" style="height: 150px;"  v-show="Status==0">
+    <el-header class="main-head" style="height: 150px;"  v-show="Status<=0">
       <el-row>
         <el-col :span="19">
           <el-row :gutter="20">
 
-   <el-col :span="24">
+   <el-col :span="6">
    <el-select v-model="ServerGroupId" filterable placeholder="请选择">
     <el-option
       v-for="item in ServerList"
@@ -17,14 +17,14 @@
   </el-select>
   </el-col> 
 
-  <el-col :span="24">
+  <el-col :span="18">
     <el-input placeholder="请输入内容" v-model="ServerItem.url">
     <template slot="prepend">MC:</template>
   </el-input>
   </el-col> 
 
   <el-col :span="8">
-    <el-input placeholder="请输入内容" v-model="ServerItem.Partner">
+    <el-input placeholder="请输入内容" v-model="ServerItem.PartnerId">
       <template slot="prepend">合作商:</template>
     </el-input>
   </el-col> 
@@ -94,7 +94,7 @@
         </el-col>
         <el-col :span="24">
           <ul class="infinite-list"  style="overflow:auto">
-           <li v-for="item in WebCli.msgList" :key="item.MsgOrder" class="infinite-list-item" v-show="item.Cmd.indexOf(SearchMsg.toUpperCase())>=0" @click="selectMsg(item)" :title="item.Cmd">{{ item.Cmd }} </li>
+           <li v-for="item in MsgList" :key="item.MsgOrder" class="infinite-list-item" v-show="item.Cmd.indexOf(SearchMsg.toUpperCase())>=0" @click="selectMsg(item)" :title="item.Cmd">{{ item.Cmd }} </li>
           </ul>
         </el-col>
       </el-row>
@@ -105,6 +105,12 @@
     </el-aside>
     <el-main>
       <el-row> 
+         <el-col :span="12">
+          <div style="color: wheat;">Name：{{WebCli.name}}</div>
+         </el-col>
+         <el-col :span="12">
+          <div style="color: wheat;">Id:{{WebCli.pid}}</div>
+         </el-col>
          <el-col :span="24">
           <el-input placeholder="请输入内容" v-model="MsgObj.Cmd"  :disabled="true" class="input-with-select" > 
              <el-button slot="append" icon="el-icon-check" @click="request()"></el-button>
@@ -133,8 +139,7 @@
 </template>
 <script>
 import pbUtils from '@/lib/pbUtils'
-import webClient from '@/lib/client'
-import { watch } from 'gulp';
+import webClient from '@/lib/client' 
 let _this
 
 export default {
@@ -142,7 +147,7 @@ export default {
   data () {
     return {
       Status:0,
-      ServerGroupId:1007,
+      ServerGroupId:0,
       ServerItem:{
         url:"",
         PartnerId:1001,
@@ -171,57 +176,40 @@ export default {
         }, {
           value: 'PlayerReLogin',
           label: 'Seasion'
-        }],
-      connectLogoin:function(){
-        
-      },
-      WebCli:new webClient({
-      LoginParam:"l11",
-      LoginType:"PlayerYaceLogin",
-      Mc:"ws://10.253.0.63:10001/client",
-      Partner:1001,
-      VersoinId:101,
-      ServerGroupid:1007,
-      onStatus:function(state){
-        this.ShowLoginPanel=state<=0
-        
-      }
-      })
+        }], 
+      WebCli:new webClient({})
     }
   },
-  computed: {
-    monthNum () {
-      if (!this.dateStatus) return ''
-      return Math.floor(this.dateStatus.dayNum / 30)
-    },
-    dayNum () {
-      if (!this.dateStatus) return ''
-      return Math.floor(this.dateStatus.dayNum % 30)
-    }
+  computed: { 
   },
   methods: {
-    Connect(){
+    Connect(cb){
        var _this=this
        this.WebCli.setOpt({
-       LoginParam:"l11",
-       LoginType:"PlayerYaceLogin",
-       Mc:"ws://10.253.0.63:10001/client",
-       Partner:1001,
-       VersoinId:101,
-       ServerGroupid:1007,
+       LoginParam:this.ServerItem.LoginParam,
+       LoginType:this.ServerItem.LoginType,
+       Mc:this.ServerItem.url,
+       Partner:this.ServerItem.PartnerId,
+       VersoinId:this.ServerItem.VersionId,
+       ServerGroupid:this.ServerGroupId,
        onStatus:function(state){
-        this.ShowLoginPanel=state<=0
-        
+        _this.Status=state
+      },
+      onMsg:function(msg){
+        _this.MsgList.push(msg)
       }
       })
+
+      this.WebCli.connect(cb)
     },
     Login(){
-        
-        this.WebCli.Login()
+        var _this=this
+        this.Connect(function(){
+          _this.WebCli.Login()
+        })
     },
     getBottomRightItems () { // 
 
-     debugger
       // this.$http.get({
       //   api: 'B_TOTALITEM',
       //   params: {},
@@ -237,15 +225,10 @@ export default {
        this.CmdList=this.WebCli.cmdSearch(this.SearchCmd)
     },
     onSearchMsg(){  
-       this.WebCli.cmdSearch(function(status,obj){
-        if(status!=200){
-          console.log("MC Err:"+status)
-          return
-        }
-
-        console.log(obj)
-
-       })
+      var l=this.MsgList.length
+       for(var i=0;i<l;i++){
+        this.MsgList.pop()
+       }
     },
     selectCmd(CmdObj){
        this.MsgObj.Cmd=CmdObj.Cmd
@@ -258,11 +241,11 @@ export default {
        this.WebCli.Query(this.MsgObj.Cmd,JSON.parse(this.MsgObj.Req))
     },
     getServerItem(){
-      //  for(var i=0;i<this.ServerList.length;i++){
-      //    if(this.ServerItem.ServerGroupId==this.ServerList[i].GroupID){
-      //      return this.ServerList[i]
-      //    }
-      //  }
+       for(var i=0;i<this.ServerList.length;i++){
+         if(this.ServerGroupId==this.ServerList[i].GroupID){
+           return this.ServerList[i]
+         }
+       }
 
        return null
     },
@@ -274,18 +257,34 @@ export default {
           return
         }
 
-        _this.ServerList=list
+        if(list){
+          _this.ServerList=list
+          _this.ServerGroupId=1007
+        }
+      
+
       })
     }
   },
   updated () {},
   watch: {},
   created () {
-     
+    this.CmdList=window.Pb.ReqList   
+    this.loadServerList()
   },
   mounted () { 
-    // this.CmdList=window.Pb.ReqList   
-    // this.loadServerList()
+    
+  },
+  watch:{
+    ServerGroupId:{
+      handler:function(id,oId){
+       var item=this.getServerItem()
+       console.log(item)
+       this.ServerItem.url=item.GroupUrl
+
+    },
+    immediate:false
+    },
   }
 }
 

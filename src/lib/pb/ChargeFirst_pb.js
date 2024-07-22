@@ -202,7 +202,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.ChargeFirst.ChargeFirstBoxInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.ChargeFirst.ChargeFirstBoxInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1527,6 +1527,13 @@ proto.PbModel.ChargeFirst.ChargeFirstPushChargeBoxInfoRes.prototype.setIscomplet
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.repeatedFields_ = [2];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1558,7 +1565,9 @@ proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.toObject = function(opt_i
  */
 proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    iscomplete: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    iscomplete: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
+    drawnuminfolistList: jspb.Message.toObjectList(msg.getDrawnuminfolistList(),
+    proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1599,6 +1608,11 @@ proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.deserializeBinaryFromReader = funct
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIscomplete(value);
       break;
+    case 2:
+      var value = new proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo;
+      reader.readMessage(value,proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo.deserializeBinaryFromReader);
+      msg.addDrawnuminfolist(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1635,6 +1649,14 @@ proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.serializeBinaryToWriter = function(
       f
     );
   }
+  f = message.getDrawnuminfolistList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -1653,6 +1675,44 @@ proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.getIscomplete = function(
  */
 proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.setIscomplete = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+/**
+ * repeated ChargeFirstDrawNumInfo DrawNumInfoList = 2;
+ * @return {!Array<!proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo>}
+ */
+proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.getDrawnuminfolistList = function() {
+  return /** @type{!Array<!proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo>} value
+ * @return {!proto.PbModel.ChargeFirst.ChargeFirstBoxInfo} returns this
+*/
+proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.setDrawnuminfolistList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo}
+ */
+proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.addDrawnuminfolist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.PbModel.ChargeFirst.ChargeFirstDrawNumInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.ChargeFirst.ChargeFirstBoxInfo} returns this
+ */
+proto.PbModel.ChargeFirst.ChargeFirstBoxInfo.prototype.clearDrawnuminfolistList = function() {
+  return this.setDrawnuminfolistList([]);
 };
 
 
