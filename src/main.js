@@ -12,6 +12,8 @@ store.dispatch('loadServerList').then((list) => {
   console.log(list)
 })
 
+store.commit('LoadTabList')
+
 Echarts.registerTheme('macarons', echartsTheme)
 Vue.config.productionTip = false
 Vue.prototype.$echarts = Echarts

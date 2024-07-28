@@ -37,10 +37,10 @@ export default {
     },
     getters: {
       getPlayerStorage: (state)=>(pid) => {
-        if (state.token === '') {
-          state.token = window.sessionStorage.getItem('token') ? window.sessionStorage.getItem('token') : ''
-        }
-        return state.token
+         var loginMap=getLoginMap(window.localStorage)
+         if(loginMap[pid]) return loginMap[pid]
+
+         return null
       },
       getShowList: (state)=> {
           if(window.localStorage[SHOWLIST]){

@@ -10,6 +10,7 @@ import confirm from './confirmv'
 import loading from './loading'
 import mc from './mc'
 import storage from './storage'
+import tabLogin from './tabLogin'
 
 Vue.use(Vuex)
 
@@ -26,6 +27,7 @@ status = objAdd(status, confirm)
 status = objAdd(status, loading)
 status = objAdd(status, mc)
 status = objAdd(status, storage)
+status = objAdd(status, tabLogin)
 
 function objAdd (a, b) {
   Object.keys(a).forEach((o) => {
