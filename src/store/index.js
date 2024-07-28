@@ -8,6 +8,8 @@ import token from './token'
 import jalert from './jalert'
 import confirm from './confirmv'
 import loading from './loading'
+import mc from './mc'
+import storage from './storage'
 
 Vue.use(Vuex)
 
@@ -22,6 +24,8 @@ status = objAdd(status, token)
 status = objAdd(status, jalert)
 status = objAdd(status, confirm)
 status = objAdd(status, loading)
+status = objAdd(status, mc)
+status = objAdd(status, storage)
 
 function objAdd (a, b) {
   Object.keys(a).forEach((o) => {

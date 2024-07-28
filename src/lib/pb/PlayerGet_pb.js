@@ -70,6 +70,8 @@ var ChargeFirst_pb = require('./ChargeFirst_pb.js');
 goog.object.extend(proto, ChargeFirst_pb);
 var HeroContact_pb = require('./HeroContact_pb.js');
 goog.object.extend(proto, HeroContact_pb);
+var NewTeamPve_pb = require('./NewTeamPve_pb.js');
+goog.object.extend(proto, NewTeamPve_pb);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataReq', null, global);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataRes', null, global);
 /**
@@ -309,7 +311,8 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.toObject = function(includeInstance
     branchtaskgroupinfo: (f = msg.getBranchtaskgroupinfo()) && BranchTask_pb.BranchTaskGroupInfo.toObject(includeInstance, f),
     chargefirstinfo: (f = msg.getChargefirstinfo()) && ChargeFirst_pb.ChargeFirstBoxInfo.toObject(includeInstance, f),
     fapinfo: (f = msg.getFapinfo()) && Player_pb.PlayerPushFapInfoRes.toObject(includeInstance, f),
-    herocontactinfo: (f = msg.getHerocontactinfo()) && HeroContact_pb.HeroContactInitInfo.toObject(includeInstance, f)
+    herocontactinfo: (f = msg.getHerocontactinfo()) && HeroContact_pb.HeroContactInitInfo.toObject(includeInstance, f),
+    newteampve: (f = msg.getNewteampve()) && NewTeamPve_pb.NewTeamPveGetInfoRes.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -623,6 +626,11 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.deserializeBinaryFromReader = funct
       var value = new HeroContact_pb.HeroContactInitInfo;
       reader.readMessage(value,HeroContact_pb.HeroContactInitInfo.deserializeBinaryFromReader);
       msg.setHerocontactinfo(value);
+      break;
+    case 53:
+      var value = new NewTeamPve_pb.NewTeamPveGetInfoRes;
+      reader.readMessage(value,NewTeamPve_pb.NewTeamPveGetInfoRes.deserializeBinaryFromReader);
+      msg.setNewteampve(value);
       break;
     default:
       reader.skipField();
@@ -995,6 +1003,14 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.serializeBinaryToWriter = function(
       52,
       f,
       HeroContact_pb.HeroContactInitInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getNewteampve();
+  if (f != null) {
+    writer.writeMessage(
+      53,
+      f,
+      NewTeamPve_pb.NewTeamPveGetInfoRes.serializeBinaryToWriter
     );
   }
 };
@@ -2655,6 +2671,43 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearHerocontactinfo = fu
  */
 proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasHerocontactinfo = function() {
   return jspb.Message.getField(this, 52) != null;
+};
+
+
+/**
+ * optional PbModel.NewTeamPve.NewTeamPveGetInfoRes NewTeamPve = 53;
+ * @return {?proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getNewteampve = function() {
+  return /** @type{?proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes} */ (
+    jspb.Message.getWrapperField(this, NewTeamPve_pb.NewTeamPveGetInfoRes, 53));
+};
+
+
+/**
+ * @param {?proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setNewteampve = function(value) {
+  return jspb.Message.setWrapperField(this, 53, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearNewteampve = function() {
+  return this.setNewteampve(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasNewteampve = function() {
+  return jspb.Message.getField(this, 53) != null;
 };
 
 

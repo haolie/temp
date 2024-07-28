@@ -66,7 +66,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -339,7 +339,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -444,7 +444,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -556,6 +556,13 @@ proto.PbModel.NewTeamPve.NewTeamPveGetInfoReq.serializeBinaryToWriter = function
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.repeatedFields_ = [9];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -594,7 +601,8 @@ proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.toObject = function(includeInstanc
     teaminfo: (f = msg.getTeaminfo()) && proto.PbModel.NewTeamPve.NewTeamPveInfo.toObject(includeInstance, f),
     rewardchapterid: jspb.Message.getFieldWithDefault(msg, 6, 0),
     friendlynum: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    isfirstreward: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
+    isfirstreward: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    passchapteridsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -663,6 +671,10 @@ proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.deserializeBinaryFromReader = func
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIsfirstreward(value);
+      break;
+    case 9:
+      var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
+      msg.setPasschapteridsList(value);
       break;
     default:
       reader.skipField();
@@ -747,6 +759,13 @@ proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.serializeBinaryToWriter = function
   if (f) {
     writer.writeBool(
       8,
+      f
+    );
+  }
+  f = message.getPasschapteridsList();
+  if (f.length > 0) {
+    writer.writePackedInt32(
+      9,
       f
     );
   }
@@ -913,6 +932,43 @@ proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.prototype.getIsfirstreward = funct
  */
 proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.prototype.setIsfirstreward = function(value) {
   return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * repeated int32 PassChapterIds = 9;
+ * @return {!Array<number>}
+ */
+proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.prototype.getPasschapteridsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.prototype.setPasschapteridsList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.prototype.addPasschapterids = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveGetInfoRes.prototype.clearPasschapteridsList = function() {
+  return this.setPasschapteridsList([]);
 };
 
 
@@ -1923,7 +1979,9 @@ proto.PbModel.NewTeamPve.NewTeamPveHero.toObject = function(includeInstance, msg
   var f, obj = {
     heroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     heromodelid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    output: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    output: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    star: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    lv: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -1968,9 +2026,17 @@ proto.PbModel.NewTeamPve.NewTeamPveHero.deserializeBinaryFromReader = function(m
       var value = /** @type {number} */ (reader.readInt32());
       msg.setHeromodelid(value);
       break;
-    case 5:
+    case 3:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setOutput(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStar(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setLv(value);
       break;
     default:
       reader.skipField();
@@ -2018,6 +2084,20 @@ proto.PbModel.NewTeamPve.NewTeamPveHero.serializeBinaryToWriter = function(messa
   f = message.getOutput();
   if (f !== 0) {
     writer.writeInt64(
+      3,
+      f
+    );
+  }
+  f = message.getStar();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getLv();
+  if (f !== 0) {
+    writer.writeInt32(
       5,
       f
     );
@@ -2062,11 +2142,11 @@ proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.setHeromodelid = function(valu
 
 
 /**
- * optional int64 Output = 5;
+ * optional int64 Output = 3;
  * @return {number}
  */
 proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.getOutput = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -2075,6 +2155,42 @@ proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.getOutput = function() {
  * @return {!proto.PbModel.NewTeamPve.NewTeamPveHero} returns this
  */
 proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.setOutput = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional string Star = 4;
+ * @return {string}
+ */
+proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.getStar = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveHero} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.setStar = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional int32 Lv = 5;
+ * @return {number}
+ */
+proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.getLv = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveHero} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveHero.prototype.setLv = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -2558,7 +2674,8 @@ proto.PbModel.NewTeamPve.NewTeamPveFightRes.prototype.toObject = function(opt_in
  */
 proto.PbModel.NewTeamPve.NewTeamPveFightRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    reportid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    reportid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    bossorder: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -2599,6 +2716,10 @@ proto.PbModel.NewTeamPve.NewTeamPveFightRes.deserializeBinaryFromReader = functi
       var value = /** @type {string} */ (reader.readString());
       msg.setReportid(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setBossorder(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -2635,6 +2756,13 @@ proto.PbModel.NewTeamPve.NewTeamPveFightRes.serializeBinaryToWriter = function(m
       f
     );
   }
+  f = message.getBossorder();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -2653,6 +2781,24 @@ proto.PbModel.NewTeamPve.NewTeamPveFightRes.prototype.getReportid = function() {
  */
 proto.PbModel.NewTeamPve.NewTeamPveFightRes.prototype.setReportid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 BossOrder = 2;
+ * @return {number}
+ */
+proto.PbModel.NewTeamPve.NewTeamPveFightRes.prototype.getBossorder = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveFightRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveFightRes.prototype.setBossorder = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -2818,7 +2964,7 @@ proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.prototype.toObject = function(opt
  */
 proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    reportid: jspb.Message.getFieldWithDefault(msg, 1, "")
+
   };
 
   if (includeInstance) {
@@ -2855,10 +3001,6 @@ proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.deserializeBinaryFromReader = fun
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setReportid(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -2888,31 +3030,6 @@ proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.prototype.serializeBinary = funct
  */
 proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getReportid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string ReportId = 1;
- * @return {string}
- */
-proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.prototype.getReportid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.NewTeamPve.NewTeamPveOverGameRes} returns this
- */
-proto.PbModel.NewTeamPve.NewTeamPveOverGameRes.prototype.setReportid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3047,6 +3164,13 @@ proto.PbModel.NewTeamPve.NewTeamPveDrawRewardReq.prototype.setIsdraw = function(
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.repeatedFields_ = [7];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -3083,7 +3207,8 @@ proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.toObject = function(includeInst
     canbuytimes: jspb.Message.getFieldWithDefault(msg, 3, 0),
     availablebuytimes: jspb.Message.getFieldWithDefault(msg, 4, 0),
     firstreward: (f = msg.getFirstreward()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f),
-    rewardchapterid: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    rewardchapterid: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    passchapteridsList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3145,6 +3270,10 @@ proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.deserializeBinaryFromReader = f
     case 6:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setRewardchapterid(value);
+      break;
+    case 7:
+      var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
+      msg.setPasschapteridsList(value);
       break;
     default:
       reader.skipField();
@@ -3216,6 +3345,13 @@ proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.serializeBinaryToWriter = funct
   if (f !== 0) {
     writer.writeInt32(
       6,
+      f
+    );
+  }
+  f = message.getPasschapteridsList();
+  if (f.length > 0) {
+    writer.writePackedInt32(
+      7,
       f
     );
   }
@@ -3365,6 +3501,43 @@ proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.prototype.getRewardchapterid = 
  */
 proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.prototype.setRewardchapterid = function(value) {
   return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * repeated int32 PassChapterIds = 7;
+ * @return {!Array<number>}
+ */
+proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.prototype.getPasschapteridsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 7));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.prototype.setPasschapteridsList = function(value) {
+  return jspb.Message.setField(this, 7, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.prototype.addPasschapterids = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPveDrawRewardRes.prototype.clearPasschapteridsList = function() {
+  return this.setPasschapteridsList([]);
 };
 
 
@@ -3907,7 +4080,6 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.toObject = functi
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.toObject = function(includeInstance, msg) {
   var f, obj = {
     reportid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    fightplayerid: jspb.Message.getFieldWithDefault(msg, 2, ""),
     boss: (f = msg.getBoss()) && proto.PbModel.NewTeamPve.NewTeamPveBoss.toObject(includeInstance, f),
     player: (f = msg.getPlayer()) && proto.PbModel.NewTeamPve.NewTeamPvePlayer.toObject(includeInstance, f)
   };
@@ -3951,15 +4123,11 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.deserializeBinaryFromReader
       msg.setReportid(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightplayerid(value);
-      break;
-    case 3:
       var value = new proto.PbModel.NewTeamPve.NewTeamPveBoss;
       reader.readMessage(value,proto.PbModel.NewTeamPve.NewTeamPveBoss.deserializeBinaryFromReader);
       msg.setBoss(value);
       break;
-    case 4:
+    case 3:
       var value = new proto.PbModel.NewTeamPve.NewTeamPvePlayer;
       reader.readMessage(value,proto.PbModel.NewTeamPve.NewTeamPvePlayer.deserializeBinaryFromReader);
       msg.setPlayer(value);
@@ -4000,17 +4168,10 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.serializeBinaryToWriter = f
       f
     );
   }
-  f = message.getFightplayerid();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
   f = message.getBoss();
   if (f != null) {
     writer.writeMessage(
-      3,
+      2,
       f,
       proto.PbModel.NewTeamPve.NewTeamPveBoss.serializeBinaryToWriter
     );
@@ -4018,7 +4179,7 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.serializeBinaryToWriter = f
   f = message.getPlayer();
   if (f != null) {
     writer.writeMessage(
-      4,
+      3,
       f,
       proto.PbModel.NewTeamPve.NewTeamPvePlayer.serializeBinaryToWriter
     );
@@ -4045,30 +4206,12 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.setReportid = fun
 
 
 /**
- * optional string FightPlayerId = 2;
- * @return {string}
- */
-proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.getFightplayerid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes} returns this
- */
-proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.setFightplayerid = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional NewTeamPveBoss Boss = 3;
+ * optional NewTeamPveBoss Boss = 2;
  * @return {?proto.PbModel.NewTeamPve.NewTeamPveBoss}
  */
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.getBoss = function() {
   return /** @type{?proto.PbModel.NewTeamPve.NewTeamPveBoss} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.NewTeamPve.NewTeamPveBoss, 3));
+    jspb.Message.getWrapperField(this, proto.PbModel.NewTeamPve.NewTeamPveBoss, 2));
 };
 
 
@@ -4077,7 +4220,7 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.getBoss = functio
  * @return {!proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes} returns this
 */
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.setBoss = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
@@ -4095,17 +4238,17 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.clearBoss = funct
  * @return {boolean}
  */
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.hasBoss = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional NewTeamPvePlayer Player = 4;
+ * optional NewTeamPvePlayer Player = 3;
  * @return {?proto.PbModel.NewTeamPve.NewTeamPvePlayer}
  */
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.getPlayer = function() {
   return /** @type{?proto.PbModel.NewTeamPve.NewTeamPvePlayer} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.NewTeamPve.NewTeamPvePlayer, 4));
+    jspb.Message.getWrapperField(this, proto.PbModel.NewTeamPve.NewTeamPvePlayer, 3));
 };
 
 
@@ -4114,7 +4257,7 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.getPlayer = funct
  * @return {!proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes} returns this
 */
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.setPlayer = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -4132,10 +4275,17 @@ proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.clearPlayer = fun
  * @return {boolean}
  */
 proto.PbModel.NewTeamPve.NewTeamPvePushAfterFightRes.prototype.hasPlayer = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.repeatedFields_ = [11];
 
 
 
@@ -4175,7 +4325,8 @@ proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.toObject = function(includeIn
     friendlynum: jspb.Message.getFieldWithDefault(msg, 7, 0),
     isfirstreward: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
     canbuytimes: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    availablebuytimes: jspb.Message.getFieldWithDefault(msg, 10, 0)
+    availablebuytimes: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    passchapteridsList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -4243,6 +4394,10 @@ proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.deserializeBinaryFromReader =
     case 10:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setAvailablebuytimes(value);
+      break;
+    case 11:
+      var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
+      msg.setPasschapteridsList(value);
       break;
     default:
       reader.skipField();
@@ -4326,6 +4481,13 @@ proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.serializeBinaryToWriter = fun
   if (f !== 0) {
     writer.writeInt32(
       10,
+      f
+    );
+  }
+  f = message.getPasschapteridsList();
+  if (f.length > 0) {
+    writer.writePackedInt32(
+      11,
       f
     );
   }
@@ -4473,6 +4635,43 @@ proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.prototype.getAvailablebuytime
  */
 proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.prototype.setAvailablebuytimes = function(value) {
   return jspb.Message.setProto3IntField(this, 10, value);
+};
+
+
+/**
+ * repeated int32 PassChapterIds = 11;
+ * @return {!Array<number>}
+ */
+proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.prototype.getPasschapteridsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 11));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.prototype.setPasschapteridsList = function(value) {
+  return jspb.Message.setField(this, 11, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.prototype.addPasschapterids = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 11, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes} returns this
+ */
+proto.PbModel.NewTeamPve.NewTeamPvePushGameOverRes.prototype.clearPasschapteridsList = function() {
+  return this.setPasschapteridsList([]);
 };
 
 

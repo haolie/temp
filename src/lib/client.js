@@ -1,6 +1,8 @@
 import pbUitl from '@/lib/pbUtils'
 import { name } from 'file-loader'
+import { error } from 'shelljs'
 
+const CMD_XINTIAO="PLAYERXINTIAO"
 const igList={
     SLOT_PUSHMAINSLOTINFO:1
 }
@@ -21,7 +23,7 @@ Client.prototype.order=0
 Client.prototype.msgOrder=0
 Client.prototype.reqMap={}
 Client.prototype.msgList=[]
-Client.prototype.Login=function(){
+Client.prototype.Login=function(cb){
     var _this=this
     var loginReq= pbUitl.CreateReqObj(_this.option.LoginType)
         loginReq.setPlayername(_this.option.LoginParam) 
@@ -36,6 +38,8 @@ Client.prototype.Login=function(){
             }else{
                 _this.setStatus(-res.Code)
             } 
+
+            if(cb)cb()
         })
 }
 
@@ -44,10 +48,13 @@ if (!this.isConnect)return
 
     var obj=this.createReq(comman,req)
     this.wbSocket.send(obj.serializeBinary())
-    this.reqMap[obj.getHandlecode()]={
-        Req:req.toObject(),
-        Cb:cb,
-        Time:new Date().getTime()
+
+    if(comman!=CMD_XINTIAO){
+        this.reqMap[obj.getHandlecode()]={
+            Req:req.toObject(),
+            Cb:cb,
+            Time:new Date().getTime()
+        }
     }
 }
 
@@ -71,7 +78,7 @@ Client.prototype.onMessage=function(event){
    var response=pbUitl.GetPb("ClientResponse").deserializeBinary(event.data) 
    var responseObj=response.toObject(); 
 	   var cmdObj=pbUitl.GetCommand(responseObj.cmd)
-       if(cmdObj.Cmd=="PLAYER_XINTIAO"){
+       if(cmdObj.Cmd==CMD_XINTIAO){
         console.log("client PLAYER_XINTIAO")
         return     
        }
@@ -91,12 +98,14 @@ Client.prototype.onMessage=function(event){
        }
 	   if (responseObj.code!=0){
 		   console.log(cmdObj.Cmd+"err:"+responseObj.code)
+
 	   }else{ 
 		 var res=  cmdObj.Res.deserializeBinary(responseObj.data)
          o.Res=res.toObject() 
 	   } 
 
        if(this.reqMap[responseObj.handlecode]){
+
         o.Req=this.reqMap[responseObj.handlecode]
         if(this.reqMap[responseObj.handlecode].Cb){
             this.reqMap[responseObj.handlecode].Cb(o)
@@ -251,15 +260,19 @@ Client.prototype.msgClear=function(txt){
 
 Client.prototype.selectMsg=function(obj,msg){ 
     obj.Cmd=msg.Cmd
-    
+   
     if(msg.Req&&msg.Req.Req){
         obj.Req=JSON.stringify(msg.Req.Req,null,2) 
     }else{
         obj.Req="{}"
     }
 
-    
-    obj.Res=  JSON.stringify(msg.Res,null,2) 
+    if(msg.Code==0){
+        obj.Res=  JSON.stringify(msg.Res,null,2) 
+    }else{
+        obj.Res= JSON.stringify({error:msg.Code},null,2) 
+    }
+  
  }
 
  Client.prototype.Query=function(cmd,msg,cb){ 
