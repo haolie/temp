@@ -6,16 +6,17 @@
       :key="i"
       :label="item.name"
       :value="item.id"
-      >用户管理</el-tab-pane> 
+      >
+      <PlayerView></PlayerView>
+    </el-tab-pane> 
   </el-tabs>
 </el-container>
 </template>
 <script>
-import pbUtils from '@/lib/pbUtils'
-import webClient from '@/lib/client'  
+import PlayerView from '@/PlayerView'
 
 export default {
-  components: {},
+  components: {PlayerView},
   data () {
     return {
       LoginList:[]
@@ -37,7 +38,7 @@ export default {
   updated () {}, 
   created () {
     var _this= this
-   
+     
   },
   mounted () { 
     

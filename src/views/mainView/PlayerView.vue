@@ -142,6 +142,7 @@ import pbUtils from '@/lib/pbUtils'
 import webClient from '@/lib/client'  
 
 export default {
+  props:["tabInfo"],
   components: {},
   data () {
     return {
@@ -205,11 +206,17 @@ export default {
         var _this=this
         this.Connect(function(){
           _this.WebCli.Login(function(){
-            _this.$store.commit("setPlayerItem",{
+
+            var obj={
               pid:_this.WebCli.pid,
               name:_this.WebCli.name,
-              time:new Date().getTime()
-            }) 
+              time:new Date().getTime(),
+              status:1,
+              serverGroupId:_this.ServerGroupId,
+
+            }
+            _this.$store.commit("setPlayerItem",obj) 
+            _this.$store.commit("ReplaceLoginTab",_this.tabInfo.TabId,obj) 
           })
         })
     },
