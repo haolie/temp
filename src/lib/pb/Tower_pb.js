@@ -1659,7 +1659,8 @@ proto.PbModel.Tower.TowerFightBeforeRes.prototype.toObject = function(opt_includ
  */
 proto.PbModel.Tower.TowerFightBeforeRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fightreportsMap: (f = msg.getFightreportsMap()) ? f.toObject(includeInstance, proto.PbModel.Fight.FightReport.toObject) : []
+    fightreportsMap: (f = msg.getFightreportsMap()) ? f.toObject(includeInstance, proto.PbModel.Fight.FightReport.toObject) : [],
+    towerinfo: (f = msg.getTowerinfo()) && proto.PbModel.Tower.TowerObj.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1702,6 +1703,11 @@ proto.PbModel.Tower.TowerFightBeforeRes.deserializeBinaryFromReader = function(m
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Fight.FightReport.deserializeBinaryFromReader, 0, new proto.PbModel.Fight.FightReport());
          });
       break;
+    case 2:
+      var value = new proto.PbModel.Tower.TowerObj;
+      reader.readMessage(value,proto.PbModel.Tower.TowerObj.deserializeBinaryFromReader);
+      msg.setTowerinfo(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1735,6 +1741,14 @@ proto.PbModel.Tower.TowerFightBeforeRes.serializeBinaryToWriter = function(messa
   if (f && f.getLength() > 0) {
     f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Fight.FightReport.serializeBinaryToWriter);
   }
+  f = message.getTowerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.PbModel.Tower.TowerObj.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -1758,6 +1772,43 @@ proto.PbModel.Tower.TowerFightBeforeRes.prototype.getFightreportsMap = function(
 proto.PbModel.Tower.TowerFightBeforeRes.prototype.clearFightreportsMap = function() {
   this.getFightreportsMap().clear();
   return this;};
+
+
+/**
+ * optional TowerObj TowerInfo = 2;
+ * @return {?proto.PbModel.Tower.TowerObj}
+ */
+proto.PbModel.Tower.TowerFightBeforeRes.prototype.getTowerinfo = function() {
+  return /** @type{?proto.PbModel.Tower.TowerObj} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Tower.TowerObj, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.Tower.TowerObj|undefined} value
+ * @return {!proto.PbModel.Tower.TowerFightBeforeRes} returns this
+*/
+proto.PbModel.Tower.TowerFightBeforeRes.prototype.setTowerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.Tower.TowerFightBeforeRes} returns this
+ */
+proto.PbModel.Tower.TowerFightBeforeRes.prototype.clearTowerinfo = function() {
+  return this.setTowerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.Tower.TowerFightBeforeRes.prototype.hasTowerinfo = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
 
 
 

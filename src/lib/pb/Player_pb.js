@@ -18,6 +18,8 @@ var Resource_pb = require('./Resource_pb.js');
 goog.object.extend(proto, Resource_pb);
 var PlayerEquip_pb = require('./PlayerEquip_pb.js');
 goog.object.extend(proto, PlayerEquip_pb);
+var Tmwd_pb = require('./Tmwd_pb.js');
+goog.object.extend(proto, Tmwd_pb);
 goog.exportSymbol('proto.PbModel.Player.PlayerAlterPlayerNameReq', null, global);
 goog.exportSymbol('proto.PbModel.Player.PlayerAlterPlayerNameRes', null, global);
 goog.exportSymbol('proto.PbModel.Player.PlayerBaseInfo', null, global);
@@ -527,7 +529,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.Player.PlayerViewAllInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.Player.PlayerViewAllInfoRes.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.Player.PlayerViewAllInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1502,7 +1504,8 @@ proto.PbModel.Player.PlayerBaseInfo.toObject = function(includeInstance, msg) {
     serverid: jspb.Message.getFieldWithDefault(msg, 3, 0),
     userid: jspb.Message.getFieldWithDefault(msg, 4, ""),
     gender: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    playername: jspb.Message.getFieldWithDefault(msg, 6, "")
+    playername: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    isinnerplayer: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
   };
 
   if (includeInstance) {
@@ -1562,6 +1565,10 @@ proto.PbModel.Player.PlayerBaseInfo.deserializeBinaryFromReader = function(msg, 
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setPlayername(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsinnerplayer(value);
       break;
     default:
       reader.skipField();
@@ -1631,6 +1638,13 @@ proto.PbModel.Player.PlayerBaseInfo.serializeBinaryToWriter = function(message, 
   if (f.length > 0) {
     writer.writeString(
       6,
+      f
+    );
+  }
+  f = message.getIsinnerplayer();
+  if (f) {
+    writer.writeBool(
+      7,
       f
     );
   }
@@ -1742,6 +1756,24 @@ proto.PbModel.Player.PlayerBaseInfo.prototype.getPlayername = function() {
  */
 proto.PbModel.Player.PlayerBaseInfo.prototype.setPlayername = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional bool IsInnerPlayer = 7;
+ * @return {boolean}
+ */
+proto.PbModel.Player.PlayerBaseInfo.prototype.getIsinnerplayer = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Player.PlayerBaseInfo} returns this
+ */
+proto.PbModel.Player.PlayerBaseInfo.prototype.setIsinnerplayer = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
 
@@ -2582,7 +2614,10 @@ proto.PbModel.Player.PlayerLoginReq.toObject = function(includeInstance, msg) {
     logininfo: jspb.Message.getFieldWithDefault(msg, 2, ""),
     inputencryptedstring: jspb.Message.getFieldWithDefault(msg, 3, ""),
     randnum: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    ismaxserverid: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+    ismaxserverid: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    devicemodel: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    os: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    osversion: jspb.Message.getFieldWithDefault(msg, 8, "")
   };
 
   if (includeInstance) {
@@ -2638,6 +2673,18 @@ proto.PbModel.Player.PlayerLoginReq.deserializeBinaryFromReader = function(msg, 
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIsmaxserverid(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDevicemodel(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setOs(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setOsversion(value);
       break;
     default:
       reader.skipField();
@@ -2700,6 +2747,27 @@ proto.PbModel.Player.PlayerLoginReq.serializeBinaryToWriter = function(message, 
   if (f) {
     writer.writeBool(
       5,
+      f
+    );
+  }
+  f = message.getDevicemodel();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getOs();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getOsversion();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
       f
     );
   }
@@ -2793,6 +2861,60 @@ proto.PbModel.Player.PlayerLoginReq.prototype.getIsmaxserverid = function() {
  */
 proto.PbModel.Player.PlayerLoginReq.prototype.setIsmaxserverid = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional string DeviceModel = 6;
+ * @return {string}
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.getDevicemodel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.setDevicemodel = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string Os = 7;
+ * @return {string}
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.getOs = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.setOs = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional string OsVersion = 8;
+ * @return {string}
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.getOsversion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Player.PlayerLoginReq} returns this
+ */
+proto.PbModel.Player.PlayerLoginReq.prototype.setOsversion = function(value) {
+  return jspb.Message.setProto3StringField(this, 8, value);
 };
 
 
@@ -4171,7 +4293,8 @@ proto.PbModel.Player.PlayerReLoginReq.prototype.toObject = function(opt_includeI
 proto.PbModel.Player.PlayerReLoginReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    token: jspb.Message.getFieldWithDefault(msg, 2, "")
+    token: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    pushid: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -4216,6 +4339,10 @@ proto.PbModel.Player.PlayerReLoginReq.deserializeBinaryFromReader = function(msg
       var value = /** @type {string} */ (reader.readString());
       msg.setToken(value);
       break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPushid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -4259,6 +4386,13 @@ proto.PbModel.Player.PlayerReLoginReq.serializeBinaryToWriter = function(message
       f
     );
   }
+  f = message.getPushid();
+  if (f !== 0) {
+    writer.writeUint32(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -4298,6 +4432,24 @@ proto.PbModel.Player.PlayerReLoginReq.prototype.setToken = function(value) {
 };
 
 
+/**
+ * optional uint32 PushId = 3;
+ * @return {number}
+ */
+proto.PbModel.Player.PlayerReLoginReq.prototype.getPushid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Player.PlayerReLoginReq} returns this
+ */
+proto.PbModel.Player.PlayerReLoginReq.prototype.setPushid = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
 
 
 
@@ -4330,7 +4482,8 @@ proto.PbModel.Player.PlayerReLoginRes.prototype.toObject = function(opt_includeI
  */
 proto.PbModel.Player.PlayerReLoginRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    safecode: jspb.Message.getFieldWithDefault(msg, 1, "")
+    safecode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    needgetinit: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -4371,6 +4524,10 @@ proto.PbModel.Player.PlayerReLoginRes.deserializeBinaryFromReader = function(msg
       var value = /** @type {string} */ (reader.readString());
       msg.setSafecode(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setNeedgetinit(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -4407,6 +4564,13 @@ proto.PbModel.Player.PlayerReLoginRes.serializeBinaryToWriter = function(message
       f
     );
   }
+  f = message.getNeedgetinit();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -4425,6 +4589,24 @@ proto.PbModel.Player.PlayerReLoginRes.prototype.getSafecode = function() {
  */
 proto.PbModel.Player.PlayerReLoginRes.prototype.setSafecode = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool NeedGetInit = 2;
+ * @return {boolean}
+ */
+proto.PbModel.Player.PlayerReLoginRes.prototype.getNeedgetinit = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Player.PlayerReLoginRes} returns this
+ */
+proto.PbModel.Player.PlayerReLoginRes.prototype.setNeedgetinit = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -5089,6 +5271,13 @@ proto.PbModel.Player.PlayerViewAllInfoReq.prototype.setPlayerid = function(value
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.Player.PlayerViewAllInfoRes.repeatedFields_ = [6];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -5124,7 +5313,9 @@ proto.PbModel.Player.PlayerViewAllInfoRes.toObject = function(includeInstance, m
     herosMap: (f = msg.getHerosMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroViewAttributeInfo.toObject) : [],
     fashioninfo: (f = msg.getFashioninfo()) && proto.PbModel.Player.PlayerViewFashionInfo.toObject(includeInstance, f),
     playerequipwearinfo: (f = msg.getPlayerequipwearinfo()) && PlayerEquip_pb.PlayerEquipInfo.toObject(includeInstance, f),
-    playerattrMap: (f = msg.getPlayerattrMap()) ? f.toObject(includeInstance, undefined) : []
+    playerattrMap: (f = msg.getPlayerattrMap()) ? f.toObject(includeInstance, undefined) : [],
+    tmwdtypeslotinfolistList: jspb.Message.toObjectList(msg.getTmwdtypeslotinfolistList(),
+    Tmwd_pb.TmwdTypeSlotInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -5188,6 +5379,11 @@ proto.PbModel.Player.PlayerViewAllInfoRes.deserializeBinaryFromReader = function
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readInt64, null, 0, 0);
          });
       break;
+    case 6:
+      var value = new Tmwd_pb.TmwdTypeSlotInfo;
+      reader.readMessage(value,Tmwd_pb.TmwdTypeSlotInfo.deserializeBinaryFromReader);
+      msg.addTmwdtypeslotinfolist(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -5248,6 +5444,14 @@ proto.PbModel.Player.PlayerViewAllInfoRes.serializeBinaryToWriter = function(mes
   f = message.getPlayerattrMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeInt64);
+  }
+  f = message.getTmwdtypeslotinfolistList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
+      f,
+      Tmwd_pb.TmwdTypeSlotInfo.serializeBinaryToWriter
+    );
   }
 };
 
@@ -5405,6 +5609,44 @@ proto.PbModel.Player.PlayerViewAllInfoRes.prototype.getPlayerattrMap = function(
 proto.PbModel.Player.PlayerViewAllInfoRes.prototype.clearPlayerattrMap = function() {
   this.getPlayerattrMap().clear();
   return this;};
+
+
+/**
+ * repeated PbModel.Tmwd.TmwdTypeSlotInfo TmwdTypeSlotInfoList = 6;
+ * @return {!Array<!proto.PbModel.Tmwd.TmwdTypeSlotInfo>}
+ */
+proto.PbModel.Player.PlayerViewAllInfoRes.prototype.getTmwdtypeslotinfolistList = function() {
+  return /** @type{!Array<!proto.PbModel.Tmwd.TmwdTypeSlotInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, Tmwd_pb.TmwdTypeSlotInfo, 6));
+};
+
+
+/**
+ * @param {!Array<!proto.PbModel.Tmwd.TmwdTypeSlotInfo>} value
+ * @return {!proto.PbModel.Player.PlayerViewAllInfoRes} returns this
+*/
+proto.PbModel.Player.PlayerViewAllInfoRes.prototype.setTmwdtypeslotinfolistList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.PbModel.Tmwd.TmwdTypeSlotInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.Tmwd.TmwdTypeSlotInfo}
+ */
+proto.PbModel.Player.PlayerViewAllInfoRes.prototype.addTmwdtypeslotinfolist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.PbModel.Tmwd.TmwdTypeSlotInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.Player.PlayerViewAllInfoRes} returns this
+ */
+proto.PbModel.Player.PlayerViewAllInfoRes.prototype.clearTmwdtypeslotinfolistList = function() {
+  return this.setTmwdtypeslotinfolistList([]);
+};
 
 
 

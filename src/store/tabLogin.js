@@ -1,3 +1,5 @@
+import utils from './storeUtils'
+
 const DEFAULT_SERVERGROUPID=1007
 const STATUS_NEW=10000
 const STATUS_INIT=1
@@ -9,51 +11,55 @@ export default {
       TabSeed:0
     },
     mutations: {
-      ReplaceLoginTab (state,tabId, infoObj) {
-         var temp= getTabItem(state,tabId)
+      ReplaceLoginTab (state,loginObj) { 
+         var temp= getTabItem(state,loginObj.TabId)
          if(temp==null){
           return
          }
 
-         Object.keys(infoObj).forEach((k) => {
-          for (let i in infoObj[k]) {
-            temp[k] = infoObj[k]
-          }
-        })
+         temp=utils.copyObj(loginObj.Info,temp)
 
         tryAddNewTab(state)
   
-         saveToStoarge(state.LoginTabList)
+         saveToStoarge(state)
       },
-      RemoveLoginTab(state,index){
-        var l=state.LoginTabList.length
-        if(index>=l) return;
+      RemoveLoginTab(state,tabId){
+        var l=state.LoginTabList.length 
         var tempList=[]
-        for(var i=l-1;i>index;i--){
-           tempList.push(state.LoginTabList.pop())
-        }
+        for(var i=l-1;i>=0;i--){
+          var tempItem=state.LoginTabList.pop()
+          if(tempItem.TabId==tabId){
+            break
+          }
 
-        state.LoginTabList.pop()
+           tempList.push(tempItem)
+        }
+ 
         tempList=tempList.reverse()
         tempList.forEach(element => {
           state.LoginTabList.push(element)
         });
 
-        saveToStoarge(state.LoginTabList)
+        saveToStoarge(state)
       }, 
       LoadTabList(state){
         if(window.localStorage[SHOWLIST]){
           var pidList= JSON.parse(window.localStorage[SHOWLIST])
-          var loginMap=getLoginMap(window.localStorage)
+          var loginMap=utils.getLoginMap()
           pidList.forEach(pid => {
-            loginMap[pid].TabId=createTabId(state)
-            loginMap[pid].status=STATUS_INIT
-
-            if(loginMap[pid])state.LoginTabList.push(loginMap[pid])
-          });
-
-          state.LoginTabList.push(createDefault())
+            if(loginMap[pid]){
+              var temp=utils.copyObj(loginMap[pid]) 
+              temp.TabId=createTabId(state)
+              temp.status=STATUS_INIT
+   
+              state.LoginTabList.push(temp)
+            }
+            
+          }); 
         }
+
+        state.LoginTabList.push(createDefault(state))
+        console.log(state.LoginTabList) 
  
       }
     },
@@ -65,26 +71,19 @@ export default {
   
 
 
-  function saveToStoarge(list){
+  function saveToStoarge(state){
     var idList=[]
-    list.forEach(element => {
-       if(element['id']) idList.push(element['id'])
+    state.LoginTabList.forEach(element => {
+       if(element['pid']) idList.push(element['pid'])
      });
 
      window.localStorage[SHOWLIST]=JSON.stringify(idList)
   }
 
-  function getLoginMap(storageObj){
-    if(storageObj[LOGINMAP]){
-      return JSON.parse(storageObj[LOGINMAP]) 
-    }
-
-    return {}
-  }
-
+  
   function createTabId(state){
      state.TabSeed+=1
-     return state.TabSeed
+     return state.TabSeed.toString()
   }
 
   function getTabItem(state,tabId){
@@ -96,7 +95,7 @@ export default {
   }
 
   function createDefault(state){
-    return {Name:"新增",TabId:createTabId(),Status:STATUS_NEW,ServerGroupId:DEFAULT_SERVERGROUPID}
+    return {name:"新增",TabId:createTabId(state),status:STATUS_NEW,serverGroupId:DEFAULT_SERVERGROUPID}
   }
 
   function tryAddNewTab(state){
@@ -108,3 +107,5 @@ export default {
 
     state.LoginTabList.push(createDefault(state))
   }
+
+ 

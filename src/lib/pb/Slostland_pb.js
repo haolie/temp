@@ -1995,7 +1995,9 @@ proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.toObject = function(incl
     heroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     heromodelid: jspb.Message.getFieldWithDefault(msg, 2, 0),
     lv: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    stars: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    stars: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    ismainforce: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    corpslv: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -2047,6 +2049,14 @@ proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.deserializeBinaryFromRea
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setStars(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsmainforce(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCorpslv(value);
       break;
     default:
       reader.skipField();
@@ -2102,6 +2112,20 @@ proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.serializeBinaryToWriter 
   if (f !== 0) {
     writer.writeInt32(
       4,
+      f
+    );
+  }
+  f = message.getIsmainforce();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getCorpslv();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
       f
     );
   }
@@ -2177,6 +2201,42 @@ proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.prototype.getStars = fun
  */
 proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.prototype.setStars = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional bool IsMainForce = 5;
+ * @return {boolean}
+ */
+proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.prototype.getIsmainforce = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB} returns this
+ */
+proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.prototype.setIsmainforce = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional int32 CorpsLv = 6;
+ * @return {number}
+ */
+proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.prototype.getCorpslv = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB} returns this
+ */
+proto.PbModel.Slostland.SlostlandCommonlyUsedHeroInfoPB.prototype.setCorpslv = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 

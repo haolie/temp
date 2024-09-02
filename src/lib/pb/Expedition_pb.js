@@ -3781,9 +3781,11 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.toObject = function(includeInst
     heromodelid: jspb.Message.getFieldWithDefault(msg, 1, 0),
     stars: jspb.Message.getFieldWithDefault(msg, 2, 0),
     lv: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    valuelv: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    entityid: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    ifawakening: jspb.Message.getBooleanFieldWithDefault(msg, 6, false)
+    corpslv: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    ismainforces: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    valuelv: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    entityid: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    ifawakening: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
   };
 
   if (includeInstance) {
@@ -3834,13 +3836,21 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.deserializeBinaryFromReader = f
       break;
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setValuelv(value);
+      msg.setCorpslv(value);
       break;
     case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsmainforces(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setValuelv(value);
+      break;
+    case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setEntityid(value);
       break;
-    case 6:
+    case 8:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIfawakening(value);
       break;
@@ -3894,24 +3904,38 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.serializeBinaryToWriter = funct
       f
     );
   }
-  f = message.getValuelv();
+  f = message.getCorpslv();
   if (f !== 0) {
     writer.writeInt32(
       4,
       f
     );
   }
+  f = message.getIsmainforces();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getValuelv();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
   f = message.getEntityid();
   if (f.length > 0) {
     writer.writeString(
-      5,
+      7,
       f
     );
   }
   f = message.getIfawakening();
   if (f) {
     writer.writeBool(
-      6,
+      8,
       f
     );
   }
@@ -3973,10 +3997,10 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setLv = function(valu
 
 
 /**
- * optional int32 ValueLv = 4;
+ * optional int32 CorpsLv = 4;
  * @return {number}
  */
-proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getValuelv = function() {
+proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getCorpslv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
@@ -3985,17 +4009,53 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getValuelv = function
  * @param {number} value
  * @return {!proto.PbModel.Expedition.ExpeditionTeamInfoModel} returns this
  */
-proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setValuelv = function(value) {
+proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setCorpslv = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
 /**
- * optional string EntityId = 5;
+ * optional bool IsMainForces = 5;
+ * @return {boolean}
+ */
+proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getIsmainforces = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Expedition.ExpeditionTeamInfoModel} returns this
+ */
+proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setIsmainforces = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional int32 ValueLv = 6;
+ * @return {number}
+ */
+proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getValuelv = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Expedition.ExpeditionTeamInfoModel} returns this
+ */
+proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setValuelv = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional string EntityId = 7;
  * @return {string}
  */
 proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getEntityid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
@@ -4004,16 +4064,16 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getEntityid = functio
  * @return {!proto.PbModel.Expedition.ExpeditionTeamInfoModel} returns this
  */
 proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setEntityid = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
- * optional bool IfAwakening = 6;
+ * optional bool IfAwakening = 8;
  * @return {boolean}
  */
 proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getIfawakening = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
 };
 
 
@@ -4022,7 +4082,7 @@ proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.getIfawakening = func
  * @return {!proto.PbModel.Expedition.ExpeditionTeamInfoModel} returns this
  */
 proto.PbModel.Expedition.ExpeditionTeamInfoModel.prototype.setIfawakening = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 6, value);
+  return jspb.Message.setProto3BooleanField(this, 8, value);
 };
 
 

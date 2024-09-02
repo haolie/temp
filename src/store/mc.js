@@ -17,13 +17,12 @@ export default {
         });
 
         console.log("updateList")
-        console.log(state.serverList)
       },
       addServerListCb(state,cb){
          if(state.isServerLoaded){
             cb(state.serverList)
          }else{
-            waiteServerCbList.push(cb)
+          state.waiteServerCbList.push(cb)
          }
       } 
     },

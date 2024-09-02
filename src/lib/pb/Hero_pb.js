@@ -6896,10 +6896,8 @@ proto.PbModel.Hero.HeroViewTalentInfo.prototype.toObject = function(opt_includeI
  */
 proto.PbModel.Hero.HeroViewTalentInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    talentattrlv: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    usetalentattrpoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    talentskilllv: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    usetalentskillpoint: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    talentskilllv: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    usetalentskillpoint: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -6938,17 +6936,9 @@ proto.PbModel.Hero.HeroViewTalentInfo.deserializeBinaryFromReader = function(msg
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setTalentattrlv(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setUsetalentattrpoint(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
       msg.setTalentskilllv(value);
       break;
-    case 4:
+    case 2:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setUsetalentskillpoint(value);
       break;
@@ -6981,31 +6971,17 @@ proto.PbModel.Hero.HeroViewTalentInfo.prototype.serializeBinary = function() {
  */
 proto.PbModel.Hero.HeroViewTalentInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTalentattrlv();
+  f = message.getTalentskilllv();
   if (f !== 0) {
     writer.writeInt32(
       1,
       f
     );
   }
-  f = message.getUsetalentattrpoint();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getTalentskilllv();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
   f = message.getUsetalentskillpoint();
   if (f !== 0) {
     writer.writeInt32(
-      4,
+      2,
       f
     );
   }
@@ -7013,10 +6989,10 @@ proto.PbModel.Hero.HeroViewTalentInfo.serializeBinaryToWriter = function(message
 
 
 /**
- * optional int32 TalentAttrLv = 1;
+ * optional int32 TalentSkillLv = 1;
  * @return {number}
  */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.getTalentattrlv = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.getTalentskilllv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -7025,16 +7001,16 @@ proto.PbModel.Hero.HeroViewTalentInfo.prototype.getTalentattrlv = function() {
  * @param {number} value
  * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.setTalentattrlv = function(value) {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.setTalentskilllv = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
 /**
- * optional int32 UseTalentAttrPoint = 2;
+ * optional int32 UseTalentSkillPoint = 2;
  * @return {number}
  */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.getUsetalentattrpoint = function() {
+proto.PbModel.Hero.HeroViewTalentInfo.prototype.getUsetalentskillpoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -7043,44 +7019,8 @@ proto.PbModel.Hero.HeroViewTalentInfo.prototype.getUsetalentattrpoint = function
  * @param {number} value
  * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.setUsetalentattrpoint = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional int32 TalentSkillLv = 3;
- * @return {number}
- */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.getTalentskilllv = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
- */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.setTalentskilllv = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional int32 UseTalentSkillPoint = 4;
- * @return {number}
- */
-proto.PbModel.Hero.HeroViewTalentInfo.prototype.getUsetalentskillpoint = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Hero.HeroViewTalentInfo} returns this
- */
 proto.PbModel.Hero.HeroViewTalentInfo.prototype.setUsetalentskillpoint = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -10497,10 +10437,8 @@ proto.PbModel.Hero.HeroTalentInfo.prototype.toObject = function(opt_includeInsta
 proto.PbModel.Hero.HeroTalentInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     heroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    talentattrlv: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    usetalentattrpoint: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    talentskilllv: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    usetalentskillpoint: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    talentskilllv: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    usetalentskillpoint: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -10543,17 +10481,9 @@ proto.PbModel.Hero.HeroTalentInfo.deserializeBinaryFromReader = function(msg, re
       break;
     case 2:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setTalentattrlv(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setUsetalentattrpoint(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt32());
       msg.setTalentskilllv(value);
       break;
-    case 5:
+    case 3:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setUsetalentskillpoint(value);
       break;
@@ -10593,31 +10523,17 @@ proto.PbModel.Hero.HeroTalentInfo.serializeBinaryToWriter = function(message, wr
       f
     );
   }
-  f = message.getTalentattrlv();
+  f = message.getTalentskilllv();
   if (f !== 0) {
     writer.writeInt32(
       2,
       f
     );
   }
-  f = message.getUsetalentattrpoint();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
-  f = message.getTalentskilllv();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
-  }
   f = message.getUsetalentskillpoint();
   if (f !== 0) {
     writer.writeInt32(
-      5,
+      3,
       f
     );
   }
@@ -10643,10 +10559,10 @@ proto.PbModel.Hero.HeroTalentInfo.prototype.setHeroid = function(value) {
 
 
 /**
- * optional int32 TalentAttrLv = 2;
+ * optional int32 TalentSkillLv = 2;
  * @return {number}
  */
-proto.PbModel.Hero.HeroTalentInfo.prototype.getTalentattrlv = function() {
+proto.PbModel.Hero.HeroTalentInfo.prototype.getTalentskilllv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -10655,16 +10571,16 @@ proto.PbModel.Hero.HeroTalentInfo.prototype.getTalentattrlv = function() {
  * @param {number} value
  * @return {!proto.PbModel.Hero.HeroTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroTalentInfo.prototype.setTalentattrlv = function(value) {
+proto.PbModel.Hero.HeroTalentInfo.prototype.setTalentskilllv = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
 /**
- * optional int32 UseTalentAttrPoint = 3;
+ * optional int32 UseTalentSkillPoint = 3;
  * @return {number}
  */
-proto.PbModel.Hero.HeroTalentInfo.prototype.getUsetalentattrpoint = function() {
+proto.PbModel.Hero.HeroTalentInfo.prototype.getUsetalentskillpoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -10673,44 +10589,8 @@ proto.PbModel.Hero.HeroTalentInfo.prototype.getUsetalentattrpoint = function() {
  * @param {number} value
  * @return {!proto.PbModel.Hero.HeroTalentInfo} returns this
  */
-proto.PbModel.Hero.HeroTalentInfo.prototype.setUsetalentattrpoint = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional int32 TalentSkillLv = 4;
- * @return {number}
- */
-proto.PbModel.Hero.HeroTalentInfo.prototype.getTalentskilllv = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Hero.HeroTalentInfo} returns this
- */
-proto.PbModel.Hero.HeroTalentInfo.prototype.setTalentskilllv = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional int32 UseTalentSkillPoint = 5;
- * @return {number}
- */
-proto.PbModel.Hero.HeroTalentInfo.prototype.getUsetalentskillpoint = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.Hero.HeroTalentInfo} returns this
- */
 proto.PbModel.Hero.HeroTalentInfo.prototype.setUsetalentskillpoint = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -11589,7 +11469,7 @@ proto.PbModel.Hero.HeroUpBagLvReq.prototype.toObject = function(opt_includeInsta
  */
 proto.PbModel.Hero.HeroUpBagLvReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    lv: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -11626,6 +11506,10 @@ proto.PbModel.Hero.HeroUpBagLvReq.deserializeBinaryFromReader = function(msg, re
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setLv(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -11655,6 +11539,31 @@ proto.PbModel.Hero.HeroUpBagLvReq.prototype.serializeBinary = function() {
  */
 proto.PbModel.Hero.HeroUpBagLvReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getLv();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int32 Lv = 1;
+ * @return {number}
+ */
+proto.PbModel.Hero.HeroUpBagLvReq.prototype.getLv = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Hero.HeroUpBagLvReq} returns this
+ */
+proto.PbModel.Hero.HeroUpBagLvReq.prototype.setLv = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -15704,7 +15613,8 @@ proto.PbModel.Hero.HeroQuickBigLvRes.prototype.toObject = function(opt_includeIn
  */
 proto.PbModel.Hero.HeroQuickBigLvRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    info: (f = msg.getInfo()) && proto.PbModel.Hero.HeroInfo.toObject(includeInstance, f)
+    info: (f = msg.getInfo()) && proto.PbModel.Hero.HeroInfo.toObject(includeInstance, f),
+    talentinfo: (f = msg.getTalentinfo()) && proto.PbModel.Hero.HeroTalentInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -15746,6 +15656,11 @@ proto.PbModel.Hero.HeroQuickBigLvRes.deserializeBinaryFromReader = function(msg,
       reader.readMessage(value,proto.PbModel.Hero.HeroInfo.deserializeBinaryFromReader);
       msg.setInfo(value);
       break;
+    case 2:
+      var value = new proto.PbModel.Hero.HeroTalentInfo;
+      reader.readMessage(value,proto.PbModel.Hero.HeroTalentInfo.deserializeBinaryFromReader);
+      msg.setTalentinfo(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -15781,6 +15696,14 @@ proto.PbModel.Hero.HeroQuickBigLvRes.serializeBinaryToWriter = function(message,
       1,
       f,
       proto.PbModel.Hero.HeroInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getTalentinfo();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.PbModel.Hero.HeroTalentInfo.serializeBinaryToWriter
     );
   }
 };
@@ -15823,6 +15746,43 @@ proto.PbModel.Hero.HeroQuickBigLvRes.prototype.hasInfo = function() {
 };
 
 
+/**
+ * optional HeroTalentInfo TalentInfo = 2;
+ * @return {?proto.PbModel.Hero.HeroTalentInfo}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.getTalentinfo = function() {
+  return /** @type{?proto.PbModel.Hero.HeroTalentInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Hero.HeroTalentInfo, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.Hero.HeroTalentInfo|undefined} value
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvRes} returns this
+*/
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.setTalentinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.Hero.HeroQuickBigLvRes} returns this
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.clearTalentinfo = function() {
+  return this.setTalentinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.Hero.HeroQuickBigLvRes.prototype.hasTalentinfo = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
 
 
 
@@ -15856,7 +15816,8 @@ proto.PbModel.Hero.HeroLvInterchangeReq.prototype.toObject = function(opt_includ
 proto.PbModel.Hero.HeroLvInterchangeReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     mainheroid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    corpsheroid: jspb.Message.getFieldWithDefault(msg, 2, "")
+    corpsheroid: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    takeoff: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -15901,6 +15862,10 @@ proto.PbModel.Hero.HeroLvInterchangeReq.deserializeBinaryFromReader = function(m
       var value = /** @type {string} */ (reader.readString());
       msg.setCorpsheroid(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTakeoff(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -15944,6 +15909,13 @@ proto.PbModel.Hero.HeroLvInterchangeReq.serializeBinaryToWriter = function(messa
       f
     );
   }
+  f = message.getTakeoff();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -15980,6 +15952,24 @@ proto.PbModel.Hero.HeroLvInterchangeReq.prototype.getCorpsheroid = function() {
  */
 proto.PbModel.Hero.HeroLvInterchangeReq.prototype.setCorpsheroid = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional bool TakeOff = 3;
+ * @return {boolean}
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.getTakeoff = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Hero.HeroLvInterchangeReq} returns this
+ */
+proto.PbModel.Hero.HeroLvInterchangeReq.prototype.setTakeoff = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 

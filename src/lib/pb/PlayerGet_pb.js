@@ -72,6 +72,12 @@ var HeroContact_pb = require('./HeroContact_pb.js');
 goog.object.extend(proto, HeroContact_pb);
 var NewTeamPve_pb = require('./NewTeamPve_pb.js');
 goog.object.extend(proto, NewTeamPve_pb);
+var HeroBroadcast_pb = require('./HeroBroadcast_pb.js');
+goog.object.extend(proto, HeroBroadcast_pb);
+var XianHui_pb = require('./XianHui_pb.js');
+goog.object.extend(proto, XianHui_pb);
+var PveRecruitGift_pb = require('./PveRecruitGift_pb.js');
+goog.object.extend(proto, PveRecruitGift_pb);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataReq', null, global);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataRes', null, global);
 /**
@@ -223,7 +229,7 @@ proto.PbModel.PlayerGet.PlayerGetInitDataReq.serializeBinaryToWriter = function(
  * @private {!Array<number>}
  * @const
  */
-proto.PbModel.PlayerGet.PlayerGetInitDataRes.repeatedFields_ = [33,41,42,47];
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.repeatedFields_ = [33,41,42,47,54];
 
 
 
@@ -312,7 +318,12 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.toObject = function(includeInstance
     chargefirstinfo: (f = msg.getChargefirstinfo()) && ChargeFirst_pb.ChargeFirstBoxInfo.toObject(includeInstance, f),
     fapinfo: (f = msg.getFapinfo()) && Player_pb.PlayerPushFapInfoRes.toObject(includeInstance, f),
     herocontactinfo: (f = msg.getHerocontactinfo()) && HeroContact_pb.HeroContactInitInfo.toObject(includeInstance, f),
-    newteampve: (f = msg.getNewteampve()) && NewTeamPve_pb.NewTeamPveGetInfoRes.toObject(includeInstance, f)
+    newteampve: (f = msg.getNewteampve()) && NewTeamPve_pb.NewTeamPveGetInfoRes.toObject(includeInstance, f),
+    playerequipfirelistList: jspb.Message.toObjectList(msg.getPlayerequipfirelistList(),
+    PlayerEquip_pb.PlayerEquipFireInfo.toObject, includeInstance),
+    herobroadcastinfo: (f = msg.getHerobroadcastinfo()) && HeroBroadcast_pb.HeroBroadcastPushCompleteInfoRes.toObject(includeInstance, f),
+    xianhuiinitinfo: (f = msg.getXianhuiinitinfo()) && XianHui_pb.XianHuiInitInfoPB.toObject(includeInstance, f),
+    pverecruitgiftinfo: (f = msg.getPverecruitgiftinfo()) && PveRecruitGift_pb.PveRecruitGiftInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -631,6 +642,26 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.deserializeBinaryFromReader = funct
       var value = new NewTeamPve_pb.NewTeamPveGetInfoRes;
       reader.readMessage(value,NewTeamPve_pb.NewTeamPveGetInfoRes.deserializeBinaryFromReader);
       msg.setNewteampve(value);
+      break;
+    case 54:
+      var value = new PlayerEquip_pb.PlayerEquipFireInfo;
+      reader.readMessage(value,PlayerEquip_pb.PlayerEquipFireInfo.deserializeBinaryFromReader);
+      msg.addPlayerequipfirelist(value);
+      break;
+    case 55:
+      var value = new HeroBroadcast_pb.HeroBroadcastPushCompleteInfoRes;
+      reader.readMessage(value,HeroBroadcast_pb.HeroBroadcastPushCompleteInfoRes.deserializeBinaryFromReader);
+      msg.setHerobroadcastinfo(value);
+      break;
+    case 56:
+      var value = new XianHui_pb.XianHuiInitInfoPB;
+      reader.readMessage(value,XianHui_pb.XianHuiInitInfoPB.deserializeBinaryFromReader);
+      msg.setXianhuiinitinfo(value);
+      break;
+    case 57:
+      var value = new PveRecruitGift_pb.PveRecruitGiftInfo;
+      reader.readMessage(value,PveRecruitGift_pb.PveRecruitGiftInfo.deserializeBinaryFromReader);
+      msg.setPverecruitgiftinfo(value);
       break;
     default:
       reader.skipField();
@@ -1011,6 +1042,38 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.serializeBinaryToWriter = function(
       53,
       f,
       NewTeamPve_pb.NewTeamPveGetInfoRes.serializeBinaryToWriter
+    );
+  }
+  f = message.getPlayerequipfirelistList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      54,
+      f,
+      PlayerEquip_pb.PlayerEquipFireInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getHerobroadcastinfo();
+  if (f != null) {
+    writer.writeMessage(
+      55,
+      f,
+      HeroBroadcast_pb.HeroBroadcastPushCompleteInfoRes.serializeBinaryToWriter
+    );
+  }
+  f = message.getXianhuiinitinfo();
+  if (f != null) {
+    writer.writeMessage(
+      56,
+      f,
+      XianHui_pb.XianHuiInitInfoPB.serializeBinaryToWriter
+    );
+  }
+  f = message.getPverecruitgiftinfo();
+  if (f != null) {
+    writer.writeMessage(
+      57,
+      f,
+      PveRecruitGift_pb.PveRecruitGiftInfo.serializeBinaryToWriter
     );
   }
 };
@@ -2708,6 +2771,155 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearNewteampve = functio
  */
 proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasNewteampve = function() {
   return jspb.Message.getField(this, 53) != null;
+};
+
+
+/**
+ * repeated PbModel.PlayerEquip.PlayerEquipFireInfo PlayerEquipFireList = 54;
+ * @return {!Array<!proto.PbModel.PlayerEquip.PlayerEquipFireInfo>}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getPlayerequipfirelistList = function() {
+  return /** @type{!Array<!proto.PbModel.PlayerEquip.PlayerEquipFireInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, PlayerEquip_pb.PlayerEquipFireInfo, 54));
+};
+
+
+/**
+ * @param {!Array<!proto.PbModel.PlayerEquip.PlayerEquipFireInfo>} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setPlayerequipfirelistList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 54, value);
+};
+
+
+/**
+ * @param {!proto.PbModel.PlayerEquip.PlayerEquipFireInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.PlayerEquip.PlayerEquipFireInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.addPlayerequipfirelist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 54, opt_value, proto.PbModel.PlayerEquip.PlayerEquipFireInfo, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearPlayerequipfirelistList = function() {
+  return this.setPlayerequipfirelistList([]);
+};
+
+
+/**
+ * optional PbModel.HeroBroadcast.HeroBroadcastPushCompleteInfoRes HeroBroadcastInfo = 55;
+ * @return {?proto.PbModel.HeroBroadcast.HeroBroadcastPushCompleteInfoRes}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getHerobroadcastinfo = function() {
+  return /** @type{?proto.PbModel.HeroBroadcast.HeroBroadcastPushCompleteInfoRes} */ (
+    jspb.Message.getWrapperField(this, HeroBroadcast_pb.HeroBroadcastPushCompleteInfoRes, 55));
+};
+
+
+/**
+ * @param {?proto.PbModel.HeroBroadcast.HeroBroadcastPushCompleteInfoRes|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setHerobroadcastinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 55, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearHerobroadcastinfo = function() {
+  return this.setHerobroadcastinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasHerobroadcastinfo = function() {
+  return jspb.Message.getField(this, 55) != null;
+};
+
+
+/**
+ * optional PbModel.XianHui.XianHuiInitInfoPB XianHuiInitInfo = 56;
+ * @return {?proto.PbModel.XianHui.XianHuiInitInfoPB}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getXianhuiinitinfo = function() {
+  return /** @type{?proto.PbModel.XianHui.XianHuiInitInfoPB} */ (
+    jspb.Message.getWrapperField(this, XianHui_pb.XianHuiInitInfoPB, 56));
+};
+
+
+/**
+ * @param {?proto.PbModel.XianHui.XianHuiInitInfoPB|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setXianhuiinitinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 56, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearXianhuiinitinfo = function() {
+  return this.setXianhuiinitinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasXianhuiinitinfo = function() {
+  return jspb.Message.getField(this, 56) != null;
+};
+
+
+/**
+ * optional PbModel.PveRecruitGift.PveRecruitGiftInfo PveRecruitGiftInfo = 57;
+ * @return {?proto.PbModel.PveRecruitGift.PveRecruitGiftInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getPverecruitgiftinfo = function() {
+  return /** @type{?proto.PbModel.PveRecruitGift.PveRecruitGiftInfo} */ (
+    jspb.Message.getWrapperField(this, PveRecruitGift_pb.PveRecruitGiftInfo, 57));
+};
+
+
+/**
+ * @param {?proto.PbModel.PveRecruitGift.PveRecruitGiftInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setPverecruitgiftinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 57, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearPverecruitgiftinfo = function() {
+  return this.setPverecruitgiftinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasPverecruitgiftinfo = function() {
+  return jspb.Message.getField(this, 57) != null;
 };
 
 

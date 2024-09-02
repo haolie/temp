@@ -1935,7 +1935,8 @@ proto.PbModel.Team.TeamTeamInfo.toObject = function(includeInstance, msg) {
     herolistList: jspb.Message.toObjectList(msg.getHerolistList(),
     proto.PbModel.Team.TeamHeroItem.toObject, includeInstance),
     herodetailinfolistList: jspb.Message.toObjectList(msg.getHerodetailinfolistList(),
-    proto.PbModel.Team.TeamHeroDetailInfoItem.toObject, includeInstance)
+    proto.PbModel.Team.TeamHeroDetailInfoItem.toObject, includeInstance),
+    mercenarymapMap: (f = msg.getMercenarymapMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -2004,6 +2005,12 @@ proto.PbModel.Team.TeamTeamInfo.deserializeBinaryFromReader = function(msg, read
       var value = new proto.PbModel.Team.TeamHeroDetailInfoItem;
       reader.readMessage(value,proto.PbModel.Team.TeamHeroDetailInfoItem.deserializeBinaryFromReader);
       msg.addHerodetailinfolist(value);
+      break;
+    case 8:
+      var value = msg.getMercenarymapMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readString, null, 0, "");
+         });
       break;
     default:
       reader.skipField();
@@ -2082,6 +2089,10 @@ proto.PbModel.Team.TeamTeamInfo.serializeBinaryToWriter = function(message, writ
       f,
       proto.PbModel.Team.TeamHeroDetailInfoItem.serializeBinaryToWriter
     );
+  }
+  f = message.getMercenarymapMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(8, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -2275,6 +2286,28 @@ proto.PbModel.Team.TeamTeamInfo.prototype.clearHerodetailinfolistList = function
 };
 
 
+/**
+ * map<int32, string> MercenaryMap = 8;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,string>}
+ */
+proto.PbModel.Team.TeamTeamInfo.prototype.getMercenarymapMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,string>} */ (
+      jspb.Message.getMapField(this, 8, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.Team.TeamTeamInfo} returns this
+ */
+proto.PbModel.Team.TeamTeamInfo.prototype.clearMercenarymapMap = function() {
+  this.getMercenarymapMap().clear();
+  return this;};
+
+
 
 
 
@@ -2307,7 +2340,8 @@ proto.PbModel.Team.TeamRoleInfo.prototype.toObject = function(opt_includeInstanc
  */
 proto.PbModel.Team.TeamRoleInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    wearfashionid: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    wearfashionid: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    roleskilllvdcitMap: (f = msg.getRoleskilllvdcitMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -2348,6 +2382,12 @@ proto.PbModel.Team.TeamRoleInfo.deserializeBinaryFromReader = function(msg, read
       var value = /** @type {number} */ (reader.readInt32());
       msg.setWearfashionid(value);
       break;
+    case 2:
+      var value = msg.getRoleskilllvdcitMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readInt32, null, 0, 0);
+         });
+      break;
     default:
       reader.skipField();
       break;
@@ -2384,6 +2424,10 @@ proto.PbModel.Team.TeamRoleInfo.serializeBinaryToWriter = function(message, writ
       f
     );
   }
+  f = message.getRoleskilllvdcitMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeInt32);
+  }
 };
 
 
@@ -2403,6 +2447,28 @@ proto.PbModel.Team.TeamRoleInfo.prototype.getWearfashionid = function() {
 proto.PbModel.Team.TeamRoleInfo.prototype.setWearfashionid = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
+
+
+/**
+ * map<int32, int32> RoleSkillLvDcit = 2;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,number>}
+ */
+proto.PbModel.Team.TeamRoleInfo.prototype.getRoleskilllvdcitMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,number>} */ (
+      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.Team.TeamRoleInfo} returns this
+ */
+proto.PbModel.Team.TeamRoleInfo.prototype.clearRoleskilllvdcitMap = function() {
+  this.getRoleskilllvdcitMap().clear();
+  return this;};
 
 
 

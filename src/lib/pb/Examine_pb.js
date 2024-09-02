@@ -1759,7 +1759,8 @@ proto.PbModel.Examine.ExamineTeamHeroInfo.toObject = function(includeInstance, m
     lv: jspb.Message.getFieldWithDefault(msg, 3, 0),
     stars: jspb.Message.getFieldWithDefault(msg, 4, 0),
     fap: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    corpslv: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    corpslv: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    ismainforces: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
   };
 
   if (includeInstance) {
@@ -1819,6 +1820,10 @@ proto.PbModel.Examine.ExamineTeamHeroInfo.deserializeBinaryFromReader = function
     case 6:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setCorpslv(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsmainforces(value);
       break;
     default:
       reader.skipField();
@@ -1888,6 +1893,13 @@ proto.PbModel.Examine.ExamineTeamHeroInfo.serializeBinaryToWriter = function(mes
   if (f !== 0) {
     writer.writeInt32(
       6,
+      f
+    );
+  }
+  f = message.getIsmainforces();
+  if (f) {
+    writer.writeBool(
+      7,
       f
     );
   }
@@ -1999,6 +2011,24 @@ proto.PbModel.Examine.ExamineTeamHeroInfo.prototype.getCorpslv = function() {
  */
 proto.PbModel.Examine.ExamineTeamHeroInfo.prototype.setCorpslv = function(value) {
   return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional bool IsMainForces = 7;
+ * @return {boolean}
+ */
+proto.PbModel.Examine.ExamineTeamHeroInfo.prototype.getIsmainforces = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Examine.ExamineTeamHeroInfo} returns this
+ */
+proto.PbModel.Examine.ExamineTeamHeroInfo.prototype.setIsmainforces = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
 

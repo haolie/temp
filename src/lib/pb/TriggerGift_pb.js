@@ -144,7 +144,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.repeatedFields_, null);
 };
 goog.inherits(proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1622,6 +1622,13 @@ proto.PbModel.TriggerGift.TriggerGiftPoolChoose.prototype.setId = function(value
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1653,7 +1660,7 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.toObject = func
  */
 proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    triggertype: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    triggertypelistList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1691,8 +1698,8 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.deserializeBinaryFromRead
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setTriggertype(value);
+      var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
+      msg.setTriggertypelistList(value);
       break;
     default:
       reader.skipField();
@@ -1723,9 +1730,9 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.serializeBinary
  */
 proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTriggertype();
-  if (f !== 0) {
-    writer.writeInt32(
+  f = message.getTriggertypelistList();
+  if (f.length > 0) {
+    writer.writePackedInt32(
       1,
       f
     );
@@ -1734,20 +1741,39 @@ proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.serializeBinaryToWriter =
 
 
 /**
- * optional int32 TriggerType = 1;
- * @return {number}
+ * repeated int32 TriggerTypeList = 1;
+ * @return {!Array<number>}
  */
-proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.getTriggertype = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.getTriggertypelistList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq} returns this
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.setTriggertypelistList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
 };
 
 
 /**
  * @param {number} value
+ * @param {number=} opt_index
  * @return {!proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq} returns this
  */
-proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.setTriggertype = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.addTriggertypelist = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq} returns this
+ */
+proto.PbModel.TriggerGift.TriggerGiftSpecialTriggerReq.prototype.clearTriggertypelistList = function() {
+  return this.setTriggertypelistList([]);
 };
 
 

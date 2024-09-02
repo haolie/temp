@@ -1050,7 +1050,8 @@ proto.PbModel.Resource.ResourceObj.toObject = function(includeInstance, msg) {
     num: jspb.Message.getFieldWithDefault(msg, 3, 0),
     entityid: jspb.Message.getFieldWithDefault(msg, 4, ""),
     fenjieid: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    extendstr: jspb.Message.getFieldWithDefault(msg, 6, "")
+    extendstr: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    exchangeruleid: jspb.Message.getFieldWithDefault(msg, 7, "")
   };
 
   if (includeInstance) {
@@ -1110,6 +1111,10 @@ proto.PbModel.Resource.ResourceObj.deserializeBinaryFromReader = function(msg, r
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setExtendstr(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setExchangeruleid(value);
       break;
     default:
       reader.skipField();
@@ -1179,6 +1184,13 @@ proto.PbModel.Resource.ResourceObj.serializeBinaryToWriter = function(message, w
   if (f.length > 0) {
     writer.writeString(
       6,
+      f
+    );
+  }
+  f = message.getExchangeruleid();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
       f
     );
   }
@@ -1290,6 +1302,24 @@ proto.PbModel.Resource.ResourceObj.prototype.getExtendstr = function() {
  */
 proto.PbModel.Resource.ResourceObj.prototype.setExtendstr = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string ExchangeRuleId = 7;
+ * @return {string}
+ */
+proto.PbModel.Resource.ResourceObj.prototype.getExchangeruleid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Resource.ResourceObj} returns this
+ */
+proto.PbModel.Resource.ResourceObj.prototype.setExchangeruleid = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 

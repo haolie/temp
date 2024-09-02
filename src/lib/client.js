@@ -47,12 +47,13 @@ Client.prototype.sendReq=function(comman,req,cb){
 if (!this.isConnect)return
 
     var obj=this.createReq(comman,req)
+    var binaryData=obj.serializeBinary()
     this.wbSocket.send(obj.serializeBinary())
 
     if(comman!=CMD_XINTIAO){
         this.reqMap[obj.getHandlecode()]={
-            Req:req.toObject(),
-            Cb:cb,
+            Req:req,
+            Cb:cb, 
             Time:new Date().getTime()
         }
     }
@@ -83,6 +84,10 @@ Client.prototype.onMessage=function(event){
         return     
        }
 
+       if(cmdObj.Cmd=="CLIENT_CONNECTIONCLOSE"){
+          this.setStatus(responseObj.code)
+       }
+
        if(igList[cmdObj.Cmd]){
          return     
        }
@@ -94,7 +99,8 @@ Client.prototype.onMessage=function(event){
         Cmd:cmdObj.Cmd,
         Code:responseObj.code,
         Res:{},
-        Req:{}
+        Req:{},
+        IsReq:false
        }
 	   if (responseObj.code!=0){
 		   console.log(cmdObj.Cmd+"err:"+responseObj.code)
@@ -106,6 +112,7 @@ Client.prototype.onMessage=function(event){
 
        if(this.reqMap[responseObj.handlecode]){
 
+        o.IsReq=true
         o.Req=this.reqMap[responseObj.handlecode]
         if(this.reqMap[responseObj.handlecode].Cb){
             this.reqMap[responseObj.handlecode].Cb(o)
@@ -121,8 +128,7 @@ Client.prototype.onMessage=function(event){
 }
 
 Client.prototype.onOpen=function(event){
-   this.isConnect=true
-   this.Login()
+   this.isConnect=true 
    console.log("client connected")
 }
 
@@ -214,7 +220,7 @@ Client.prototype.startHead=function(){
     var _this=this
     setTimeout(() => {
         _this.startHead()
-    }, 500);
+    }, 5000);
 
 }
 
@@ -262,7 +268,7 @@ Client.prototype.selectMsg=function(obj,msg){
     obj.Cmd=msg.Cmd
    
     if(msg.Req&&msg.Req.Req){
-        obj.Req=JSON.stringify(msg.Req.Req,null,2) 
+        obj.Req=JSON.stringify(msg.Req.Req.toObject(),null,2) 
     }else{
         obj.Req="{}"
     }

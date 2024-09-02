@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container style="width: 100%;height: 100%;">
     <!-- <header data-v-730268c5="" class="el-header main-head">Header</header> -->
     <el-header class="main-head" style="height: 150px;"  v-show="Status<=0">
       <el-row>
@@ -56,34 +56,27 @@
     
     </el-header>
 
-  <el-container>
+  <el-container style="width: 100%;height: 100%;">
     <el-aside width="500px">
             <el-row>
-                  <el-col :span="24">
-                    <el-radio-group v-model="ListType">
-      <el-radio-button label="Cmd"></el-radio-button> 
-      <el-radio-button label="Msg"></el-radio-button>
-    </el-radio-group>
-
-    <el-col :span="24" v-show="ListType=='Cmd'">
+              <el-col :span="24" v-show="ListType=='Cmd'">
       <el-row>
         <el-col :span="24">
-          <div style="margin-top: 15px;">
+        
+        </el-col>
+
+        <el-col :span="24">
+            <el-tabs type="border-card" class="demo-tabs">
+    <el-tab-pane label="Cmd">
+      <div style="margin-top: 15px;">
   <el-input placeholder="请输入内容" v-model="SearchCmd" class="input-with-select" > 
   </el-input>
 </div>
-        </el-col>
-        <el-col :span="24">
-          <ul class="infinite-list"  style="overflow:auto">
+      <ul class="infinite-list"  style="overflow:auto">
            <li v-for="item in CmdList" :key="item.Cmd" v-show="item.Cmd.indexOf(SearchCmd.toUpperCase())>=0"  class="infinite-list-item" @click="selectCmd(item)" :title="item.Cmd">{{ item.Cmd }} </li>
           </ul>
-        </el-col>
-      </el-row>
-   
-    </el-col>
-
-
-    <el-col :span="24" v-show="ListType=='Msg'">
+    </el-tab-pane>
+    <el-tab-pane label="Msg">
       <el-row>
         <el-col :span="24">
           <div style="margin-top: 15px;">
@@ -94,16 +87,44 @@
         </el-col>
         <el-col :span="24">
           <ul class="infinite-list"  style="overflow:auto">
-           <li v-for="item in MsgList" :key="item.MsgOrder" class="infinite-list-item" v-show="item.Cmd.indexOf(SearchMsg.toUpperCase())>=0" @click="selectMsg(item)" :title="item.Cmd">{{ item.Cmd }} </li>
+           <li v-for="item in MsgList" :key="item.MsgOrder" class="infinite-list-item" v-show="item.Cmd.indexOf(SearchMsg.toUpperCase())>=0" @click="selectMsg(item)" :title="item.Cmd">
+            <el-row>
+              <el-col :span="20">{{ item.Cmd }} </el-col>
+              <el-col :span="4" v-show="item.IsReq">
+                <i class="el-icon-star-on" @click="addFavorite(item)"></i>
+               </el-col>
+            </el-row>
+            
+          </li>
           </ul>
         </el-col>
       </el-row>
-    </el-col>
+    </el-tab-pane>
+    <el-tab-pane label="Fv"> 
 
-                  </el-col>
+      <ul class="infinite-list"  style="overflow:auto">
+           <li v-for="item in favoriteList" :key="item.cmd" class="infinite-list-item" @click="selectFavorite(item)" :title="item.Cmd">
+            <el-row>
+              <el-col :span="20">{{ item.cmd }} </el-col> 
+              <el-col :span="4">
+                <i class="el-icon-close" @click="delFavorite(item.cmd)"></i>
+               </el-col>
+         
+            </el-row> 
+          </li>
+          </ul>
+    </el-tab-pane>
+  </el-tabs>
+
+        </el-col>
+
+ 
+      </el-row>
+   
+    </el-col>
             </el-row>
     </el-aside>
-    <el-main>
+    <el-main style="width: 100%;height: 1200px;">
       <el-row> 
          <el-col :span="12">
           <div style="color: wheat;">Name：{{WebCli.name}}</div>
@@ -156,6 +177,7 @@ export default {
         LoginParam:"l11"
       }, 
       ServerList:[],
+      favoriteList:[],
       SearchCmd:"",
       SearchMsg:"",
       CmdList:[],
@@ -213,10 +235,12 @@ export default {
               time:new Date().getTime(),
               status:1,
               serverGroupId:_this.ServerGroupId,
-
+              partnerId:_this.ServerItem.PartnerId
             }
             _this.$store.commit("setPlayerItem",obj) 
-            _this.$store.commit("ReplaceLoginTab",_this.tabInfo.TabId,obj) 
+            _this.$store.commit("ReplaceLoginTab",{TabId:_this.tabInfo.TabId,Info:obj}) 
+            _this.favoriteList=_this.$store.getters.getFavoriteList(_this.WebCli.pid)  
+
           })
         })
     },
@@ -246,6 +270,13 @@ export default {
        this.MsgObj.Cmd=CmdObj.Cmd
        this.MsgObj.Req=JSON.stringify(new CmdObj.Req().toObject(),null,2)
     },
+    selectFavorite(fav){
+
+        var req= pbUtils.CreateReqFromData(fav.cmd.replace("_",""),fav.reqData)
+        var o=req.toObject()
+        this.MsgObj.Cmd=fav.cmd
+        this.MsgObj.Req=JSON.stringify(o,null,2) 
+    },
     selectMsg(msg){
        this.WebCli.selectMsg(this.MsgObj,msg)
     },
@@ -254,6 +285,51 @@ export default {
        this.WebCli.Query(this.MsgObj.Cmd,JSON.parse(this.MsgObj.Req),function(msg){
         _this.selectMsg(msg)
        })
+    },
+    delFavorite(cmd){
+      var temp=[]
+      var l=this.favoriteList.length
+      for(var i=l-1;i>=0;i--){
+          var item=this.favoriteList.pop()
+          if(cmd==item.cmd){
+            this.$store.commit("delFavoriteReq",{
+            pid: this.WebCli.pid,
+            cmd:cmd, 
+            }) 
+
+            continue;
+          }
+
+          temp.unshift(item)
+        }
+
+        temp.forEach(element => {
+          this.favoriteList.push(element)
+        });
+
+
+    },
+    addFavorite(msg){
+         var data=[]
+         var buff=msg.Req.Req.serializeBinary()
+         buff.forEach(d => {
+          data.push(d)
+         });
+        
+        this.$store.commit("addFavoriteReq",{
+            pid: this.WebCli.pid,
+            cmd:msg.Cmd,
+            reqData:data
+        }) 
+
+        for(var i=0;i<this.favoriteList.length;i++){
+          if(msg.Cmd==this.favoriteList[i].cmd){
+            this.favoriteList[i].reqData=data
+            return
+          }
+        }
+
+        this.favoriteList.push({cmd:msg.Cmd,reqData:data})
     },
     getServerItem(){
        for(var i=0;i<this.ServerList.length;i++){
@@ -284,11 +360,20 @@ export default {
   updated () {},
   watch: {},
   created () {
-    var _this= this
     this.CmdList=window.Pb.ReqList   
-    this.$store.commit("addServerListCb",function(){
+      var _this= this
+      this.ServerGroupId=this.tabInfo.serverGroupId,
+      this.ServerItem.PartnerId=this.tabInfo.partnerId
+      if(this.tabInfo.status!=10000) this.ServerItem.LoginParam=this.tabInfo.name
+
+      this.$store.commit("addServerListCb",function(){ 
+        if(_this.tabInfo.serverGroupId)
+        _this.ServerGroupId=_this.tabInfo.serverGroupId
+        else
         _this.ServerGroupId=1007
     })
+
+
   },
   mounted () { 
     
@@ -296,13 +381,17 @@ export default {
   watch:{
     ServerGroupId:{
       handler:function(id,oId){
-       var item=this.$store.getters.getServerItem(id)
-       console.log(item)
-       this.ServerItem.url=item.GroupUrl
+        var _this= this
+        this.$store.commit("addServerListCb",function(){ 
+          var item=_this.$store.getters.getServerItem(id) 
+          _this.ServerItem.url=item.GroupUrl
+    })
+        
+     
 
     },
     immediate:false
-    },
+    }, 
   }
 }
 

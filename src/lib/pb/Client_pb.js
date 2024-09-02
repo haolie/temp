@@ -655,7 +655,8 @@ proto.PbModel.Client.ClientPushModel.toObject = function(includeInstance, msg) {
   var f, obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, 0),
     cmd: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    data: msg.getData_asB64()
+    data: msg.getData_asB64(),
+    pushid: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -704,6 +705,10 @@ proto.PbModel.Client.ClientPushModel.deserializeBinaryFromReader = function(msg,
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setData(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPushid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -751,6 +756,13 @@ proto.PbModel.Client.ClientPushModel.serializeBinaryToWriter = function(message,
   if (f.length > 0) {
     writer.writeBytes(
       3,
+      f
+    );
+  }
+  f = message.getPushid();
+  if (f !== 0) {
+    writer.writeUint32(
+      4,
       f
     );
   }
@@ -832,6 +844,24 @@ proto.PbModel.Client.ClientPushModel.prototype.getData_asU8 = function() {
  */
 proto.PbModel.Client.ClientPushModel.prototype.setData = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
+};
+
+
+/**
+ * optional uint32 PushId = 4;
+ * @return {number}
+ */
+proto.PbModel.Client.ClientPushModel.prototype.getPushid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Client.ClientPushModel} returns this
+ */
+proto.PbModel.Client.ClientPushModel.prototype.setPushid = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -1396,7 +1426,8 @@ proto.PbModel.Client.ClientResponse.toObject = function(includeInstance, msg) {
     data: msg.getData_asB64(),
     extdataList: jspb.Message.toObjectList(msg.getExtdataList(),
     proto.PbModel.Client.ClientAvatarPushModel.toObject, includeInstance),
-    codedata: (f = msg.getCodedata()) && proto.PbModel.Client.ClientAvatarPushModel.toObject(includeInstance, f)
+    codedata: (f = msg.getCodedata()) && proto.PbModel.Client.ClientAvatarPushModel.toObject(includeInstance, f),
+    pushid: jspb.Message.getFieldWithDefault(msg, 9, 0)
   };
 
   if (includeInstance) {
@@ -1466,6 +1497,10 @@ proto.PbModel.Client.ClientResponse.deserializeBinaryFromReader = function(msg, 
       var value = new proto.PbModel.Client.ClientAvatarPushModel;
       reader.readMessage(value,proto.PbModel.Client.ClientAvatarPushModel.deserializeBinaryFromReader);
       msg.setCodedata(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPushid(value);
       break;
     default:
       reader.skipField();
@@ -1552,6 +1587,13 @@ proto.PbModel.Client.ClientResponse.serializeBinaryToWriter = function(message, 
       8,
       f,
       proto.PbModel.Client.ClientAvatarPushModel.serializeBinaryToWriter
+    );
+  }
+  f = message.getPushid();
+  if (f !== 0) {
+    writer.writeUint32(
+      9,
+      f
     );
   }
 };
@@ -1761,6 +1803,24 @@ proto.PbModel.Client.ClientResponse.prototype.clearCodedata = function() {
  */
 proto.PbModel.Client.ClientResponse.prototype.hasCodedata = function() {
   return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional uint32 PushId = 9;
+ * @return {number}
+ */
+proto.PbModel.Client.ClientResponse.prototype.getPushid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Client.ClientResponse} returns this
+ */
+proto.PbModel.Client.ClientResponse.prototype.setPushid = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
 };
 
 

@@ -47,6 +47,14 @@ if(!pbObj||!obj){
       
         return null
     },
+    CreateReqFromData:function(command,data){
+        command=command.toUpperCase();
+        if(window.Pb.CmdMap[command]){
+            return window.Pb.CmdMap[command].Req.deserializeBinary(data)
+        }
+      
+        return null
+    },
     GetCommandNum:function(command){
         if( window.Pb.CmdMap[command.toUpperCase()]){
             return  window.Pb.CmdMap[command.toUpperCase()].Value

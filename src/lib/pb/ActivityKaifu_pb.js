@@ -1589,7 +1589,8 @@ proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.toObject = function(includeI
     currentprogress: jspb.Message.getFieldWithDefault(msg, 5, 0),
     received: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
     openday: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    addpoint: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    addpoint: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    completeprogress: jspb.Message.getFieldWithDefault(msg, 9, 0)
   };
 
   if (includeInstance) {
@@ -1657,6 +1658,10 @@ proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.deserializeBinaryFromReader 
     case 8:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setAddpoint(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCompleteprogress(value);
       break;
     default:
       reader.skipField();
@@ -1740,6 +1745,13 @@ proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.serializeBinaryToWriter = fu
   if (f !== 0) {
     writer.writeInt32(
       8,
+      f
+    );
+  }
+  f = message.getCompleteprogress();
+  if (f !== 0) {
+    writer.writeInt64(
+      9,
       f
     );
   }
@@ -1887,6 +1899,24 @@ proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.prototype.getAddpoint = func
  */
 proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.prototype.setAddpoint = function(value) {
   return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
+/**
+ * optional int64 CompleteProgress = 9;
+ * @return {number}
+ */
+proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.prototype.getCompleteprogress = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask} returns this
+ */
+proto.PbModel.ActivityKaifu.ActivityKaifuGrowthTask.prototype.setCompleteprogress = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
 };
 
 
