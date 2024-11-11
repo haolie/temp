@@ -340,6 +340,13 @@ export default {
 
        return null
     },
+    guildRobotAppy(){
+       for(var i=0;i<30;i++){
+
+          
+
+       }    
+    },
     loadServerList(){
       // var _this=this
       // pbUtils.GetServerList(function(status,list){

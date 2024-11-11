@@ -95,7 +95,7 @@ export default {
   }
 
   function createDefault(state){
-    return {name:"新增",TabId:createTabId(state),status:STATUS_NEW,serverGroupId:DEFAULT_SERVERGROUPID}
+    return {name:"新增",TabId:createTabId(state),status:STATUS_NEW,serverGroupId:DEFAULT_SERVERGROUPID,partnerId:1001}
   }
 
   function tryAddNewTab(state){

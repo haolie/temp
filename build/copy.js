@@ -14,14 +14,15 @@ function copy(src, dst) {
 
 function createF() {
   will2("pb") 
-   fs.writeFile("./src/lib/proto.js",createContent(list),'utf8',(err)=>{ console.log(err) })
+   fs.writeFile("./static/libs/proto.js",createContent(list),'utf8',(err)=>{ console.log(err) })
 }
 
 var list = []
-var pbPath = './src/lib/'
+var pbPath = './static/libs/'
 function will2(dir){
- 
+  console.log(pbPath + dir)
    var files =readDir_(pbPath + dir)
+   console.log(files)
    if(!files){
     return
    }

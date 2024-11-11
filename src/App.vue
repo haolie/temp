@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import JAlert from '@/components/JAlert'
-import pb from  '@/lib/proto' 
-import pbUtils from '@/lib/pbUtils'
+import JAlert from '@/components/JAlert' 
+import pb from '../static/libs/proto';
+import pbUtils from '@/lib/pbUtils' 
 
 export default {
   name: 'App',

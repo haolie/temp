@@ -32,6 +32,7 @@
 import { name } from 'file-loader';
 import PlayerView from './PlayerView.vue'
 
+
 export default {
   components: {PlayerView},
   data () {
@@ -59,7 +60,6 @@ export default {
   updated () {}, 
   created () {
     var _this= this
-     
   },
   mounted () { 
     
