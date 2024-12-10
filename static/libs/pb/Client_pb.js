@@ -1427,7 +1427,8 @@ proto.PbModel.Client.ClientResponse.toObject = function(includeInstance, msg) {
     extdataList: jspb.Message.toObjectList(msg.getExtdataList(),
     proto.PbModel.Client.ClientAvatarPushModel.toObject, includeInstance),
     codedata: (f = msg.getCodedata()) && proto.PbModel.Client.ClientAvatarPushModel.toObject(includeInstance, f),
-    pushid: jspb.Message.getFieldWithDefault(msg, 9, 0)
+    pushid: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    isdiscard: jspb.Message.getBooleanFieldWithDefault(msg, 10, false)
   };
 
   if (includeInstance) {
@@ -1501,6 +1502,10 @@ proto.PbModel.Client.ClientResponse.deserializeBinaryFromReader = function(msg, 
     case 9:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setPushid(value);
+      break;
+    case 10:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsdiscard(value);
       break;
     default:
       reader.skipField();
@@ -1593,6 +1598,13 @@ proto.PbModel.Client.ClientResponse.serializeBinaryToWriter = function(message, 
   if (f !== 0) {
     writer.writeUint32(
       9,
+      f
+    );
+  }
+  f = message.getIsdiscard();
+  if (f) {
+    writer.writeBool(
+      10,
       f
     );
   }
@@ -1821,6 +1833,24 @@ proto.PbModel.Client.ClientResponse.prototype.getPushid = function() {
  */
 proto.PbModel.Client.ClientResponse.prototype.setPushid = function(value) {
   return jspb.Message.setProto3IntField(this, 9, value);
+};
+
+
+/**
+ * optional bool IsDiscard = 10;
+ * @return {boolean}
+ */
+proto.PbModel.Client.ClientResponse.prototype.getIsdiscard = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Client.ClientResponse} returns this
+ */
+proto.PbModel.Client.ClientResponse.prototype.setIsdiscard = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 10, value);
 };
 
 

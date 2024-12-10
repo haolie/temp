@@ -1833,7 +1833,8 @@ proto.PbModel.Player.PlayerCommonInfoRes.toObject = function(includeInstance, ms
     wearfashionvcardsid: jspb.Message.getFieldWithDefault(msg, 18, 0),
     biglv: jspb.Message.getFieldWithDefault(msg, 19, 0),
     headavatarurl: jspb.Message.getFieldWithDefault(msg, 20, ""),
-    wearfashionpetid: jspb.Message.getFieldWithDefault(msg, 21, 0)
+    wearfashionpetid: jspb.Message.getFieldWithDefault(msg, 21, 0),
+    wearfashiontitleid: jspb.Message.getFieldWithDefault(msg, 22, 0)
   };
 
   if (includeInstance) {
@@ -1953,6 +1954,10 @@ proto.PbModel.Player.PlayerCommonInfoRes.deserializeBinaryFromReader = function(
     case 21:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setWearfashionpetid(value);
+      break;
+    case 22:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setWearfashiontitleid(value);
       break;
     default:
       reader.skipField();
@@ -2127,6 +2132,13 @@ proto.PbModel.Player.PlayerCommonInfoRes.serializeBinaryToWriter = function(mess
   if (f !== 0) {
     writer.writeInt32(
       21,
+      f
+    );
+  }
+  f = message.getWearfashiontitleid();
+  if (f !== 0) {
+    writer.writeInt32(
+      22,
       f
     );
   }
@@ -2508,6 +2520,24 @@ proto.PbModel.Player.PlayerCommonInfoRes.prototype.getWearfashionpetid = functio
  */
 proto.PbModel.Player.PlayerCommonInfoRes.prototype.setWearfashionpetid = function(value) {
   return jspb.Message.setProto3IntField(this, 21, value);
+};
+
+
+/**
+ * optional int32 WearFashionTitleId = 22;
+ * @return {number}
+ */
+proto.PbModel.Player.PlayerCommonInfoRes.prototype.getWearfashiontitleid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 22, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Player.PlayerCommonInfoRes} returns this
+ */
+proto.PbModel.Player.PlayerCommonInfoRes.prototype.setWearfashiontitleid = function(value) {
+  return jspb.Message.setProto3IntField(this, 22, value);
 };
 
 
@@ -6206,7 +6236,8 @@ proto.PbModel.Player.PlayerViewFashionInfo.toObject = function(includeInstance, 
     wearfashionheadframeid: jspb.Message.getFieldWithDefault(msg, 3, 0),
     wearfashionvcardsid: jspb.Message.getFieldWithDefault(msg, 4, 0),
     headavatarurl: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    wearfashionpetid: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    wearfashionpetid: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    wearfashiontitleid: jspb.Message.getFieldWithDefault(msg, 7, 0)
   };
 
   if (includeInstance) {
@@ -6266,6 +6297,10 @@ proto.PbModel.Player.PlayerViewFashionInfo.deserializeBinaryFromReader = functio
     case 6:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setWearfashionpetid(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setWearfashiontitleid(value);
       break;
     default:
       reader.skipField();
@@ -6335,6 +6370,13 @@ proto.PbModel.Player.PlayerViewFashionInfo.serializeBinaryToWriter = function(me
   if (f !== 0) {
     writer.writeInt32(
       6,
+      f
+    );
+  }
+  f = message.getWearfashiontitleid();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
       f
     );
   }
@@ -6446,6 +6488,24 @@ proto.PbModel.Player.PlayerViewFashionInfo.prototype.getWearfashionpetid = funct
  */
 proto.PbModel.Player.PlayerViewFashionInfo.prototype.setWearfashionpetid = function(value) {
   return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int32 WearFashionTitleId = 7;
+ * @return {number}
+ */
+proto.PbModel.Player.PlayerViewFashionInfo.prototype.getWearfashiontitleid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Player.PlayerViewFashionInfo} returns this
+ */
+proto.PbModel.Player.PlayerViewFashionInfo.prototype.setWearfashiontitleid = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 

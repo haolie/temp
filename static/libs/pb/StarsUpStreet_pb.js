@@ -240,7 +240,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetPB.repeatedFields_ = [2,4];
+proto.PbModel.StarsUpStreet.StarsUpStreetPB.repeatedFields_ = [5];
 
 
 
@@ -274,9 +274,10 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.toObject = function(opt_in
 proto.PbModel.StarsUpStreet.StarsUpStreetPB.toObject = function(includeInstance, msg) {
   var f, obj = {
     taskprogressdicMap: (f = msg.getTaskprogressdicMap()) ? f.toObject(includeInstance, undefined) : [],
-    rtrhashsetList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
-    totalscore: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    rprhashsetList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f
+    rtrdicMap: (f = msg.getRtrdicMap()) ? f.toObject(includeInstance, undefined) : [],
+    taskfinishcountdicMap: (f = msg.getTaskfinishcountdicMap()) ? f.toObject(includeInstance, undefined) : [],
+    totalscore: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    rprhashsetList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -320,14 +321,22 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.deserializeBinaryFromReader = functi
          });
       break;
     case 2:
-      var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
-      msg.setRtrhashsetList(value);
+      var value = msg.getRtrdicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readInt32, null, 0, 0);
+         });
       break;
     case 3:
+      var value = msg.getTaskfinishcountdicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readInt32, null, 0, 0);
+         });
+      break;
+    case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setTotalscore(value);
       break;
-    case 4:
+    case 5:
       var value = /** @type {!Array<number>} */ (reader.readPackedInt32());
       msg.setRprhashsetList(value);
       break;
@@ -364,24 +373,25 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.serializeBinaryToWriter = function(m
   if (f && f.getLength() > 0) {
     f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeInt32);
   }
-  f = message.getRtrhashsetList();
-  if (f.length > 0) {
-    writer.writePackedInt32(
-      2,
-      f
-    );
+  f = message.getRtrdicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeInt32);
+  }
+  f = message.getTaskfinishcountdicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeInt32);
   }
   f = message.getTotalscore();
   if (f !== 0) {
     writer.writeInt32(
-      3,
+      4,
       f
     );
   }
   f = message.getRprhashsetList();
   if (f.length > 0) {
     writer.writePackedInt32(
-      4,
+      5,
       f
     );
   }
@@ -411,48 +421,55 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.clearTaskprogressdicMap = 
 
 
 /**
- * repeated int32 RTRHashSet = 2;
- * @return {!Array<number>}
+ * map<int32, int32> RTRDic = 2;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,number>}
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getRtrhashsetList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 2));
+proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getRtrdicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,number>} */ (
+      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      null));
 };
 
 
 /**
- * @param {!Array<number>} value
+ * Clears values from the map. The map will be non-null.
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetPB} returns this
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.setRtrhashsetList = function(value) {
-  return jspb.Message.setField(this, 2, value || []);
+proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.clearRtrdicMap = function() {
+  this.getRtrdicMap().clear();
+  return this;};
+
+
+/**
+ * map<int32, int32> TaskFinishCountDic = 3;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,number>}
+ */
+proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getTaskfinishcountdicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,number>} */ (
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
+      null));
 };
 
 
 /**
- * @param {number} value
- * @param {number=} opt_index
+ * Clears values from the map. The map will be non-null.
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetPB} returns this
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.addRtrhashset = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
-};
+proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.clearTaskfinishcountdicMap = function() {
+  this.getTaskfinishcountdicMap().clear();
+  return this;};
 
 
 /**
- * Clears the list making it empty but non-null.
- * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetPB} returns this
- */
-proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.clearRtrhashsetList = function() {
-  return this.setRtrhashsetList([]);
-};
-
-
-/**
- * optional int32 TotalScore = 3;
+ * optional int32 TotalScore = 4;
  * @return {number}
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getTotalscore = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
@@ -461,16 +478,16 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getTotalscore = function()
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetPB} returns this
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.setTotalscore = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
 /**
- * repeated int32 RPRHashSet = 4;
+ * repeated int32 RPRHashSet = 5;
  * @return {!Array<number>}
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getRprhashsetList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 4));
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 5));
 };
 
 
@@ -479,7 +496,7 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.getRprhashsetList = functi
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetPB} returns this
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.setRprhashsetList = function(value) {
-  return jspb.Message.setField(this, 4, value || []);
+  return jspb.Message.setField(this, 5, value || []);
 };
 
 
@@ -489,7 +506,7 @@ proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.setRprhashsetList = functi
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetPB} returns this
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetPB.prototype.addRprhashset = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
 };
 
 
@@ -701,11 +718,12 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.toObject = funct
 proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    herovalue: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    grouptype: jspb.Message.getFieldWithDefault(msg, 2, 0),
     describe: jspb.Message.getFieldWithDefault(msg, 3, ""),
     condition: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    score: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    reward: jspb.Message.getFieldWithDefault(msg, 6, "")
+    finishcount: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    score: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    reward: jspb.Message.getFieldWithDefault(msg, 7, "")
   };
 
   if (includeInstance) {
@@ -748,7 +766,7 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.deserializeBinaryFromReade
       break;
     case 2:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setHerovalue(value);
+      msg.setGrouptype(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -760,9 +778,13 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.deserializeBinaryFromReade
       break;
     case 5:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setScore(value);
+      msg.setFinishcount(value);
       break;
     case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setScore(value);
+      break;
+    case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setReward(value);
       break;
@@ -802,7 +824,7 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.serializeBinaryToWriter = 
       f
     );
   }
-  f = message.getHerovalue();
+  f = message.getGrouptype();
   if (f !== 0) {
     writer.writeInt32(
       2,
@@ -823,17 +845,24 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.serializeBinaryToWriter = 
       f
     );
   }
-  f = message.getScore();
+  f = message.getFinishcount();
   if (f !== 0) {
     writer.writeInt32(
       5,
       f
     );
   }
+  f = message.getScore();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
   f = message.getReward();
   if (f.length > 0) {
     writer.writeString(
-      6,
+      7,
       f
     );
   }
@@ -859,10 +888,10 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setId = function
 
 
 /**
- * optional int32 HeroValue = 2;
+ * optional int32 GroupType = 2;
  * @return {number}
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getHerovalue = function() {
+proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getGrouptype = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -871,7 +900,7 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getHerovalue = f
  * @param {number} value
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB} returns this
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setHerovalue = function(value) {
+proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setGrouptype = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -913,10 +942,10 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setCondition = f
 
 
 /**
- * optional int32 Score = 5;
+ * optional int32 FinishCount = 5;
  * @return {number}
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getScore = function() {
+proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getFinishcount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
@@ -925,17 +954,35 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getScore = funct
  * @param {number} value
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB} returns this
  */
-proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setScore = function(value) {
+proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setFinishcount = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 
 /**
- * optional string Reward = 6;
+ * optional int32 Score = 6;
+ * @return {number}
+ */
+proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getScore = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB} returns this
+ */
+proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setScore = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional string Reward = 7;
  * @return {string}
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getReward = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
@@ -944,7 +991,7 @@ proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.getReward = func
  * @return {!proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB} returns this
  */
 proto.PbModel.StarsUpStreet.StarsUpStreetTaskConfigPB.prototype.setReward = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 

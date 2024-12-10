@@ -584,7 +584,8 @@ proto.PbModel.Auction.AuctionGoodsItem.toObject = function(includeInstance, msg)
     lastplayername: jspb.Message.getFieldWithDefault(msg, 5, ""),
     equipinfo: (f = msg.getEquipinfo()) && PlayerEquip_pb.PlayerEquipModel.toObject(includeInstance, f),
     endtime: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    status: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    status: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    servername: jspb.Message.getFieldWithDefault(msg, 9, "")
   };
 
   if (includeInstance) {
@@ -653,6 +654,10 @@ proto.PbModel.Auction.AuctionGoodsItem.deserializeBinaryFromReader = function(ms
     case 8:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setStatus(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setServername(value);
       break;
     default:
       reader.skipField();
@@ -737,6 +742,13 @@ proto.PbModel.Auction.AuctionGoodsItem.serializeBinaryToWriter = function(messag
   if (f !== 0) {
     writer.writeInt32(
       8,
+      f
+    );
+  }
+  f = message.getServername();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
       f
     );
   }
@@ -903,6 +915,24 @@ proto.PbModel.Auction.AuctionGoodsItem.prototype.getStatus = function() {
  */
 proto.PbModel.Auction.AuctionGoodsItem.prototype.setStatus = function(value) {
   return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
+/**
+ * optional string ServerName = 9;
+ * @return {string}
+ */
+proto.PbModel.Auction.AuctionGoodsItem.prototype.getServername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Auction.AuctionGoodsItem} returns this
+ */
+proto.PbModel.Auction.AuctionGoodsItem.prototype.setServername = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 

@@ -2784,7 +2784,8 @@ proto.PbModel.GuildHunt.GuildHuntBossFightRes.toObject = function(includeInstanc
     hp: jspb.Message.getFieldWithDefault(msg, 3, 0),
     cuthp: jspb.Message.getFieldWithDefault(msg, 4, 0),
     huntleveid: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f)
+    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
+    guildhuntplayerinfo: (f = msg.getGuildhuntplayerinfo()) && proto.PbModel.GuildHunt.GuildHuntPlayerInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2846,6 +2847,11 @@ proto.PbModel.GuildHunt.GuildHuntBossFightRes.deserializeBinaryFromReader = func
       var value = new Fight_pb.FightReport;
       reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
       msg.setFightreport(value);
+      break;
+    case 7:
+      var value = new proto.PbModel.GuildHunt.GuildHuntPlayerInfo;
+      reader.readMessage(value,proto.PbModel.GuildHunt.GuildHuntPlayerInfo.deserializeBinaryFromReader);
+      msg.setGuildhuntplayerinfo(value);
       break;
     default:
       reader.skipField();
@@ -2918,6 +2924,14 @@ proto.PbModel.GuildHunt.GuildHuntBossFightRes.serializeBinaryToWriter = function
       6,
       f,
       Fight_pb.FightReport.serializeBinaryToWriter
+    );
+  }
+  f = message.getGuildhuntplayerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.PbModel.GuildHunt.GuildHuntPlayerInfo.serializeBinaryToWriter
     );
   }
 };
@@ -3066,6 +3080,43 @@ proto.PbModel.GuildHunt.GuildHuntBossFightRes.prototype.clearFightreport = funct
  */
 proto.PbModel.GuildHunt.GuildHuntBossFightRes.prototype.hasFightreport = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional GuildHuntPlayerInfo GuildHuntPlayerInfo = 7;
+ * @return {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo}
+ */
+proto.PbModel.GuildHunt.GuildHuntBossFightRes.prototype.getGuildhuntplayerinfo = function() {
+  return /** @type{?proto.PbModel.GuildHunt.GuildHuntPlayerInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.GuildHunt.GuildHuntPlayerInfo, 7));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo|undefined} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntBossFightRes} returns this
+*/
+proto.PbModel.GuildHunt.GuildHuntBossFightRes.prototype.setGuildhuntplayerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.GuildHunt.GuildHuntBossFightRes} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntBossFightRes.prototype.clearGuildhuntplayerinfo = function() {
+  return this.setGuildhuntplayerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.GuildHunt.GuildHuntBossFightRes.prototype.hasGuildhuntplayerinfo = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
@@ -3265,7 +3316,8 @@ proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.toObject = function(includeInst
     maxhp: jspb.Message.getFieldWithDefault(msg, 2, 0),
     hp: jspb.Message.getFieldWithDefault(msg, 3, 0),
     cuthp: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    huntleveid: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    huntleveid: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    guildhuntplayerinfo: (f = msg.getGuildhuntplayerinfo()) && proto.PbModel.GuildHunt.GuildHuntPlayerInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3322,6 +3374,11 @@ proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.deserializeBinaryFromReader = f
     case 5:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setHuntleveid(value);
+      break;
+    case 6:
+      var value = new proto.PbModel.GuildHunt.GuildHuntPlayerInfo;
+      reader.readMessage(value,proto.PbModel.GuildHunt.GuildHuntPlayerInfo.deserializeBinaryFromReader);
+      msg.setGuildhuntplayerinfo(value);
       break;
     default:
       reader.skipField();
@@ -3386,6 +3443,14 @@ proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.serializeBinaryToWriter = funct
     writer.writeInt32(
       5,
       f
+    );
+  }
+  f = message.getGuildhuntplayerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.PbModel.GuildHunt.GuildHuntPlayerInfo.serializeBinaryToWriter
     );
   }
 };
@@ -3497,6 +3562,43 @@ proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.prototype.getHuntleveid = funct
  */
 proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.prototype.setHuntleveid = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional GuildHuntPlayerInfo GuildHuntPlayerInfo = 6;
+ * @return {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo}
+ */
+proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.prototype.getGuildhuntplayerinfo = function() {
+  return /** @type{?proto.PbModel.GuildHunt.GuildHuntPlayerInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.GuildHunt.GuildHuntPlayerInfo, 6));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo|undefined} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntBossSweepingRes} returns this
+*/
+proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.prototype.setGuildhuntplayerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.GuildHunt.GuildHuntBossSweepingRes} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.prototype.clearGuildhuntplayerinfo = function() {
+  return this.setGuildhuntplayerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.GuildHunt.GuildHuntBossSweepingRes.prototype.hasGuildhuntplayerinfo = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -3761,7 +3863,9 @@ proto.PbModel.GuildHunt.GuildHuntFightRes.toObject = function(includeInstance, m
     bosshp: jspb.Message.getFieldWithDefault(msg, 7, 0),
     bosscuthp: jspb.Message.getFieldWithDefault(msg, 8, 0),
     huntleveid: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f)
+    fightreport: (f = msg.getFightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
+    guildhuntplayerinfo: (f = msg.getGuildhuntplayerinfo()) && proto.PbModel.GuildHunt.GuildHuntPlayerInfo.toObject(includeInstance, f),
+    guildhuntinfo: (f = msg.getGuildhuntinfo()) && proto.PbModel.GuildHunt.GuildHuntInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3839,6 +3943,16 @@ proto.PbModel.GuildHunt.GuildHuntFightRes.deserializeBinaryFromReader = function
       var value = new Fight_pb.FightReport;
       reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
       msg.setFightreport(value);
+      break;
+    case 11:
+      var value = new proto.PbModel.GuildHunt.GuildHuntPlayerInfo;
+      reader.readMessage(value,proto.PbModel.GuildHunt.GuildHuntPlayerInfo.deserializeBinaryFromReader);
+      msg.setGuildhuntplayerinfo(value);
+      break;
+    case 12:
+      var value = new proto.PbModel.GuildHunt.GuildHuntInfo;
+      reader.readMessage(value,proto.PbModel.GuildHunt.GuildHuntInfo.deserializeBinaryFromReader);
+      msg.setGuildhuntinfo(value);
       break;
     default:
       reader.skipField();
@@ -3939,6 +4053,22 @@ proto.PbModel.GuildHunt.GuildHuntFightRes.serializeBinaryToWriter = function(mes
       10,
       f,
       Fight_pb.FightReport.serializeBinaryToWriter
+    );
+  }
+  f = message.getGuildhuntplayerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.PbModel.GuildHunt.GuildHuntPlayerInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getGuildhuntinfo();
+  if (f != null) {
+    writer.writeMessage(
+      12,
+      f,
+      proto.PbModel.GuildHunt.GuildHuntInfo.serializeBinaryToWriter
     );
   }
 };
@@ -4162,6 +4292,80 @@ proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.hasFightreport = function() 
 };
 
 
+/**
+ * optional GuildHuntPlayerInfo GuildHuntPlayerInfo = 11;
+ * @return {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo}
+ */
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.getGuildhuntplayerinfo = function() {
+  return /** @type{?proto.PbModel.GuildHunt.GuildHuntPlayerInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.GuildHunt.GuildHuntPlayerInfo, 11));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo|undefined} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntFightRes} returns this
+*/
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.setGuildhuntplayerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 11, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.GuildHunt.GuildHuntFightRes} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.clearGuildhuntplayerinfo = function() {
+  return this.setGuildhuntplayerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.hasGuildhuntplayerinfo = function() {
+  return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional GuildHuntInfo GuildHuntInfo = 12;
+ * @return {?proto.PbModel.GuildHunt.GuildHuntInfo}
+ */
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.getGuildhuntinfo = function() {
+  return /** @type{?proto.PbModel.GuildHunt.GuildHuntInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.GuildHunt.GuildHuntInfo, 12));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildHunt.GuildHuntInfo|undefined} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntFightRes} returns this
+*/
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.setGuildhuntinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 12, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.GuildHunt.GuildHuntFightRes} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.clearGuildhuntinfo = function() {
+  return this.setGuildhuntinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.GuildHunt.GuildHuntFightRes.prototype.hasGuildhuntinfo = function() {
+  return jspb.Message.getField(this, 12) != null;
+};
+
+
 
 
 
@@ -4361,7 +4565,9 @@ proto.PbModel.GuildHunt.GuildHuntSweepingRes.toObject = function(includeInstance
     bossmaxhp: jspb.Message.getFieldWithDefault(msg, 6, 0),
     bosshp: jspb.Message.getFieldWithDefault(msg, 7, 0),
     bosscuthp: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    huntleveid: jspb.Message.getFieldWithDefault(msg, 9, 0)
+    huntleveid: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    guildhuntplayerinfo: (f = msg.getGuildhuntplayerinfo()) && proto.PbModel.GuildHunt.GuildHuntPlayerInfo.toObject(includeInstance, f),
+    guildhuntinfo: (f = msg.getGuildhuntinfo()) && proto.PbModel.GuildHunt.GuildHuntInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4430,6 +4636,16 @@ proto.PbModel.GuildHunt.GuildHuntSweepingRes.deserializeBinaryFromReader = funct
     case 9:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setHuntleveid(value);
+      break;
+    case 10:
+      var value = new proto.PbModel.GuildHunt.GuildHuntPlayerInfo;
+      reader.readMessage(value,proto.PbModel.GuildHunt.GuildHuntPlayerInfo.deserializeBinaryFromReader);
+      msg.setGuildhuntplayerinfo(value);
+      break;
+    case 11:
+      var value = new proto.PbModel.GuildHunt.GuildHuntInfo;
+      reader.readMessage(value,proto.PbModel.GuildHunt.GuildHuntInfo.deserializeBinaryFromReader);
+      msg.setGuildhuntinfo(value);
       break;
     default:
       reader.skipField();
@@ -4515,6 +4731,22 @@ proto.PbModel.GuildHunt.GuildHuntSweepingRes.serializeBinaryToWriter = function(
     writer.writeInt32(
       9,
       f
+    );
+  }
+  f = message.getGuildhuntplayerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      10,
+      f,
+      proto.PbModel.GuildHunt.GuildHuntPlayerInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getGuildhuntinfo();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.PbModel.GuildHunt.GuildHuntInfo.serializeBinaryToWriter
     );
   }
 };
@@ -4680,6 +4912,80 @@ proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.getHuntleveid = function(
  */
 proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.setHuntleveid = function(value) {
   return jspb.Message.setProto3IntField(this, 9, value);
+};
+
+
+/**
+ * optional GuildHuntPlayerInfo GuildHuntPlayerInfo = 10;
+ * @return {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo}
+ */
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.getGuildhuntplayerinfo = function() {
+  return /** @type{?proto.PbModel.GuildHunt.GuildHuntPlayerInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.GuildHunt.GuildHuntPlayerInfo, 10));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildHunt.GuildHuntPlayerInfo|undefined} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntSweepingRes} returns this
+*/
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.setGuildhuntplayerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 10, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.GuildHunt.GuildHuntSweepingRes} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.clearGuildhuntplayerinfo = function() {
+  return this.setGuildhuntplayerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.hasGuildhuntplayerinfo = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional GuildHuntInfo GuildHuntInfo = 11;
+ * @return {?proto.PbModel.GuildHunt.GuildHuntInfo}
+ */
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.getGuildhuntinfo = function() {
+  return /** @type{?proto.PbModel.GuildHunt.GuildHuntInfo} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.GuildHunt.GuildHuntInfo, 11));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildHunt.GuildHuntInfo|undefined} value
+ * @return {!proto.PbModel.GuildHunt.GuildHuntSweepingRes} returns this
+*/
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.setGuildhuntinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 11, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.GuildHunt.GuildHuntSweepingRes} returns this
+ */
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.clearGuildhuntinfo = function() {
+  return this.setGuildhuntinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.GuildHunt.GuildHuntSweepingRes.prototype.hasGuildhuntinfo = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 

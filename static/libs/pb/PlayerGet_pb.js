@@ -104,6 +104,22 @@ var Personality_pb = require('./Personality_pb.js');
 goog.object.extend(proto, Personality_pb);
 var Auction_pb = require('./Auction_pb.js');
 goog.object.extend(proto, Auction_pb);
+var GuildBoss_pb = require('./GuildBoss_pb.js');
+goog.object.extend(proto, GuildBoss_pb);
+var ShowPlayerSkill_pb = require('./ShowPlayerSkill_pb.js');
+goog.object.extend(proto, ShowPlayerSkill_pb);
+var TeamPve_pb = require('./TeamPve_pb.js');
+goog.object.extend(proto, TeamPve_pb);
+var WorldBoss_pb = require('./WorldBoss_pb.js');
+goog.object.extend(proto, WorldBoss_pb);
+var PersonalityTalk_pb = require('./PersonalityTalk_pb.js');
+goog.object.extend(proto, PersonalityTalk_pb);
+var Retrieve_pb = require('./Retrieve_pb.js');
+goog.object.extend(proto, Retrieve_pb);
+var FashionTitle_pb = require('./FashionTitle_pb.js');
+goog.object.extend(proto, FashionTitle_pb);
+var PersonalityFeel_pb = require('./PersonalityFeel_pb.js');
+goog.object.extend(proto, PersonalityFeel_pb);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataReq', null, global);
 goog.exportSymbol('proto.PbModel.PlayerGet.PlayerGetInitDataRes', null, global);
 /**
@@ -322,7 +338,7 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.toObject = function(includeInstance
     moduleinfos: (f = msg.getModuleinfos()) && ServerInfo_pb.ServerInfoModuleOpenInfos.toObject(includeInstance, f),
     heroowninfosMap: (f = msg.getHeroowninfosMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroOwnInfo.toObject) : [],
     towerinfo: (f = msg.getTowerinfo()) && Tower_pb.TowerGetInfo.toObject(includeInstance, f),
-    prorecruitinfo: (f = msg.getProrecruitinfo()) && HeroRecruit_pb.HeroRecruitProRecruitInfo.toObject(includeInstance, f),
+    recruitinitinfo: (f = msg.getRecruitinitinfo()) && HeroRecruit_pb.HeroRecruitRecruitInitInfo.toObject(includeInstance, f),
     rsinfo: (f = msg.getRsinfo()) && Player_pb.PlayerRsInfo.toObject(includeInstance, f),
     taskmaininfo: (f = msg.getTaskmaininfo()) && TaskMain_pb.TaskMainInfo.toObject(includeInstance, f),
     heroequippositiondicMap: (f = msg.getHeroequippositiondicMap()) ? f.toObject(includeInstance, proto.PbModel.HeroEquipPosition.HeroEquipPositionPB.toObject) : [],
@@ -361,7 +377,18 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.toObject = function(includeInstance
     wearfashionpetinfo: (f = msg.getWearfashionpetinfo()) && FashionPet_pb.FashionPetWearInfo.toObject(includeInstance, f),
     personalityinfo: (f = msg.getPersonalityinfo()) && Personality_pb.PersonalityInitInfo.toObject(includeInstance, f),
     personalitypowerinfo: (f = msg.getPersonalitypowerinfo()) && Personality_pb.PersonalityPowerInfo.toObject(includeInstance, f),
-    auction: (f = msg.getAuction()) && Auction_pb.AuctionInfo.toObject(includeInstance, f)
+    auction: (f = msg.getAuction()) && Auction_pb.AuctionInfo.toObject(includeInstance, f),
+    guildbossinitinfo: (f = msg.getGuildbossinitinfo()) && GuildBoss_pb.GuildBossInitInfo.toObject(includeInstance, f),
+    showplayerskill: (f = msg.getShowplayerskill()) && ShowPlayerSkill_pb.ShowPlayerSkillInfo.toObject(includeInstance, f),
+    mainnodesweepmapMap: (f = msg.getMainnodesweepmapMap()) ? f.toObject(includeInstance, undefined) : [],
+    teampve: (f = msg.getTeampve()) && TeamPve_pb.TeamPvePB.toObject(includeInstance, f),
+    personalitytalk: (f = msg.getPersonalitytalk()) && PersonalityTalk_pb.PersonalityTalkInfo.toObject(includeInstance, f),
+    worldbossinfo: (f = msg.getWorldbossinfo()) && WorldBoss_pb.WorldBossInitInfo.toObject(includeInstance, f),
+    retrieveinfo: (f = msg.getRetrieveinfo()) && Retrieve_pb.RetrieveGetInfoRes.toObject(includeInstance, f),
+    finishedpassactivityMap: (f = msg.getFinishedpassactivityMap()) ? f.toObject(includeInstance, undefined) : [],
+    fashiontitle: (f = msg.getFashiontitle()) && FashionTitle_pb.FashionTitleInitInfo.toObject(includeInstance, f),
+    wearfashiontitleinfo: (f = msg.getWearfashiontitleinfo()) && FashionTitle_pb.FashionTitleWearInfo.toObject(includeInstance, f),
+    personalityfell: (f = msg.getPersonalityfell()) && PersonalityFeel_pb.PersonalityFeelInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -578,9 +605,9 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.deserializeBinaryFromReader = funct
       msg.setTowerinfo(value);
       break;
     case 37:
-      var value = new HeroRecruit_pb.HeroRecruitProRecruitInfo;
-      reader.readMessage(value,HeroRecruit_pb.HeroRecruitProRecruitInfo.deserializeBinaryFromReader);
-      msg.setProrecruitinfo(value);
+      var value = new HeroRecruit_pb.HeroRecruitRecruitInitInfo;
+      reader.readMessage(value,HeroRecruit_pb.HeroRecruitRecruitInitInfo.deserializeBinaryFromReader);
+      msg.setRecruitinitinfo(value);
       break;
     case 38:
       var value = new Player_pb.PlayerRsInfo;
@@ -758,6 +785,63 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.deserializeBinaryFromReader = funct
       var value = new Auction_pb.AuctionInfo;
       reader.readMessage(value,Auction_pb.AuctionInfo.deserializeBinaryFromReader);
       msg.setAuction(value);
+      break;
+    case 73:
+      var value = new GuildBoss_pb.GuildBossInitInfo;
+      reader.readMessage(value,GuildBoss_pb.GuildBossInitInfo.deserializeBinaryFromReader);
+      msg.setGuildbossinitinfo(value);
+      break;
+    case 74:
+      var value = new ShowPlayerSkill_pb.ShowPlayerSkillInfo;
+      reader.readMessage(value,ShowPlayerSkill_pb.ShowPlayerSkillInfo.deserializeBinaryFromReader);
+      msg.setShowplayerskill(value);
+      break;
+    case 75:
+      var value = msg.getMainnodesweepmapMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readInt32, null, 0, 0);
+         });
+      break;
+    case 76:
+      var value = new TeamPve_pb.TeamPvePB;
+      reader.readMessage(value,TeamPve_pb.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampve(value);
+      break;
+    case 77:
+      var value = new PersonalityTalk_pb.PersonalityTalkInfo;
+      reader.readMessage(value,PersonalityTalk_pb.PersonalityTalkInfo.deserializeBinaryFromReader);
+      msg.setPersonalitytalk(value);
+      break;
+    case 78:
+      var value = new WorldBoss_pb.WorldBossInitInfo;
+      reader.readMessage(value,WorldBoss_pb.WorldBossInitInfo.deserializeBinaryFromReader);
+      msg.setWorldbossinfo(value);
+      break;
+    case 79:
+      var value = new Retrieve_pb.RetrieveGetInfoRes;
+      reader.readMessage(value,Retrieve_pb.RetrieveGetInfoRes.deserializeBinaryFromReader);
+      msg.setRetrieveinfo(value);
+      break;
+    case 80:
+      var value = msg.getFinishedpassactivityMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readBool, null, 0, false);
+         });
+      break;
+    case 81:
+      var value = new FashionTitle_pb.FashionTitleInitInfo;
+      reader.readMessage(value,FashionTitle_pb.FashionTitleInitInfo.deserializeBinaryFromReader);
+      msg.setFashiontitle(value);
+      break;
+    case 82:
+      var value = new FashionTitle_pb.FashionTitleWearInfo;
+      reader.readMessage(value,FashionTitle_pb.FashionTitleWearInfo.deserializeBinaryFromReader);
+      msg.setWearfashiontitleinfo(value);
+      break;
+    case 83:
+      var value = new PersonalityFeel_pb.PersonalityFeelInfo;
+      reader.readMessage(value,PersonalityFeel_pb.PersonalityFeelInfo.deserializeBinaryFromReader);
+      msg.setPersonalityfell(value);
       break;
     default:
       reader.skipField();
@@ -996,12 +1080,12 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.serializeBinaryToWriter = function(
       Tower_pb.TowerGetInfo.serializeBinaryToWriter
     );
   }
-  f = message.getProrecruitinfo();
+  f = message.getRecruitinitinfo();
   if (f != null) {
     writer.writeMessage(
       37,
       f,
-      HeroRecruit_pb.HeroRecruitProRecruitInfo.serializeBinaryToWriter
+      HeroRecruit_pb.HeroRecruitRecruitInitInfo.serializeBinaryToWriter
     );
   }
   f = message.getRsinfo();
@@ -1274,6 +1358,86 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.serializeBinaryToWriter = function(
       72,
       f,
       Auction_pb.AuctionInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getGuildbossinitinfo();
+  if (f != null) {
+    writer.writeMessage(
+      73,
+      f,
+      GuildBoss_pb.GuildBossInitInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getShowplayerskill();
+  if (f != null) {
+    writer.writeMessage(
+      74,
+      f,
+      ShowPlayerSkill_pb.ShowPlayerSkillInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getMainnodesweepmapMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(75, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeInt32);
+  }
+  f = message.getTeampve();
+  if (f != null) {
+    writer.writeMessage(
+      76,
+      f,
+      TeamPve_pb.TeamPvePB.serializeBinaryToWriter
+    );
+  }
+  f = message.getPersonalitytalk();
+  if (f != null) {
+    writer.writeMessage(
+      77,
+      f,
+      PersonalityTalk_pb.PersonalityTalkInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getWorldbossinfo();
+  if (f != null) {
+    writer.writeMessage(
+      78,
+      f,
+      WorldBoss_pb.WorldBossInitInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getRetrieveinfo();
+  if (f != null) {
+    writer.writeMessage(
+      79,
+      f,
+      Retrieve_pb.RetrieveGetInfoRes.serializeBinaryToWriter
+    );
+  }
+  f = message.getFinishedpassactivityMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(80, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeBool);
+  }
+  f = message.getFashiontitle();
+  if (f != null) {
+    writer.writeMessage(
+      81,
+      f,
+      FashionTitle_pb.FashionTitleInitInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getWearfashiontitleinfo();
+  if (f != null) {
+    writer.writeMessage(
+      82,
+      f,
+      FashionTitle_pb.FashionTitleWearInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getPersonalityfell();
+  if (f != null) {
+    writer.writeMessage(
+      83,
+      f,
+      PersonalityFeel_pb.PersonalityFeelInfo.serializeBinaryToWriter
     );
   }
 };
@@ -2292,20 +2456,20 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasTowerinfo = function()
 
 
 /**
- * optional PbModel.HeroRecruit.HeroRecruitProRecruitInfo ProRecruitInfo = 37;
- * @return {?proto.PbModel.HeroRecruit.HeroRecruitProRecruitInfo}
+ * optional PbModel.HeroRecruit.HeroRecruitRecruitInitInfo RecruitInitInfo = 37;
+ * @return {?proto.PbModel.HeroRecruit.HeroRecruitRecruitInitInfo}
  */
-proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getProrecruitinfo = function() {
-  return /** @type{?proto.PbModel.HeroRecruit.HeroRecruitProRecruitInfo} */ (
-    jspb.Message.getWrapperField(this, HeroRecruit_pb.HeroRecruitProRecruitInfo, 37));
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getRecruitinitinfo = function() {
+  return /** @type{?proto.PbModel.HeroRecruit.HeroRecruitRecruitInitInfo} */ (
+    jspb.Message.getWrapperField(this, HeroRecruit_pb.HeroRecruitRecruitInitInfo, 37));
 };
 
 
 /**
- * @param {?proto.PbModel.HeroRecruit.HeroRecruitProRecruitInfo|undefined} value
+ * @param {?proto.PbModel.HeroRecruit.HeroRecruitRecruitInitInfo|undefined} value
  * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
 */
-proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setProrecruitinfo = function(value) {
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setRecruitinitinfo = function(value) {
   return jspb.Message.setWrapperField(this, 37, value);
 };
 
@@ -2314,8 +2478,8 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setProrecruitinfo = funct
  * Clears the message field making it undefined.
  * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
  */
-proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearProrecruitinfo = function() {
-  return this.setProrecruitinfo(undefined);
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearRecruitinitinfo = function() {
+  return this.setRecruitinitinfo(undefined);
 };
 
 
@@ -2323,7 +2487,7 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearProrecruitinfo = fun
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasProrecruitinfo = function() {
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasRecruitinitinfo = function() {
   return jspb.Message.getField(this, 37) != null;
 };
 
@@ -3594,6 +3758,383 @@ proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearAuction = function()
  */
 proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasAuction = function() {
   return jspb.Message.getField(this, 72) != null;
+};
+
+
+/**
+ * optional PbModel.GuildBoss.GuildBossInitInfo GuildBossInitInfo = 73;
+ * @return {?proto.PbModel.GuildBoss.GuildBossInitInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getGuildbossinitinfo = function() {
+  return /** @type{?proto.PbModel.GuildBoss.GuildBossInitInfo} */ (
+    jspb.Message.getWrapperField(this, GuildBoss_pb.GuildBossInitInfo, 73));
+};
+
+
+/**
+ * @param {?proto.PbModel.GuildBoss.GuildBossInitInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setGuildbossinitinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 73, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearGuildbossinitinfo = function() {
+  return this.setGuildbossinitinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasGuildbossinitinfo = function() {
+  return jspb.Message.getField(this, 73) != null;
+};
+
+
+/**
+ * optional PbModel.ShowPlayerSkill.ShowPlayerSkillInfo ShowPlayerSkill = 74;
+ * @return {?proto.PbModel.ShowPlayerSkill.ShowPlayerSkillInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getShowplayerskill = function() {
+  return /** @type{?proto.PbModel.ShowPlayerSkill.ShowPlayerSkillInfo} */ (
+    jspb.Message.getWrapperField(this, ShowPlayerSkill_pb.ShowPlayerSkillInfo, 74));
+};
+
+
+/**
+ * @param {?proto.PbModel.ShowPlayerSkill.ShowPlayerSkillInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setShowplayerskill = function(value) {
+  return jspb.Message.setWrapperField(this, 74, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearShowplayerskill = function() {
+  return this.setShowplayerskill(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasShowplayerskill = function() {
+  return jspb.Message.getField(this, 74) != null;
+};
+
+
+/**
+ * map<int32, int32> MainNodeSweepMap = 75;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,number>}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getMainnodesweepmapMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,number>} */ (
+      jspb.Message.getMapField(this, 75, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearMainnodesweepmapMap = function() {
+  this.getMainnodesweepmapMap().clear();
+  return this;};
+
+
+/**
+ * optional PbModel.TeamPve.TeamPvePB TeamPve = 76;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getTeampve = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, TeamPve_pb.TeamPvePB, 76));
+};
+
+
+/**
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setTeampve = function(value) {
+  return jspb.Message.setWrapperField(this, 76, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearTeampve = function() {
+  return this.setTeampve(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasTeampve = function() {
+  return jspb.Message.getField(this, 76) != null;
+};
+
+
+/**
+ * optional PbModel.PersonalityTalk.PersonalityTalkInfo PersonalityTalk = 77;
+ * @return {?proto.PbModel.PersonalityTalk.PersonalityTalkInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getPersonalitytalk = function() {
+  return /** @type{?proto.PbModel.PersonalityTalk.PersonalityTalkInfo} */ (
+    jspb.Message.getWrapperField(this, PersonalityTalk_pb.PersonalityTalkInfo, 77));
+};
+
+
+/**
+ * @param {?proto.PbModel.PersonalityTalk.PersonalityTalkInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setPersonalitytalk = function(value) {
+  return jspb.Message.setWrapperField(this, 77, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearPersonalitytalk = function() {
+  return this.setPersonalitytalk(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasPersonalitytalk = function() {
+  return jspb.Message.getField(this, 77) != null;
+};
+
+
+/**
+ * optional PbModel.WorldBoss.WorldBossInitInfo WorldBossInfo = 78;
+ * @return {?proto.PbModel.WorldBoss.WorldBossInitInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getWorldbossinfo = function() {
+  return /** @type{?proto.PbModel.WorldBoss.WorldBossInitInfo} */ (
+    jspb.Message.getWrapperField(this, WorldBoss_pb.WorldBossInitInfo, 78));
+};
+
+
+/**
+ * @param {?proto.PbModel.WorldBoss.WorldBossInitInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setWorldbossinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 78, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearWorldbossinfo = function() {
+  return this.setWorldbossinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasWorldbossinfo = function() {
+  return jspb.Message.getField(this, 78) != null;
+};
+
+
+/**
+ * optional PbModel.Retrieve.RetrieveGetInfoRes RetrieveInfo = 79;
+ * @return {?proto.PbModel.Retrieve.RetrieveGetInfoRes}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getRetrieveinfo = function() {
+  return /** @type{?proto.PbModel.Retrieve.RetrieveGetInfoRes} */ (
+    jspb.Message.getWrapperField(this, Retrieve_pb.RetrieveGetInfoRes, 79));
+};
+
+
+/**
+ * @param {?proto.PbModel.Retrieve.RetrieveGetInfoRes|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setRetrieveinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 79, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearRetrieveinfo = function() {
+  return this.setRetrieveinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasRetrieveinfo = function() {
+  return jspb.Message.getField(this, 79) != null;
+};
+
+
+/**
+ * map<int32, bool> FinishedPassActivity = 80;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,boolean>}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getFinishedpassactivityMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,boolean>} */ (
+      jspb.Message.getMapField(this, 80, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearFinishedpassactivityMap = function() {
+  this.getFinishedpassactivityMap().clear();
+  return this;};
+
+
+/**
+ * optional PbModel.FashionTitle.FashionTitleInitInfo FashionTitle = 81;
+ * @return {?proto.PbModel.FashionTitle.FashionTitleInitInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getFashiontitle = function() {
+  return /** @type{?proto.PbModel.FashionTitle.FashionTitleInitInfo} */ (
+    jspb.Message.getWrapperField(this, FashionTitle_pb.FashionTitleInitInfo, 81));
+};
+
+
+/**
+ * @param {?proto.PbModel.FashionTitle.FashionTitleInitInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setFashiontitle = function(value) {
+  return jspb.Message.setWrapperField(this, 81, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearFashiontitle = function() {
+  return this.setFashiontitle(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasFashiontitle = function() {
+  return jspb.Message.getField(this, 81) != null;
+};
+
+
+/**
+ * optional PbModel.FashionTitle.FashionTitleWearInfo WearFashionTitleInfo = 82;
+ * @return {?proto.PbModel.FashionTitle.FashionTitleWearInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getWearfashiontitleinfo = function() {
+  return /** @type{?proto.PbModel.FashionTitle.FashionTitleWearInfo} */ (
+    jspb.Message.getWrapperField(this, FashionTitle_pb.FashionTitleWearInfo, 82));
+};
+
+
+/**
+ * @param {?proto.PbModel.FashionTitle.FashionTitleWearInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setWearfashiontitleinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 82, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearWearfashiontitleinfo = function() {
+  return this.setWearfashiontitleinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasWearfashiontitleinfo = function() {
+  return jspb.Message.getField(this, 82) != null;
+};
+
+
+/**
+ * optional PbModel.PersonalityFeel.PersonalityFeelInfo PersonalityFell = 83;
+ * @return {?proto.PbModel.PersonalityFeel.PersonalityFeelInfo}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.getPersonalityfell = function() {
+  return /** @type{?proto.PbModel.PersonalityFeel.PersonalityFeelInfo} */ (
+    jspb.Message.getWrapperField(this, PersonalityFeel_pb.PersonalityFeelInfo, 83));
+};
+
+
+/**
+ * @param {?proto.PbModel.PersonalityFeel.PersonalityFeelInfo|undefined} value
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+*/
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.setPersonalityfell = function(value) {
+  return jspb.Message.setWrapperField(this, 83, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.PlayerGet.PlayerGetInitDataRes} returns this
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.clearPersonalityfell = function() {
+  return this.setPersonalityfell(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.PlayerGet.PlayerGetInitDataRes.prototype.hasPersonalityfell = function() {
+  return jspb.Message.getField(this, 83) != null;
 };
 
 

@@ -1,6 +1,7 @@
 const MAX_STORAGE_NUM=20
 const LOGINMAP='LoginMap'
 const SHOWLIST='ShowList'
+const FvList='FvList'
 
 export default {
     CON:{
@@ -18,7 +19,16 @@ export default {
     saveLoginMap:function(lMap){
         window.localStorage[LOGINMAP]=JSON.stringify(lMap)
     }, 
-
+    loadFvList:function(){
+        if(window.localStorage[FvList]){
+            return JSON.parse(window.localStorage[FvList]) 
+          }
+      
+        return []
+    },
+    saveFvList:function(list){
+        window.localStorage[FvList]=JSON.stringify(list)
+    }, 
     copyObj:function(srcObj,tagObj,ignoreObj){
         if(!tagObj){
          tagObj={}

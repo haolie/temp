@@ -7,7 +7,7 @@ const SHOWLIST='ShowList'
 const LOGINMAP='LoginMap'
 export default {
     state: {
-      LoginTabList: [],
+      LoginTabList: [], 
       TabSeed:0
     },
     mutations: {

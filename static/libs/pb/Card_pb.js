@@ -1482,7 +1482,8 @@ proto.PbModel.Card.CardItemInfo.toObject = function(includeInstance, msg) {
     expiretime: jspb.Message.getFieldWithDefault(msg, 2, 0),
     candrawtodayreward: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
     remaindays: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    productid: jspb.Message.getFieldWithDefault(msg, 5, "")
+    productid: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    showrewarddays: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -1538,6 +1539,10 @@ proto.PbModel.Card.CardItemInfo.deserializeBinaryFromReader = function(msg, read
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setProductid(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setShowrewarddays(value);
       break;
     default:
       reader.skipField();
@@ -1600,6 +1605,13 @@ proto.PbModel.Card.CardItemInfo.serializeBinaryToWriter = function(message, writ
   if (f.length > 0) {
     writer.writeString(
       5,
+      f
+    );
+  }
+  f = message.getShowrewarddays();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
       f
     );
   }
@@ -1693,6 +1705,24 @@ proto.PbModel.Card.CardItemInfo.prototype.getProductid = function() {
  */
 proto.PbModel.Card.CardItemInfo.prototype.setProductid = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional int32 ShowRewardDays = 6;
+ * @return {number}
+ */
+proto.PbModel.Card.CardItemInfo.prototype.getShowrewarddays = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Card.CardItemInfo} returns this
+ */
+proto.PbModel.Card.CardItemInfo.prototype.setShowrewarddays = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 

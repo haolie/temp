@@ -156,7 +156,8 @@ proto.PbModel.GlobalRank.GlobalRankGetRankReq.prototype.toObject = function(opt_
  */
 proto.PbModel.GlobalRank.GlobalRankGetRankReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    ranktype: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    ranktype: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    iszone: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -197,6 +198,10 @@ proto.PbModel.GlobalRank.GlobalRankGetRankReq.deserializeBinaryFromReader = func
       var value = /** @type {number} */ (reader.readInt32());
       msg.setRanktype(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIszone(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -233,6 +238,13 @@ proto.PbModel.GlobalRank.GlobalRankGetRankReq.serializeBinaryToWriter = function
       f
     );
   }
+  f = message.getIszone();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -251,6 +263,24 @@ proto.PbModel.GlobalRank.GlobalRankGetRankReq.prototype.getRanktype = function()
  */
 proto.PbModel.GlobalRank.GlobalRankGetRankReq.prototype.setRanktype = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional bool IsZone = 2;
+ * @return {boolean}
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankReq.prototype.getIszone = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.GlobalRank.GlobalRankGetRankReq} returns this
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankReq.prototype.setIszone = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -297,7 +327,8 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.toObject = function(includeInstanc
     proto.PbModel.GlobalRank.GlobalRankInfo.toObject, includeInstance),
     myrank: jspb.Message.getFieldWithDefault(msg, 2, 0),
     myrankcontent: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    myguildname: jspb.Message.getFieldWithDefault(msg, 4, "")
+    myguildname: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    selfservername: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -350,6 +381,10 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.deserializeBinaryFromReader = func
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setMyguildname(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSelfservername(value);
       break;
     default:
       reader.skipField();
@@ -406,6 +441,13 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.serializeBinaryToWriter = function
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getSelfservername();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -501,6 +543,24 @@ proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.getMyguildname = functio
  */
 proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.setMyguildname = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string SelfServerName = 5;
+ * @return {string}
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.getSelfservername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.GlobalRank.GlobalRankGetRankRes} returns this
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankRes.prototype.setSelfservername = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -747,7 +807,7 @@ proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.prototype.toObject = function
  */
 proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    iszone: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -784,6 +844,10 @@ proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIszone(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -813,6 +877,31 @@ proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.prototype.serializeBinary = f
  */
 proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getIszone();
+  if (f) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bool IsZone = 1;
+ * @return {boolean}
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.prototype.getIszone = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq} returns this
+ */
+proto.PbModel.GlobalRank.GlobalRankGetRankFirstReq.prototype.setIszone = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
 

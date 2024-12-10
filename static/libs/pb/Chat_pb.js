@@ -1905,7 +1905,9 @@ proto.PbModel.Chat.ChatMsgSender.toObject = function(includeInstance, msg) {
     playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     headimage: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    headframe: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    headframe: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    chatframeid: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    servername: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -1957,6 +1959,14 @@ proto.PbModel.Chat.ChatMsgSender.deserializeBinaryFromReader = function(msg, rea
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setHeadframe(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setChatframeid(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setServername(value);
       break;
     default:
       reader.skipField();
@@ -2012,6 +2022,20 @@ proto.PbModel.Chat.ChatMsgSender.serializeBinaryToWriter = function(message, wri
   if (f !== 0) {
     writer.writeInt32(
       4,
+      f
+    );
+  }
+  f = message.getChatframeid();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getServername();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -2087,6 +2111,42 @@ proto.PbModel.Chat.ChatMsgSender.prototype.getHeadframe = function() {
  */
 proto.PbModel.Chat.ChatMsgSender.prototype.setHeadframe = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 ChatFrameId = 5;
+ * @return {number}
+ */
+proto.PbModel.Chat.ChatMsgSender.prototype.getChatframeid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Chat.ChatMsgSender} returns this
+ */
+proto.PbModel.Chat.ChatMsgSender.prototype.setChatframeid = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional string ServerName = 6;
+ * @return {string}
+ */
+proto.PbModel.Chat.ChatMsgSender.prototype.getServername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Chat.ChatMsgSender} returns this
+ */
+proto.PbModel.Chat.ChatMsgSender.prototype.setServername = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 

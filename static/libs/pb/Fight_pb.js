@@ -3822,7 +3822,9 @@ proto.PbModel.Fight.FightReportDamage.toObject = function(includeInstance, msg) 
     value: jspb.Message.getFieldWithDefault(msg, 5, 0),
     sheild: jspb.Message.getFieldWithDefault(msg, 6, 0),
     attackeffectenum: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    currp: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    currp: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    isrestrain: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    realvalue: jspb.Message.getFieldWithDefault(msg, 10, 0)
   };
 
   if (includeInstance) {
@@ -3890,6 +3892,14 @@ proto.PbModel.Fight.FightReportDamage.deserializeBinaryFromReader = function(msg
     case 8:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setCurrp(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setIsrestrain(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setRealvalue(value);
       break;
     default:
       reader.skipField();
@@ -3973,6 +3983,20 @@ proto.PbModel.Fight.FightReportDamage.serializeBinaryToWriter = function(message
   if (f !== 0) {
     writer.writeInt64(
       8,
+      f
+    );
+  }
+  f = message.getIsrestrain();
+  if (f !== 0) {
+    writer.writeInt32(
+      9,
+      f
+    );
+  }
+  f = message.getRealvalue();
+  if (f !== 0) {
+    writer.writeInt64(
+      10,
       f
     );
   }
@@ -4120,6 +4144,42 @@ proto.PbModel.Fight.FightReportDamage.prototype.getCurrp = function() {
  */
 proto.PbModel.Fight.FightReportDamage.prototype.setCurrp = function(value) {
   return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
+/**
+ * optional int32 IsRestrain = 9;
+ * @return {number}
+ */
+proto.PbModel.Fight.FightReportDamage.prototype.getIsrestrain = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Fight.FightReportDamage} returns this
+ */
+proto.PbModel.Fight.FightReportDamage.prototype.setIsrestrain = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
+};
+
+
+/**
+ * optional int64 RealValue = 10;
+ * @return {number}
+ */
+proto.PbModel.Fight.FightReportDamage.prototype.getRealvalue = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Fight.FightReportDamage} returns this
+ */
+proto.PbModel.Fight.FightReportDamage.prototype.setRealvalue = function(value) {
+  return jspb.Message.setProto3IntField(this, 10, value);
 };
 
 
@@ -5348,7 +5408,7 @@ proto.PbModel.Fight.FightReportTeamStatistic.prototype.toObject = function(opt_i
 proto.PbModel.Fight.FightReportTeamStatistic.toObject = function(includeInstance, msg) {
   var f, obj = {
     group: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    totalatkdmg: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    totalatkdmg: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -5389,7 +5449,7 @@ proto.PbModel.Fight.FightReportTeamStatistic.deserializeBinaryFromReader = funct
       var value = /** @type {number} */ (reader.readInt32());
       msg.setGroup(value);
       break;
-    case 5:
+    case 2:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setTotalatkdmg(value);
       break;
@@ -5432,7 +5492,7 @@ proto.PbModel.Fight.FightReportTeamStatistic.serializeBinaryToWriter = function(
   f = message.getTotalatkdmg();
   if (f !== 0) {
     writer.writeInt64(
-      5,
+      2,
       f
     );
   }
@@ -5458,11 +5518,11 @@ proto.PbModel.Fight.FightReportTeamStatistic.prototype.setGroup = function(value
 
 
 /**
- * optional int64 TotalAtkDmg = 5;
+ * optional int64 TotalAtkDmg = 2;
  * @return {number}
  */
 proto.PbModel.Fight.FightReportTeamStatistic.prototype.getTotalatkdmg = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -5471,7 +5531,7 @@ proto.PbModel.Fight.FightReportTeamStatistic.prototype.getTotalatkdmg = function
  * @return {!proto.PbModel.Fight.FightReportTeamStatistic} returns this
  */
 proto.PbModel.Fight.FightReportTeamStatistic.prototype.setTotalatkdmg = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -6067,7 +6127,9 @@ proto.PbModel.Fight.FightReportOneShow.toObject = function(includeInstance, msg)
     buffvaild: jspb.Message.getBooleanFieldWithDefault(msg, 19, false),
     skilllocatesList: (f = jspb.Message.getRepeatedField(msg, 20)) == null ? undefined : f,
     insertscrip: jspb.Message.getFieldWithDefault(msg, 21, ""),
-    buffresulttype: jspb.Message.getFieldWithDefault(msg, 22, 0)
+    buffresulttype: jspb.Message.getFieldWithDefault(msg, 22, 0),
+    buffeffecttype: jspb.Message.getFieldWithDefault(msg, 23, 0),
+    buffturnnum: jspb.Message.getFieldWithDefault(msg, 24, 0)
   };
 
   if (includeInstance) {
@@ -6196,6 +6258,14 @@ proto.PbModel.Fight.FightReportOneShow.deserializeBinaryFromReader = function(ms
     case 22:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setBuffresulttype(value);
+      break;
+    case 23:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setBuffeffecttype(value);
+      break;
+    case 24:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setBuffturnnum(value);
       break;
     default:
       reader.skipField();
@@ -6372,6 +6442,20 @@ proto.PbModel.Fight.FightReportOneShow.serializeBinaryToWriter = function(messag
   if (f !== 0) {
     writer.writeInt32(
       22,
+      f
+    );
+  }
+  f = message.getBuffeffecttype();
+  if (f !== 0) {
+    writer.writeInt32(
+      23,
+      f
+    );
+  }
+  f = message.getBuffturnnum();
+  if (f !== 0) {
+    writer.writeInt64(
+      24,
       f
     );
   }
@@ -6893,6 +6977,42 @@ proto.PbModel.Fight.FightReportOneShow.prototype.getBuffresulttype = function() 
  */
 proto.PbModel.Fight.FightReportOneShow.prototype.setBuffresulttype = function(value) {
   return jspb.Message.setProto3IntField(this, 22, value);
+};
+
+
+/**
+ * optional int32 BuffEffectType = 23;
+ * @return {number}
+ */
+proto.PbModel.Fight.FightReportOneShow.prototype.getBuffeffecttype = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 23, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Fight.FightReportOneShow} returns this
+ */
+proto.PbModel.Fight.FightReportOneShow.prototype.setBuffeffecttype = function(value) {
+  return jspb.Message.setProto3IntField(this, 23, value);
+};
+
+
+/**
+ * optional int64 BuffTurnNum = 24;
+ * @return {number}
+ */
+proto.PbModel.Fight.FightReportOneShow.prototype.getBuffturnnum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 24, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Fight.FightReportOneShow} returns this
+ */
+proto.PbModel.Fight.FightReportOneShow.prototype.setBuffturnnum = function(value) {
+  return jspb.Message.setProto3IntField(this, 24, value);
 };
 
 
@@ -10862,7 +10982,8 @@ proto.PbModel.Fight.FightGetReportReq.prototype.toObject = function(opt_includeI
  */
 proto.PbModel.Fight.FightGetReportReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    reportid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    reportid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    ifneedfightobject: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -10903,6 +11024,10 @@ proto.PbModel.Fight.FightGetReportReq.deserializeBinaryFromReader = function(msg
       var value = /** @type {string} */ (reader.readString());
       msg.setReportid(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIfneedfightobject(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -10939,6 +11064,13 @@ proto.PbModel.Fight.FightGetReportReq.serializeBinaryToWriter = function(message
       f
     );
   }
+  f = message.getIfneedfightobject();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -10957,6 +11089,24 @@ proto.PbModel.Fight.FightGetReportReq.prototype.getReportid = function() {
  */
 proto.PbModel.Fight.FightGetReportReq.prototype.setReportid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool IfNeedFightObject = 2;
+ * @return {boolean}
+ */
+proto.PbModel.Fight.FightGetReportReq.prototype.getIfneedfightobject = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.Fight.FightGetReportReq} returns this
+ */
+proto.PbModel.Fight.FightGetReportReq.prototype.setIfneedfightobject = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -10992,7 +11142,8 @@ proto.PbModel.Fight.FightGetReportRes.prototype.toObject = function(opt_includeI
  */
 proto.PbModel.Fight.FightGetReportRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fightreport: (f = msg.getFightreport()) && proto.PbModel.Fight.FightReport.toObject(includeInstance, f)
+    fightreport: (f = msg.getFightreport()) && proto.PbModel.Fight.FightReport.toObject(includeInstance, f),
+    fightobject: (f = msg.getFightobject()) && proto.PbModel.Fight.FightObject.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -11034,6 +11185,11 @@ proto.PbModel.Fight.FightGetReportRes.deserializeBinaryFromReader = function(msg
       reader.readMessage(value,proto.PbModel.Fight.FightReport.deserializeBinaryFromReader);
       msg.setFightreport(value);
       break;
+    case 2:
+      var value = new proto.PbModel.Fight.FightObject;
+      reader.readMessage(value,proto.PbModel.Fight.FightObject.deserializeBinaryFromReader);
+      msg.setFightobject(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -11069,6 +11225,14 @@ proto.PbModel.Fight.FightGetReportRes.serializeBinaryToWriter = function(message
       1,
       f,
       proto.PbModel.Fight.FightReport.serializeBinaryToWriter
+    );
+  }
+  f = message.getFightobject();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.PbModel.Fight.FightObject.serializeBinaryToWriter
     );
   }
 };
@@ -11108,6 +11272,43 @@ proto.PbModel.Fight.FightGetReportRes.prototype.clearFightreport = function() {
  */
 proto.PbModel.Fight.FightGetReportRes.prototype.hasFightreport = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional FightObject FightObject = 2;
+ * @return {?proto.PbModel.Fight.FightObject}
+ */
+proto.PbModel.Fight.FightGetReportRes.prototype.getFightobject = function() {
+  return /** @type{?proto.PbModel.Fight.FightObject} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.Fight.FightObject, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.Fight.FightObject|undefined} value
+ * @return {!proto.PbModel.Fight.FightGetReportRes} returns this
+*/
+proto.PbModel.Fight.FightGetReportRes.prototype.setFightobject = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.Fight.FightGetReportRes} returns this
+ */
+proto.PbModel.Fight.FightGetReportRes.prototype.clearFightobject = function() {
+  return this.setFightobject(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.Fight.FightGetReportRes.prototype.hasFightobject = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

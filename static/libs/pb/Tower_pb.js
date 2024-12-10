@@ -789,7 +789,8 @@ proto.PbModel.Tower.TowerFirstPassInfoPB.prototype.toObject = function(opt_inclu
 proto.PbModel.Tower.TowerFirstPassInfoPB.toObject = function(includeInstance, msg) {
   var f, obj = {
     playercommoninfo: (f = msg.getPlayercommoninfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
-    heroinfodicMap: (f = msg.getHeroinfodicMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroInfo.toObject) : []
+    heroinfodicMap: (f = msg.getHeroinfodicMap()) ? f.toObject(includeInstance, proto.PbModel.Hero.HeroInfo.toObject) : [],
+    fightreportid: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -837,6 +838,10 @@ proto.PbModel.Tower.TowerFirstPassInfoPB.deserializeBinaryFromReader = function(
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Hero.HeroInfo.deserializeBinaryFromReader, "", new proto.PbModel.Hero.HeroInfo());
          });
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFightreportid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -877,6 +882,13 @@ proto.PbModel.Tower.TowerFirstPassInfoPB.serializeBinaryToWriter = function(mess
   f = message.getHeroinfodicMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Hero.HeroInfo.serializeBinaryToWriter);
+  }
+  f = message.getFightreportid();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
   }
 };
 
@@ -938,6 +950,24 @@ proto.PbModel.Tower.TowerFirstPassInfoPB.prototype.getHeroinfodicMap = function(
 proto.PbModel.Tower.TowerFirstPassInfoPB.prototype.clearHeroinfodicMap = function() {
   this.getHeroinfodicMap().clear();
   return this;};
+
+
+/**
+ * optional string FightReportId = 3;
+ * @return {string}
+ */
+proto.PbModel.Tower.TowerFirstPassInfoPB.prototype.getFightreportid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.Tower.TowerFirstPassInfoPB} returns this
+ */
+proto.PbModel.Tower.TowerFirstPassInfoPB.prototype.setFightreportid = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -1566,7 +1596,8 @@ proto.PbModel.Tower.TowerGetInfoRes.toObject = function(includeInstance, msg) {
     myrank: jspb.Message.getFieldWithDefault(msg, 2, 0),
     towerfirstpassinfo: (f = msg.getTowerfirstpassinfo()) && proto.PbModel.Tower.TowerFirstPassInfoPB.toObject(includeInstance, f),
     ranklistList: jspb.Message.toObjectList(msg.getRanklistList(),
-    proto.PbModel.Tower.TowerRankInfo.toObject, includeInstance)
+    proto.PbModel.Tower.TowerRankInfo.toObject, includeInstance),
+    showfap: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -1621,6 +1652,10 @@ proto.PbModel.Tower.TowerGetInfoRes.deserializeBinaryFromReader = function(msg, 
       var value = new proto.PbModel.Tower.TowerRankInfo;
       reader.readMessage(value,proto.PbModel.Tower.TowerRankInfo.deserializeBinaryFromReader);
       msg.addRanklist(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setShowfap(value);
       break;
     default:
       reader.skipField();
@@ -1680,6 +1715,13 @@ proto.PbModel.Tower.TowerGetInfoRes.serializeBinaryToWriter = function(message, 
       4,
       f,
       proto.PbModel.Tower.TowerRankInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getShowfap();
+  if (f !== 0) {
+    writer.writeInt64(
+      5,
+      f
     );
   }
 };
@@ -1812,6 +1854,24 @@ proto.PbModel.Tower.TowerGetInfoRes.prototype.addRanklist = function(opt_value, 
  */
 proto.PbModel.Tower.TowerGetInfoRes.prototype.clearRanklistList = function() {
   return this.setRanklistList([]);
+};
+
+
+/**
+ * optional int64 ShowFap = 5;
+ * @return {number}
+ */
+proto.PbModel.Tower.TowerGetInfoRes.prototype.getShowfap = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Tower.TowerGetInfoRes} returns this
+ */
+proto.PbModel.Tower.TowerGetInfoRes.prototype.setShowfap = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 

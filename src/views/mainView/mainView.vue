@@ -10,6 +10,10 @@
       >
       <PlayerView :tabInfo="item"></PlayerView>
     </el-tab-pane> 
+
+    <el-tab-pane name="tab_ex" key="extend" label="扩展">
+      <extend></extend>
+    </el-tab-pane>
   </el-tabs>
 
   <!-- <el-tabs type="border-card" class="demo-tabs">
@@ -28,13 +32,13 @@
   </el-tabs> -->
 </el-container>
 </template>
-<script>
-import { name } from 'file-loader';
+<script> 
 import PlayerView from './PlayerView.vue'
+import Extend from '../Extend/Index.vue'
 
 
 export default {
-  components: {PlayerView},
+  components: {PlayerView,Extend},
   data () {
     return {
       LoginList:[]
@@ -46,9 +50,8 @@ export default {
     }
   },
   methods: { 
-    removeItem(tabId){
-      debugger
-      this.$store.commit("RemoveLoginTab",tabId) 
+    removeItem(tabId){ 
+      this.$store.commit("RemoveLoginTab",tabId)  
     }, 
     onSearchCmd(){  
        

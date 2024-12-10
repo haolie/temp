@@ -18,57 +18,142 @@ var Resource_pb = require('./Resource_pb.js');
 goog.object.extend(proto, Resource_pb);
 var Fight_pb = require('./Fight_pb.js');
 goog.object.extend(proto, Fight_pb);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveChooseRobotReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveChooseRobotRes', null, global);
+var Team_pb = require('./Team_pb.js');
+goog.object.extend(proto, Team_pb);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveChooseWishReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveChooseWishRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveCreateRoomReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveCreateRoomRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveDataChangeInfo', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveExitRoomReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveExitRoomRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveFightPushRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveFightReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveFightRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetInviteInfo', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetInviteInfoListReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetRoomInfoListReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetRoomInfoReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetRoomInfoRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetTeamInfoReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetTeamInfoRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetTodayRewardReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveGetTodayRewardRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveInviteHadnleReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveInviteHadnleRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveInviteInfoPB', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveInvitePushRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveInviteReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveInviteRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveJoinRoomReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveJoinRoomRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveKickOutPlayerReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveKickOutPlayerRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveLocationInfo', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveOutRoomReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveOutRoomRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePlayerData', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePushDataChangeRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePushInviteRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePushOutRoomRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePushPersonChangeRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePushPlayerDataRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveRefuseInviteReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveRefuseInviteRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveRoomSimpleInfo', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAssistStatusReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAssistStatusRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAutoReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAutoRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPvePB', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveRoomChangePushRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveRoomPB', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSelfChangePushRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAssistReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAssistRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetFightOrderReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetFightOrderRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetMultipleFightReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetMultipleFightRes', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetReadyReq', null, global);
 goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetReadyRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetRoomLimitReq', null, global);
-goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetRoomLimitRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetRoomInfoReq', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveSetRoomInfoRes', null, global);
+goog.exportSymbol('proto.PbModel.TeamPve.TeamPveTVRMemberModelPB', null, global);
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPvePB = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPvePB, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPvePB.displayName = 'proto.PbModel.TeamPve.TeamPvePB';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveRoomPB, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveRoomPB.displayName = 'proto.PbModel.TeamPve.TeamPveRoomPB';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveTVRMemberModelPB, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.displayName = 'proto.PbModel.TeamPve.TeamPveTVRMemberModelPB';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveInviteInfoPB, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveInviteInfoPB.displayName = 'proto.PbModel.TeamPve.TeamPveInviteInfoPB';
+}
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -121,16 +206,37 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveRoomSimpleInfo, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveGetRoomInfoReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.displayName = 'proto.PbModel.TeamPve.TeamPveRoomSimpleInfo';
+  proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.displayName = 'proto.PbModel.TeamPve.TeamPveGetRoomInfoReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveGetRoomInfoRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.displayName = 'proto.PbModel.TeamPve.TeamPveGetRoomInfoRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -164,7 +270,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.TeamPve.TeamPveCreateRoomRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPveCreateRoomRes.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.PbModel.TeamPve.TeamPveCreateRoomRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -173,90 +279,6 @@ if (goog.DEBUG && !COMPILED) {
    * @override
    */
   proto.PbModel.TeamPve.TeamPveCreateRoomRes.displayName = 'proto.PbModel.TeamPve.TeamPveCreateRoomRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetRoomInfoReq, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.displayName = 'proto.PbModel.TeamPve.TeamPveGetRoomInfoReq';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.repeatedFields_, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetRoomInfoRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.displayName = 'proto.PbModel.TeamPve.TeamPveGetRoomInfoRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveLocationInfo, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveLocationInfo.displayName = 'proto.PbModel.TeamPve.TeamPveLocationInfo';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPvePlayerData = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPvePlayerData, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPvePlayerData.displayName = 'proto.PbModel.TeamPve.TeamPvePlayerData';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -290,7 +312,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.TeamPve.TeamPveJoinRoomRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPveJoinRoomRes.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.PbModel.TeamPve.TeamPveJoinRoomRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -310,16 +332,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveExitRoomReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveOutRoomReq, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveExitRoomReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveOutRoomReq.displayName = 'proto.PbModel.TeamPve.TeamPveOutRoomReq';
+  proto.PbModel.TeamPve.TeamPveExitRoomReq.displayName = 'proto.PbModel.TeamPve.TeamPveExitRoomReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -331,16 +353,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveExitRoomRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveOutRoomRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveExitRoomRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveOutRoomRes.displayName = 'proto.PbModel.TeamPve.TeamPveOutRoomRes';
+  proto.PbModel.TeamPve.TeamPveExitRoomRes.displayName = 'proto.PbModel.TeamPve.TeamPveExitRoomRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -394,16 +416,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveChooseRobotReq, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetRoomInfoReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveChooseRobotReq.displayName = 'proto.PbModel.TeamPve.TeamPveChooseRobotReq';
+  proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetRoomInfoReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -415,16 +437,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveChooseRobotRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetRoomInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveChooseRobotRes.displayName = 'proto.PbModel.TeamPve.TeamPveChooseRobotRes';
+  proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetRoomInfoRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -436,16 +458,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetAssistReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.displayName = 'proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq';
+  proto.PbModel.TeamPve.TeamPveSetAssistReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetAssistReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -457,184 +479,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetAssistRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetAssistRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.displayName = 'proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveChooseWishReq, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveChooseWishReq.displayName = 'proto.PbModel.TeamPve.TeamPveChooseWishReq';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveChooseWishRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveChooseWishRes.displayName = 'proto.PbModel.TeamPve.TeamPveChooseWishRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetAssistStatusReq, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetAssistStatusReq';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetAssistStatusRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetAssistStatusRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetReadyReq, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveSetReadyReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetReadyReq';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetReadyRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveSetReadyRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetReadyRes';
+  proto.PbModel.TeamPve.TeamPveSetAssistRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetAssistRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -688,16 +542,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetReadyReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetAutoReq, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetReadyReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveSetAutoReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetAutoReq';
+  proto.PbModel.TeamPve.TeamPveSetReadyReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetReadyReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -709,16 +563,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetReadyRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetAutoRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetReadyRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveSetAutoRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetAutoRes';
+  proto.PbModel.TeamPve.TeamPveSetReadyRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetReadyRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -730,16 +584,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.displayName = 'proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq';
+  proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -751,16 +605,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.displayName = 'proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes';
+  proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -814,69 +668,6 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveGetInviteInfo, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveGetInviteInfo.displayName = 'proto.PbModel.TeamPve.TeamPveGetInviteInfo';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveRefuseInviteReq, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveRefuseInviteReq.displayName = 'proto.PbModel.TeamPve.TeamPveRefuseInviteReq';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPveRefuseInviteRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPveRefuseInviteRes.displayName = 'proto.PbModel.TeamPve.TeamPveRefuseInviteRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
 proto.PbModel.TeamPve.TeamPveInviteReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
@@ -919,6 +710,48 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveInviteHadnleReq, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveInviteHadnleReq.displayName = 'proto.PbModel.TeamPve.TeamPveInviteHadnleReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPveInviteHadnleRes.repeatedFields_, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveInviteHadnleRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveInviteHadnleRes.displayName = 'proto.PbModel.TeamPve.TeamPveInviteHadnleRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
 proto.PbModel.TeamPve.TeamPveFightReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
@@ -941,7 +774,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.PbModel.TeamPve.TeamPveFightRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPveFightRes.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.PbModel.TeamPve.TeamPveFightRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -961,16 +794,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveChooseWishReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetRoomLimitReq, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveChooseWishReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetRoomLimitReq';
+  proto.PbModel.TeamPve.TeamPveChooseWishReq.displayName = 'proto.PbModel.TeamPve.TeamPveChooseWishReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -982,16 +815,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveChooseWishRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveSetRoomLimitRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveChooseWishRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetRoomLimitRes';
+  proto.PbModel.TeamPve.TeamPveChooseWishRes.displayName = 'proto.PbModel.TeamPve.TeamPveChooseWishRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1003,16 +836,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPvePushPersonChangeRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetMultipleFightReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.displayName = 'proto.PbModel.TeamPve.TeamPvePushPersonChangeRes';
+  proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.displayName = 'proto.PbModel.TeamPve.TeamPveSetMultipleFightReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1024,16 +857,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPvePushOutRoomRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveSetMultipleFightRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPvePushOutRoomRes.displayName = 'proto.PbModel.TeamPve.TeamPvePushOutRoomRes';
+  proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.displayName = 'proto.PbModel.TeamPve.TeamPveSetMultipleFightRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1045,37 +878,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPvePushDataChangeRes.repeatedFields_, null);
-};
-goog.inherits(proto.PbModel.TeamPve.TeamPvePushDataChangeRes, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.PbModel.TeamPve.TeamPvePushDataChangeRes.displayName = 'proto.PbModel.TeamPve.TeamPvePushDataChangeRes';
-}
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPveDataChangeInfo, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveGetTodayRewardReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPveDataChangeInfo.displayName = 'proto.PbModel.TeamPve.TeamPveDataChangeInfo';
+  proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.displayName = 'proto.PbModel.TeamPve.TeamPveGetTodayRewardReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1087,16 +899,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPvePushPlayerDataRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveGetTodayRewardRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.displayName = 'proto.PbModel.TeamPve.TeamPvePushPlayerDataRes';
+  proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.displayName = 'proto.PbModel.TeamPve.TeamPveGetTodayRewardRes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1108,16 +920,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes = function(opt_data) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPvePushInviteRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveGetTeamInfoReq, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPvePushInviteRes.displayName = 'proto.PbModel.TeamPve.TeamPvePushInviteRes';
+  proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.displayName = 'proto.PbModel.TeamPve.TeamPveGetTeamInfoReq';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1129,17 +941,1530 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.repeatedFields_, null);
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.repeatedFields_, null);
 };
-goog.inherits(proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes, jspb.Message);
+goog.inherits(proto.PbModel.TeamPve.TeamPveGetTeamInfoRes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.displayName = 'proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes';
+  proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.displayName = 'proto.PbModel.TeamPve.TeamPveGetTeamInfoRes';
 }
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.displayName = 'proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.displayName = 'proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveRoomChangePushRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveRoomChangePushRes.displayName = 'proto.PbModel.TeamPve.TeamPveRoomChangePushRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.displayName = 'proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveSelfChangePushRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveSelfChangePushRes.displayName = 'proto.PbModel.TeamPve.TeamPveSelfChangePushRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveFightPushRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveFightPushRes.displayName = 'proto.PbModel.TeamPve.TeamPveFightPushRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveInvitePushRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveInvitePushRes.displayName = 'proto.PbModel.TeamPve.TeamPveInvitePushRes';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.displayName = 'proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPvePB.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPvePB} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPvePB.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    wishtypeid: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    isautordorcha: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    presetsvitcount: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    presetsvitusecount: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    todayuserobotcount: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    todayassistcount: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    multiplefight: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    isformation: jspb.Message.getBooleanFieldWithDefault(msg, 10, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPvePB}
+ */
+proto.PbModel.TeamPve.TeamPvePB.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPvePB;
+  return proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPvePB} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPvePB}
+ */
+proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRoomid(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setChapterid(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setWishtypeid(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsautordorcha(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPresetsvitcount(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPresetsvitusecount(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTodayuserobotcount(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTodayassistcount(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setMultiplefight(value);
+      break;
+    case 10:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsformation(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPvePB} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRoomid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getChapterid();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getWishtypeid();
+  if (f !== 0) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+  f = message.getIsautordorcha();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getPresetsvitcount();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getPresetsvitusecount();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getTodayuserobotcount();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
+    );
+  }
+  f = message.getTodayassistcount();
+  if (f !== 0) {
+    writer.writeInt32(
+      8,
+      f
+    );
+  }
+  f = message.getMultiplefight();
+  if (f !== 0) {
+    writer.writeInt32(
+      9,
+      f
+    );
+  }
+  f = message.getIsformation();
+  if (f) {
+    writer.writeBool(
+      10,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string RoomId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getRoomid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setRoomid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 ChapterId = 2;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getChapterid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setChapterid = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int32 WishTypeId = 3;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getWishtypeid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setWishtypeid = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional bool IsAutoRdOrCha = 4;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getIsautordorcha = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setIsautordorcha = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional int32 PresetsVitCount = 5;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getPresetsvitcount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setPresetsvitcount = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 PresetsVitUseCount = 6;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getPresetsvitusecount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setPresetsvitusecount = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int32 TodayUseRobotCount = 7;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getTodayuserobotcount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setTodayuserobotcount = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional int32 TodayAssistCount = 8;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getTodayassistcount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setTodayassistcount = function(value) {
+  return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
+/**
+ * optional int32 MultipleFight = 9;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getMultiplefight = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setMultiplefight = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
+};
+
+
+/**
+ * optional bool IsFormation = 10;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.getIsformation = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPvePB} returns this
+ */
+proto.PbModel.TeamPve.TeamPvePB.prototype.setIsformation = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 10, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveRoomPB.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomPB} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    homeownerid: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    teampveroomlimitenum: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    faplimit: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    tvrmembermodeldicMap: (f = msg.getTvrmembermodeldicMap()) ? f.toObject(includeInstance, proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.toObject) : [],
+    createtime: jspb.Message.getFieldWithDefault(msg, 9, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveRoomPB;
+  return proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomPB} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRoomid(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setChapterid(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHomeownerid(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTeampveroomlimitenum(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setFaplimit(value);
+      break;
+    case 6:
+      var value = msg.getTvrmembermodeldicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.deserializeBinaryFromReader, "", new proto.PbModel.TeamPve.TeamPveTVRMemberModelPB());
+         });
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCreatetime(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomPB} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRoomid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getChapterid();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getHomeownerid();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getTeampveroomlimitenum();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+  f = message.getFaplimit();
+  if (f !== 0) {
+    writer.writeInt64(
+      5,
+      f
+    );
+  }
+  f = message.getTvrmembermodeldicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(6, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.serializeBinaryToWriter);
+  }
+  f = message.getCreatetime();
+  if (f !== 0) {
+    writer.writeInt64(
+      9,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string RoomId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getRoomid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.setRoomid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 ChapterId = 2;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getChapterid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.setChapterid = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional string HomeownerId = 3;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getHomeownerid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.setHomeownerid = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional int32 TeamPveRoomLimitEnum = 4;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getTeampveroomlimitenum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.setTeampveroomlimitenum = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int64 FapLimit = 5;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getFaplimit = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.setFaplimit = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * map<string, TeamPveTVRMemberModelPB> TVRMemberModelDic = 6;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB>}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getTvrmembermodeldicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB>} */ (
+      jspb.Message.getMapField(this, 6, opt_noLazyCreate,
+      proto.PbModel.TeamPve.TeamPveTVRMemberModelPB));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.clearTvrmembermodeldicMap = function() {
+  this.getTvrmembermodeldicMap().clear();
+  return this;};
+
+
+/**
+ * optional int64 CreateTime = 9;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.getCreatetime = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomPB.prototype.setCreatetime = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    playerinfo: (f = msg.getPlayerinfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
+    isready: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    isrobot: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    isassist: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    fightorder: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    challengeconsume: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    fap: jspb.Message.getFieldWithDefault(msg, 8, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveTVRMemberModelPB;
+  return proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPlayerid(value);
+      break;
+    case 2:
+      var value = new Player_pb.PlayerCommonInfoRes;
+      reader.readMessage(value,Player_pb.PlayerCommonInfoRes.deserializeBinaryFromReader);
+      msg.setPlayerinfo(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsready(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsrobot(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsassist(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setFightorder(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChallengeconsume(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setFap(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPlayerid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getPlayerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      Player_pb.PlayerCommonInfoRes.serializeBinaryToWriter
+    );
+  }
+  f = message.getIsready();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getIsrobot();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getIsassist();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getFightorder();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getChallengeconsume();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getFap();
+  if (f !== 0) {
+    writer.writeInt64(
+      8,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string PlayerId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getPlayerid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setPlayerid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional PbModel.Player.PlayerCommonInfoRes PlayerInfo = 2;
+ * @return {?proto.PbModel.Player.PlayerCommonInfoRes}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getPlayerinfo = function() {
+  return /** @type{?proto.PbModel.Player.PlayerCommonInfoRes} */ (
+    jspb.Message.getWrapperField(this, Player_pb.PlayerCommonInfoRes, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.Player.PlayerCommonInfoRes|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+*/
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setPlayerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.clearPlayerinfo = function() {
+  return this.setPlayerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.hasPlayerinfo = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bool IsReady = 3;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getIsready = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setIsready = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional bool IsRobot = 4;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getIsrobot = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setIsrobot = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional bool IsAssist = 5;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getIsassist = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setIsassist = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional int32 FightOrder = 6;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getFightorder = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setFightorder = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional string ChallengeConsume = 7;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getChallengeconsume = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setChallengeconsume = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional int64 Fap = 8;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.getFap = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.prototype.setFap = function(value) {
+  return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveInviteInfoPB.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    playerinfo: (f = msg.getPlayerinfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
+    invitetime: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    status: jspb.Message.getFieldWithDefault(msg, 5, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveInviteInfoPB;
+  return proto.PbModel.TeamPve.TeamPveInviteInfoPB.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRoomid(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setChapterid(value);
+      break;
+    case 3:
+      var value = new Player_pb.PlayerCommonInfoRes;
+      reader.readMessage(value,Player_pb.PlayerCommonInfoRes.deserializeBinaryFromReader);
+      msg.setPlayerinfo(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setInvitetime(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setStatus(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveInviteInfoPB.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRoomid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getChapterid();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getPlayerinfo();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      Player_pb.PlayerCommonInfoRes.serializeBinaryToWriter
+    );
+  }
+  f = message.getInvitetime();
+  if (f !== 0) {
+    writer.writeInt64(
+      4,
+      f
+    );
+  }
+  f = message.getStatus();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string RoomId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.getRoomid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.setRoomid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 ChapterId = 2;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.getChapterid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.setChapterid = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional PbModel.Player.PlayerCommonInfoRes PlayerInfo = 3;
+ * @return {?proto.PbModel.Player.PlayerCommonInfoRes}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.getPlayerinfo = function() {
+  return /** @type{?proto.PbModel.Player.PlayerCommonInfoRes} */ (
+    jspb.Message.getWrapperField(this, Player_pb.PlayerCommonInfoRes, 3));
+};
+
+
+/**
+ * @param {?proto.PbModel.Player.PlayerCommonInfoRes|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} returns this
+*/
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.setPlayerinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.clearPlayerinfo = function() {
+  return this.setPlayerinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.hasPlayerinfo = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional int64 InviteTime = 4;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.getInvitetime = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.setInvitetime = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 Status = 5;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.getStatus = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteInfoPB.prototype.setStatus = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
 
 
 
@@ -1309,8 +2634,8 @@ proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.toObject = function(op
  */
 proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    roomlistList: jspb.Message.toObjectList(msg.getRoomlistList(),
-    proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.toObject, includeInstance)
+    teampveroomlistList: jspb.Message.toObjectList(msg.getTeampveroomlistList(),
+    proto.PbModel.TeamPve.TeamPveRoomPB.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1348,9 +2673,9 @@ proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.deserializeBinaryFromReader = fu
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.TeamPve.TeamPveRoomSimpleInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.deserializeBinaryFromReader);
-      msg.addRoomlist(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.addTeampveroomlist(value);
       break;
     default:
       reader.skipField();
@@ -1381,43 +2706,43 @@ proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.serializeBinary = func
  */
 proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getRoomlistList();
+  f = message.getTeampveroomlistList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.serializeBinaryToWriter
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated TeamPveRoomSimpleInfo RoomList = 1;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo>}
+ * repeated TeamPveRoomPB TeamPveRoomList = 1;
+ * @return {!Array<!proto.PbModel.TeamPve.TeamPveRoomPB>}
  */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.getRoomlistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomSimpleInfo, 1));
+proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.getTeampveroomlistList = function() {
+  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveRoomPB>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 1));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo>} value
+ * @param {!Array<!proto.PbModel.TeamPve.TeamPveRoomPB>} value
  * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.setRoomlistList = function(value) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.setTeampveroomlistList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo=} opt_value
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomPB=} opt_value
  * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo}
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.addRoomlist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveRoomSimpleInfo, opt_index);
+proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.addTeampveroomlist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveRoomPB, opt_index);
 };
 
 
@@ -1425,8 +2750,8 @@ proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.addRoomlist = function
  * Clears the list making it empty but non-null.
  * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.clearRoomlistList = function() {
-  return this.setRoomlistList([]);
+proto.PbModel.TeamPve.TeamPveGetRoomInfoListRes.prototype.clearTeampveroomlistList = function() {
+  return this.setTeampveroomlistList([]);
 };
 
 
@@ -1446,8 +2771,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -1456,17 +2781,14 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    playerinfo: (f = msg.getPlayerinfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
-    leaderplayerid: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -1480,23 +2802,23 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo}
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveRoomSimpleInfo;
-  return proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveGetRoomInfoReq;
+  return proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo}
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1508,19 +2830,6 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.deserializeBinaryFromReader = functi
       msg.setRoomid(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
-      break;
-    case 3:
-      var value = new Player_pb.PlayerCommonInfoRes;
-      reader.readMessage(value,Player_pb.PlayerCommonInfoRes.deserializeBinaryFromReader);
-      msg.setPlayerinfo(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLeaderplayerid(value);
-      break;
-    case 5:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setChapterid(value);
       break;
@@ -1537,9 +2846,9 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1547,11 +2856,11 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} message
+ * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoomid();
   if (f.length > 0) {
@@ -1560,32 +2869,10 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getFapcondition();
-  if (f !== 0) {
-    writer.writeInt64(
-      2,
-      f
-    );
-  }
-  f = message.getPlayerinfo();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      Player_pb.PlayerCommonInfoRes.serializeBinaryToWriter
-    );
-  }
-  f = message.getLeaderplayerid();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
   f = message.getChapterid();
   if (f !== 0) {
     writer.writeInt32(
-      5,
+      2,
       f
     );
   }
@@ -1596,63 +2883,177 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.serializeBinaryToWriter = function(m
  * optional string RoomId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.getRoomid = function() {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.getRoomid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.setRoomid = function(value) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.setRoomid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional int64 FapCondition = 2;
+ * optional int32 ChapterId = 2;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.getFapcondition = function() {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.getChapterid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.setFapcondition = function(value) {
+proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.setChapterid = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * optional PbModel.Player.PlayerCommonInfoRes PlayerInfo = 3;
- * @return {?proto.PbModel.Player.PlayerCommonInfoRes}
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.getPlayerinfo = function() {
-  return /** @type{?proto.PbModel.Player.PlayerCommonInfoRes} */ (
-    jspb.Message.getWrapperField(this, Player_pb.PlayerCommonInfoRes, 3));
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.toObject(opt_includeInstance, this);
 };
 
 
 /**
- * @param {?proto.PbModel.Player.PlayerCommonInfoRes|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} returns this
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes}
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveGetRoomInfoRes;
+  return proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes}
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getTeampveroom();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional TeamPveRoomPB TeamPveRoom = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
+ */
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 1));
+};
+
+
+/**
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.setPlayerinfo = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.clearPlayerinfo = function() {
-  return this.setPlayerinfo(undefined);
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
@@ -1660,44 +3061,8 @@ proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.clearPlayerinfo = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.hasPlayerinfo = function() {
-  return jspb.Message.getField(this, 3) != null;
-};
-
-
-/**
- * optional string LeaderPlayerId = 4;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.getLeaderplayerid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.setLeaderplayerid = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional int32 ChapterId = 5;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.getChapterid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveRoomSimpleInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveRoomSimpleInfo.prototype.setChapterid = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1734,8 +3099,8 @@ proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.toObject = function(opt_inc
 proto.PbModel.TeamPve.TeamPveCreateRoomReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     chapterid: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    faplimit: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    teampveroomlimitenum: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -1778,11 +3143,11 @@ proto.PbModel.TeamPve.TeamPveCreateRoomReq.deserializeBinaryFromReader = functio
       break;
     case 2:
       var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
+      msg.setFaplimit(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
+      msg.setTeampveroomlimitenum(value);
       break;
     default:
       reader.skipField();
@@ -1820,14 +3185,14 @@ proto.PbModel.TeamPve.TeamPveCreateRoomReq.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getFapcondition();
+  f = message.getFaplimit();
   if (f !== 0) {
     writer.writeInt64(
       2,
       f
     );
   }
-  f = message.getRoomlimit();
+  f = message.getTeampveroomlimitenum();
   if (f !== 0) {
     writer.writeInt32(
       3,
@@ -1856,10 +3221,10 @@ proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.setChapterid = function(val
 
 
 /**
- * optional int64 FapCondition = 2;
+ * optional int64 FapLimit = 2;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.getFapcondition = function() {
+proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.getFaplimit = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -1868,16 +3233,16 @@ proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.getFapcondition = function(
  * @param {number} value
  * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.setFapcondition = function(value) {
+proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.setFaplimit = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
 /**
- * optional int32 RoomLimit = 3;
+ * optional int32 TeamPveRoomLimitEnum = 3;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.getRoomlimit = function() {
+proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.getTeampveroomlimitenum = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -1886,18 +3251,11 @@ proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.getRoomlimit = function() {
  * @param {number} value
  * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.setRoomlimit = function(value) {
+proto.PbModel.TeamPve.TeamPveCreateRoomReq.prototype.setTeampveroomlimitenum = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
-
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.repeatedFields_ = [2];
 
 
 
@@ -1930,14 +3288,8 @@ proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.toObject = function(opt_inc
  */
 proto.PbModel.TeamPve.TeamPveCreateRoomRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    locationinfolistList: jspb.Message.toObjectList(msg.getLocationinfolistList(),
-    proto.PbModel.TeamPve.TeamPveLocationInfo.toObject, includeInstance),
-    wishtypeid: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    fightcost: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 7, 0)
+    teampve: (f = msg.getTeampve()) && proto.PbModel.TeamPve.TeamPvePB.toObject(includeInstance, f),
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1975,33 +3327,14 @@ proto.PbModel.TeamPve.TeamPveCreateRoomRes.deserializeBinaryFromReader = functio
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
+      var value = new proto.PbModel.TeamPve.TeamPvePB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampve(value);
       break;
     case 2:
-      var value = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader);
-      msg.addLocationinfolist(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setWishtypeid(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightcost(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
-      break;
-    case 7:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setChapterid(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
       break;
     default:
       reader.skipField();
@@ -2032,1156 +3365,50 @@ proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.serializeBinary = function(
  */
 proto.PbModel.TeamPve.TeamPveCreateRoomRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getLocationinfolistList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      2,
-      f,
-      proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter
-    );
-  }
-  f = message.getWishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
-  f = message.getFightcost();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getFapcondition();
-  if (f !== 0) {
-    writer.writeInt64(
-      5,
-      f
-    );
-  }
-  f = message.getRoomlimit();
-  if (f !== 0) {
-    writer.writeInt32(
-      6,
-      f
-    );
-  }
-  f = message.getChapterid();
-  if (f !== 0) {
-    writer.writeInt32(
-      7,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * repeated TeamPveLocationInfo LocationInfoList = 2;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getLocationinfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveLocationInfo, 2));
-};
-
-
-/**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setLocationinfolistList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
-};
-
-
-/**
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo=} opt_value
- * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.addLocationinfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.PbModel.TeamPve.TeamPveLocationInfo, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.clearLocationinfolistList = function() {
-  return this.setLocationinfolistList([]);
-};
-
-
-/**
- * optional int32 WishTypeId = 3;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getWishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setWishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional string FightCost = 4;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getFightcost = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setFightcost = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional int64 FapCondition = 5;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getFapcondition = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setFapcondition = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional int32 RoomLimit = 6;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getRoomlimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setRoomlimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
-};
-
-
-/**
- * optional int32 ChapterId = 7;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getChapterid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setChapterid = function(value) {
-  return jspb.Message.setProto3IntField(this, 7, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetRoomInfoReq;
-  return proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoReq.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.repeatedFields_ = [1];
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    locationinfolistList: jspb.Message.toObjectList(msg.getLocationinfolistList(),
-    proto.PbModel.TeamPve.TeamPveLocationInfo.toObject, includeInstance),
-    wishtypeid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    fightcost: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 6, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetRoomInfoRes;
-  return proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader);
-      msg.addLocationinfolist(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setWishtypeid(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightcost(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setChapterid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getLocationinfolistList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter
-    );
-  }
-  f = message.getWishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getFightcost();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getFapcondition();
-  if (f !== 0) {
-    writer.writeInt64(
-      4,
-      f
-    );
-  }
-  f = message.getRoomlimit();
-  if (f !== 0) {
-    writer.writeInt32(
-      5,
-      f
-    );
-  }
-  f = message.getChapterid();
-  if (f !== 0) {
-    writer.writeInt32(
-      6,
-      f
-    );
-  }
-};
-
-
-/**
- * repeated TeamPveLocationInfo LocationInfoList = 1;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getLocationinfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveLocationInfo, 1));
-};
-
-
-/**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setLocationinfolistList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
-};
-
-
-/**
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo=} opt_value
- * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.addLocationinfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveLocationInfo, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.clearLocationinfolistList = function() {
-  return this.setLocationinfolistList([]);
-};
-
-
-/**
- * optional int32 WishTypeId = 2;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getWishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setWishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional string FightCost = 3;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getFightcost = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setFightcost = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional int64 FapCondition = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getFapcondition = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setFapcondition = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional int32 RoomLimit = 5;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getRoomlimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setRoomlimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional int32 ChapterId = 6;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.getChapterid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetRoomInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetRoomInfoRes.prototype.setChapterid = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveLocationInfo.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    isrobot: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-    robotname: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    robotheadid: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    isfillrobot: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
-    isleader: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
-    fightorder: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    isready: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
-    isassist: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
-    isauto: jspb.Message.getBooleanFieldWithDefault(msg, 10, false),
-    autousablenum: jspb.Message.getFieldWithDefault(msg, 11, 0),
-    autoresiduenum: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    playerinfo: (f = msg.getPlayerinfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
-    inviteplayers: jspb.Message.getFieldWithDefault(msg, 14, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-  return proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsrobot(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRobotname(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRobotheadid(value);
-      break;
-    case 5:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsfillrobot(value);
-      break;
-    case 6:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsleader(value);
-      break;
-    case 7:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setFightorder(value);
-      break;
-    case 8:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsready(value);
-      break;
-    case 9:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsassist(value);
-      break;
-    case 10:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsauto(value);
-      break;
-    case 11:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setAutousablenum(value);
-      break;
-    case 12:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setAutoresiduenum(value);
-      break;
-    case 13:
-      var value = new Player_pb.PlayerCommonInfoRes;
-      reader.readMessage(value,Player_pb.PlayerCommonInfoRes.deserializeBinaryFromReader);
-      msg.setPlayerinfo(value);
-      break;
-    case 14:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInviteplayers(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getId();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getIsrobot();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
-  f = message.getRobotname();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getRobotheadid();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
-  }
-  f = message.getIsfillrobot();
-  if (f) {
-    writer.writeBool(
-      5,
-      f
-    );
-  }
-  f = message.getIsleader();
-  if (f) {
-    writer.writeBool(
-      6,
-      f
-    );
-  }
-  f = message.getFightorder();
-  if (f !== 0) {
-    writer.writeInt32(
-      7,
-      f
-    );
-  }
-  f = message.getIsready();
-  if (f) {
-    writer.writeBool(
-      8,
-      f
-    );
-  }
-  f = message.getIsassist();
-  if (f) {
-    writer.writeBool(
-      9,
-      f
-    );
-  }
-  f = message.getIsauto();
-  if (f) {
-    writer.writeBool(
-      10,
-      f
-    );
-  }
-  f = message.getAutousablenum();
-  if (f !== 0) {
-    writer.writeInt32(
-      11,
-      f
-    );
-  }
-  f = message.getAutoresiduenum();
-  if (f !== 0) {
-    writer.writeInt32(
-      12,
-      f
-    );
-  }
-  f = message.getPlayerinfo();
+  f = message.getTeampve();
   if (f != null) {
     writer.writeMessage(
-      13,
+      1,
       f,
-      Player_pb.PlayerCommonInfoRes.serializeBinaryToWriter
+      proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter
     );
   }
-  f = message.getInviteplayers();
-  if (f.length > 0) {
-    writer.writeString(
-      14,
-      f
+  f = message.getTeampveroom();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string Id = 1;
- * @return {string}
+ * optional TeamPvePB TeamPve = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
  */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getTeampve = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPvePB, 1));
 };
 
 
 /**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional bool IsRobot = 2;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getIsrobot = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setIsrobot = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-/**
- * optional string RobotName = 3;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getRobotname = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setRobotname = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional int32 RobotHeadId = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getRobotheadid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setRobotheadid = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional bool IsFillRobot = 5;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getIsfillrobot = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setIsfillrobot = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
-};
-
-
-/**
- * optional bool IsLeader = 6;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getIsleader = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setIsleader = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 6, value);
-};
-
-
-/**
- * optional int32 FightOrder = 7;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getFightorder = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setFightorder = function(value) {
-  return jspb.Message.setProto3IntField(this, 7, value);
-};
-
-
-/**
- * optional bool IsReady = 8;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getIsready = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setIsready = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 8, value);
-};
-
-
-/**
- * optional bool IsAssist = 9;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getIsassist = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setIsassist = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 9, value);
-};
-
-
-/**
- * optional bool IsAuto = 10;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getIsauto = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setIsauto = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 10, value);
-};
-
-
-/**
- * optional int32 AutoUsableNum = 11;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getAutousablenum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setAutousablenum = function(value) {
-  return jspb.Message.setProto3IntField(this, 11, value);
-};
-
-
-/**
- * optional int32 AutoResidueNum = 12;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getAutoresiduenum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setAutoresiduenum = function(value) {
-  return jspb.Message.setProto3IntField(this, 12, value);
-};
-
-
-/**
- * optional PbModel.Player.PlayerCommonInfoRes PlayerInfo = 13;
- * @return {?proto.PbModel.Player.PlayerCommonInfoRes}
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getPlayerinfo = function() {
-  return /** @type{?proto.PbModel.Player.PlayerCommonInfoRes} */ (
-    jspb.Message.getWrapperField(this, Player_pb.PlayerCommonInfoRes, 13));
-};
-
-
-/**
- * @param {?proto.PbModel.Player.PlayerCommonInfoRes|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setPlayerinfo = function(value) {
-  return jspb.Message.setWrapperField(this, 13, value);
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setTeampve = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.clearPlayerinfo = function() {
-  return this.setPlayerinfo(undefined);
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.clearTeampve = function() {
+  return this.setTeampve(undefined);
 };
 
 
@@ -3189,246 +3416,45 @@ proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.clearPlayerinfo = function()
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.hasPlayerinfo = function() {
-  return jspb.Message.getField(this, 13) != null;
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.hasTeampve = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
- * optional string InvitePlayers = 14;
- * @return {string}
+ * optional TeamPveRoomPB TeamPveRoom = 2;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.getInviteplayers = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 2));
 };
 
 
 /**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveLocationInfo.prototype.setInviteplayers = function(value) {
-  return jspb.Message.setProto3StringField(this, 14, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePlayerData.toObject(opt_includeInstance, this);
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePlayerData} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveCreateRoomRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePlayerData.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    curroomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    getrewardstr: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    wishtypeid: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    fillrobotcount: jspb.Message.getFieldWithDefault(msg, 4, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePlayerData}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePlayerData;
-  return proto.PbModel.TeamPve.TeamPvePlayerData.deserializeBinaryFromReader(msg, reader);
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
 /**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePlayerData} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePlayerData}
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPvePlayerData.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCurroomid(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setGetrewardstr(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setWishtypeid(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setFillrobotcount(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePlayerData.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePlayerData} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getCurroomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getGetrewardstr();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getWishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
-  f = message.getFillrobotcount();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string CurRoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.getCurroomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPvePlayerData} returns this
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.setCurroomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string GetRewardStr = 2;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.getGetrewardstr = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPvePlayerData} returns this
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.setGetrewardstr = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional int32 WishTypeId = 3;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.getWishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePlayerData} returns this
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.setWishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional int32 FillRobotCount = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.getFillrobotcount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePlayerData} returns this
- */
-proto.PbModel.TeamPve.TeamPvePlayerData.prototype.setFillrobotcount = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
+proto.PbModel.TeamPve.TeamPveCreateRoomRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -3464,7 +3490,8 @@ proto.PbModel.TeamPve.TeamPveJoinRoomReq.prototype.toObject = function(opt_inclu
  */
 proto.PbModel.TeamPve.TeamPveJoinRoomReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -3505,6 +3532,10 @@ proto.PbModel.TeamPve.TeamPveJoinRoomReq.deserializeBinaryFromReader = function(
       var value = /** @type {string} */ (reader.readString());
       msg.setRoomid(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setChapterid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -3541,6 +3572,13 @@ proto.PbModel.TeamPve.TeamPveJoinRoomReq.serializeBinaryToWriter = function(mess
       f
     );
   }
+  f = message.getChapterid();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -3562,13 +3600,24 @@ proto.PbModel.TeamPve.TeamPveJoinRoomReq.prototype.setRoomid = function(value) {
 };
 
 
+/**
+ * optional int32 ChapterId = 2;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveJoinRoomReq.prototype.getChapterid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
 
 /**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.repeatedFields_ = [1];
+proto.PbModel.TeamPve.TeamPveJoinRoomReq.prototype.setChapterid = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
 
 
 
@@ -3601,13 +3650,8 @@ proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.toObject = function(opt_inclu
  */
 proto.PbModel.TeamPve.TeamPveJoinRoomRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    locationinfolistList: jspb.Message.toObjectList(msg.getLocationinfolistList(),
-    proto.PbModel.TeamPve.TeamPveLocationInfo.toObject, includeInstance),
-    wishtypeid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    fightcost: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    teampve: (f = msg.getTeampve()) && proto.PbModel.TeamPve.TeamPvePB.toObject(includeInstance, f),
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3645,29 +3689,14 @@ proto.PbModel.TeamPve.TeamPveJoinRoomRes.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader);
-      msg.addLocationinfolist(value);
+      var value = new proto.PbModel.TeamPve.TeamPvePB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampve(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setWishtypeid(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightcost(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setChapterid(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
       break;
     default:
       reader.skipField();
@@ -3698,177 +3727,96 @@ proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.serializeBinary = function() 
  */
 proto.PbModel.TeamPve.TeamPveJoinRoomRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getLocationinfolistList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getTeampve();
+  if (f != null) {
+    writer.writeMessage(
       1,
       f,
-      proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter
+      proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter
     );
   }
-  f = message.getWishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
+  f = message.getTeampveroom();
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
-    );
-  }
-  f = message.getFightcost();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getFapcondition();
-  if (f !== 0) {
-    writer.writeInt64(
-      4,
-      f
-    );
-  }
-  f = message.getRoomlimit();
-  if (f !== 0) {
-    writer.writeInt32(
-      5,
-      f
-    );
-  }
-  f = message.getChapterid();
-  if (f !== 0) {
-    writer.writeInt32(
-      6,
-      f
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated TeamPveLocationInfo LocationInfoList = 1;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>}
+ * optional TeamPvePB TeamPve = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
  */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getLocationinfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveLocationInfo, 1));
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getTeampve = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPvePB, 1));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} value
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
  * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setLocationinfolistList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setTeampve = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo=} opt_value
- * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.addLocationinfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveLocationInfo, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
+ * Clears the message field making it undefined.
  * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.clearLocationinfolistList = function() {
-  return this.setLocationinfolistList([]);
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.clearTeampve = function() {
+  return this.setTeampve(undefined);
 };
 
 
 /**
- * optional int32 WishTypeId = 2;
- * @return {number}
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getWishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.hasTeampve = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
- * @param {number} value
+ * optional TeamPveRoomPB TeamPveRoom = 2;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
+ */
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
  * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setWishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
 /**
- * optional string FightCost = 3;
- * @return {string}
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getFightcost = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setFightcost = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional int64 FapCondition = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getFapcondition = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setFapcondition = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional int32 RoomLimit = 5;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getRoomlimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setRoomlimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional int32 ChapterId = 6;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.getChapterid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveJoinRoomRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.setChapterid = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
+proto.PbModel.TeamPve.TeamPveJoinRoomRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -3888,8 +3836,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveOutRoomReq.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveExitRoomReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveExitRoomReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -3898,11 +3846,11 @@ proto.PbModel.TeamPve.TeamPveOutRoomReq.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveOutRoomReq} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveExitRoomReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     roomid: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -3918,23 +3866,23 @@ proto.PbModel.TeamPve.TeamPveOutRoomReq.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveOutRoomReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveExitRoomReq}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveOutRoomReq;
-  return proto.PbModel.TeamPve.TeamPveOutRoomReq.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveExitRoomReq;
+  return proto.PbModel.TeamPve.TeamPveExitRoomReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveOutRoomReq} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveExitRoomReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveOutRoomReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveExitRoomReq}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3958,9 +3906,9 @@ proto.PbModel.TeamPve.TeamPveOutRoomReq.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveOutRoomReq.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveExitRoomReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3968,11 +3916,11 @@ proto.PbModel.TeamPve.TeamPveOutRoomReq.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveOutRoomReq} message
+ * @param {!proto.PbModel.TeamPve.TeamPveExitRoomReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoomid();
   if (f.length > 0) {
@@ -3988,16 +3936,16 @@ proto.PbModel.TeamPve.TeamPveOutRoomReq.serializeBinaryToWriter = function(messa
  * optional string RoomId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.prototype.getRoomid = function() {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.prototype.getRoomid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveOutRoomReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveExitRoomReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveOutRoomReq.prototype.setRoomid = function(value) {
+proto.PbModel.TeamPve.TeamPveExitRoomReq.prototype.setRoomid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4018,8 +3966,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveOutRoomRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveExitRoomRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveExitRoomRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -4028,11 +3976,11 @@ proto.PbModel.TeamPve.TeamPveOutRoomRes.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveOutRoomRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveExitRoomRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveExitRoomRes.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -4048,23 +3996,23 @@ proto.PbModel.TeamPve.TeamPveOutRoomRes.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveOutRoomRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveExitRoomRes}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveExitRoomRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveOutRoomRes;
-  return proto.PbModel.TeamPve.TeamPveOutRoomRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveExitRoomRes;
+  return proto.PbModel.TeamPve.TeamPveExitRoomRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveOutRoomRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveExitRoomRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveOutRoomRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveExitRoomRes}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveExitRoomRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4084,9 +4032,9 @@ proto.PbModel.TeamPve.TeamPveOutRoomRes.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveExitRoomRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveOutRoomRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveExitRoomRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4094,11 +4042,11 @@ proto.PbModel.TeamPve.TeamPveOutRoomRes.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveOutRoomRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveExitRoomRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveOutRoomRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveExitRoomRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -4136,7 +4084,7 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.toObject = function(opt_
 proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    otherid: jspb.Message.getFieldWithDefault(msg, 2, "")
+    playerid: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -4179,7 +4127,7 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.deserializeBinaryFromReader = func
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setOtherid(value);
+      msg.setPlayerid(value);
       break;
     default:
       reader.skipField();
@@ -4217,7 +4165,7 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getOtherid();
+  f = message.getPlayerid();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -4246,10 +4194,10 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.setRoomid = function(val
 
 
 /**
- * optional string OtherId = 2;
+ * optional string PlayerId = 2;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.getOtherid = function() {
+proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.getPlayerid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -4258,7 +4206,7 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.getOtherid = function() 
  * @param {string} value
  * @return {!proto.PbModel.TeamPve.TeamPveKickOutPlayerReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.setOtherid = function(value) {
+proto.PbModel.TeamPve.TeamPveKickOutPlayerReq.prototype.setPlayerid = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -4295,7 +4243,7 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.toObject = function(opt_
  */
 proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fightcost: jspb.Message.getFieldWithDefault(msg, 1, "")
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4333,8 +4281,9 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightcost(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
       break;
     default:
       reader.skipField();
@@ -4365,351 +4314,51 @@ proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.serializeBinary = functi
  */
 proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFightcost();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getTeampveroom();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string FightCost = 1;
- * @return {string}
+ * optional TeamPveRoomPB TeamPveRoom = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.getFightcost = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 1));
 };
 
 
 /**
- * @param {string} value
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveKickOutPlayerRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
  * @return {!proto.PbModel.TeamPve.TeamPveKickOutPlayerRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.setFightcost = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveChooseRobotReq.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
 /**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveChooseRobotReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    robotid: jspb.Message.getFieldWithDefault(msg, 2, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotReq}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveChooseRobotReq;
-  return proto.PbModel.TeamPve.TeamPveChooseRobotReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseRobotReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotReq}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRobotid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveChooseRobotReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseRobotReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getRobotid();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional int32 RobotId = 2;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.prototype.getRobotid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotReq.prototype.setRobotid = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveChooseRobotRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveChooseRobotRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    fightcost: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    isassist: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotRes}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveChooseRobotRes;
-  return proto.PbModel.TeamPve.TeamPveChooseRobotRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseRobotRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotRes}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightcost(value);
-      break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsassist(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveChooseRobotRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseRobotRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getFightcost();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getIsassist();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string FightCost = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.prototype.getFightcost = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.prototype.setFightcost = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional bool IsAssist = 2;
+ * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.prototype.getIsassist = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveChooseRobotRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveChooseRobotRes.prototype.setIsassist = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
+proto.PbModel.TeamPve.TeamPveKickOutPlayerRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -4729,8 +4378,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -4739,505 +4388,15 @@ proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq;
-  return proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    getrewardstr: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes;
-  return proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setGetrewardstr(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getGetrewardstr();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string GetRewardStr = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.prototype.getGetrewardstr = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetTodayRewardsRes.prototype.setGetrewardstr = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveChooseWishReq.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveChooseWishReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    wishtypeid: jspb.Message.getFieldWithDefault(msg, 1, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseWishReq}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveChooseWishReq;
-  return proto.PbModel.TeamPve.TeamPveChooseWishReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseWishReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseWishReq}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setWishtypeid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveChooseWishReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseWishReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getWishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional int32 WishTypeId = 1;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.getWishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveChooseWishReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.setWishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveChooseWishRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveChooseWishRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    curwishtypeid: jspb.Message.getFieldWithDefault(msg, 1, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveChooseWishRes;
-  return proto.PbModel.TeamPve.TeamPveChooseWishRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseWishRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setCurwishtypeid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveChooseWishRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveChooseWishRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getCurwishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional int32 CurWishTypeId = 1;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.getCurwishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.setCurwishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    teampveroomlimitenum: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    faplimit: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -5251,23 +4410,23 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq;
-  return proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetRoomInfoReq;
+  return proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5279,8 +4438,12 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.deserializeBinaryFromReader = fu
       msg.setRoomid(value);
       break;
     case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTeampveroomlimitenum(value);
+      break;
+    case 3:
       var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
+      msg.setFaplimit(value);
       break;
     default:
       reader.skipField();
@@ -5295,9 +4458,9 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5305,11 +4468,11 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoomid();
   if (f.length > 0) {
@@ -5318,10 +4481,17 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.serializeBinaryToWriter = functi
       f
     );
   }
-  f = message.getFapcondition();
+  f = message.getTeampveroomlimitenum();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getFaplimit();
   if (f !== 0) {
     writer.writeInt64(
-      2,
+      3,
       f
     );
   }
@@ -5332,35 +4502,53 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.serializeBinaryToWriter = functi
  * optional string RoomId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.getRoomid = function() {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.getRoomid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.setRoomid = function(value) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.setRoomid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional int64 FapCondition = 2;
+ * optional int32 TeamPveRoomLimitEnum = 2;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.getFapcondition = function() {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.getTeampveroomlimitenum = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitReq.prototype.setFapcondition = function(value) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.setTeampveroomlimitenum = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int64 FapLimit = 3;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.getFaplimit = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSetRoomInfoReq.prototype.setFaplimit = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -5380,8 +4568,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -5390,13 +4578,13 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5410,23 +4598,23 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes;
-  return proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetRoomInfoRes;
+  return proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5434,8 +4622,9 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.deserializeBinaryFromReader = fu
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
       break;
     default:
       reader.skipField();
@@ -5450,9 +4639,9 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5460,37 +4649,57 @@ proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFapcondition();
-  if (f !== 0) {
-    writer.writeInt64(
+  f = message.getTeampveroom();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional int64 FapCondition = 1;
- * @return {number}
+ * optional TeamPveRoomPB TeamPveRoom = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.prototype.getFapcondition = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 1));
 };
 
 
 /**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes} returns this
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetRoomInfoRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetRoomFapLimitRes.prototype.setFapcondition = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveSetRoomInfoRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -5510,8 +4719,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetAssistReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetAssistReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -5520,11 +4729,11 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAssistReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     isassist: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
@@ -5541,23 +4750,23 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAssistReq}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetAssistStatusReq;
-  return proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetAssistReq;
+  return proto.PbModel.TeamPve.TeamPveSetAssistReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAssistReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAssistReq}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5585,9 +4794,9 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetAssistReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5595,11 +4804,11 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAssistReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoomid();
   if (f.length > 0) {
@@ -5622,16 +4831,16 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.serializeBinaryToWriter = functi
  * optional string RoomId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.getRoomid = function() {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.prototype.getRoomid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAssistReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.setRoomid = function(value) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.prototype.setRoomid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5640,16 +4849,16 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.setRoomid = function(v
  * optional bool IsAssist = 2;
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.getIsassist = function() {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.prototype.getIsassist = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAssistReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusReq.prototype.setIsassist = function(value) {
+proto.PbModel.TeamPve.TeamPveSetAssistReq.prototype.setIsassist = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
@@ -5670,8 +4879,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetAssistRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetAssistRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -5680,13 +4889,13 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetAssistStatusRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAssistRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetAssistRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    isassist: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+
   };
 
   if (includeInstance) {
@@ -5700,33 +4909,29 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAssistRes}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetAssistRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetAssistStatusRes;
-  return proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetAssistRes;
+  return proto.PbModel.TeamPve.TeamPveSetAssistRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAssistStatusRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAssistRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAssistRes}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetAssistRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsassist(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -5740,9 +4945,9 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetAssistRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetAssistRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5750,327 +4955,12 @@ proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAssistStatusRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAssistRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetAssistRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getIsassist();
-  if (f) {
-    writer.writeBool(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional bool IsAssist = 1;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.prototype.getIsassist = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAssistStatusRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetAssistStatusRes.prototype.setIsassist = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetReadyReq.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetReadyReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    isready: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetReadyReq;
-  return proto.PbModel.TeamPve.TeamPveSetReadyReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetReadyReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsready(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetReadyReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetReadyReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getIsready();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional bool IsReady = 2;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.getIsready = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.setIsready = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetReadyRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetReadyRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    isready: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyRes}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetReadyRes;
-  return proto.PbModel.TeamPve.TeamPveSetReadyRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetReadyRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyRes}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsready(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetReadyRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetReadyRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getIsready();
-  if (f) {
-    writer.writeBool(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional bool IsReady = 1;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.prototype.getIsready = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetReadyRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetReadyRes.prototype.setIsready = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
 
@@ -6266,7 +5156,7 @@ proto.PbModel.TeamPve.TeamPveSetFightOrderRes.prototype.toObject = function(opt_
  */
 proto.PbModel.TeamPve.TeamPveSetFightOrderRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fightorder: jspb.Message.getFieldWithDefault(msg, 1, 0)
+
   };
 
   if (includeInstance) {
@@ -6303,10 +5193,6 @@ proto.PbModel.TeamPve.TeamPveSetFightOrderRes.deserializeBinaryFromReader = func
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setFightorder(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -6336,31 +5222,6 @@ proto.PbModel.TeamPve.TeamPveSetFightOrderRes.prototype.serializeBinary = functi
  */
 proto.PbModel.TeamPve.TeamPveSetFightOrderRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFightorder();
-  if (f !== 0) {
-    writer.writeInt32(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional int32 FightOrder = 1;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveSetFightOrderRes.prototype.getFightorder = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetFightOrderRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetFightOrderRes.prototype.setFightorder = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -6380,8 +5241,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetAutoReq.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetReadyReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -6390,15 +5251,14 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetAutoReq} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetReadyReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetReadyReq.toObject = function(includeInstance, msg) {
   var f, obj = {
     roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    isauto: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-    autousablenum: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    isready: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -6412,23 +5272,285 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetReadyReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetAutoReq;
-  return proto.PbModel.TeamPve.TeamPveSetAutoReq.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetReadyReq;
+  return proto.PbModel.TeamPve.TeamPveSetReadyReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAutoReq} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetReadyReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetReadyReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRoomid(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsready(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveSetReadyReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetReadyReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRoomid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getIsready();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string RoomId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.getRoomid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.setRoomid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool IsReady = 2;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.getIsready = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetReadyReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyReq.prototype.setIsready = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetReadyRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveSetReadyRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetReadyRes}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetReadyRes;
+  return proto.PbModel.TeamPve.TeamPveSetReadyRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetReadyRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetReadyRes}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveSetReadyRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetReadyRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveSetReadyRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    isauto: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+    presetsvitcount: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq}
+ */
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq;
+  return proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq}
+ */
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6445,7 +5567,7 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.deserializeBinaryFromReader = function(m
       break;
     case 3:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setAutousablenum(value);
+      msg.setPresetsvitcount(value);
       break;
     default:
       reader.skipField();
@@ -6460,9 +5582,9 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetAutoReq.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6470,11 +5592,11 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAutoReq} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoomid();
   if (f.length > 0) {
@@ -6490,7 +5612,7 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.serializeBinaryToWriter = function(messa
       f
     );
   }
-  f = message.getAutousablenum();
+  f = message.getPresetsvitcount();
   if (f !== 0) {
     writer.writeInt32(
       3,
@@ -6504,16 +5626,16 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.serializeBinaryToWriter = function(messa
  * optional string RoomId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.getRoomid = function() {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.getRoomid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.setRoomid = function(value) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.setRoomid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6522,34 +5644,34 @@ proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.setRoomid = function(value) {
  * optional bool IsAuto = 2;
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.getIsauto = function() {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.getIsauto = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.setIsauto = function(value) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.setIsauto = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
 /**
- * optional int32 AutoUsableNum = 3;
+ * optional int32 PresetsVitCount = 3;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.getAutousablenum = function() {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.getPresetsvitcount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoReq} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetAutoReq.prototype.setAutousablenum = function(value) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaReq.prototype.setPresetsvitcount = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -6570,8 +5692,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetAutoRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -6580,15 +5702,13 @@ proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    isauto: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
-    autousablenum: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    autoresiduenum: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    teampvepb: (f = msg.getTeampvepb()) && proto.PbModel.TeamPve.TeamPvePB.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -6602,23 +5722,23 @@ proto.PbModel.TeamPve.TeamPveSetAutoRes.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetAutoRes;
-  return proto.PbModel.TeamPve.TeamPveSetAutoRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes;
+  return proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6626,16 +5746,9 @@ proto.PbModel.TeamPve.TeamPveSetAutoRes.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsauto(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setAutousablenum(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setAutoresiduenum(value);
+      var value = new proto.PbModel.TeamPve.TeamPvePB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampvepb(value);
       break;
     default:
       reader.skipField();
@@ -6650,9 +5763,9 @@ proto.PbModel.TeamPve.TeamPveSetAutoRes.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetAutoRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6660,318 +5773,57 @@ proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getIsauto();
-  if (f) {
-    writer.writeBool(
+  f = message.getTeampvepb();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
-    );
-  }
-  f = message.getAutousablenum();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getAutoresiduenum();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
+      f,
+      proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional bool IsAuto = 1;
+ * optional TeamPvePB TeamPvePB = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
+ */
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.prototype.getTeampvepb = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPvePB, 1));
+};
+
+
+/**
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.prototype.setTeampvepb = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.prototype.clearTeampvepb = function() {
+  return this.setTeampvepb(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.getIsauto = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.setIsauto = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
-};
-
-
-/**
- * optional int32 AutoUsableNum = 2;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.getAutousablenum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.setAutousablenum = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional int32 AutoResidueNum = 3;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.getAutoresiduenum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetAutoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetAutoRes.prototype.setAutoresiduenum = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq;
-  return proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes;
-  return proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetCurRoomIdRes.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+proto.PbModel.TeamPve.TeamPveSetAutoRdOrChaRes.prototype.hasTeampvepb = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -7115,8 +5967,8 @@ proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.toObject = function(
  */
 proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    infolistList: jspb.Message.toObjectList(msg.getInfolistList(),
-    proto.PbModel.TeamPve.TeamPveGetInviteInfo.toObject, includeInstance)
+    teampveinviteinfolistList: jspb.Message.toObjectList(msg.getTeampveinviteinfolistList(),
+    proto.PbModel.TeamPve.TeamPveInviteInfoPB.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -7154,9 +6006,9 @@ proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.TeamPve.TeamPveGetInviteInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveGetInviteInfo.deserializeBinaryFromReader);
-      msg.addInfolist(value);
+      var value = new proto.PbModel.TeamPve.TeamPveInviteInfoPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveInviteInfoPB.deserializeBinaryFromReader);
+      msg.addTeampveinviteinfolist(value);
       break;
     default:
       reader.skipField();
@@ -7187,43 +6039,43 @@ proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.serializeBinary = fu
  */
 proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getInfolistList();
+  f = message.getTeampveinviteinfolistList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.PbModel.TeamPve.TeamPveGetInviteInfo.serializeBinaryToWriter
+      proto.PbModel.TeamPve.TeamPveInviteInfoPB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated TeamPveGetInviteInfo InfoList = 1;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveGetInviteInfo>}
+ * repeated TeamPveInviteInfoPB TeamPveInviteInfoList = 1;
+ * @return {!Array<!proto.PbModel.TeamPve.TeamPveInviteInfoPB>}
  */
-proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.getInfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveGetInviteInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveGetInviteInfo, 1));
+proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.getTeampveinviteinfolistList = function() {
+  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveInviteInfoPB>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveInviteInfoPB, 1));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveGetInviteInfo>} value
+ * @param {!Array<!proto.PbModel.TeamPve.TeamPveInviteInfoPB>} value
  * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.setInfolistList = function(value) {
+proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.setTeampveinviteinfolistList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.PbModel.TeamPve.TeamPveGetInviteInfo=} opt_value
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteInfoPB=} opt_value
  * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo}
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB}
  */
-proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.addInfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveGetInviteInfo, opt_index);
+proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.addTeampveinviteinfolist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveInviteInfoPB, opt_index);
 };
 
 
@@ -7231,570 +6083,8 @@ proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.addInfolist = functi
  * Clears the list making it empty but non-null.
  * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.clearInfolistList = function() {
-  return this.setInfolistList([]);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveGetInviteInfo.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    playerinfo: (f = msg.getPlayerinfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
-    invitetime: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    isexpire: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveGetInviteInfo;
-  return proto.PbModel.TeamPve.TeamPveGetInviteInfo.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setChapterid(value);
-      break;
-    case 3:
-      var value = new Player_pb.PlayerCommonInfoRes;
-      reader.readMessage(value,Player_pb.PlayerCommonInfoRes.deserializeBinaryFromReader);
-      msg.setPlayerinfo(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setInvitetime(value);
-      break;
-    case 5:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsexpire(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveGetInviteInfo.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getChapterid();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getPlayerinfo();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      Player_pb.PlayerCommonInfoRes.serializeBinaryToWriter
-    );
-  }
-  f = message.getInvitetime();
-  if (f !== 0) {
-    writer.writeInt64(
-      4,
-      f
-    );
-  }
-  f = message.getIsexpire();
-  if (f) {
-    writer.writeBool(
-      5,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional int32 ChapterId = 2;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.getChapterid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.setChapterid = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional PbModel.Player.PlayerCommonInfoRes PlayerInfo = 3;
- * @return {?proto.PbModel.Player.PlayerCommonInfoRes}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.getPlayerinfo = function() {
-  return /** @type{?proto.PbModel.Player.PlayerCommonInfoRes} */ (
-    jspb.Message.getWrapperField(this, Player_pb.PlayerCommonInfoRes, 3));
-};
-
-
-/**
- * @param {?proto.PbModel.Player.PlayerCommonInfoRes|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} returns this
-*/
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.setPlayerinfo = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.clearPlayerinfo = function() {
-  return this.setPlayerinfo(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.hasPlayerinfo = function() {
-  return jspb.Message.getField(this, 3) != null;
-};
-
-
-/**
- * optional int64 InviteTime = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.getInvitetime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.setInvitetime = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional bool IsExpire = 5;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.getIsexpire = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveGetInviteInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveGetInviteInfo.prototype.setIsexpire = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveRefuseInviteReq.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    isall: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
-    roomid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    playerid: jspb.Message.getFieldWithDefault(msg, 3, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveRefuseInviteReq;
-  return proto.PbModel.TeamPve.TeamPveRefuseInviteReq.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsall(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPlayerid(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveRefuseInviteReq.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getIsall();
-  if (f) {
-    writer.writeBool(
-      1,
-      f
-    );
-  }
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getPlayerid();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-};
-
-
-/**
- * optional bool IsAll = 1;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.getIsall = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.setIsall = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
-};
-
-
-/**
- * optional string RoomId = 2;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string PlayerId = 3;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.getPlayerid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteReq.prototype.setPlayerid = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveRefuseInviteRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveRefuseInviteRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteRes}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveRefuseInviteRes;
-  return proto.PbModel.TeamPve.TeamPveRefuseInviteRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveRefuseInviteRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveRefuseInviteRes}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveRefuseInviteRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveRefuseInviteRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveRefuseInviteRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.PbModel.TeamPve.TeamPveGetInviteInfoListRes.prototype.clearTeampveinviteinfolistList = function() {
+  return this.setTeampveinviteinfolistList([]);
 };
 
 
@@ -7830,7 +6120,8 @@ proto.PbModel.TeamPve.TeamPveInviteReq.prototype.toObject = function(opt_include
  */
 proto.PbModel.TeamPve.TeamPveInviteReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    playerid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    isrobot: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -7871,6 +6162,10 @@ proto.PbModel.TeamPve.TeamPveInviteReq.deserializeBinaryFromReader = function(ms
       var value = /** @type {string} */ (reader.readString());
       msg.setPlayerid(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsrobot(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -7907,6 +6202,13 @@ proto.PbModel.TeamPve.TeamPveInviteReq.serializeBinaryToWriter = function(messag
       f
     );
   }
+  f = message.getIsrobot();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -7925,6 +6227,24 @@ proto.PbModel.TeamPve.TeamPveInviteReq.prototype.getPlayerid = function() {
  */
 proto.PbModel.TeamPve.TeamPveInviteReq.prototype.setPlayerid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool IsRobot = 2;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveInviteReq.prototype.getIsrobot = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteReq.prototype.setIsrobot = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -7960,7 +6280,8 @@ proto.PbModel.TeamPve.TeamPveInviteRes.prototype.toObject = function(opt_include
  */
 proto.PbModel.TeamPve.TeamPveInviteRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    challengeconsume: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    isassist: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -7997,6 +6318,14 @@ proto.PbModel.TeamPve.TeamPveInviteRes.deserializeBinaryFromReader = function(ms
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChallengeconsume(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsassist(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -8026,6 +6355,376 @@ proto.PbModel.TeamPve.TeamPveInviteRes.prototype.serializeBinary = function() {
  */
 proto.PbModel.TeamPve.TeamPveInviteRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getChallengeconsume();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getIsassist();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string ChallengeConsume = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveInviteRes.prototype.getChallengeconsume = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteRes.prototype.setChallengeconsume = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool IsAssist = 2;
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveInviteRes.prototype.getIsassist = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteRes.prototype.setIsassist = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveInviteHadnleReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    hadnletype: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    hadnlevalue: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveInviteHadnleReq;
+  return proto.PbModel.TeamPve.TeamPveInviteHadnleReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setHadnletype(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHadnlevalue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveInviteHadnleReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHadnletype();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+  f = message.getHadnlevalue();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int32 HadnleType = 1;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.prototype.getHadnletype = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.prototype.setHadnletype = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional string HadnleValue = 2;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.prototype.getHadnlevalue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleReq.prototype.setHadnlevalue = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveInviteHadnleRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    teampveinviteinfolistList: jspb.Message.toObjectList(msg.getTeampveinviteinfolistList(),
+    proto.PbModel.TeamPve.TeamPveInviteInfoPB.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveInviteHadnleRes;
+  return proto.PbModel.TeamPve.TeamPveInviteHadnleRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.PbModel.TeamPve.TeamPveInviteInfoPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveInviteInfoPB.deserializeBinaryFromReader);
+      msg.addTeampveinviteinfolist(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveInviteHadnleRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getTeampveinviteinfolistList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.PbModel.TeamPve.TeamPveInviteInfoPB.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TeamPveInviteInfoPB TeamPveInviteInfoList = 1;
+ * @return {!Array<!proto.PbModel.TeamPve.TeamPveInviteInfoPB>}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.prototype.getTeampveinviteinfolistList = function() {
+  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveInviteInfoPB>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveInviteInfoPB, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.PbModel.TeamPve.TeamPveInviteInfoPB>} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.prototype.setTeampveinviteinfolistList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.PbModel.TeamPve.TeamPveInviteInfoPB=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteInfoPB}
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.prototype.addTeampveinviteinfolist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveInviteInfoPB, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.TeamPve.TeamPveInviteHadnleRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInviteHadnleRes.prototype.clearTeampveinviteinfolistList = function() {
+  return this.setTeampveinviteinfolistList([]);
 };
 
 
@@ -8160,13 +6859,6 @@ proto.PbModel.TeamPve.TeamPveFightReq.prototype.setRoomid = function(value) {
 
 
 
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.PbModel.TeamPve.TeamPveFightRes.repeatedFields_ = [4];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -8198,12 +6890,14 @@ proto.PbModel.TeamPve.TeamPveFightRes.prototype.toObject = function(opt_includeI
  */
 proto.PbModel.TeamPve.TeamPveFightRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    firstfightreport: (f = msg.getFirstfightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
-    secondfightreport: (f = msg.getSecondfightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
+    fightreportdicMap: (f = msg.getFightreportdicMap()) ? f.toObject(includeInstance, proto.PbModel.Fight.FightReport.toObject) : [],
+    windicMap: (f = msg.getWindicMap()) ? f.toObject(includeInstance, undefined) : [],
     iswin: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
-    locationinfolistList: jspb.Message.toObjectList(msg.getLocationinfolistList(),
-    proto.PbModel.TeamPve.TeamPveLocationInfo.toObject, includeInstance),
-    basegetgameresourcelist: (f = msg.getBasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f)
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f),
+    presetsvitusecount: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    weekfriendshipcount: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    mybasegetgameresourcelist: (f = msg.getMybasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f),
+    teammatebasegetgameresourcelist: (f = msg.getTeammatebasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -8241,28 +6935,43 @@ proto.PbModel.TeamPve.TeamPveFightRes.deserializeBinaryFromReader = function(msg
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new Fight_pb.FightReport;
-      reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
-      msg.setFirstfightreport(value);
+      var value = msg.getFightreportdicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Fight.FightReport.deserializeBinaryFromReader, 0, new proto.PbModel.Fight.FightReport());
+         });
       break;
     case 2:
-      var value = new Fight_pb.FightReport;
-      reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
-      msg.setSecondfightreport(value);
+      var value = msg.getWindicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readBool, null, 0, false);
+         });
       break;
     case 3:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIswin(value);
       break;
     case 4:
-      var value = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader);
-      msg.addLocationinfolist(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
       break;
     case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPresetsvitusecount(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setWeekfriendshipcount(value);
+      break;
+    case 7:
       var value = new Resource_pb.ResourceToClientModel;
       reader.readMessage(value,Resource_pb.ResourceToClientModel.deserializeBinaryFromReader);
-      msg.setBasegetgameresourcelist(value);
+      msg.setMybasegetgameresourcelist(value);
+      break;
+    case 8:
+      var value = new Resource_pb.ResourceToClientModel;
+      reader.readMessage(value,Resource_pb.ResourceToClientModel.deserializeBinaryFromReader);
+      msg.setTeammatebasegetgameresourcelist(value);
       break;
     default:
       reader.skipField();
@@ -8293,21 +7002,13 @@ proto.PbModel.TeamPve.TeamPveFightRes.prototype.serializeBinary = function() {
  */
 proto.PbModel.TeamPve.TeamPveFightRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFirstfightreport();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      Fight_pb.FightReport.serializeBinaryToWriter
-    );
+  f = message.getFightreportdicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Fight.FightReport.serializeBinaryToWriter);
   }
-  f = message.getSecondfightreport();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      Fight_pb.FightReport.serializeBinaryToWriter
-    );
+  f = message.getWindicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeBool);
   }
   f = message.getIswin();
   if (f) {
@@ -8316,18 +7017,40 @@ proto.PbModel.TeamPve.TeamPveFightRes.serializeBinaryToWriter = function(message
       f
     );
   }
-  f = message.getLocationinfolistList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      4,
-      f,
-      proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter
-    );
-  }
-  f = message.getBasegetgameresourcelist();
+  f = message.getTeampveroom();
   if (f != null) {
     writer.writeMessage(
+      4,
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
+    );
+  }
+  f = message.getPresetsvitusecount();
+  if (f !== 0) {
+    writer.writeInt32(
       5,
+      f
+    );
+  }
+  f = message.getWeekfriendshipcount();
+  if (f !== 0) {
+    writer.writeInt64(
+      6,
+      f
+    );
+  }
+  f = message.getMybasegetgameresourcelist();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      Resource_pb.ResourceToClientModel.serializeBinaryToWriter
+    );
+  }
+  f = message.getTeammatebasegetgameresourcelist();
+  if (f != null) {
+    writer.writeMessage(
+      8,
       f,
       Resource_pb.ResourceToClientModel.serializeBinaryToWriter
     );
@@ -8336,77 +7059,47 @@ proto.PbModel.TeamPve.TeamPveFightRes.serializeBinaryToWriter = function(message
 
 
 /**
- * optional PbModel.Fight.FightReport FirstFightReport = 1;
- * @return {?proto.PbModel.Fight.FightReport}
+ * map<int32, PbModel.Fight.FightReport> FightReportDic = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,!proto.PbModel.Fight.FightReport>}
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.getFirstfightreport = function() {
-  return /** @type{?proto.PbModel.Fight.FightReport} */ (
-    jspb.Message.getWrapperField(this, Fight_pb.FightReport, 1));
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getFightreportdicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,!proto.PbModel.Fight.FightReport>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      proto.PbModel.Fight.FightReport));
 };
 
 
 /**
- * @param {?proto.PbModel.Fight.FightReport|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.setFirstfightreport = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
+ * Clears values from the map. The map will be non-null.
  * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearFirstfightreport = function() {
-  return this.setFirstfightreport(undefined);
-};
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearFightreportdicMap = function() {
+  this.getFightreportdicMap().clear();
+  return this;};
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * map<int32, bool> WinDic = 2;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,boolean>}
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.hasFirstfightreport = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getWindicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,boolean>} */ (
+      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      null));
 };
 
 
 /**
- * optional PbModel.Fight.FightReport SecondFightReport = 2;
- * @return {?proto.PbModel.Fight.FightReport}
- */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.getSecondfightreport = function() {
-  return /** @type{?proto.PbModel.Fight.FightReport} */ (
-    jspb.Message.getWrapperField(this, Fight_pb.FightReport, 2));
-};
-
-
-/**
- * @param {?proto.PbModel.Fight.FightReport|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.setSecondfightreport = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
+ * Clears values from the map. The map will be non-null.
  * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearSecondfightreport = function() {
-  return this.setSecondfightreport(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.hasSecondfightreport = function() {
-  return jspb.Message.getField(this, 2) != null;
-};
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearWindicMap = function() {
+  this.getWindicMap().clear();
+  return this;};
 
 
 /**
@@ -8428,50 +7121,85 @@ proto.PbModel.TeamPve.TeamPveFightRes.prototype.setIswin = function(value) {
 
 
 /**
- * repeated TeamPveLocationInfo LocationInfoList = 4;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>}
+ * optional TeamPveRoomPB TeamPveRoom = 4;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.getLocationinfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveLocationInfo, 4));
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 4));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} value
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
  * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.setLocationinfolistList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 4, value);
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo=} opt_value
- * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.addLocationinfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.PbModel.TeamPve.TeamPveLocationInfo, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
+ * Clears the message field making it undefined.
  * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearLocationinfolistList = function() {
-  return this.setLocationinfolistList([]);
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
 /**
- * optional PbModel.Resource.ResourceToClientModel BaseGetGameResourceList = 5;
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional int32 PresetsVitUseCount = 5;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getPresetsvitusecount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.setPresetsvitusecount = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int64 WeekFriendshipCount = 6;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getWeekfriendshipcount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.setWeekfriendshipcount = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional PbModel.Resource.ResourceToClientModel MyBaseGetGameResourceList = 7;
  * @return {?proto.PbModel.Resource.ResourceToClientModel}
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.getBasegetgameresourcelist = function() {
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getMybasegetgameresourcelist = function() {
   return /** @type{?proto.PbModel.Resource.ResourceToClientModel} */ (
-    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 5));
+    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 7));
 };
 
 
@@ -8479,8 +7207,8 @@ proto.PbModel.TeamPve.TeamPveFightRes.prototype.getBasegetgameresourcelist = fun
  * @param {?proto.PbModel.Resource.ResourceToClientModel|undefined} value
  * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
 */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.setBasegetgameresourcelist = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.setMybasegetgameresourcelist = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
 };
 
 
@@ -8488,8 +7216,8 @@ proto.PbModel.TeamPve.TeamPveFightRes.prototype.setBasegetgameresourcelist = fun
  * Clears the message field making it undefined.
  * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearBasegetgameresourcelist = function() {
-  return this.setBasegetgameresourcelist(undefined);
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearMybasegetgameresourcelist = function() {
+  return this.setMybasegetgameresourcelist(undefined);
 };
 
 
@@ -8497,8 +7225,45 @@ proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearBasegetgameresourcelist = f
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveFightRes.prototype.hasBasegetgameresourcelist = function() {
-  return jspb.Message.getField(this, 5) != null;
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.hasMybasegetgameresourcelist = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional PbModel.Resource.ResourceToClientModel TeammateBaseGetGameResourceList = 8;
+ * @return {?proto.PbModel.Resource.ResourceToClientModel}
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.getTeammatebasegetgameresourcelist = function() {
+  return /** @type{?proto.PbModel.Resource.ResourceToClientModel} */ (
+    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 8));
+};
+
+
+/**
+ * @param {?proto.PbModel.Resource.ResourceToClientModel|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.setTeammatebasegetgameresourcelist = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.clearTeammatebasegetgameresourcelist = function() {
+  return this.setTeammatebasegetgameresourcelist(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveFightRes.prototype.hasTeammatebasegetgameresourcelist = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
@@ -8518,8 +7283,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveChooseWishReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -8528,14 +7293,13 @@ proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveChooseWishReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    wishtypeid: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -8549,23 +7313,23 @@ proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishReq}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetRoomLimitReq;
-  return proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveChooseWishReq;
+  return proto.PbModel.TeamPve.TeamPveChooseWishReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveChooseWishReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq}
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishReq}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8573,12 +7337,8 @@ proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.deserializeBinaryFromReader = funct
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRoomid(value);
-      break;
-    case 2:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
+      msg.setWishtypeid(value);
       break;
     default:
       reader.skipField();
@@ -8593,9 +7353,9 @@ proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveChooseWishReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8603,168 +7363,13 @@ proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq} message
+ * @param {!proto.PbModel.TeamPve.TeamPveChooseWishReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getRoomid();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getRoomlimit();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string RoomId = 1;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.getRoomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.setRoomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional int32 RoomLimit = 2;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.getRoomlimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitReq} returns this
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitReq.prototype.setRoomlimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomLimitRes} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 1, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitRes}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveSetRoomLimitRes;
-  return proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomLimitRes} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitRes}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveSetRoomLimitRes} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getRoomlimit();
+  f = message.getWishtypeid();
   if (f !== 0) {
     writer.writeInt32(
       1,
@@ -8775,19 +7380,19 @@ proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.serializeBinaryToWriter = function(
 
 
 /**
- * optional int32 RoomLimit = 1;
+ * optional int32 WishTypeId = 1;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.prototype.getRoomlimit = function() {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.getWishtypeid = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveSetRoomLimitRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveSetRoomLimitRes.prototype.setRoomlimit = function(value) {
+proto.PbModel.TeamPve.TeamPveChooseWishReq.prototype.setWishtypeid = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -8808,8 +7413,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveChooseWishRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -8818,16 +7423,13 @@ proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.toObject = function(o
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveChooseWishRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    locationinfo: (f = msg.getLocationinfo()) && proto.PbModel.TeamPve.TeamPveLocationInfo.toObject(includeInstance, f),
-    fightcost: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    roomlimit: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    fapcondition: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    teampve: (f = msg.getTeampve()) && proto.PbModel.TeamPve.TeamPvePB.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -8841,23 +7443,23 @@ proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.toObject = function(includeInst
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes}
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePushPersonChangeRes;
-  return proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveChooseWishRes;
+  return proto.PbModel.TeamPve.TeamPveChooseWishRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveChooseWishRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes}
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8865,21 +7467,9 @@ proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.deserializeBinaryFromReader = f
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader);
-      msg.setLocationinfo(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFightcost(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRoomlimit(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setFapcondition(value);
+      var value = new proto.PbModel.TeamPve.TeamPvePB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampve(value);
       break;
     default:
       reader.skipField();
@@ -8894,9 +7484,9 @@ proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.deserializeBinaryFromReader = f
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveChooseWishRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8904,69 +7494,48 @@ proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.serializeBinary = fun
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveChooseWishRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getLocationinfo();
+  f = message.getTeampve();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter
-    );
-  }
-  f = message.getFightcost();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getRoomlimit();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
-    );
-  }
-  f = message.getFapcondition();
-  if (f !== 0) {
-    writer.writeInt64(
-      4,
-      f
+      proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional TeamPveLocationInfo LocationInfo = 1;
- * @return {?proto.PbModel.TeamPve.TeamPveLocationInfo}
+ * optional TeamPvePB TeamPve = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.getLocationinfo = function() {
-  return /** @type{?proto.PbModel.TeamPve.TeamPveLocationInfo} */ (
-    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveLocationInfo, 1));
+proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.getTeampve = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPvePB, 1));
 };
 
 
 /**
- * @param {?proto.PbModel.TeamPve.TeamPveLocationInfo|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} returns this
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes} returns this
 */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.setLocationinfo = function(value) {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.setTeampve = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveChooseWishRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.clearLocationinfo = function() {
-  return this.setLocationinfo(undefined);
+proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.clearTeampve = function() {
+  return this.setTeampve(undefined);
 };
 
 
@@ -8974,62 +7543,8 @@ proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.clearLocationinfo = f
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.hasLocationinfo = function() {
+proto.PbModel.TeamPve.TeamPveChooseWishRes.prototype.hasTeampve = function() {
   return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional string FightCost = 2;
- * @return {string}
- */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.getFightcost = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.setFightcost = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional int32 RoomLimit = 3;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.getRoomlimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.setRoomlimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional int64 FapCondition = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.getFapcondition = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPersonChangeRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushPersonChangeRes.prototype.setFapcondition = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -9049,8 +7564,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePushOutRoomRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -9059,13 +7574,13 @@ proto.PbModel.TeamPve.TeamPvePushOutRoomRes.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePushOutRoomRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetMultipleFightReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    multiplefight: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -9079,23 +7594,23 @@ proto.PbModel.TeamPve.TeamPvePushOutRoomRes.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePushOutRoomRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightReq}
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePushOutRoomRes;
-  return proto.PbModel.TeamPve.TeamPvePushOutRoomRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetMultipleFightReq;
+  return proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePushOutRoomRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetMultipleFightReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePushOutRoomRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightReq}
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9104,7 +7619,7 @@ proto.PbModel.TeamPve.TeamPvePushOutRoomRes.deserializeBinaryFromReader = functi
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setType(value);
+      msg.setMultiplefight(value);
       break;
     default:
       reader.skipField();
@@ -9119,9 +7634,9 @@ proto.PbModel.TeamPve.TeamPvePushOutRoomRes.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePushOutRoomRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9129,13 +7644,13 @@ proto.PbModel.TeamPve.TeamPvePushOutRoomRes.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePushOutRoomRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetMultipleFightReq} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getType();
+  f = message.getMultiplefight();
   if (f !== 0) {
     writer.writeInt32(
       1,
@@ -9146,30 +7661,23 @@ proto.PbModel.TeamPve.TeamPvePushOutRoomRes.serializeBinaryToWriter = function(m
 
 
 /**
- * optional int32 Type = 1;
+ * optional int32 MultipleFight = 1;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.prototype.getType = function() {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.prototype.getMultiplefight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushOutRoomRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightReq} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushOutRoomRes.prototype.setType = function(value) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightReq.prototype.setMultiplefight = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
-
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.repeatedFields_ = [1];
 
 
 
@@ -9186,8 +7694,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePushDataChangeRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -9196,14 +7704,14 @@ proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    infolistList: jspb.Message.toObjectList(msg.getInfolistList(),
-    proto.PbModel.TeamPve.TeamPveDataChangeInfo.toObject, includeInstance)
+    teampve: (f = msg.getTeampve()) && proto.PbModel.TeamPve.TeamPvePB.toObject(includeInstance, f),
+    challengeconsume: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -9217,23 +7725,23 @@ proto.PbModel.TeamPve.TeamPvePushDataChangeRes.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes}
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePushDataChangeRes;
-  return proto.PbModel.TeamPve.TeamPvePushDataChangeRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveSetMultipleFightRes;
+  return proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes}
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9241,9 +7749,13 @@ proto.PbModel.TeamPve.TeamPvePushDataChangeRes.deserializeBinaryFromReader = fun
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.PbModel.TeamPve.TeamPveDataChangeInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveDataChangeInfo.deserializeBinaryFromReader);
-      msg.addInfolist(value);
+      var value = new proto.PbModel.TeamPve.TeamPvePB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampve(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChallengeconsume(value);
       break;
     default:
       reader.skipField();
@@ -9258,9 +7770,9 @@ proto.PbModel.TeamPve.TeamPvePushDataChangeRes.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePushDataChangeRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9268,58 +7780,82 @@ proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getInfolistList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getTeampve();
+  if (f != null) {
+    writer.writeMessage(
       1,
       f,
-      proto.PbModel.TeamPve.TeamPveDataChangeInfo.serializeBinaryToWriter
+      proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter
+    );
+  }
+  f = message.getChallengeconsume();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
     );
   }
 };
 
 
 /**
- * repeated TeamPveDataChangeInfo InfoList = 1;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveDataChangeInfo>}
+ * optional TeamPvePB TeamPve = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.getInfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveDataChangeInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveDataChangeInfo, 1));
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.getTeampve = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPvePB, 1));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveDataChangeInfo>} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes} returns this
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes} returns this
 */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.setInfolistList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.setTeampve = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.PbModel.TeamPve.TeamPveDataChangeInfo=} opt_value
- * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo}
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.addInfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.TeamPve.TeamPveDataChangeInfo, opt_index);
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.clearTeampve = function() {
+  return this.setTeampve(undefined);
 };
 
 
 /**
- * Clears the list making it empty but non-null.
- * @return {!proto.PbModel.TeamPve.TeamPvePushDataChangeRes} returns this
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPvePushDataChangeRes.prototype.clearInfolistList = function() {
-  return this.setInfolistList([]);
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.hasTeampve = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string ChallengeConsume = 2;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.getChallengeconsume = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSetMultipleFightRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSetMultipleFightRes.prototype.setChallengeconsume = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -9339,8 +7875,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPveDataChangeInfo.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -9349,20 +7885,13 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    isrobot: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-    isfillrobot: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
-    isleader: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    fightorder: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    isready: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
-    isassist: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
-    isauto: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
+
   };
 
   if (includeInstance) {
@@ -9376,23 +7905,124 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo}
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardReq}
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPveDataChangeInfo;
-  return proto.PbModel.TeamPve.TeamPveDataChangeInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveGetTodayRewardReq;
+  return proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo}
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardReq}
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    todayreward: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardRes}
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveGetTodayRewardRes;
+  return proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardRes}
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9401,35 +8031,7 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.deserializeBinaryFromReader = functi
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsrobot(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsfillrobot(value);
-      break;
-    case 4:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsleader(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setFightorder(value);
-      break;
-    case 6:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsready(value);
-      break;
-    case 7:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsassist(value);
-      break;
-    case 8:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsauto(value);
+      msg.setTodayreward(value);
       break;
     default:
       reader.skipField();
@@ -9444,9 +8046,9 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPveDataChangeInfo.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9454,13 +8056,148 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} message
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTodayRewardRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getId();
+  f = message.getTodayreward();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string TodayReward = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.prototype.getTodayreward = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTodayRewardRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveGetTodayRewardRes.prototype.setTodayreward = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    isrobot: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq}
+ */
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveGetTeamInfoReq;
+  return proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq}
+ */
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPlayerid(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsrobot(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPlayerid();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -9474,65 +8211,23 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getIsfillrobot();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
-  f = message.getIsleader();
-  if (f) {
-    writer.writeBool(
-      4,
-      f
-    );
-  }
-  f = message.getFightorder();
-  if (f !== 0) {
-    writer.writeInt32(
-      5,
-      f
-    );
-  }
-  f = message.getIsready();
-  if (f) {
-    writer.writeBool(
-      6,
-      f
-    );
-  }
-  f = message.getIsassist();
-  if (f) {
-    writer.writeBool(
-      7,
-      f
-    );
-  }
-  f = message.getIsauto();
-  if (f) {
-    writer.writeBool(
-      8,
-      f
-    );
-  }
 };
 
 
 /**
- * optional string Id = 1;
+ * optional string PlayerId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getId = function() {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.prototype.getPlayerid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setId = function(value) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.prototype.setPlayerid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -9541,128 +8236,27 @@ proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setId = function(value) {
  * optional bool IsRobot = 2;
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getIsrobot = function() {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.prototype.getIsrobot = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoReq} returns this
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setIsrobot = function(value) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoReq.prototype.setIsrobot = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
-/**
- * optional bool IsFillRobot = 3;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getIsfillrobot = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
 
 /**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
  */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setIsfillrobot = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
-};
-
-
-/**
- * optional bool IsLeader = 4;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getIsleader = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setIsleader = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 4, value);
-};
-
-
-/**
- * optional int32 FightOrder = 5;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getFightorder = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setFightorder = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional bool IsReady = 6;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getIsready = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setIsready = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 6, value);
-};
-
-
-/**
- * optional bool IsAssist = 7;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getIsassist = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setIsassist = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 7, value);
-};
-
-
-/**
- * optional bool IsAuto = 8;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.getIsauto = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPveDataChangeInfo} returns this
- */
-proto.PbModel.TeamPve.TeamPveDataChangeInfo.prototype.setIsauto = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 8, value);
-};
-
-
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.repeatedFields_ = [1];
 
 
 
@@ -9679,8 +8273,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -9689,15 +8283,14 @@ proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    curroomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    wishtypeid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    teaminfolistList: jspb.Message.toObjectList(msg.getTeaminfolistList(),
+    Team_pb.TeamTeamInfo.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -9711,23 +8304,23 @@ proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes}
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePushPlayerDataRes;
-  return proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveGetTeamInfoRes;
+  return proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes}
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9735,16 +8328,9 @@ proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.deserializeBinaryFromReader = fun
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCurroomid(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setWishtypeid(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setChapterid(value);
+      var value = new Team_pb.TeamTeamInfo;
+      reader.readMessage(value,Team_pb.TeamTeamInfo.deserializeBinaryFromReader);
+      msg.addTeaminfolist(value);
       break;
     default:
       reader.skipField();
@@ -9759,9 +8345,9 @@ proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9769,87 +8355,58 @@ proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getCurroomid();
+  f = message.getTeaminfolistList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedMessage(
       1,
-      f
-    );
-  }
-  f = message.getWishtypeid();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getChapterid();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
-      f
+      f,
+      Team_pb.TeamTeamInfo.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string CurRoomId = 1;
- * @return {string}
+ * repeated PbModel.Team.TeamTeamInfo TeamInfoList = 1;
+ * @return {!Array<!proto.PbModel.Team.TeamTeamInfo>}
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.getCurroomid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.prototype.getTeaminfolistList = function() {
+  return /** @type{!Array<!proto.PbModel.Team.TeamTeamInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, Team_pb.TeamTeamInfo, 1));
 };
 
 
 /**
- * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.setCurroomid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+ * @param {!Array<!proto.PbModel.Team.TeamTeamInfo>} value
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.prototype.setTeaminfolistList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * optional int32 WishTypeId = 2;
- * @return {number}
+ * @param {!proto.PbModel.Team.TeamTeamInfo=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.PbModel.Team.TeamTeamInfo}
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.getWishtypeid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.prototype.addTeaminfolist = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.PbModel.Team.TeamTeamInfo, opt_index);
 };
 
 
 /**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes} returns this
+ * Clears the list making it empty but non-null.
+ * @return {!proto.PbModel.TeamPve.TeamPveGetTeamInfoRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.setWishtypeid = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional int32 ChapterId = 3;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.getChapterid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushPlayerDataRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushPlayerDataRes.prototype.setChapterid = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+proto.PbModel.TeamPve.TeamPveGetTeamInfoRes.prototype.clearTeaminfolistList = function() {
+  return this.setTeaminfolistList([]);
 };
 
 
@@ -9869,8 +8426,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePushInviteRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.toObject(opt_includeInstance, this);
 };
 
 
@@ -9879,17 +8436,14 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.toObject = function(opt_inc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePushInviteRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.toObject = function(includeInstance, msg) {
   var f, obj = {
-    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    chapterid: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    playerinfo: (f = msg.getPlayerinfo()) && Player_pb.PlayerCommonInfoRes.toObject(includeInstance, f),
-    invitetime: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    isexpire: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+    playerid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    customizevalue: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -9903,23 +8457,285 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.toObject = function(includeInstance, 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePushInviteRes;
-  return proto.PbModel.TeamPve.TeamPvePushInviteRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq;
+  return proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePushInviteRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPlayerid(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomizevalue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPlayerid();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getCustomizevalue();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string PlayerId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.prototype.getPlayerid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.prototype.setPlayerid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string CustomizeValue = 2;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.prototype.getCustomizevalue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq} returns this
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeReq.prototype.setCustomizevalue = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes;
+  return proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticeRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveRoomChangePushRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    hadndletype: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveRoomChangePushRes;
+  return proto.PbModel.TeamPve.TeamPveRoomChangePushRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9932,20 +8748,12 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.deserializeBinaryFromReader = functio
       break;
     case 2:
       var value = /** @type {number} */ (reader.readInt32());
-      msg.setChapterid(value);
+      msg.setHadndletype(value);
       break;
     case 3:
-      var value = new Player_pb.PlayerCommonInfoRes;
-      reader.readMessage(value,Player_pb.PlayerCommonInfoRes.deserializeBinaryFromReader);
-      msg.setPlayerinfo(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setInvitetime(value);
-      break;
-    case 5:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsexpire(value);
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
       break;
     default:
       reader.skipField();
@@ -9960,9 +8768,9 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.deserializeBinaryFromReader = functio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePushInviteRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveRoomChangePushRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9970,11 +8778,11 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.serializeBinary = function(
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePushInviteRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoomid();
   if (f.length > 0) {
@@ -9983,33 +8791,19 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getChapterid();
+  f = message.getHadndletype();
   if (f !== 0) {
     writer.writeInt32(
       2,
       f
     );
   }
-  f = message.getPlayerinfo();
+  f = message.getTeampveroom();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
-      Player_pb.PlayerCommonInfoRes.serializeBinaryToWriter
-    );
-  }
-  f = message.getInvitetime();
-  if (f !== 0) {
-    writer.writeInt64(
-      4,
-      f
-    );
-  }
-  f = message.getIsexpire();
-  if (f) {
-    writer.writeBool(
-      5,
-      f
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
     );
   }
 };
@@ -10019,63 +8813,63 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.serializeBinaryToWriter = function(me
  * optional string RoomId = 1;
  * @return {string}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.getRoomid = function() {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.getRoomid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.setRoomid = function(value) {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.setRoomid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional int32 ChapterId = 2;
+ * optional int32 HadndleType = 2;
  * @return {number}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.getChapterid = function() {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.getHadndletype = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.setChapterid = function(value) {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.setHadndletype = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
 /**
- * optional PbModel.Player.PlayerCommonInfoRes PlayerInfo = 3;
- * @return {?proto.PbModel.Player.PlayerCommonInfoRes}
+ * optional TeamPveRoomPB TeamPveRoom = 3;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.getPlayerinfo = function() {
-  return /** @type{?proto.PbModel.Player.PlayerCommonInfoRes} */ (
-    jspb.Message.getWrapperField(this, Player_pb.PlayerCommonInfoRes, 3));
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 3));
 };
 
 
 /**
- * @param {?proto.PbModel.Player.PlayerCommonInfoRes|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes} returns this
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} returns this
 */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.setPlayerinfo = function(value) {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.setTeampveroom = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomChangePushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.clearPlayerinfo = function() {
-  return this.setPlayerinfo(undefined);
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
@@ -10083,54 +8877,11 @@ proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.clearPlayerinfo = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.hasPlayerinfo = function() {
+proto.PbModel.TeamPve.TeamPveRoomChangePushRes.prototype.hasTeampveroom = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
 
-/**
- * optional int64 InviteTime = 4;
- * @return {number}
- */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.getInvitetime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.setInvitetime = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional bool IsExpire = 5;
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.getIsexpire = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushInviteRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushInviteRes.prototype.setIsexpire = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
-};
-
-
-
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.repeatedFields_ = [4];
 
 
 
@@ -10147,8 +8898,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.toObject = function(opt_includeInstance) {
-  return proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.toObject(opt_includeInstance, this);
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.toObject(opt_includeInstance, this);
 };
 
 
@@ -10157,18 +8908,15 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.toObject = function(
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} msg The msg instance to transform.
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.toObject = function(includeInstance, msg) {
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.toObject = function(includeInstance, msg) {
   var f, obj = {
-    firstfightreport: (f = msg.getFirstfightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
-    secondfightreport: (f = msg.getSecondfightreport()) && Fight_pb.FightReport.toObject(includeInstance, f),
-    iswin: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
-    locationinfolistList: jspb.Message.toObjectList(msg.getLocationinfolistList(),
-    proto.PbModel.TeamPve.TeamPveLocationInfo.toObject, includeInstance),
-    basegetgameresourcelist: (f = msg.getBasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f)
+    roomid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    hadndletype: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    tvrmembermodeldicMap: (f = msg.getTvrmembermodeldicMap()) ? f.toObject(includeInstance, proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.toObject) : []
   };
 
   if (includeInstance) {
@@ -10182,23 +8930,23 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.toObject = function(includeIns
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.deserializeBinary = function(bytes) {
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes;
-  return proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes;
+  return proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} msg The message object to deserialize into.
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes}
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.deserializeBinaryFromReader = function(msg, reader) {
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10206,28 +8954,18 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new Fight_pb.FightReport;
-      reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
-      msg.setFirstfightreport(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRoomid(value);
       break;
     case 2:
-      var value = new Fight_pb.FightReport;
-      reader.readMessage(value,Fight_pb.FightReport.deserializeBinaryFromReader);
-      msg.setSecondfightreport(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIswin(value);
-      break;
-    case 4:
-      var value = new proto.PbModel.TeamPve.TeamPveLocationInfo;
-      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveLocationInfo.deserializeBinaryFromReader);
-      msg.addLocationinfolist(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setHadndletype(value);
       break;
     case 5:
-      var value = new Resource_pb.ResourceToClientModel;
-      reader.readMessage(value,Resource_pb.ResourceToClientModel.deserializeBinaryFromReader);
-      msg.setBasegetgameresourcelist(value);
+      var value = msg.getTvrmembermodeldicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.deserializeBinaryFromReader, "", new proto.PbModel.TeamPve.TeamPveTVRMemberModelPB());
+         });
       break;
     default:
       reader.skipField();
@@ -10242,9 +8980,9 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.deserializeBinaryFromReader = 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.serializeBinary = function() {
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.serializeBinaryToWriter(this, writer);
+  proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10252,27 +8990,423 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.serializeBinary = fu
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} message
+ * @param {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.serializeBinaryToWriter = function(message, writer) {
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFirstfightreport();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getRoomid();
+  if (f.length > 0) {
+    writer.writeString(
       1,
-      f,
-      Fight_pb.FightReport.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getSecondfightreport();
+  f = message.getHadndletype();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+  f = message.getTvrmembermodeldicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.TeamPve.TeamPveTVRMemberModelPB.serializeBinaryToWriter);
+  }
+};
+
+
+/**
+ * optional string RoomId = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.getRoomid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.setRoomid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int32 HadndleType = 2;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.getHadndletype = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.setHadndletype = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * map<string, TeamPveTVRMemberModelPB> TVRMemberModelDic = 5;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB>}
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.getTvrmembermodeldicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.PbModel.TeamPve.TeamPveTVRMemberModelPB>} */ (
+      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
+      proto.PbModel.TeamPve.TeamPveTVRMemberModelPB));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveRoomMemberChangePushRes.prototype.clearTvrmembermodeldicMap = function() {
+  this.getTvrmembermodeldicMap().clear();
+  return this;};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveSelfChangePushRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    hadndletype: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    teampve: (f = msg.getTeampve()) && proto.PbModel.TeamPve.TeamPvePB.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveSelfChangePushRes;
+  return proto.PbModel.TeamPve.TeamPveSelfChangePushRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setHadndletype(value);
+      break;
+    case 2:
+      var value = new proto.PbModel.TeamPve.TeamPvePB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPvePB.deserializeBinaryFromReader);
+      msg.setTeampve(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveSelfChangePushRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHadndletype();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+  f = message.getTeampve();
   if (f != null) {
     writer.writeMessage(
       2,
       f,
-      Fight_pb.FightReport.serializeBinaryToWriter
+      proto.PbModel.TeamPve.TeamPvePB.serializeBinaryToWriter
     );
+  }
+};
+
+
+/**
+ * optional int32 HadndleType = 1;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.getHadndletype = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.setHadndletype = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional TeamPvePB TeamPve = 2;
+ * @return {?proto.PbModel.TeamPve.TeamPvePB}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.getTeampve = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPvePB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPvePB, 2));
+};
+
+
+/**
+ * @param {?proto.PbModel.TeamPve.TeamPvePB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.setTeampve = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveSelfChangePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.clearTeampve = function() {
+  return this.setTeampve(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveSelfChangePushRes.prototype.hasTeampve = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveFightPushRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveFightPushRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    fightreportdicMap: (f = msg.getFightreportdicMap()) ? f.toObject(includeInstance, proto.PbModel.Fight.FightReport.toObject) : [],
+    windicMap: (f = msg.getWindicMap()) ? f.toObject(includeInstance, undefined) : [],
+    iswin: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    teampveroom: (f = msg.getTeampveroom()) && proto.PbModel.TeamPve.TeamPveRoomPB.toObject(includeInstance, f),
+    presetsvitusecount: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    weekfriendshipcount: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    mybasegetgameresourcelist: (f = msg.getMybasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f),
+    teammatebasegetgameresourcelist: (f = msg.getTeammatebasegetgameresourcelist()) && Resource_pb.ResourceToClientModel.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveFightPushRes;
+  return proto.PbModel.TeamPve.TeamPveFightPushRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveFightPushRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = msg.getFightreportdicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readMessage, proto.PbModel.Fight.FightReport.deserializeBinaryFromReader, 0, new proto.PbModel.Fight.FightReport());
+         });
+      break;
+    case 2:
+      var value = msg.getWindicMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readBool, null, 0, false);
+         });
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIswin(value);
+      break;
+    case 4:
+      var value = new proto.PbModel.TeamPve.TeamPveRoomPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveRoomPB.deserializeBinaryFromReader);
+      msg.setTeampveroom(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPresetsvitusecount(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setWeekfriendshipcount(value);
+      break;
+    case 7:
+      var value = new Resource_pb.ResourceToClientModel;
+      reader.readMessage(value,Resource_pb.ResourceToClientModel.deserializeBinaryFromReader);
+      msg.setMybasegetgameresourcelist(value);
+      break;
+    case 8:
+      var value = new Resource_pb.ResourceToClientModel;
+      reader.readMessage(value,Resource_pb.ResourceToClientModel.deserializeBinaryFromReader);
+      msg.setTeammatebasegetgameresourcelist(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveFightPushRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveFightPushRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFightreportdicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeMessage, proto.PbModel.Fight.FightReport.serializeBinaryToWriter);
+  }
+  f = message.getWindicMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeBool);
   }
   f = message.getIswin();
   if (f) {
@@ -10281,18 +9415,40 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.serializeBinaryToWriter = func
       f
     );
   }
-  f = message.getLocationinfolistList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      4,
-      f,
-      proto.PbModel.TeamPve.TeamPveLocationInfo.serializeBinaryToWriter
-    );
-  }
-  f = message.getBasegetgameresourcelist();
+  f = message.getTeampveroom();
   if (f != null) {
     writer.writeMessage(
+      4,
+      f,
+      proto.PbModel.TeamPve.TeamPveRoomPB.serializeBinaryToWriter
+    );
+  }
+  f = message.getPresetsvitusecount();
+  if (f !== 0) {
+    writer.writeInt32(
       5,
+      f
+    );
+  }
+  f = message.getWeekfriendshipcount();
+  if (f !== 0) {
+    writer.writeInt64(
+      6,
+      f
+    );
+  }
+  f = message.getMybasegetgameresourcelist();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      Resource_pb.ResourceToClientModel.serializeBinaryToWriter
+    );
+  }
+  f = message.getTeammatebasegetgameresourcelist();
+  if (f != null) {
+    writer.writeMessage(
+      8,
       f,
       Resource_pb.ResourceToClientModel.serializeBinaryToWriter
     );
@@ -10301,160 +9457,92 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.serializeBinaryToWriter = func
 
 
 /**
- * optional PbModel.Fight.FightReport FirstFightReport = 1;
- * @return {?proto.PbModel.Fight.FightReport}
+ * map<int32, PbModel.Fight.FightReport> FightReportDic = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,!proto.PbModel.Fight.FightReport>}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.getFirstfightreport = function() {
-  return /** @type{?proto.PbModel.Fight.FightReport} */ (
-    jspb.Message.getWrapperField(this, Fight_pb.FightReport, 1));
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getFightreportdicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,!proto.PbModel.Fight.FightReport>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      proto.PbModel.Fight.FightReport));
 };
 
 
 /**
- * @param {?proto.PbModel.Fight.FightReport|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.setFirstfightreport = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.clearFirstfightreport = function() {
-  return this.setFirstfightreport(undefined);
-};
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.clearFightreportdicMap = function() {
+  this.getFightreportdicMap().clear();
+  return this;};
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * map<int32, bool> WinDic = 2;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<number,boolean>}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.hasFirstfightreport = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getWindicMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,boolean>} */ (
+      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      null));
 };
 
 
 /**
- * optional PbModel.Fight.FightReport SecondFightReport = 2;
- * @return {?proto.PbModel.Fight.FightReport}
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.getSecondfightreport = function() {
-  return /** @type{?proto.PbModel.Fight.FightReport} */ (
-    jspb.Message.getWrapperField(this, Fight_pb.FightReport, 2));
-};
-
-
-/**
- * @param {?proto.PbModel.Fight.FightReport|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.setSecondfightreport = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.clearSecondfightreport = function() {
-  return this.setSecondfightreport(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.hasSecondfightreport = function() {
-  return jspb.Message.getField(this, 2) != null;
-};
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.clearWindicMap = function() {
+  this.getWindicMap().clear();
+  return this;};
 
 
 /**
  * optional bool IsWin = 3;
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.getIswin = function() {
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getIswin = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.setIswin = function(value) {
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.setIswin = function(value) {
   return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
 /**
- * repeated TeamPveLocationInfo LocationInfoList = 4;
- * @return {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>}
+ * optional TeamPveRoomPB TeamPveRoom = 4;
+ * @return {?proto.PbModel.TeamPve.TeamPveRoomPB}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.getLocationinfolistList = function() {
-  return /** @type{!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.PbModel.TeamPve.TeamPveLocationInfo, 4));
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getTeampveroom = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveRoomPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveRoomPB, 4));
 };
 
 
 /**
- * @param {!Array<!proto.PbModel.TeamPve.TeamPveLocationInfo>} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
+ * @param {?proto.PbModel.TeamPve.TeamPveRoomPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
 */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.setLocationinfolistList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 4, value);
-};
-
-
-/**
- * @param {!proto.PbModel.TeamPve.TeamPveLocationInfo=} opt_value
- * @param {number=} opt_index
- * @return {!proto.PbModel.TeamPve.TeamPveLocationInfo}
- */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.addLocationinfolist = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.PbModel.TeamPve.TeamPveLocationInfo, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
- */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.clearLocationinfolistList = function() {
-  return this.setLocationinfolistList([]);
-};
-
-
-/**
- * optional PbModel.Resource.ResourceToClientModel BaseGetGameResourceList = 5;
- * @return {?proto.PbModel.Resource.ResourceToClientModel}
- */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.getBasegetgameresourcelist = function() {
-  return /** @type{?proto.PbModel.Resource.ResourceToClientModel} */ (
-    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 5));
-};
-
-
-/**
- * @param {?proto.PbModel.Resource.ResourceToClientModel|undefined} value
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
-*/
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.setBasegetgameresourcelist = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.setTeampveroom = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes} returns this
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.clearBasegetgameresourcelist = function() {
-  return this.setBasegetgameresourcelist(undefined);
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.clearTeampveroom = function() {
+  return this.setTeampveroom(undefined);
 };
 
 
@@ -10462,8 +9550,399 @@ proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.clearBasegetgamereso
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.PbModel.TeamPve.TeamPvePushFightOverInfoRes.prototype.hasBasegetgameresourcelist = function() {
-  return jspb.Message.getField(this, 5) != null;
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.hasTeampveroom = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional int32 PresetsVitUseCount = 5;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getPresetsvitusecount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.setPresetsvitusecount = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int64 WeekFriendshipCount = 6;
+ * @return {number}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getWeekfriendshipcount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.setWeekfriendshipcount = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional PbModel.Resource.ResourceToClientModel MyBaseGetGameResourceList = 7;
+ * @return {?proto.PbModel.Resource.ResourceToClientModel}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getMybasegetgameresourcelist = function() {
+  return /** @type{?proto.PbModel.Resource.ResourceToClientModel} */ (
+    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 7));
+};
+
+
+/**
+ * @param {?proto.PbModel.Resource.ResourceToClientModel|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.setMybasegetgameresourcelist = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.clearMybasegetgameresourcelist = function() {
+  return this.setMybasegetgameresourcelist(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.hasMybasegetgameresourcelist = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional PbModel.Resource.ResourceToClientModel TeammateBaseGetGameResourceList = 8;
+ * @return {?proto.PbModel.Resource.ResourceToClientModel}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.getTeammatebasegetgameresourcelist = function() {
+  return /** @type{?proto.PbModel.Resource.ResourceToClientModel} */ (
+    jspb.Message.getWrapperField(this, Resource_pb.ResourceToClientModel, 8));
+};
+
+
+/**
+ * @param {?proto.PbModel.Resource.ResourceToClientModel|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.setTeammatebasegetgameresourcelist = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveFightPushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.clearTeammatebasegetgameresourcelist = function() {
+  return this.setTeammatebasegetgameresourcelist(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveFightPushRes.prototype.hasTeammatebasegetgameresourcelist = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveInvitePushRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveInvitePushRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    teampveinviteinfo: (f = msg.getTeampveinviteinfo()) && proto.PbModel.TeamPve.TeamPveInviteInfoPB.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveInvitePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveInvitePushRes;
+  return proto.PbModel.TeamPve.TeamPveInvitePushRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveInvitePushRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveInvitePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.PbModel.TeamPve.TeamPveInviteInfoPB;
+      reader.readMessage(value,proto.PbModel.TeamPve.TeamPveInviteInfoPB.deserializeBinaryFromReader);
+      msg.setTeampveinviteinfo(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveInvitePushRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveInvitePushRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getTeampveinviteinfo();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.PbModel.TeamPve.TeamPveInviteInfoPB.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional TeamPveInviteInfoPB TeamPveInviteInfo = 1;
+ * @return {?proto.PbModel.TeamPve.TeamPveInviteInfoPB}
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.prototype.getTeampveinviteinfo = function() {
+  return /** @type{?proto.PbModel.TeamPve.TeamPveInviteInfoPB} */ (
+    jspb.Message.getWrapperField(this, proto.PbModel.TeamPve.TeamPveInviteInfoPB, 1));
+};
+
+
+/**
+ * @param {?proto.PbModel.TeamPve.TeamPveInviteInfoPB|undefined} value
+ * @return {!proto.PbModel.TeamPve.TeamPveInvitePushRes} returns this
+*/
+proto.PbModel.TeamPve.TeamPveInvitePushRes.prototype.setTeampveinviteinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.PbModel.TeamPve.TeamPveInvitePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.prototype.clearTeampveinviteinfo = function() {
+  return this.setTeampveinviteinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PbModel.TeamPve.TeamPveInvitePushRes.prototype.hasTeampveinviteinfo = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.prototype.toObject = function(opt_includeInstance) {
+  return proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    customizevalue: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes;
+  return proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomizevalue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getCustomizevalue();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string CustomizeValue = 1;
+ * @return {string}
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.prototype.getCustomizevalue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes} returns this
+ */
+proto.PbModel.TeamPve.TeamPveClientCustomizeNoticePushRes.prototype.setCustomizevalue = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 

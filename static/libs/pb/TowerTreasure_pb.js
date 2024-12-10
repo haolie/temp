@@ -1000,7 +1000,8 @@ proto.PbModel.TowerTreasure.TowerTreasureObj.toObject = function(includeInstance
     activityenum: jspb.Message.getFieldWithDefault(msg, 2, 0),
     chargelistList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
     freedrawdicMap: (f = msg.getFreedrawdicMap()) ? f.toObject(includeInstance, undefined) : [],
-    chargedrawdicMap: (f = msg.getChargedrawdicMap()) ? f.toObject(includeInstance, undefined) : []
+    chargedrawdicMap: (f = msg.getChargedrawdicMap()) ? f.toObject(includeInstance, undefined) : [],
+    towernodeid: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -1061,6 +1062,10 @@ proto.PbModel.TowerTreasure.TowerTreasureObj.deserializeBinaryFromReader = funct
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readString, null, 0, "");
          });
       break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTowernodeid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1118,6 +1123,13 @@ proto.PbModel.TowerTreasure.TowerTreasureObj.serializeBinaryToWriter = function(
   f = message.getChargedrawdicMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeInt32, jspb.BinaryWriter.prototype.writeString);
+  }
+  f = message.getTowernodeid();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
   }
 };
 
@@ -1237,6 +1249,24 @@ proto.PbModel.TowerTreasure.TowerTreasureObj.prototype.getChargedrawdicMap = fun
 proto.PbModel.TowerTreasure.TowerTreasureObj.prototype.clearChargedrawdicMap = function() {
   this.getChargedrawdicMap().clear();
   return this;};
+
+
+/**
+ * optional int32 TowerNodeId = 6;
+ * @return {number}
+ */
+proto.PbModel.TowerTreasure.TowerTreasureObj.prototype.getTowernodeid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.TowerTreasure.TowerTreasureObj} returns this
+ */
+proto.PbModel.TowerTreasure.TowerTreasureObj.prototype.setTowernodeid = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
 
 
 

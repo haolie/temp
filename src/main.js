@@ -13,6 +13,7 @@ store.dispatch('loadServerList').then((list) => {
 })
 
 store.commit('LoadTabList')
+store.commit('LoadFvList')
 
 Echarts.registerTheme('macarons', echartsTheme)
 Vue.config.productionTip = false
