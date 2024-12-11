@@ -1,160 +1,169 @@
 <template>
-  <el-container style="width: 100%;height: 100%;">
-    <!-- <header data-v-730268c5="" class="el-header main-head">Header</header> -->
-    <el-header class="main-head" style="height: 150px;" v-show="Status <= 0">
-      <el-row>
-        <el-col :span="19">
-          <el-row :gutter="20">
+  <div style="width: 100%;height: 100%;">
+    <el-container style="width: 100%;height: 100%;">
+      <!-- <header data-v-730268c5="" class="el-header main-head">Header</header> -->
+      <el-header class="main-head" style="height: 150px;" v-show="Status <= 0">
+        <el-row>
+          <el-col :span="19">
+            <el-row :gutter="20">
 
-            <el-col :span="6">
-              <el-select v-model="ServerGroupId" filterable placeholder="请选择">
-                <el-option v-for="item in $store.state.serverList" :key="item.GroupID" :label="item.GroupName"
-                  :value="item.GroupID">
-                </el-option>
-              </el-select>
-            </el-col>
-
-            <el-col :span="18">
-              <el-input placeholder="请输入内容" v-model="ServerItem.url">
-                <template slot="prepend">MC:</template>
-              </el-input>
-            </el-col>
-
-            <el-col :span="8">
-              <el-input placeholder="请输入内容" v-model="ServerItem.PartnerId">
-                <template slot="prepend">合作商:</template>
-              </el-input>
-            </el-col>
-            <el-col :span="8">
-              <el-input placeholder="请输入内容" v-model="ServerGroupId">
-                <template slot="prepend">ServerGroupId:</template>
-              </el-input>
-            </el-col>
-            <el-col :span="24">
-              <el-input placeholder="请输入内容" v-model="ServerItem.LoginParam" class="input-with-select">
-                <el-select v-model="ServerItem.LoginType" slot="prepend" placeholder="请选择" style="width: 132px;">
-                  <el-option v-for="item in LoginOptions" :key="item.value" :label="item.label" :value="item.value">
+              <el-col :span="6">
+                <el-select v-model="ServerGroupId" filterable placeholder="请选择">
+                  <el-option v-for="item in $store.state.serverList" :key="item.GroupID" :label="item.GroupName"
+                    :value="item.GroupID">
                   </el-option>
                 </el-select>
+              </el-col>
+
+              <el-col :span="18">
+                <el-input placeholder="请输入内容" v-model="ServerItem.url">
+                  <template slot="prepend">MC:</template>
+                </el-input>
+              </el-col>
+
+              <el-col :span="8">
+                <el-input placeholder="请输入内容" v-model="ServerItem.PartnerId">
+                  <template slot="prepend">合作商:</template>
+                </el-input>
+              </el-col>
+              <el-col :span="8">
+                <el-input placeholder="请输入内容" v-model="ServerGroupId">
+                  <template slot="prepend">ServerGroupId:</template>
+                </el-input>
+              </el-col>
+              <el-col :span="24">
+                <el-input placeholder="请输入内容" v-model="ServerItem.LoginParam" class="input-with-select">
+                  <el-select v-model="ServerItem.LoginType" slot="prepend" placeholder="请选择" style="width: 132px;">
+                    <el-option v-for="item in LoginOptions" :key="item.value" :label="item.label" :value="item.value">
+                    </el-option>
+                  </el-select>
+                </el-input>
+              </el-col>
+            </el-row>
+          </el-col>
+          <el-col :span="5">
+            <el-button type="primary" @click="Login" plain>请求</el-button>
+          </el-col>
+        </el-row>
+
+
+
+      </el-header>
+
+      <el-container style="width: 100%;height: 100%;">
+        <el-aside width="500px">
+          <el-row>
+            <el-col :span="24" v-show="ListType == 'Cmd'">
+              <el-row>
+                <el-col :span="24">
+
+                </el-col>
+
+                <el-col :span="24">
+                  <el-tabs type="border-card" class="demo-tabs">
+                    <el-tab-pane label="Cmd">
+                      <div style="margin-top: 15px;">
+                        <el-input placeholder="请输入内容" v-model="SearchCmd" class="input-with-select">
+                        </el-input>
+                      </div>
+                      <ul class="infinite-list" style="overflow:auto">
+                        <li v-for="item in CmdList" :key="item.Cmd"
+                          v-show="item.Cmd.indexOf(SearchCmd.toUpperCase()) >= 0" class="infinite-list-item"
+                          @click="selectCmd(item)" :title="item.Cmd">{{ item.Cmd }} </li>
+                      </ul>
+                    </el-tab-pane>
+                    <el-tab-pane label="Msg">
+                      <el-row>
+                        <el-col :span="24">
+                          <div style="margin-top: 15px;">
+                            <el-input placeholder="请输入内容" v-model="SearchMsg" class="input-with-select">
+                              <el-button slot="append" icon="el-icon-refresh" @click="onSearchMsg"></el-button>
+                            </el-input>
+                          </div>
+                        </el-col>
+                        <el-col :span="24">
+                          <ul class="infinite-list" style="overflow:auto">
+                            <li v-for="item in MsgList" :key="item.MsgOrder" class="infinite-list-item"
+                              v-show="item.Cmd.indexOf(SearchMsg.toUpperCase()) >= 0" @click="selectMsg(item)"
+                              :title="item.Cmd">
+                              <el-row>
+                                <el-col :span="20">{{ item.Cmd }} </el-col>
+                                <el-col :span="4" v-show="item.IsReq">
+                                  <i class="el-icon-star-on" @click="addFavorite(item)"></i>
+                                </el-col>
+                              </el-row>
+
+                            </li>
+                          </ul>
+                        </el-col>
+                      </el-row>
+                    </el-tab-pane>
+                    <el-tab-pane label="Fv">
+
+                      <ul class="infinite-list" style="overflow:auto">
+                        <li v-for="item in $store.state.fvList" :key="item.cmd" class="infinite-list-item"
+                          @click="selectFavorite(item)" :title="item.Cmd">
+                          <el-row>
+                            <el-col :span="20">{{ item.cmd }} </el-col>
+                            <el-col :span="4">
+                              <i class="el-icon-close" @click="delFavorite(item.cmd)"></i>
+                            </el-col>
+
+                          </el-row>
+                        </li>
+                      </ul>
+                    </el-tab-pane>
+                  </el-tabs>
+
+                </el-col>
+
+
+              </el-row>
+
+            </el-col>
+          </el-row>
+        </el-aside>
+        <el-main style="width: 100%;height: 1200px;">
+          <el-row>
+            <el-col :span="12">
+              <div style="color: wheat;">Name：{{ WebCli.name }}</div>
+            </el-col>
+            <el-col :span="12">
+              <div style="color: wheat;">Id:{{ WebCli.pid }}</div>
+            </el-col>
+            <el-col :span="24">
+              <el-input placeholder="请输入内容" v-model="MsgObj.Cmd" :disabled="true" class="input-with-select">
+                <el-button slot="append" icon="el-icon-check" @click="request()"></el-button>
               </el-input>
             </el-col>
           </el-row>
-        </el-col>
-        <el-col :span="5">
-          <el-button type="primary" @click="Login" plain>请求</el-button>
-        </el-col>
-      </el-row>
-
-
-
-    </el-header>
-
-    <el-container style="width: 100%;height: 100%;">
-      <el-aside width="500px">
-        <el-row>
-          <el-col :span="24" v-show="ListType == 'Cmd'">
-            <el-row>
-              <el-col :span="24">
-
-              </el-col>
-
-              <el-col :span="24">
-                <el-tabs type="border-card" class="demo-tabs">
-                  <el-tab-pane label="Cmd">
-                    <div style="margin-top: 15px;">
-                      <el-input placeholder="请输入内容" v-model="SearchCmd" class="input-with-select">
-                      </el-input>
-                    </div>
-                    <ul class="infinite-list" style="overflow:auto">
-                      <li v-for="item in CmdList" :key="item.Cmd" v-show="item.Cmd.indexOf(SearchCmd.toUpperCase()) >= 0"
-                        class="infinite-list-item" @click="selectCmd(item)" :title="item.Cmd">{{ item.Cmd }} </li>
-                    </ul>
-                  </el-tab-pane>
-                  <el-tab-pane label="Msg">
-                    <el-row>
-                      <el-col :span="24">
-                        <div style="margin-top: 15px;">
-                          <el-input placeholder="请输入内容" v-model="SearchMsg" class="input-with-select">
-                            <el-button slot="append" icon="el-icon-refresh" @click="onSearchMsg"></el-button>
-                          </el-input>
-                        </div>
-                      </el-col>
-                      <el-col :span="24">
-                        <ul class="infinite-list" style="overflow:auto">
-                          <li v-for="item in MsgList" :key="item.MsgOrder" class="infinite-list-item"
-                            v-show="item.Cmd.indexOf(SearchMsg.toUpperCase()) >= 0" @click="selectMsg(item)"
-                            :title="item.Cmd">
-                            <el-row>
-                              <el-col :span="20">{{ item.Cmd }} </el-col>
-                              <el-col :span="4" v-show="item.IsReq">
-                                <i class="el-icon-star-on" @click="addFavorite(item)"></i>
-                              </el-col>
-                            </el-row>
-
-                          </li>
-                        </ul>
-                      </el-col>
-                    </el-row>
-                  </el-tab-pane>
-                  <el-tab-pane label="Fv">
-
-                    <ul class="infinite-list" style="overflow:auto">
-                      <li v-for="item in $store.state.fvList" :key="item.cmd" class="infinite-list-item"
-                        @click="selectFavorite(item)" :title="item.Cmd">
-                        <el-row>
-                          <el-col :span="20">{{ item.cmd }} </el-col>
-                          <el-col :span="4">
-                            <i class="el-icon-close" @click="delFavorite(item.cmd)"></i>
-                          </el-col>
-
-                        </el-row>
-                      </li>
-                    </ul>
-                  </el-tab-pane>
-                </el-tabs>
-
-              </el-col>
-
-
-            </el-row>
-
-          </el-col>
-        </el-row>
-      </el-aside>
-      <el-main style="width: 100%;height: 1200px;">
-        <el-row>
-          <el-col :span="12">
-            <div style="color: wheat;">Name：{{ WebCli.name }}</div>
-          </el-col>
-          <el-col :span="12">
-            <div style="color: wheat;">Id:{{ WebCli.pid }}</div>
-          </el-col>
-          <el-col :span="24">
-            <el-input placeholder="请输入内容" v-model="MsgObj.Cmd" :disabled="true" class="input-with-select">
-              <el-button slot="append" icon="el-icon-check" @click="request()"></el-button>
-            </el-input>
-          </el-col>
-        </el-row>
-        <el-col style="height: 100%;">
-          <el-container style="height: 100%;">
-            <el-main style="height: 40%;">
-              <textarea v-model="MsgObj.Req" style="height: 100%;width: 100%;color: #FFFFFF;background: #323224;">
+          <el-col style="height: 100%;">
+            <el-container style="height: 100%;">
+              <el-main style="height: 40%;">
+                <textarea v-model="MsgObj.Req" style="height: 100%;width: 100%;color: #FFFFFF;background: #323224;">
 
           </textarea>
-            </el-main>
+              </el-main>
 
 
-            <el-footer style="height: 60%;background: #242424;">
-              <textarea v-model="MsgObj.Res"
-                style="height: 100%;width: 100%;color:blue;background: lightgray;font-size: larger;">
+              <el-footer style="height: 60%;background: #242424;">
+                <textarea v-model="MsgObj.Res"
+                  style="height: 100%;width: 100%;color:blue;background: lightgray;font-size: larger;">
 
           </textarea>
-            </el-footer>
-          </el-container>
-        </el-col>
-      </el-main>
-    </el-container>
-  </el-container>
+              </el-footer>
+            </el-container>
+          </el-col>
+        </el-main>
+      </el-container>
+    </el-container> 
+    <div style="width: 100%;height: 100%;background-color: #9d8c9640;position: fixed;inset: 0;top: 40px;">
+          <div style="background-color: white; height: 222px;width: 520px; margin: 200px auto;">
+
+          </div>
+    </div>
+  </div>
+
 </template>
 <script>
 import pbUtils from '@/lib/pbUtils'
