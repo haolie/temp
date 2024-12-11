@@ -157,11 +157,11 @@
         </el-main>
       </el-container>
     </el-container> 
-    <div style="width: 100%;height: 100%;background-color: #9d8c9640;position: fixed;inset: 0;top: 40px;">
+    <!-- <div style="width: 100%;height: 100%;background-color: #9d8c9640;position: fixed;inset: 0;top: 40px;">
           <div style="background-color: white; height: 222px;width: 520px; margin: 200px auto;">
 
           </div>
-    </div>
+    </div> -->
   </div>
 
 </template>
