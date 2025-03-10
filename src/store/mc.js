@@ -31,7 +31,8 @@ export default {
             return new Promise((resolve, reject) => {
              
                 var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
-        httpRequest.open('POST', 'https://managecenterapitest-dqsj2.qcplay.com/API/ServerGroupList.ashx', true); //第二步：打开连接
+        //httpRequest.open('POST', 'https://managecenterapitest-dqsj2.qcplay.com/API/ServerGroupList.ashx', true); //第二步：打开连接
+        httpRequest.open('POST', 'https://mcapitest-ds3h5.7qule.com/API/ServerGroupList.ashx', true); //第二步：打开连接
         httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
         httpRequest.send('GroupType=Mix&HashValue=');//发送请求 将情头体写在send中
         /**

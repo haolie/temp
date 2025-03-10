@@ -195,11 +195,11 @@ proto.PbModel.Marquee.MarqueeMessage.deserializeBinaryFromReader = function(msg,
       msg.setWeight(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setStartime(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setEndtime(value);
       break;
     case 6:
@@ -259,14 +259,14 @@ proto.PbModel.Marquee.MarqueeMessage.serializeBinaryToWriter = function(message,
   }
   f = message.getStartime();
   if (f !== 0) {
-    writer.writeInt32(
+    writer.writeInt64(
       4,
       f
     );
   }
   f = message.getEndtime();
   if (f !== 0) {
-    writer.writeInt32(
+    writer.writeInt64(
       5,
       f
     );
@@ -337,7 +337,7 @@ proto.PbModel.Marquee.MarqueeMessage.prototype.setWeight = function(value) {
 
 
 /**
- * optional int32 StarTime = 4;
+ * optional int64 StarTime = 4;
  * @return {number}
  */
 proto.PbModel.Marquee.MarqueeMessage.prototype.getStartime = function() {
@@ -355,7 +355,7 @@ proto.PbModel.Marquee.MarqueeMessage.prototype.setStartime = function(value) {
 
 
 /**
- * optional int32 EndTime = 5;
+ * optional int64 EndTime = 5;
  * @return {number}
  */
 proto.PbModel.Marquee.MarqueeMessage.prototype.getEndtime = function() {

@@ -1907,7 +1907,8 @@ proto.PbModel.Chat.ChatMsgSender.toObject = function(includeInstance, msg) {
     headimage: jspb.Message.getFieldWithDefault(msg, 3, 0),
     headframe: jspb.Message.getFieldWithDefault(msg, 4, 0),
     chatframeid: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    servername: jspb.Message.getFieldWithDefault(msg, 6, "")
+    servername: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    titleframeid: jspb.Message.getFieldWithDefault(msg, 7, 0)
   };
 
   if (includeInstance) {
@@ -1967,6 +1968,10 @@ proto.PbModel.Chat.ChatMsgSender.deserializeBinaryFromReader = function(msg, rea
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setServername(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTitleframeid(value);
       break;
     default:
       reader.skipField();
@@ -2036,6 +2041,13 @@ proto.PbModel.Chat.ChatMsgSender.serializeBinaryToWriter = function(message, wri
   if (f.length > 0) {
     writer.writeString(
       6,
+      f
+    );
+  }
+  f = message.getTitleframeid();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
       f
     );
   }
@@ -2147,6 +2159,24 @@ proto.PbModel.Chat.ChatMsgSender.prototype.getServername = function() {
  */
 proto.PbModel.Chat.ChatMsgSender.prototype.setServername = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional int32 TitleFrameId = 7;
+ * @return {number}
+ */
+proto.PbModel.Chat.ChatMsgSender.prototype.getTitleframeid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PbModel.Chat.ChatMsgSender} returns this
+ */
+proto.PbModel.Chat.ChatMsgSender.prototype.setTitleframeid = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 
