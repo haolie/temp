@@ -100,7 +100,7 @@ let http = {
           let msg = '服务端没有返回！'
           reject(msg)
         }
-        if (Number(res.data.status.code) === 401) {
+        if (Number(res.data.status) === 401) {
           let msg = res.data.status.message ? res.data.status.message : '无访问权限，请重新登录！'
           self.$root.$bus.$emit('alert', {
             text: msg,
@@ -112,20 +112,20 @@ let http = {
           throw new Error('token无效，无访问权限！')
         }
 
-        if (Number(res.data.status.code) === 200) {
-          if ((typeof res.data.data === 'string' || typeof res.data.data === 'number') && Number(res.data.data) === 0 && typeof o.toast === 'undefined') {
+        if (Number(res.data.status) === 200) {
+          if ((typeof res.data.content === 'string' || typeof res.data.content === 'number') && Number(res.data.content) === 0 && typeof o.toast === 'undefined') {
             let msg = '操作失败'
             reject(msg)
-          } else if ((typeof res.data.data === 'string' || typeof res.data.data === 'number') && Number(res.data.data) === 1 && typeof o.toast === 'undefined') {
+          } else if ((typeof res.data.content === 'string' || typeof res.data.content === 'number') && Number(res.data.content) === 1 && typeof o.toast === 'undefined') {
             let msg = '恭喜你，操作成功'
             self.$root.$message({
               message: msg,
               type: 'success',
               customClass: 'custom-el-message'
             })
-            resolve(res.data.data)
+            resolve(res.data.content)
           } else {
-            resolve(res.data.data)
+            resolve(res.data.content)
           }
         } else {
           let msg = res.data.status.message ? res.data.status.message : '对不起，服务器接口出错！请联系技术人员！'

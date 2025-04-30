@@ -7,8 +7,6 @@
 
 <script>
 import JAlert from '@/components/JAlert' 
-import pb from '../static/libs/proto';
-import pbUtils from '@/lib/pbUtils' 
 
 export default {
   name: 'App',
@@ -16,8 +14,7 @@ export default {
     JAlert
   }, 
   created () {
-  
-    console.log(pbUtils.GetSetFunName("create"))
+   
   },
   mounted () {
 
@@ -35,7 +32,6 @@ export default {
 @import "assets/css/message-box.css";
 @import "assets/css/style.css";
 </style>
-</script>
 <style >
 body{
   width: 99%;

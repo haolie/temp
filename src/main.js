@@ -7,13 +7,6 @@ import App from './App'
 import Echarts from 'echarts'
 import echartsTheme from './lib/echartTheme'
 
-store.dispatch('loadServerList').then((list) => {
-  console.log('loadServerList')
-  console.log(list)
-})
-
-store.commit('LoadTabList')
-store.commit('LoadFvList')
 
 Echarts.registerTheme('macarons', echartsTheme)
 Vue.config.productionTip = false

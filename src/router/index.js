@@ -34,9 +34,10 @@ export default new Router({
       name: 'WebClient',
       component: () => import('@/views/mainView/mainView')
     },
-    {
-      path: '/netProfit',
-      name: '净利润',
-      component: () => import('@/views/netProfit/netProfit')
-    }]
+    // {
+    //   path: '/netProfit',
+    //   name: '净利润',
+    //   component: () => import('@/views/netProfit/netProfit')
+    // }
+  ]
 })
